@@ -1,0 +1,112 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <!-- 本页面css -->
+    <link rel="stylesheet" href="css/wap-home.css" />
+
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+<!-- banner图 -->
+<div class='banner wrap'>
+    <img class='logo'>
+</div>
+<div class='title-box'>
+    <div class='title'>免费领取最高保额<span>4.5万元</span>疾病保障</div>
+    <div class='corner-icon'>
+        <span>24093</span>
+        <span>人已领取</span>
+    </div>
+</div>
+
+<!-- form -->
+<div class='form wrap'>
+    <form id="form-box" class="form-box">
+        <div class='input-item'>
+            <div class='input-item-name'>您的姓名</div>
+            <input class='input-text' type='text' placeholder='请输入您的姓名' id="name" name="name">
+        </div>
+        <div class='input-item'>
+            <div class='input-item-name'>手机号码</div>
+            <input class='input-text' type='tel' placeholder='手机号码接收保单信息' id="mobile" name="mobile">
+        </div>
+        <div class='input-item'>
+            <div class='input-item-name'>验证码</div>
+            <input class='input-text' type='tel' placeholder='请输入验证码' id="captcha" name="captcha">
+            <div class="box-right">
+                <input name="token" id="token" type="hidden"/>
+                <input id="random" name="r" value="{{page_param['random']}}" type="hidden"/>
+                <input id="send" type="button" class="send active VIPKID-send" value="获取验证码">
+            </div>
+        </div>
+        <div class='input-item'>
+            <div class='input-item-name'>身份证号</div>
+            <input class='input-text' type='text' placeholder='身份证号用于身份验证' id="idCard" name="idCard" >
+        </div>
+        <div class='agree-box'>
+            <label class="checkbox">
+                <input type="checkbox" class="check-box-content">
+            </label>
+            <div class='label'>我已仔细阅读《<span class='span'>保险合同条款</span>》及<span class='span'>活动声明</span>，知晓并确认该产品投被保险人为同一人以及保险产品的<span class='span'>保险责任</span>和<span class='span'>责任免除</span></div>
+        </div>
+        <a class='submit'>免费领取</a>
+        <p class='note'>*郑重承诺：我们将严格遵守信息保密制度</p>
+    </form>
+</div>
+
+<!-- detail -->
+<div class='detail-insu wrap'>
+    <div class='title'>赠险详情</div>
+    <div class='strong'>短期重大疾病保险（保障期：6个月）</div>
+    <div class='table'>
+        <div class='tr clx'>
+            <div class='th'>保障内容</div>
+            <div class='th'>短期重大疾病保险金</div>
+        </div>
+        <div class='tr clx'>
+            <div class='td'>保额</div>
+            <div class='td'>4.5万元</div>
+        </div>
+        <div class='tr clx'>
+            <div class='td'>保额</div>
+            <div class='td'>4.5万元</div>
+        </div>
+    </div>
+    <div class='note'></div>
+</div>
+
+<!-- footer -->
+<div class="footer wrap">
+    <p>本活动由黑牛保险提供、黑牛保险为合法服务提供商</p>
+    <p>服务热线：010-87227385（工作日10:00-17:00）</p>
+    <p>商务合作（电话/微信）：18515088666</p>
+</div>
+</body>
+</html>

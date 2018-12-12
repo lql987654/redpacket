@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://lp.vipjr.com/landingpage/faq/teacherq/index.html -->
+<html lang="zh" style="font-size: 171.875px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style class="vjs-styles-defaults">
+        .video-js {
+            width: 300px;
+            height: 150px;
+        }
+
+        .vjs-fluid {
+            padding-top: 56.25%
+        }
+    </style>
+    <style class="vjs-styles-dimensions">
+        .my-player-dimensions {
+            width: 852px;
+            height: 480px;
+        }
+
+        .my-player-dimensions.vjs-fluid {
+            padding-top: 56.33802816901409%;
+        }
+    </style>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- 赠险通用js方法 -->
+    <script src="js/wap-common.js"></script>
+
+    <!-- 360 使用Google Chrome Frame -->
+    <meta name="renderer" content="webkit">
+    <title>来vipJr学习的理由</title>
+
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- SEO页面关键词 -->
+    <meta name="keywords" content="vipjr青少儿在线教育, 初中英语培训,小学英语培训,高中英语培训, 数学培训">
+
+    <!-- SEO页面描述 -->
+    <meta name="description" content="vipjr是全球领先的青少儿在线教育品牌，为5-18岁的青少儿提供高品质的英语、数学、留学考试一对一培训，针对不同年龄、水平、性格爱好的青少儿因材施教。">
+
+    <!-- favicon，可更改图片类型 -->
+    <link rel="shortcut icon" href="https://lp.vipjr.com/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="css/video.ext.min.css">
+    <link rel="stylesheet" href="css/wap-home.css">
+    <link rel="stylesheet" href="css/video-js.css">
+    <style _uiplaceholder="lock">.placeholder {
+        color: #999999;
+    } </style>
+
+    <style _uivalidate="lock">.has-success {
+        border: 1px solid rgb(106, 196, 81) !important;
+    }
+
+    .has-error {
+        border: 1px solid rgb(246, 86, 98) !important;
+    }</style>
+</head>
+<body>
+<div id="app">
+    <div class="index-page---2ioz-">
+        <section class="section section-1---1qaAP">
+            <img class="section-image---30A8c" src="images/wap-banner.jpg">
+        </section>
+        <!-- form -->
+        <div id="form-wrap" class="form-wrap" role="form">
+            <h6>注册填表</h6>
+            <h3>免费领取体验课</h3>
+            <form class="linkagePage-form" autocomplete="off" id="form-box" method="post">
+                <ul class="form-ul clx">
+                    <li class="_nation-code-wrap" id="phone-input">
+                        <p class="_short-box" _validtaor="jQuery_11743813890410">
+                            <input name="code" class="form-input" type="tel" placeholder="86"
+                                   value="+86" id="jQuery_11743813890410">
+                        </p>
+                        <p class="_long-box" _validtaor="jQuery_10585988406885">
+                            <input name="mobile" data-track="tk-tel" class="form-input" type="tel"
+                                   placeholder="家长手机号码" id="mobile" maxlength="11">
+                            <label class="meg-error _error-phone-target" style="display: none;"></label>
+                        </p>
+                    </li>
+                    <li>
+                        <p id="captcha-box">
+                            <input id="captcha" class="form-input" type="text" name="captcha" placeholder="请输入验证码" />
+                            <span class="box-right">
+                                            <input name="token" id="token" type="hidden"/>
+                                            <input id="random" name="r" value="{{page_param['random']}}" type="hidden"/>
+                                            <a id="send" class="send" href="javascript:;">获取验证码</a>
+                                        </span>
+                        </p>
+                    </li>
+                    <li>
+                        <div class="select-box">
+                            <select
+                                    data-track="tk-age" class="age_area" name="child-age"
+                                    style="display: inline-block; z-index: 300; visibility: visible;"
+                                    id="child-age">
+                                <option value="学员年龄" selected>学员年龄</option>
+                                <option value="1">1岁</option>
+                                <option value="2">2岁</option>
+                                <option value="3">3岁</option>
+                                <option value="4">4岁</option>
+                                <option value="5">5岁</option>
+                                <option value="6">6岁</option>
+                                <option value="7">7岁</option>
+                                <option value="8">8岁</option>
+                                <option value="9">9岁</option>
+                                <option value="10">10岁</option>
+                                <option value="11">11岁</option>
+                                <option value="12">12岁</option>
+                                <option value="13">13岁</option>
+                                <option value="14">14岁</option>
+                                <option value="15">15岁</option>
+                                <option value="16">16岁</option>
+                                <option value="17">17岁</option>
+                                <option value="18">18岁</option>
+                                <option value=">18">18岁以上</option>
+                            </select>
+                        </div>
+
+
+                        <!--</span>-->
+                    </li>
+                    <li>
+                        <p _validtaor="jQuery_2699976741552" id="name-box"><input data-type="name" data-track="tk-name"
+                                                                                  class="form-input" type="text"
+                                                                                  name="child-name" placeholder="学员姓名（选填）"
+                                                                                  id="jQuery_2699976741552"><label
+                                class="meg-error" for="jQuery_2699976741552" style="display: none;"></label>
+                        </p>
+                    </li>
+                    <li class="submit-wrap">
+                        <a class="form-submit button-animated" href="javascript:;" id="form-submit">立即体验</a>
+                    </li>
+                </ul>
+            </form>
+            <div class="clear"></div>
+        </div>
+        <!-- form end -->
+        <!-- 第二部分 观看影片 -->
+        <div class="section section-whyoxford">
+            <div class="content main-color-inverse">
+                <h2>国际权威教材，保证教学质量。</h2>
+                <p class="main-text">牛津大学出版社高级职业发展顾问 <span style="display: inline;">Ron Molenda</span>
+                    为你讲述vipJr如何为国内青少儿精选牛津英语教材。</p>
+            </div>
+        </div>
+        <div class="section section-video">
+            <!--<div class="bg"><img-->
+                    <!--src="//source.vipabc.com/ext/images/website/junior/linkage_page/faq/materials/video.png" alt="">-->
+            <!--</div>-->
+            <video class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%" poster="//source.vipabc.com/ext/images/website/junior/linkage_page/faq/materials/video.png"  data-setup="{}">
+                <source src="//source.vipabc.com/ext/video/LP/faq/materials/faq-ron-material-intro.mp4" type='video/mp4' />
+            </video>
+            <!--<div class="play-btn" videoext=""-->
+                 <!--data-source-ext="//source.vipabc.com/ext/video/LP/faq/materials/faq-ron-material-intro__h__109.ts"-->
+                 <!--data-source="//source.vipabc.com/ext/video/LP/faq/materials/faq-ron-material-intro.mp4"><img-->
+                    <!--src="//source.vipabc.com/ext/images/website/junior/linkage_page/faq/materials/icon-play-white-x.png"-->
+                    <!--alt=""></div>-->
+        </div>
+        <!-- 学习国际课程 -->
+        <div class="section section-standard">
+            <div class="bg"><img
+                    src="//source.vipabc.com/ext/images/website/junior/linkage_page/faq/materials/bg-course_structure.jpg"
+                    alt=""></div>
+            <div class="content">
+                <h2>学习国际课程，也能兼顾班上成绩。</h2>
+                <p class="main-text">
+                    课程体系与国内、国际的主要学习标准都有清晰对照，家长和孩子对学习的内容、进度和效果一目了然。无论是想要提高孩子的校内分数，还是想与国际学校的学习接轨，牛津教材都能匹配到满意的学习方案。</p>
+            </div>
+        </div>
+        <!-- 严实把关 -->
+        <section class="section section-2">
+            <div class="section-2-wrapper---3l-Y9"><h3 class="section-h3---1eppp title-2-1---2Ps_3">严选师资</h3>
+                <h2 class="section-h2---3vODy title-2-2----KPHS">层层把关，用心严选好外教。</h2>
+                <p class="section-p---3xBMr title-2-3---lKfgG">
+                    vipJr极其严格的外教筛选机制，通过层层考核从数十万外教中严选出3%的优质老师。他们全都有国际英语教师资格证书，其中95%有超过3年教学经验。无论孩子是什么学习基础，老师都有最合适的方法去教好你的孩子。</p>
+                <div class="table-wrapper---ypZjB">
+                    <div class="table---3Pa01">
+                        <div class="cell---ZlOGS certificate---3YPgs"><span
+                                class="certificate-text---3lrcd"> <span>TEFL</span>/<span>TESOL</span><br>资格证书 </span>
+                        </div>
+                        <div class="cell---ZlOGS experience---1TaEA"><span class="experience-text---64k0u"> 拥有3年以上<br>教学经验 </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-2-swiper---1d66K">
+                    <div class="swiper-container swiper-container-horizontal">
+                        <div class="swiper-wrapper"
+                             style="transform: translate3d(69.5px, 0px, 0px); transition-duration: 0ms;">
+                            <div class="swiper-slide section-2-slide---1l7FN swiper-slide-active"
+                                 style="margin-right: 30px;"><img class="section-2-swiper-icon---2b2OL"
+                                                                  src="images/3bca532ac4e0bf1a234533fa875cd1cb.png">
+                                <div class="section-2-swiper-title---2wCGW">1.资格筛选</div>
+                                <div class="section-2-swiper-content---pL9k9"> 英美加澳等80+国家<br>TESOL/TEFL资格认证<br>95%超过3年教学经验
+                                </div>
+                            </div>
+                            <div class="swiper-slide section-2-slide---1l7FN swiper-slide-next"
+                                 style="margin-right: 30px;"><img class="section-2-swiper-icon---2b2OL"
+                                                                  src="images/669a0fee3deb4692a93e2a21322bd379.png">
+                                <div class="section-2-swiper-title---2wCGW">2.专家面试</div>
+                                <div class="section-2-swiper-content---pL9k9"> 真人在线课堂考核<br>全球教研专家面试<br>多维度技能考察</div>
+                            </div>
+                            <div class="swiper-slide section-2-slide---1l7FN" style="margin-right: 30px;"><img
+                                    class="section-2-swiper-icon---2b2OL"
+                                    src="images/af28a8e8930913c41eceae91fd11ea8f.png">
+                                <div class="section-2-swiper-title---2wCGW">3.培训上岗</div>
+                                <div class="section-2-swiper-content---pL9k9"> 国际认可的教学培训体系<br>考评九分以上才可正式教课</div>
+                            </div>
+                            <div class="swiper-slide section-2-slide---1l7FN" style="margin-right: 30px;"><img
+                                    class="section-2-swiper-icon---2b2OL"
+                                    src="images/d76a4b53f9ad68576096c9069116e25e.png">
+                                <div class="section-2-swiper-title---2wCGW">4.随堂监督</div>
+                                <div class="section-2-swiper-content---pL9k9"> 全球教研团队/技术团队<br>365天/24小时在线跟踪</div>
+                            </div>
+                            <div class="swiper-slide section-2-slide---1l7FN" style="margin-right: 30px;"><img
+                                    class="section-2-swiper-icon---2b2OL"
+                                    src="images/624019d63e2cdf1e3ce7a869bace6294.png">
+                                <div class="section-2-swiper-title---2wCGW">5.客户反馈</div>
+                                <div class="section-2-swiper-content---pL9k9"> 客户课后评鉴<br>教学质量综合管理<br>不断优化客户体验</div>
+                            </div>
+                            <div class="swiper-slide section-2-slide---1l7FN" style="margin-right: 30px;"><img
+                                    class="section-2-swiper-icon---2b2OL"
+                                    src="images/f48c9fe171c768ce6b1d3ba9e8fba6c8.png">
+                                <div class="section-2-swiper-title---2wCGW">6.每周追踪</div>
+                                <div class="section-2-swiper-content---pL9k9"> 严格奖惩机制<br>末位淘汰制<br>针对性培训</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 为什么上DCGS定制 -->
+        <section class="section---39E4y section-10---s5231"><h2 class="title---1ZTvz">为什么要让孩子上DCGS定制？</h2>
+            <p class="desc---1Isn4">动态课程生成系统（DCGS）的优势。</p>
+            <div style="position: relative;">
+                <!--<video class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%" poster="//source.vipabc.com/ext/images/website/junior/linkage_page/faq/materials/icon-play-red.png"  data-setup="{}">-->
+                    <!--<source src="https://source.vipabc.com/ext/video/LP/faq/studyplan/dcgs_intro_480p.mp4" type='video/mp4' />-->
+                <!--</video>-->
+            </div>
+            <div class="video-container---_iyJq" style="position: relative;height: 282px">
+                <video class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%" poster="images/57d9f33b3f2e6db1f1691acd8b78a79f.jpg"  data-setup="{}">
+                    <source src="https://source.vipabc.com/ext/video/LP/faq/studyplan/dcgs_intro_480p.mp4" type='video/mp4' id="dingzhi"/>
+                </video>
+                <!--<img class="video-poster-&#45;&#45;2jee3"-->
+                                                      <!--src="images/57d9f33b3f2e6db1f1691acd8b78a79f.jpg">-->
+                <!--<div class="video-mask-&#45;&#45;rp9Sd">-->
+                    <!--<div class="icon-video-&#45;&#45;t3w2S" videoext=""-->
+                         <!--data-source="https://source.vipabc.com/ext/video/LP/faq/studyplan/dcgs_intro_480p.mp4"-->
+                         <!--data-source-ext="//source.vipabc.com/ext/video/LP/faq/studyplan/dcgs_intro_480p__h__80.ts">-->
+                    <!--</div>-->
+                    <!--<img src="//source.vipabc.com/ext/images/website/junior/linkage_page/faq/materials/icon-play-white-x.png"-->
+                         <!--alt="" class="DCGS-video-play">-->
+                <!--</div>-->
+            </div>
+        </section>
+        <!-- 设计理念 -->
+        <section class="section---39E4y section-11---16A61"><h4 class="desc---1Isn4">课程设计理念</h4>
+            <h2 class="title---1ZTvz">激发学习动力，成绩能力双提升。</h2></section>
+        <section class="section---39E4y section-12---UnYON">
+            <div class="feature-1---hLSsF">
+                <div class="feature-num---sNOv1"><img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAAEXCAMAAABCuDAvAAAAflBMVEUAAACY2WyW2GuX2m2X2m2W2GuY2GuW2GyX2GuW2WyW2Gub2W+X2GyX2WuW2WuX2WyZ22+Y3W+W2myX2Wya4niW2GmX2WuX2Wu35ZmX2WyY2myb23Cb4XfV78KP1mCX2m2X2WuY226Z2myq4IWb33Kt65ai53mW2GuR12SW2Grb/b0BAAAAJ3RSTlMAbfFzBvmJ4NoW9jnhHum1MZ1AEQzUzMSJgXdTJgfUq4VkXjuOS0Xu+EKeAAABhUlEQVR42u3UbW6CYBBF4YIoIoICKgWxflS9df8bLAk/35goyqRpztnAk9xJ5uMNLb169FC1t3wDV4ym49ljKfVe966LsR7OfxlMzqlkBwbHjWQIxntfhmB0mEp2YHAqxzIE4yyV7MCkWkt24MorZ7IDV9t9KpmBuzwLJTNw9/25vskMbLmvH8kAdDgDMLp0nBHYnLKw5YzAVTxa+JKMwOZyXksyApO8XsxusgGDJPe6n2IBFk3eHc4CXCXL7WQzU9sQoItVC2fIQcAgarGDgw0CBkXSXL3MnXEgMDpmpS+TOjAOpZuGywXnuhMgIKATICCgEyAgoBMgIKATIOAdcFmm4bP5r4BBET1ZkVTjvmC/As8aHAECAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAv5ZsLYGj+tw+nzzzakvmB8mfariDyKif9gvjyS5Q9ygFjYAAAAASUVORK5CYII=">
+                </div>
+                <h4>培养基本素质和竞争力。</h4>
+                <p>辩证思考 + 跨学科认知 + 自信交流</p></div>
+            <div class="feature-2---1KLpI">
+                <div class="feature-num---sNOv1"><img src="images/262b3de4f4411e118ef180bd83c354a9.png"></div>
+                <h4>像母语一样“听说读写”。</h4>
+                <p>沉浸式母语环境 + 一对一个性定制</p></div>
+            <div class="feature-3---1wiRX">
+                <div class="feature-num---sNOv1"><img src="images/bf3fb0a543bd0f3fd9504e5141fa96dd.png"></div>
+                <h4>系统化教程，学习更高效。</h4>
+                <p>适合中国学生的原创教材 + 紧扣学校的知识点</p></div>
+            <div class="feature-4---1V4hL">
+                <div class="feature-num---sNOv1"><img src="images/ff85f3bc4fc57603e6d020202abb617e.png"></div>
+                <h4>个性化教学，增强孩子对英语的兴趣。</h4>
+                <p>20年英语教学大数据 + 为孩子专属定制的课程</p></div>
+        </section>
+        <!-- 学习感受 -->
+        <section id="study-feeling" class="section-5---3i9LS"><h3 class="title-5-1---27pgh">学习感受</h3>
+            <h2 class="title-5-2---1s6Y_">家长和孩子为什么喜欢vipJr？</h2>
+            <div class="section-2-swiper---1d66K">
+                <div class="swiper-container swiper-container-horizontal">
+                <div class="swiper-wrapper" style="transform: translate3d(41.5px, 0px, 0px); transition-duration: 0ms;">
+                    <div class="swiper-slide swiper-slide-active" style="margin-right: 17px;"><img
+                            class="student-image---ikWNI" src="images/21221584da77dd5cf3c1c1af440b21db.jpg">
+                        <div class="student-info---1rAZr">
+                            <div class="student-title---1TuH_">当内蒙古女孩遇见vipJr</div>
+                            <div class="student-desc---2bhwq">喜欢在线学英语，<br>更喜欢在线英语外教。</div>
+                            <a class="student-link---38lWB icon-link---3E0F-"
+                               href="detailq.html?name=gita&amp;fromwhere=&amp;clientPlat=null">了解更多</a></div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-next" style="margin-right: 17px;"><img
+                            class="student-image---ikWNI" src="images/5d9df015096fbc7e61cfa8350e737393.jpg">
+                        <div class="student-info---1rAZr">
+                            <div class="student-title---1TuH_">家教离开后他差点放弃学英语</div>
+                            <div class="student-desc---2bhwq">我们找到了让孩子重燃英语热情的学习方式。</div>
+                            <a class="student-link---38lWB icon-link---3E0F-"
+                               href="detailq.html?name=tobby&amp;fromwhere=&amp;clientPlat=null">了解更多</a></div>
+                    </div>
+                    <div class="swiper-slide" style="margin-right: 17px;"><img class="student-image---ikWNI"
+                                                                               src="images/7f822b7246fd7f6e066a785c2444901f.jpg">
+                        <div class="student-info---1rAZr">
+                            <div class="student-title---1TuH_">在vipJr学英语的斜杠女孩</div>
+                            <div class="student-desc---2bhwq">选择教育方式这件事上，一切以孩子的感受为准。</div>
+                            <a class="student-link---38lWB icon-link---3E0F-"
+                               href="detailq.html?name=aries&amp;fromwhere=&amp;clientPlat=null">了解更多</a></div>
+                    </div>
+                </div>
+            </div>
+                <div class="swiper-pagination section-2-swiper-pagination---117it swiper-pagination-bullets">
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span
+                        class="swiper-pagination-bullet"></span><span
+                        class="swiper-pagination-bullet"></span><span
+                        class="swiper-pagination-bullet"></span><span
+                        class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span>
+                </div>
+            </div>
+
+        </section>
+        <div class="video-float---mLqvg">
+            <div data-setup="{}" x5-video-player-fullscreen="true" x5-video-player-type="h5" x5-playsinline="true"
+                 webkit-playsinline="true" playsinline="true" preload="auto"
+                 class="video-js customize-video---3H3fU vjs-paused vjs-controls-enabled vjs-workinghover vjs-v6 vjs-user-active my-player-dimensions"
+                 id="my-player" lang="zh" role="region" aria-label="Video Player">
+                <video id="my-player_html5_api" class="vjs-tech" preload="auto" playsinline="playsinline"
+                       webkit-playsinline="true" x5-playsinline="true" x5-video-player-type="h5"
+                       x5-video-player-fullscreen="true" data-setup="{}" tabindex="-1"
+                       src="//source.vipabc.com/ext/video/vipjr/english/1v1Demo.mp4?version=2018-05-11-17-40">
+                    <source src="//source.vipabc.com/ext/video/vipjr/english/1v1Demo.mp4?version=2018-05-11-17-40"
+                            type="video/mp4">
+                    <p class="vjs-no-js"> To view this video please enable JavaScript, and consider upgrading to a web
+                        browser that <a href="http://videojs.com/html5-video-support/" target="_blank"
+                                        class="vjs-hidden" hidden="hidden"> supports HTML5 video </a></p></video>
+                <div class="vjs-poster vjs-hidden" tabindex="-1" aria-disabled="false"></div>
+                <div class="vjs-text-track-display" aria-live="off" aria-atomic="true"></div>
+                <div class="vjs-loading-spinner" dir="ltr"><span
+                        class="vjs-control-text">Video Player is loading.</span></div>
+                <button class="vjs-big-play-button" type="button" title="Play Video" aria-disabled="false"><span
+                        aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text"
+                                                                                     aria-live="polite">Play Video</span>
+                </button>
+                <div class="vjs-control-bar" dir="ltr">
+                    <button class="vjs-play-control vjs-control vjs-button" type="button" title="Play"
+                            aria-disabled="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span
+                            class="vjs-control-text" aria-live="polite">Play</span></button>
+                    <div class="vjs-volume-panel vjs-control vjs-volume-panel-horizontal">
+                        <button class="vjs-mute-control vjs-control vjs-button vjs-vol-3" type="button" title="Mute"
+                                aria-disabled="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span
+                                class="vjs-control-text" aria-live="polite">Mute</span></button>
+                        <div class="vjs-volume-control vjs-control vjs-volume-horizontal">
+                            <div tabindex="0" class="vjs-volume-bar vjs-slider-bar vjs-slider vjs-slider-horizontal"
+                                 role="slider" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                                 aria-label="Volume Level" aria-live="polite" aria-valuetext="100%">
+                                <div class="vjs-volume-level"><span class="vjs-control-text"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vjs-current-time vjs-time-control vjs-control"><span class="vjs-control-text">Current Time&nbsp;</span><span
+                            class="vjs-current-time-display" aria-live="off">0:00</span></div>
+                    <div class="vjs-time-control vjs-time-divider">
+                        <div><span>/</span></div>
+                    </div>
+                    <div class="vjs-duration vjs-time-control vjs-control"><span
+                            class="vjs-control-text">Duration&nbsp;</span><span class="vjs-duration-display"
+                                                                                aria-live="off">2:38</span></div>
+                    <div class="vjs-progress-control vjs-control">
+                        <div tabindex="0" class="vjs-progress-holder vjs-slider vjs-slider-horizontal" role="slider"
+                             aria-valuenow="0.00" aria-valuemin="0" aria-valuemax="100" aria-label="Progress Bar"
+                             aria-valuetext="0:00 of -:-">
+                            <div class="vjs-load-progress" style="width: 31.6753%;"><span
+                                    class="vjs-control-text"><span>Loaded</span>: 0%</span>
+                                <div style="left: 0%; width: 100%;"></div>
+                            </div>
+                            <div class="vjs-mouse-display">
+                                <div class="vjs-time-tooltip"></div>
+                            </div>
+                            <div class="vjs-play-progress vjs-slider-bar" style="width: 0%;">
+                                <div class="vjs-time-tooltip">0:00</div>
+                                <span class="vjs-control-text"><span>Progress</span>: 0%</span></div>
+                        </div>
+                    </div>
+                    <div class="vjs-live-control vjs-control vjs-hidden">
+                        <div class="vjs-live-display" aria-live="off"><span
+                                class="vjs-control-text">Stream Type&nbsp;</span>LIVE
+                        </div>
+                    </div>
+                    <div class="vjs-remaining-time vjs-time-control vjs-control"><span class="vjs-control-text">Remaining Time&nbsp;</span><span
+                            class="vjs-remaining-time-display" aria-live="off">-2:38</span></div>
+                    <div class="vjs-custom-control-spacer vjs-spacer ">&nbsp;</div>
+                    <div class="vjs-playback-rate vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden">
+                        <button class="vjs-playback-rate vjs-menu-button vjs-menu-button-popup vjs-button" type="button"
+                                aria-disabled="false" title="Playback Rate" aria-haspopup="true" aria-expanded="false">
+                            <span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text"
+                                                                                               aria-live="polite">Playback Rate</span>
+                        </button>
+                        <div class="vjs-menu">
+                            <ul class="vjs-menu-content" role="menu"></ul>
+                        </div>
+                        <div class="vjs-playback-rate-value">1x</div>
+                    </div>
+                    <div class="vjs-chapters-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden">
+                        <button class="vjs-chapters-button vjs-menu-button vjs-menu-button-popup vjs-button"
+                                type="button" aria-disabled="false" title="Chapters" aria-haspopup="true"
+                                aria-expanded="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span
+                                class="vjs-control-text" aria-live="polite">Chapters</span></button>
+                        <div class="vjs-menu">
+                            <ul class="vjs-menu-content" role="menu">
+                                <li class="vjs-menu-title" tabindex="-1">Chapters</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="vjs-descriptions-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden">
+                        <button class="vjs-descriptions-button vjs-menu-button vjs-menu-button-popup vjs-button"
+                                type="button" aria-disabled="false" title="Descriptions" aria-haspopup="true"
+                                aria-expanded="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span
+                                class="vjs-control-text" aria-live="polite">Descriptions</span></button>
+                        <div class="vjs-menu">
+                            <ul class="vjs-menu-content" role="menu">
+                                <li class="vjs-menu-item vjs-selected" tabindex="-1" role="menuitemradio"
+                                    aria-disabled="false" aria-checked="true"><span class="vjs-menu-item-text">descriptions off</span><span
+                                        class="vjs-control-text" aria-live="polite">, selected</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="vjs-subs-caps-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden">
+                        <button class="vjs-subs-caps-button vjs-menu-button vjs-menu-button-popup vjs-button"
+                                type="button" aria-disabled="false" title="Subtitles" aria-haspopup="true"
+                                aria-expanded="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span
+                                class="vjs-control-text" aria-live="polite">Subtitles</span></button>
+                        <div class="vjs-menu">
+                            <ul class="vjs-menu-content" role="menu">
+                                <li class="vjs-menu-item vjs-texttrack-settings" tabindex="-1" role="menuitem"
+                                    aria-disabled="false"><span
+                                        class="vjs-menu-item-text">subtitles settings</span><span
+                                        class="vjs-control-text"
+                                        aria-live="polite">, opens subtitles settings dialog</span></li>
+                                <li class="vjs-menu-item vjs-selected" tabindex="-1" role="menuitemradio"
+                                    aria-disabled="false" aria-checked="true"><span class="vjs-menu-item-text">subtitles off</span><span
+                                        class="vjs-control-text" aria-live="polite">, selected</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="vjs-audio-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden">
+                        <button class="vjs-audio-button vjs-menu-button vjs-menu-button-popup vjs-button" type="button"
+                                aria-disabled="false" title="Audio Track" aria-haspopup="true" aria-expanded="false">
+                            <span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text"
+                                                                                               aria-live="polite">Audio Track</span>
+                        </button>
+                        <div class="vjs-menu">
+                            <ul class="vjs-menu-content" role="menu"></ul>
+                        </div>
+                    </div>
+                    <button class="vjs-fullscreen-control vjs-control vjs-button" type="button" title="Fullscreen"
+                            aria-disabled="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span
+                            class="vjs-control-text" aria-live="polite">Fullscreen</span></button>
+                </div>
+                <div class="vjs-error-display vjs-modal-dialog vjs-hidden " tabindex="-1"
+                     aria-describedby="my-player_component_358_description" aria-hidden="true" aria-label="Modal Window"
+                     role="dialog"><p class="vjs-modal-dialog-description vjs-control-text"
+                                      id="my-player_component_358_description">This is a modal window.</p>
+                    <div class="vjs-modal-dialog-content" role="document"></div>
+                </div>
+                <div class="vjs-modal-dialog vjs-hidden  vjs-text-track-settings" tabindex="-1"
+                     aria-describedby="my-player_component_364_description" aria-hidden="true"
+                     aria-label="Caption Settings Dialog" role="dialog"><p
+                        class="vjs-modal-dialog-description vjs-control-text" id="my-player_component_364_description">
+                    Beginning of dialog window. Escape will cancel and close the window.</p>
+                    <div class="vjs-modal-dialog-content" role="document">
+                        <div class="vjs-track-settings-colors">
+                            <fieldset class="vjs-fg-color vjs-track-setting">
+                                <legend id="captions-text-legend-my-player_component_364">Text</legend>
+                                <label id="captions-foreground-color-my-player_component_364"
+                                       class="vjs-label">Color</label><select
+                                    aria-labelledby="captions-text-legend-my-player_component_364 captions-foreground-color-my-player_component_364">
+                                <option id="captions-foreground-color-my-player_component_364-White" value="#FFF"
+                                        aria-labelledby="captions-text-legend-my-player_component_364 captions-foreground-color-my-player_component_364 captions-foreground-color-my-player_component_364-White">
+                                    White
+                                </option>
+                                <option id="captions-foreground-color-my-player_component_364-Black" value="#000"
+                                        aria-labelledby="captions-text-legend-my-player_component_364 captions-foreground-color-my-player_component_364 captions-foreground-color-my-player_component_364-Black">
+                                    Black
+                                </option>
+                                <option id="captions-foreground-color-my-player_component_364-Red" value="#F00"
+                                        aria-labelledby="captions-text-legend-my-player_component_364 captions-foreground-color-my-player_component_364 captions-foreground-color-my-player_component_364-Red">
+                                    Red
+                                </option>
+                                <option id="captions-foreground-color-my-player_component_364-Green" value="#0F0"
+                                        aria-labelledby="captions-text-legend-my-player_component_364 captions-foreground-color-my-player_component_364 captions-foreground-color-my-player_component_364-Green">
+                                    Green
+                                </option>
+                                <option id="captions-foreground-color-my-player_component_364-Blue" value="#00F"
+                                        aria-labelledby="captions-text-legend-my-player_component_364 captions-foreground-color-my-player_component_364 captions-foreground-color-my-player_component_364-Blue">
+                                    Blue
+                                </option>
+                                <option id="captions-foreground-color-my-player_component_364-Yellow" value="#FF0"
+                                        aria-labelledby="captions-text-legend-my-player_component_364 captions-foreground-color-my-player_component_364 captions-foreground-color-my-player_component_364-Yellow">
+                                    Yellow
+                                </option>
+                                <option id="captions-foreground-color-my-player_component_364-Magenta" value="#F0F"
+                                        aria-labelledby="captions-text-legend-my-player_component_364 captions-foreground-color-my-player_component_364 captions-foreground-color-my-player_component_364-Magenta">
+                                    Magenta
+                                </option>
+                                <option id="captions-foreground-color-my-player_component_364-Cyan" value="#0FF"
+                                        aria-labelledby="captions-text-legend-my-player_component_364 captions-foreground-color-my-player_component_364 captions-foreground-color-my-player_component_364-Cyan">
+                                    Cyan
+                                </option>
+                            </select><span class="vjs-text-opacity vjs-opacity"><label
+                                    id="captions-foreground-opacity-my-player_component_364" class="vjs-label">Transparency</label><select
+                                    aria-labelledby="captions-text-legend-my-player_component_364 captions-foreground-opacity-my-player_component_364"><option
+                                    id="captions-foreground-opacity-my-player_component_364-Opaque" value="1"
+                                    aria-labelledby="captions-text-legend-my-player_component_364 captions-foreground-opacity-my-player_component_364 captions-foreground-opacity-my-player_component_364-Opaque">Opaque</option><option
+                                    id="captions-foreground-opacity-my-player_component_364-SemiTransparent" value="0.5"
+                                    aria-labelledby="captions-text-legend-my-player_component_364 captions-foreground-opacity-my-player_component_364 captions-foreground-opacity-my-player_component_364-SemiTransparent">Semi-Transparent</option></select></span>
+                            </fieldset>
+                            <fieldset class="vjs-bg-color vjs-track-setting">
+                                <legend id="captions-background-my-player_component_364">Background</legend>
+                                <label id="captions-background-color-my-player_component_364"
+                                       class="vjs-label">Color</label><select
+                                    aria-labelledby="captions-background-my-player_component_364 captions-background-color-my-player_component_364">
+                                <option id="captions-background-color-my-player_component_364-Black" value="#000"
+                                        aria-labelledby="captions-background-my-player_component_364 captions-background-color-my-player_component_364 captions-background-color-my-player_component_364-Black">
+                                    Black
+                                </option>
+                                <option id="captions-background-color-my-player_component_364-White" value="#FFF"
+                                        aria-labelledby="captions-background-my-player_component_364 captions-background-color-my-player_component_364 captions-background-color-my-player_component_364-White">
+                                    White
+                                </option>
+                                <option id="captions-background-color-my-player_component_364-Red" value="#F00"
+                                        aria-labelledby="captions-background-my-player_component_364 captions-background-color-my-player_component_364 captions-background-color-my-player_component_364-Red">
+                                    Red
+                                </option>
+                                <option id="captions-background-color-my-player_component_364-Green" value="#0F0"
+                                        aria-labelledby="captions-background-my-player_component_364 captions-background-color-my-player_component_364 captions-background-color-my-player_component_364-Green">
+                                    Green
+                                </option>
+                                <option id="captions-background-color-my-player_component_364-Blue" value="#00F"
+                                        aria-labelledby="captions-background-my-player_component_364 captions-background-color-my-player_component_364 captions-background-color-my-player_component_364-Blue">
+                                    Blue
+                                </option>
+                                <option id="captions-background-color-my-player_component_364-Yellow" value="#FF0"
+                                        aria-labelledby="captions-background-my-player_component_364 captions-background-color-my-player_component_364 captions-background-color-my-player_component_364-Yellow">
+                                    Yellow
+                                </option>
+                                <option id="captions-background-color-my-player_component_364-Magenta" value="#F0F"
+                                        aria-labelledby="captions-background-my-player_component_364 captions-background-color-my-player_component_364 captions-background-color-my-player_component_364-Magenta">
+                                    Magenta
+                                </option>
+                                <option id="captions-background-color-my-player_component_364-Cyan" value="#0FF"
+                                        aria-labelledby="captions-background-my-player_component_364 captions-background-color-my-player_component_364 captions-background-color-my-player_component_364-Cyan">
+                                    Cyan
+                                </option>
+                            </select><span class="vjs-bg-opacity vjs-opacity"><label
+                                    id="captions-background-opacity-my-player_component_364" class="vjs-label">Transparency</label><select
+                                    aria-labelledby="captions-background-my-player_component_364 captions-background-opacity-my-player_component_364"><option
+                                    id="captions-background-opacity-my-player_component_364-Opaque" value="1"
+                                    aria-labelledby="captions-background-my-player_component_364 captions-background-opacity-my-player_component_364 captions-background-opacity-my-player_component_364-Opaque">Opaque</option><option
+                                    id="captions-background-opacity-my-player_component_364-SemiTransparent" value="0.5"
+                                    aria-labelledby="captions-background-my-player_component_364 captions-background-opacity-my-player_component_364 captions-background-opacity-my-player_component_364-SemiTransparent">Semi-Transparent</option><option
+                                    id="captions-background-opacity-my-player_component_364-Transparent" value="0"
+                                    aria-labelledby="captions-background-my-player_component_364 captions-background-opacity-my-player_component_364 captions-background-opacity-my-player_component_364-Transparent">Transparent</option></select></span>
+                            </fieldset>
+                            <fieldset class="vjs-window-color vjs-track-setting">
+                                <legend id="captions-window-my-player_component_364">Window</legend>
+                                <label id="captions-window-color-my-player_component_364"
+                                       class="vjs-label">Color</label><select
+                                    aria-labelledby="captions-window-my-player_component_364 captions-window-color-my-player_component_364">
+                                <option id="captions-window-color-my-player_component_364-Black" value="#000"
+                                        aria-labelledby="captions-window-my-player_component_364 captions-window-color-my-player_component_364 captions-window-color-my-player_component_364-Black">
+                                    Black
+                                </option>
+                                <option id="captions-window-color-my-player_component_364-White" value="#FFF"
+                                        aria-labelledby="captions-window-my-player_component_364 captions-window-color-my-player_component_364 captions-window-color-my-player_component_364-White">
+                                    White
+                                </option>
+                                <option id="captions-window-color-my-player_component_364-Red" value="#F00"
+                                        aria-labelledby="captions-window-my-player_component_364 captions-window-color-my-player_component_364 captions-window-color-my-player_component_364-Red">
+                                    Red
+                                </option>
+                                <option id="captions-window-color-my-player_component_364-Green" value="#0F0"
+                                        aria-labelledby="captions-window-my-player_component_364 captions-window-color-my-player_component_364 captions-window-color-my-player_component_364-Green">
+                                    Green
+                                </option>
+                                <option id="captions-window-color-my-player_component_364-Blue" value="#00F"
+                                        aria-labelledby="captions-window-my-player_component_364 captions-window-color-my-player_component_364 captions-window-color-my-player_component_364-Blue">
+                                    Blue
+                                </option>
+                                <option id="captions-window-color-my-player_component_364-Yellow" value="#FF0"
+                                        aria-labelledby="captions-window-my-player_component_364 captions-window-color-my-player_component_364 captions-window-color-my-player_component_364-Yellow">
+                                    Yellow
+                                </option>
+                                <option id="captions-window-color-my-player_component_364-Magenta" value="#F0F"
+                                        aria-labelledby="captions-window-my-player_component_364 captions-window-color-my-player_component_364 captions-window-color-my-player_component_364-Magenta">
+                                    Magenta
+                                </option>
+                                <option id="captions-window-color-my-player_component_364-Cyan" value="#0FF"
+                                        aria-labelledby="captions-window-my-player_component_364 captions-window-color-my-player_component_364 captions-window-color-my-player_component_364-Cyan">
+                                    Cyan
+                                </option>
+                            </select><span class="vjs-window-opacity vjs-opacity"><label
+                                    id="captions-window-opacity-my-player_component_364"
+                                    class="vjs-label">Transparency</label><select
+                                    aria-labelledby="captions-window-my-player_component_364 captions-window-opacity-my-player_component_364"><option
+                                    id="captions-window-opacity-my-player_component_364-Transparent" value="0"
+                                    aria-labelledby="captions-window-my-player_component_364 captions-window-opacity-my-player_component_364 captions-window-opacity-my-player_component_364-Transparent">Transparent</option><option
+                                    id="captions-window-opacity-my-player_component_364-SemiTransparent" value="0.5"
+                                    aria-labelledby="captions-window-my-player_component_364 captions-window-opacity-my-player_component_364 captions-window-opacity-my-player_component_364-SemiTransparent">Semi-Transparent</option><option
+                                    id="captions-window-opacity-my-player_component_364-Opaque" value="1"
+                                    aria-labelledby="captions-window-my-player_component_364 captions-window-opacity-my-player_component_364 captions-window-opacity-my-player_component_364-Opaque">Opaque</option></select></span>
+                            </fieldset>
+                        </div>
+                        <div class="vjs-track-settings-font">
+                            <fieldset class="vjs-font-percent vjs-track-setting">
+                                <legend id="captions-font-size-my-player_component_364" class="">Font Size</legend>
+                                <select aria-labelledby="captions-font-size-my-player_component_364">
+                                    <option id="captions-font-size-my-player_component_364-50" value="0.50"
+                                            aria-labelledby="captions-font-size-my-player_component_364 captions-font-size-my-player_component_364-50">
+                                        50%
+                                    </option>
+                                    <option id="captions-font-size-my-player_component_364-75" value="0.75"
+                                            aria-labelledby="captions-font-size-my-player_component_364 captions-font-size-my-player_component_364-75">
+                                        75%
+                                    </option>
+                                    <option id="captions-font-size-my-player_component_364-100" value="1.00"
+                                            aria-labelledby="captions-font-size-my-player_component_364 captions-font-size-my-player_component_364-100">
+                                        100%
+                                    </option>
+                                    <option id="captions-font-size-my-player_component_364-125" value="1.25"
+                                            aria-labelledby="captions-font-size-my-player_component_364 captions-font-size-my-player_component_364-125">
+                                        125%
+                                    </option>
+                                    <option id="captions-font-size-my-player_component_364-150" value="1.50"
+                                            aria-labelledby="captions-font-size-my-player_component_364 captions-font-size-my-player_component_364-150">
+                                        150%
+                                    </option>
+                                    <option id="captions-font-size-my-player_component_364-175" value="1.75"
+                                            aria-labelledby="captions-font-size-my-player_component_364 captions-font-size-my-player_component_364-175">
+                                        175%
+                                    </option>
+                                    <option id="captions-font-size-my-player_component_364-200" value="2.00"
+                                            aria-labelledby="captions-font-size-my-player_component_364 captions-font-size-my-player_component_364-200">
+                                        200%
+                                    </option>
+                                    <option id="captions-font-size-my-player_component_364-300" value="3.00"
+                                            aria-labelledby="captions-font-size-my-player_component_364 captions-font-size-my-player_component_364-300">
+                                        300%
+                                    </option>
+                                    <option id="captions-font-size-my-player_component_364-400" value="4.00"
+                                            aria-labelledby="captions-font-size-my-player_component_364 captions-font-size-my-player_component_364-400">
+                                        400%
+                                    </option>
+                                </select></fieldset>
+                            <fieldset class="vjs-edge-style vjs-track-setting">
+                                <legend id="my-player_component_364" class="">Text Edge Style</legend>
+                                <select aria-labelledby="my-player_component_364">
+                                    <option id="my-player_component_364-None" value="none"
+                                            aria-labelledby="my-player_component_364 my-player_component_364-None">None
+                                    </option>
+                                    <option id="my-player_component_364-Raised" value="raised"
+                                            aria-labelledby="my-player_component_364 my-player_component_364-Raised">
+                                        Raised
+                                    </option>
+                                    <option id="my-player_component_364-Depressed" value="depressed"
+                                            aria-labelledby="my-player_component_364 my-player_component_364-Depressed">
+                                        Depressed
+                                    </option>
+                                    <option id="my-player_component_364-Uniform" value="uniform"
+                                            aria-labelledby="my-player_component_364 my-player_component_364-Uniform">
+                                        Uniform
+                                    </option>
+                                    <option id="my-player_component_364-Dropshadow" value="dropshadow"
+                                            aria-labelledby="my-player_component_364 my-player_component_364-Dropshadow">
+                                        Dropshadow
+                                    </option>
+                                </select></fieldset>
+                            <fieldset class="vjs-font-family vjs-track-setting">
+                                <legend id="captions-font-family-my-player_component_364" class="">Font Family</legend>
+                                <select aria-labelledby="captions-font-family-my-player_component_364">
+                                    <option id="captions-font-family-my-player_component_364-ProportionalSansSerif"
+                                            value="proportionalSansSerif"
+                                            aria-labelledby="captions-font-family-my-player_component_364 captions-font-family-my-player_component_364-ProportionalSansSerif">
+                                        Proportional Sans-Serif
+                                    </option>
+                                    <option id="captions-font-family-my-player_component_364-MonospaceSansSerif"
+                                            value="monospaceSansSerif"
+                                            aria-labelledby="captions-font-family-my-player_component_364 captions-font-family-my-player_component_364-MonospaceSansSerif">
+                                        Monospace Sans-Serif
+                                    </option>
+                                    <option id="captions-font-family-my-player_component_364-ProportionalSerif"
+                                            value="proportionalSerif"
+                                            aria-labelledby="captions-font-family-my-player_component_364 captions-font-family-my-player_component_364-ProportionalSerif">
+                                        Proportional Serif
+                                    </option>
+                                    <option id="captions-font-family-my-player_component_364-MonospaceSerif"
+                                            value="monospaceSerif"
+                                            aria-labelledby="captions-font-family-my-player_component_364 captions-font-family-my-player_component_364-MonospaceSerif">
+                                        Monospace Serif
+                                    </option>
+                                    <option id="captions-font-family-my-player_component_364-Casual" value="casual"
+                                            aria-labelledby="captions-font-family-my-player_component_364 captions-font-family-my-player_component_364-Casual">
+                                        Casual
+                                    </option>
+                                    <option id="captions-font-family-my-player_component_364-Script" value="script"
+                                            aria-labelledby="captions-font-family-my-player_component_364 captions-font-family-my-player_component_364-Script">
+                                        Script
+                                    </option>
+                                    <option id="captions-font-family-my-player_component_364-SmallCaps"
+                                            value="small-caps"
+                                            aria-labelledby="captions-font-family-my-player_component_364 captions-font-family-my-player_component_364-SmallCaps">
+                                        Small Caps
+                                    </option>
+                                </select></fieldset>
+                        </div>
+                        <div class="vjs-track-settings-controls">
+                            <button class="vjs-default-button" title="restore all settings to the default values">
+                                Reset<span class="vjs-control-text"> restore all settings to the default values</span>
+                            </button>
+                            <button class="vjs-done-button">Done</button>
+                        </div>
+                    </div>
+                    <button class="vjs-close-button vjs-control vjs-button" type="button" aria-disabled="false"
+                            title="Close Modal Dialog"><span aria-hidden="true"
+                                                             class="vjs-icon-placeholder"></span><span
+                            class="vjs-control-text" aria-live="polite">Close Modal Dialog</span></button>
+                    <p class="vjs-control-text">End of dialog window.</p></div>
+            </div>
+            <a href="https://lp.vipjr.com/landingpage/faq/teacherq/index.html#"><i class="icon-close---3pIJn"></i></a>
+        </div>
+        <div class="section-share---2w3ZR" style="display: none;">
+            <div class="fixed-placeholder---3clD5"></div>
+            <div class="fixed-content---2gV2G">
+                <button type="button">介绍给好友</button>
+            </div>
+        </div>
+        <div class="share-float---3d_6g"><img class="share-tip---1dswD"
+                                              src="images/4a56b4a35c1296de82e1a3c0a00243ec.png"></div>
+        <div class="popup_wrap js-popup">
+            <div class="popup-tip"><p>提示</p>
+                <div class="confirm">
+                    <div class="tips"> 亲爱的学员，您已经领取过体验课，请把机会留给其他人哦~如有疑问，请联系24小时人工客服4009-30-30-30。</div>
+                    <div class="ok js-confirm">确定</div>
+                </div>
+            </div>
+        </div>
+        <div class="_a4af74cf-fbc1-46c4-964c-8ae5168023a0">
+            <div class="_fd689cf3-03c9-46eb-87cf-5ff6d080923e">
+                <div id="lp-footer">
+                    <div class="lp-footer lp-vipjr-footer">
+                        <div class="_copyright">
+                            vipjr.com 版权所有 (2008- 2018) 翻印必究
+                            <span style="display: block">© 无锡信成网络科技有限公司 苏ICP备 16004147号-1</span>
+                            <span class="_privicy">  |  <a>隐私保护</a>  <a>安全条款</a>  <a>服务条款</a>  |  京ICP备11004351号</span>
+                            <span class="_support"><span class="_icon">&nbsp;|&nbsp;</span>本官网内所有数据均由麦奇教育集团提供</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/vform.js"></script>
+<script src="js/video.js"></script>
+<script src="js/video.ext.min.js"></script>
+<script type="text/javascript" src="js/index.entry.js"></script>
+
+<script src="js/wap-home.js"></script>
+</body>
+</html>

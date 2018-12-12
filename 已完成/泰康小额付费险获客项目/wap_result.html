@@ -1,0 +1,95 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <link rel="stylesheet" href="css/wap-result.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/wap-common.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <!-- 结果页头部-->
+    <div class="header">
+        <div class="header-logo"><img src="images/wap-result-logo.png"></div>
+        <div class="header-right-logo"><img src="images/wap-result-right-logo.png"></div>
+        <div class="header-success">支付成功！</div>
+    </div>
+    <!-- 产品计划 -->
+    <div class="product-plan">
+        <div class="product-title">泰康出行保保险产品计划</div>
+        <div class="product-content-info">
+            <div class="info-detail">保单号：12345667875</div>
+            <div class="info-detail">生效日期：2018-07-13  00:00:00</div>
+            <div class="info-detail">失效日期：2018-07-20  23:59:59</div>
+        </div>
+    </div>
+    <!-- 表格主体 -->
+    <div class="table-container wrap">
+        <div class="table-content">
+            <div class="table-box">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>保障内容</th>
+                        <th>保额</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>乘坐飞机意外</td>
+                        <td>50万</td>
+                    </tr>
+                    <tr>
+                        <td>乘坐火车意外</td>
+                        <td>20万</td>
+                    </tr>
+                    <tr>
+                        <td>驾驶私家车意外</td>
+                        <td>10万</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- 被/投保人 -->
+    <div class="person-box">
+        <div class="person-box-title">
+            <span>投/被保人</span>
+            <span>张三</span>
+        </div>
+        <div class="person-box-info">
+            <div class="detail-info">手机号码：138****1556</div>
+            <div class="detail-info">身份证号：110************548</div>
+        </div>
+    </div>
+    <!-- 返回首页 -->
+    <a href="javascript:;" class="return-index">返回首页</a>
+</body>
+</html>

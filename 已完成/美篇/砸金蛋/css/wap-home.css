@@ -1,0 +1,745 @@
+*{padding:0; margin:0; font-family:arial,"\5FAE\8F6F\96C5\9ED1",sans-serif; }
+body{
+    background: #fff070;
+}
+a {
+    text-decoration: none;
+}
+input{
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+}
+input[type='button']{
+    -webkit-appearance: none;
+}
+input, label, a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type="checkbox"],
+input[type="radio"]{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+input:-webkit-autofill{
+    background-color: #ffffff;
+}
+.form-box .input-box input::-webkit-input-placeholder {
+    color: #acacac;
+}
+input::-moz-placeholder {
+    color: #acacac;
+}
+input:-ms-input-placeholder {
+    color: #acacac;
+}
+.clx:after{
+    clear:both;
+    content:'';
+    width:0;
+    height:0;
+    display:block;
+    visibility:hidden;
+}
+.float-left{
+    float: left;
+}
+.hide{
+    display: none;
+}
+.err_popo {
+    position: fixed;
+    z-index: 2000;
+    top: 40%;
+    left: 10%;
+    width: 80%
+}
+.err_popo span {
+    display: block;
+    padding: .22rem 0.02rem;
+    font-size: .22rem;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    text-align: center
+}
+.wrap {
+    width: 7.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+/* 头部开始 */
+.header {
+    height: 2.96rem;
+    background: url("../images/wap-home-banner.jpg") center no-repeat;
+    background-size: 100%;
+}
+.header .header-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.32rem;
+    height: 1.32rem;
+    background: url("../images/header-corner.png") center no-repeat;
+    background-size: 100%;
+}
+.header .rules-box-button {
+    position: absolute;
+    top: .24rem;
+    left: .12rem;
+    width: 1.07rem;
+    height: .4rem;
+    line-height: .4rem;
+    font-size: .28rem;
+    color: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+.header .rules-box-button .rules-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+}
+.header .rules-button-content:before {
+    position: absolute;
+    top: .07rem;
+    left: .08rem;
+    width: .26rem;
+    height: .26rem;
+    background: url("../images/icon-rules.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.header .rules-button-content {
+    position: absolute;
+    padding-left: .4rem;
+}
+.header .chance-box {
+    position: absolute;
+    left: 50%;
+    bottom: .07rem;
+    width: 2.84rem;
+    height: .38rem;
+    margin-left: -1.43rem;
+    line-height: .38rem;
+    border-radius: .5rem;
+    font-size: .24rem;
+    color: #fff;
+    text-align: center;
+    background: #07647a;
+}
+/* 活动区域 */
+.activity-container {
+    width: 6.28rem;
+    margin: 0 auto;
+}
+.egg-content {
+    margin-bottom: .4rem;
+}
+.egg-content:last-child {
+    margin-bottom: 0;
+}
+.egg-item {
+    position: relative;
+    float: left;
+    margin-right: .9rem;
+}
+.egg-item:nth-child(3n) {
+    margin-right: 0;
+}
+.egg-item:after {
+    position: absolute;
+    left: -.05rem;
+    bottom: -.12rem;
+    width: 1.56rem;
+    height: .36rem;
+    background: url("../images/egg-shadow.jpg") center no-repeat;
+    background-size: 100%;
+    content: '';
+    z-index: -1;
+}
+.egg-item .egg {
+    position: relative;
+    width: 1.48rem;
+    height: 1.7rem;
+    background: url("../images/egg.png") center no-repeat;
+    background-size: 100%;
+}
+.egg-item .egg-smashing {
+    position: relative;
+    width: 1.48rem;
+    height: 1.7rem;
+    background: url("../images/egg-smashing.png") center no-repeat;
+    background-size: 100%;
+}
+.active .egg-smashing-finished {
+    position: relative;
+    width: 1.48rem;
+    height: 1.7rem;
+    background: url("../images/egg-finished.png") center no-repeat;
+    background-size: 100%;
+}
+/* 奖品区域 */
+.prize-container {
+    width: 7.1rem;
+    height: 3.36rem;
+    background: #ffb62a;
+    margin-top: .4rem;
+    padding: .26rem .2rem .5rem;
+}
+.prize-container:before {
+    position: absolute;
+    top: .05rem;
+    left: 0;
+    width: 1.18rem;
+    height: 1.06rem;
+    background: url("../images/prize-icon.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+    z-index: 8;
+}
+.prize-content {
+    width: 100%;
+    overflow-x: scroll;
+    display: -webkit-box;
+    padding-bottom: .26rem;
+}
+.prize-box {
+    width: 1.81rem;
+    text-align: center;
+    color: #fff;
+    font-size: .26rem;
+    margin-right: .48rem;
+}
+.prize-item {
+    position: relative;
+    width: 1.61rem;
+    height: 1.64rem;
+    background: #fff;
+    border: .1rem solid #995806;
+}
+.prize-desc {
+    margin-top: .26rem;
+}
+.prize-item:before {
+    position: absolute;
+    top: .18rem;
+    left: .24rem;
+    width: 1.12rem;
+    height: 1.26rem;
+    content: '';
+}
+.redpacket-200:before {
+    background: url("../images/redpacket-200.png") center no-repeat;
+    background-size: 100%;
+}
+.redpacket-100:before {
+    background: url("../images/redpacket-100.png") center no-repeat;
+    background-size: 100%;
+}
+.redpacket-66:before {
+    background: url("../images/redpacket-66.png") center no-repeat;
+    background-size: 100%;
+}
+/* 金蛋边上的锤子 */
+.tool {
+    position: absolute;
+    top: -.4rem;
+    right: -.5rem;
+    width: 1.1rem;
+    height: 1.4rem;
+    background: url(../images/hammer.png) center no-repeat;
+    background-size: 100%;
+    display: none;
+}
+/* 金蛋 摇晃 */
+.egg-content .egg-item .egg.swing {
+    -webkit-animation: eggSwing .6s;
+    -moz-animation: eggSwing .6s;
+    -o-animation: eggSwing .6s;
+    animation: eggSwing .6s;
+}
+.egg-content .egg-item .egg.swing:before {
+    position: absolute;
+    top: 0;
+    right: -.48rem;
+    width: .86rem;
+    height: .49rem;
+    background: url("../images/egg-tip.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+@-webkit-keyframes eggSwing {
+
+    12.5%,62.5% {
+        -webkit-transform: rotate(-15deg);
+        transform: rotate(-15deg);
+    }
+    0%, 25%,50%,75%,100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    37.5%,62.5%,87.5% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+
+}
+@-moz-keyframes eggSwing {
+
+    12.5%,62.5% {
+        -moz-transform: rotate(-15deg);
+        transform: rotate(-15deg);
+    }
+    0%, 25%,50%,75%,100% {
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    37.5%,62.5%,87.5% {
+        -moz-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+
+}
+@-o-keyframes eggSwing {
+
+    12.5%,62.5% {
+        -o-transform: rotate(-15deg);
+        transform: rotate(-15deg);
+    }
+    0%, 25%,50%,75%,100% {
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    37.5%,62.5%,87.5% {
+        -o-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+
+}
+@keyframes eggSwing {
+
+    12.5%,62.5% {
+        -webkit-transform: rotate(-15deg);
+        -moz-transform: rotate(-15deg);
+        -o-transform: rotate(-15deg);
+        transform: rotate(-15deg);
+    }
+    0%, 25%,50%,75%,100% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    37.5%,62.5%,87.5% {
+        -webkit-transform: rotate(15deg);
+        -moz-transform: rotate(15deg);
+        -o-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+
+}
+/* 锤子摇晃 */
+.tool {
+    -webkit-animation: toolSwing .5s ease-in forwards;
+    -moz-animation: toolSwing .5s ease-in forwards;
+    -o-animation: toolSwing .5s ease-in forwards;
+    animation: toolSwing .5s ease-in forwards;
+}
+@-webkit-keyframes toolSwing {
+    0% {
+        -webkit-transform: rotate(40deg);
+        transform: rotate(40deg)
+    }
+
+    20% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg)
+    }
+
+    40% {
+        -webkit-transform: rotate(40deg);
+        transform: rotate(40deg)
+    }
+
+    to {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg)
+    }
+
+}
+@-moz-keyframes toolSwing {
+    0% {
+        -moz-transform: rotate(40deg);
+        transform: rotate(40deg)
+    }
+
+    20% {
+        -moz-transform: rotate(10deg);
+        transform: rotate(10deg)
+    }
+
+    40% {
+        -moz-transform: rotate(40deg);
+        transform: rotate(40deg)
+    }
+
+    to {
+        -moz-transform: rotate(10deg);
+        transform: rotate(10deg)
+    }
+
+}
+@-o-keyframes toolSwing {
+    0% {
+        -o-transform: rotate(40deg);
+        transform: rotate(40deg)
+    }
+
+    20% {
+        -o-transform: rotate(10deg);
+        transform: rotate(10deg)
+    }
+
+    40% {
+        -o-transform: rotate(40deg);
+        transform: rotate(40deg)
+    }
+
+    to {
+        -o-transform: rotate(10deg);
+        transform: rotate(10deg)
+    }
+
+}
+@keyframes toolSwing {
+    0% {
+        -webkit-transform: rotate(40deg);
+        -moz-transform: rotate(40deg);
+        -o-transform: rotate(40deg);
+        transform: rotate(40deg)
+    }
+
+    20% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        transform: rotate(10deg)
+    }
+
+    40% {
+        -webkit-transform: rotate(40deg);
+        -moz-transform: rotate(40deg);
+        -o-transform: rotate(40deg);
+        transform: rotate(40deg)
+    }
+
+    to {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        transform: rotate(10deg)
+    }
+
+}
+
+/* 红包样式 */
+.redpacket {
+    position: fixed;
+    top: 1.72rem;
+    left: .5rem;
+    width: 6.65rem;
+    height: 8.93rem;
+    background: url("../images/redpacket-bg.png") center no-repeat;
+    background-size: 100%;
+    z-index: 12;
+    overflow: hidden;
+    display: none;
+}
+.redpacket:before {
+    position: absolute;
+    top: 0;
+    left: .84rem;
+    width: 5.23rem;
+    height: 4.76rem;
+    background: url("../images/flashlight.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+    z-index: 11;
+    overflow: hidden;
+    animation: light-rotate 8s linear infinite;
+}
+.redpacket-close {
+    position: absolute;
+    top: .58rem;
+    right: .14rem;
+    width: .5rem;
+    height: .5rem;
+    background: url("../images/redpacket-close.png") center no-repeat;
+    background-size: 100%;
+    z-index: 15;
+}
+.redpacket-close a,
+.redpacket-close a img{
+    width: 100%;
+    display: inline-block;
+}
+@keyframes light-rotate {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+
+    }
+}
+.content-header {
+    position: absolute;
+    top: .56rem;
+    left: 50%;
+    width: 2.78rem;
+    height: 1.02rem;
+    margin-left: -1.39rem;
+    background: url('../images/gift-card-head.png?v=1.0.0') center no-repeat;
+    background-size: 100%;
+    z-index: 13;
+}
+.move-to-top {
+    animation: move-to-top .5s linear;
+}
+@keyframes move-to-top {
+    from {
+        top: 4.3rem;
+    }
+    to {
+        top: .56rem;
+    }
+}
+.content-detail {
+    position: absolute;
+    top: 1.52rem;
+    left: 50%;
+    width: 5.32rem;
+    height: 5.3rem;
+    margin-left: -2.66rem;
+    background: url("../images/gift-card-bg.png") center no-repeat;
+    background-size: 100%;
+    z-index: 13;
+    font-size: 0;
+    border-radius: .1rem;
+}
+body .delay300 {
+    animation-delay: .3s;
+}
+.move-to-top-detail {
+    animation: move-to-top-detail .5s linear;
+}
+@keyframes move-to-top-detail {
+    from {
+        top: 5.3rem;
+    }
+    to {
+        top: 1.52rem;
+    }
+}
+.redpacket-bottom {
+    position: absolute;
+    left: .13rem;
+    bottom: 0;
+    width: 6.52rem;
+    height: 2.67rem;
+    background: url("../images/redpacket-bottom.png") center no-repeat;
+    background-size: 100%;
+    z-index: 14;
+}
+.redpacket-button {
+    position: absolute;
+    bottom: -.1rem;
+    left: 50%;
+    width: 2.48rem;
+    height: 2.48rem;
+    margin-left: -1.24rem;
+    background: url("../images/redpacket-button.png") center no-repeat;
+    background-size: 100%;
+    z-index: 14;
+}
+.redpacket-button span {
+    position: absolute;
+    top: .5rem;
+    left: .74rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: .5rem;
+    color: #d51f00;
+    display: inline-block;
+    font-weight: bold;
+}
+.gift-img {
+    width: 5.12rem;
+    height: 3.1rem;
+    margin: .1rem;
+}
+.gift-img img,
+.gift-img a{
+    width: 5.12rem;
+    height: 3.1rem;
+    display: inline-table;
+}
+.gift-info-title {
+    color: #d51f00;
+    font-size: .4rem;
+    margin: .14rem 0;
+    text-align: center;
+}
+.gift-info-desc {
+    text-align: center;
+}
+.gift-info-desc span {
+    display: inline-block;
+    color: #fffc50;
+    font-size: .28rem;
+    padding: .14rem .34rem;
+    background: #e4331c;
+    border-radius: .1rem;
+}
+/* 活动规则 */
+.rules-box {
+    position: absolute;
+    top: 1.4rem;
+    left: 50%;
+    width: 6.78rem;
+    height: 8.9rem;
+    margin-left: -3.39rem;
+    background: url("../images/rules-bg.png") center no-repeat;
+    background-size: 100%;
+    z-index: 14;
+    display: none;
+}
+.rules-close {
+    position: absolute;
+    left: 2.76rem;
+    bottom: 0;
+    width: 1.35rem;
+    height: 1.35rem;
+}
+.rules-close a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.rules-box-content {
+    position: absolute;
+    top: 1.85rem;
+    left: 1.18rem;
+    width: 4.5rem;
+    height: 5.4rem;
+    overflow: auto;
+}
+.rules-box-content .rules-content-title {
+    font-size: .32rem;
+    color: #fff;
+    margin-bottom: .24rem;
+    text-align: center;
+}
+.rules-box-content .rules-detail {
+    font-size: .28rem;
+    color: #fff;
+}
+.detail-item {
+    margin-bottom: .12rem;
+}
+/* 点击红包关闭按钮去右上角 */
+.close-resizeBig{
+    animation: closeResizeBig .6s ease-in forwards;
+}
+@keyframes closeResizeBig {
+    0%{
+        transform: scale(1);
+        top: 1.72rem;
+        left: .5rem;
+    }
+    100%{
+        transform: scale(0);
+        top: -4.8rem;
+        left: 4.2rem;
+    }
+}
+/* 展示其他活动弹窗 */
+.show-other-activity {
+    position: absolute;
+    top: 1.55rem;
+    left: 50%;
+    width: 6.9rem;
+    height: 9rem;
+    margin-left: -3.45rem;
+    background: url("../images/show-activity-bg.png") center no-repeat;
+    background-size: 100%;
+    z-index: 11;
+    display: none;
+}
+.other-activity-close {
+    position: absolute;
+    top: -.42rem;
+    left: 50%;
+    width: .5rem;
+    height: .5rem;
+    margin-left: -.25rem;
+    background: url("../images/show-actitity-close.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.show-other-activity .activity-item {
+    position: absolute;
+    left: 50%;
+    width: 6.6rem;
+    height: 2.9rem;
+    margin-left: -3.3rem;
+    font-size: 0;
+}
+.show-other-activity .activity-item a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.show-other-activity .activity-item a:after {
+    position: absolute;
+    left: 50%;
+    bottom: -.44rem;
+    width: 3.02rem;
+    height: .9rem;
+    margin-left: -1.51rem;
+    background: url("../images/show-activity-button.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.show-other-activity .activity-item:first-child {
+    top: 1.9rem;
+}
+.show-other-activity .activity-item:last-child {
+    bottom: .7rem;
+}
+.show-other-activity .activity-item img {
+    width: 100%;
+}
+/* 遮罩层 */
+.mask {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    filter:Alpha(opacity=50);
+    z-index: 10;
+    display: none;
+}

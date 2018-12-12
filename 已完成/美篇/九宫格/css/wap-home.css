@@ -1,0 +1,442 @@
+*{padding:0; margin:0; font-family:arial,"\5FAE\8F6F\96C5\9ED1",sans-serif; }
+body {
+    background: #f87c29;
+}
+a {
+    text-decoration: none;
+}
+input{
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+}
+input[type='button']{
+    -webkit-appearance: none;
+}
+input, label, a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type="checkbox"],
+input[type="radio"]{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+input:-webkit-autofill{
+    background-color: #ffffff;
+}
+.form-box .input-box input::-webkit-input-placeholder {
+    color: #acacac;
+}
+input::-moz-placeholder {
+    color: #acacac;
+}
+input:-ms-input-placeholder {
+    color: #acacac;
+}
+.clx:after{
+    clear:both;
+    content:'';
+    width:0;
+    height:0;
+    display:block;
+    visibility:hidden;
+}
+.float-left{
+    float: left;
+}
+.hide{
+    display: none;
+}
+.err_popo {
+    position: fixed;
+    z-index: 2000;
+    top: 40%;
+    left: 10%;
+    width: 80%
+}
+.err_popo span {
+    display: block;
+    padding: .22rem 0.02rem;
+    font-size: .22rem;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    text-align: center
+}
+.wrap {
+    width: 7.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+/* 头部开始 */
+.header {
+    height: 3.9rem;
+    background: url("../images/wap-home-banner.png") center no-repeat;
+    background-size: 100%;
+}
+.header .chance-box {
+    position: absolute;
+    top: 2.7rem;
+    left: 50%;
+    width: 2.96rem;
+    height: .6rem;
+    margin-left: -1.43rem;
+    line-height: .6rem;
+    border: .02rem solid #ff433f;
+    border-radius: .5rem;
+    font-size: .28rem;
+    color: #ff433f;
+    text-align: center;
+}
+.header .custom-service {
+    position: absolute;
+    left: .47rem;
+    bottom: .36rem;
+    width: .6rem;
+    height: .6rem;
+    background: url("../images/icon-custom.png") center no-repeat;
+    background-size: 100%;
+}
+.header .rules-box-button {
+    position: absolute;
+    top: 0;
+    left: .24rem;
+    width: .72rem;
+    height: .82rem;
+    color: #fff;
+    border-bottom-left-radius: .4rem;
+    border-bottom-right-radius: .4rem;
+    overflow: hidden;
+    text-align: center;
+    font-size: 0;
+}
+.header .rules-box-button .rules-bg,
+.header .prize-box-button .rules-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+}
+.header .rules-box-button:after,
+.header .prize-box-button:after{
+    position: absolute;
+    bottom: .17rem;
+    left: .24rem;
+    width: .2rem;
+    height: .2rem;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    transform: rotate(45deg);
+    content: '';
+}
+.header .rules-button-content,
+.header .prize-button-content{
+    position: absolute;
+    top: .1rem;
+    left: 0;
+    width: 100%;
+    font-size: .24rem;
+}
+/* 我的奖品 */
+.header .prize-box-button {
+    position: absolute;
+    top: 0;
+    right: .24rem;
+    width: .72rem;
+    height: .82rem;
+    color: #fff;
+    border-bottom-left-radius: .4rem;
+    border-bottom-right-radius: .4rem;
+    overflow: hidden;
+    text-align: center;
+    font-size: 0;
+}
+/* 活动主体 */
+.activity-container {
+    position: relative;
+    height: 7.7rem;
+    background: linear-gradient(to bottom, #ff3b58 , #f67b27);
+}
+.activity-content {
+    width: 6.96rem;
+    height: 100%;
+    margin-left: .242rem;
+    background: url("../images/index-bg.png") top repeat-y;
+    background-size: 100%;
+}
+.activity-content:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 6.96rem;
+    height: 1.04rem;
+    margin-left: .242rem;
+    background: url("../images/index-bottom-bg.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.sudoku-container {
+    position: relative;
+    width: 6.8rem;
+    height: 6.8rem;
+    background: #ff4131;
+    margin: 0 auto;
+    z-index: 6;
+    border-radius: .2rem;
+}
+.sudoku-content {
+    position: absolute;
+    top: .24rem;
+    left: .24rem;
+    width: 6.34rem;
+    height: 6.34rem;
+    background: #bb0000;
+    z-index: 7;
+    border-radius: .2rem;
+    font-size: 0;
+}
+.sudoku-light:before {
+    position: absolute;
+    top: -.08rem;
+    left: -.08rem;
+    width: 6.44rem;
+    height: 6.44rem;
+    background: url(../images/light-bg-1.png) center no-repeat;
+    background-size: 100%;
+    content: '';
+    z-index: 8;
+}
+.sudoku-light-2 {
+    position: absolute;
+    top: -.08rem;
+    left: -.08rem;
+    width: 6.44rem;
+    height: 6.44rem;
+    background: url(../images/light-bg-2.png) center no-repeat;
+    background-size: 100%;
+    content: '';
+    z-index: 7;
+}
+.sudoku-table {
+    position: absolute;
+    top: .33rem;
+    left: .33rem;
+    width: 5.66rem;
+    height: 5.66rem;
+    overflow: hidden;
+    border-radius: .2rem;
+    background: #ffe406;
+    z-index: 9;
+}
+.sudoku-table table {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-collapse:collapse;
+    text-align: center;
+}
+.sudoku-table table tr td {
+    width: 33.3%;
+}
+.sudoku-table table tr td.active {
+    background: #fea508;
+}
+.td-bg {
+    background: #fff6c7;
+}
+.td-button {
+    position: relative;
+    background: #c00000;
+}
+.prize-redpacket img{
+    width: .71rem;
+    height: .93rem;
+}
+.prize-box img {
+    width: 1.08rem;
+    height: 1.08rem;
+}
+.prize-face img {
+    width: 1.06rem;
+    height: 1.06rem;
+}
+.prize-lucky img {
+    width: .92rem;
+    height: .94rem;
+}
+.activity-button {
+    position: absolute;
+    top: .02rem;
+    left: .13rem;
+    width: 1.63rem;
+    height: 1.78rem;
+    margin: 0 auto;
+    background: url(../images/activity-button.png) center no-repeat;
+    background-size: 100%;
+    z-index: 9;
+}
+.activity-button:before {
+    position: absolute;
+    right: .35rem;
+    bottom: .67rem;
+    width: .57rem;
+    height: .53rem;
+    background: url("../images/dot.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+    animation: scale-dot 1s ease-in-out infinite;
+    -webkit-animation: scale-dot 1s ease-in-out infinite;
+    -o-animation: scale-dot 1s ease-in-out infinite;
+    -moz-animation: scale-dot 1s ease-in-out infinite;
+    -ms-animation: scale-dot 1s ease-in-out infinite;
+}
+@keyframes scale-dot {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes scale-dot {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@-moz-keyframes scale-dot {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@-o-keyframes scale-dot {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@-ms-keyframes scale-dot {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* 手指 */
+.activity-finger {
+    position: absolute;
+    top: .7rem;
+    right: -1rem;
+    width: 1.86rem;
+    height: 2.17rem;
+    background: url(../images/finger.png) center no-repeat;
+    background-size: 100%;
+    z-index: 9;
+}
+/*手机点击效果动画*/
+.click{
+    animation: click 1s linear infinite;
+    -webkit-animation: click 1s linear infinite;
+    -o-animation: click 1s linear infinite;
+    -moz-animation: click 1s linear infinite;
+    -ms-animation: click 1s linear infinite;
+}
+@keyframes click {
+    0%{
+        transform: skewY(0deg);
+    }
+    50% {
+        transform: skewY(-10deg);
+    }
+    100%{
+        transform: skewY(0deg);
+
+    }
+}
+@-o-keyframes click {
+    0%{
+        transform: skewY(0deg);
+    }
+    50% {
+        transform: skewY(-10deg);
+    }
+    100%{
+        transform: skewY(0deg);
+
+    }
+}
+@-moz-keyframes click {
+    0%{
+        transform: skewY(0deg);
+    }
+    50% {
+        transform: skewY(-10deg);
+    }
+    100%{
+        transform: skewY(0deg);
+
+    }
+}
+@-ms-keyframes click {
+    0%{
+        transform: skewY(0deg);
+    }
+    50% {
+        transform: skewY(-10deg);
+    }
+    100%{
+        transform: skewY(0deg);
+
+    }
+}
+@-webkit-keyframes click {
+    0%{
+        transform: skewY(0deg);
+    }
+    50% {
+        transform: skewY(-10deg);
+    }
+    100%{
+        transform: skewY(0deg);
+
+    }
+}
+/* 页底 */
+.footer {
+    padding: .1rem 0;
+    font-size: .24rem;
+    color: #000000;
+    background: #fde245;
+    text-align: center;
+}

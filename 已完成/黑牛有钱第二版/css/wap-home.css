@@ -1,0 +1,502 @@
+*{padding:0; margin:0; font-family:arial,"\5FAE\8F6F\96C5\9ED1",sans-serif; }
+body{
+    background: #fff;
+}
+a {
+    text-decoration: none;
+}
+input{
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+    background: none;
+}
+input[type='button']{
+    -webkit-appearance: none;
+}
+input, label, a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type="checkbox"],
+input[type="radio"]{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+input:-webkit-autofill{
+    background-color: #ffffff;
+}
+.form-box .input-box input::-webkit-input-placeholder {
+    color: #c7c7c7;
+}
+input::-moz-placeholder {
+    color: #c7c7c7;
+}
+input:-ms-input-placeholder {
+    color: #c7c7c7;
+}
+.clx:after{
+    clear:both;
+    content:'';
+    width:0;
+    height:0;
+    display:block;
+    visibility:hidden;
+}
+.float-left{
+    float: left;
+}
+.hide{
+    display: none;
+}
+.err_popo {
+    position: fixed;
+    z-index: 2000;
+    top: 40%;
+    left: 10%;
+    width: 80%
+}
+.err_popo span {
+    display: block;
+    padding: .22rem 0.02rem;
+    font-size: .22rem;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    text-align: center
+}
+.wrap {
+    position: relative;
+    width: 7.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/* 头部 */
+.header {
+    height: 4.86rem;
+    background: url("../images/wap-home-banner.png") center no-repeat;
+    background-size: 100%;
+}
+.header-title {
+    position: absolute;
+    top: .64rem;
+    left: .66rem;
+    font-size: .84rem;
+    color: #fff;
+    font-weight: bold;
+}
+.header-title .header-title-tip {
+    font-size: .41rem;
+}
+.header-title .header-title-tip span {
+    font-weight: normal;
+    font-size: .24rem;
+}
+.header .header-desc {
+    font-size: .26rem;
+    color: #fff;
+}
+.header .header-desc p {
+    letter-spacing: 1px;
+}
+.header .header-desc span {
+    font-size: .36rem;
+}
+.header .header-desc .first-desc {
+    position: absolute;
+    left: .28rem;
+    bottom: .18rem;
+    transform: rotate(-5deg);
+}
+.header .header-desc .second-desc {
+    position: absolute;
+    left: 2.42rem;
+    bottom: .35rem;
+}
+.header .header-desc .third-desc {
+    position: absolute;
+    right: .3rem;
+    bottom: .19rem;
+    transform: rotate(5deg);
+}
+/* 表单主体 */
+.form-content {
+    width: 6.7rem;
+    margin: .34rem auto .4rem;
+    font-size: 0;
+}
+.form-box .input-box {
+    border: 1px solid #ff6d70;
+    border-radius: 4px;
+    margin-bottom: .3rem;
+    padding: .24rem .32rem;
+}
+.form-box .input-box .left-box {
+    float: left;
+}
+.money-box .left-box em {
+    width: .32rem;
+    height: .32rem;
+    background: url("../images/wap-form-icon-money.png") center no-repeat;
+    background-size: 100%;
+    display: block;
+}
+.mobile-box .left-box em {
+    width: .26rem;
+    height: .37rem;
+    background: url("../images/wap-form-icon-mobile.png") center no-repeat;
+    background-size: 100%;
+    display: block;
+}
+.name-box .left-box em {
+    width: .32rem;
+    height: .37rem;
+    background: url("../images/wap-form-icon-name.png") center no-repeat;
+    background-size: 100%;
+    display: block;
+}
+.age-box .left-box em {
+    width: .32rem;
+    height: .32rem;
+    background: url("../images/wap-form-icon-age.png") center no-repeat;
+    background-size: 100%;
+    display: block;
+}
+.form-box .input-box .input-text {
+    width: 5rem;
+    margin-left: .3rem;
+    font-size: .28rem;
+}
+.form-box .money-box .input-text,
+.form-box .age-box .input-text {
+    height: .32rem;
+    line-height: .32rem;
+}
+.form-box .mobile-box .input-text,
+.form-box .name-box .input-text {
+    height: .37rem;
+    line-height: .37rem;
+}
+.form-box .name-box {
+    width: 3.91rem;
+}
+.form-box .name-box  .input-text {
+    width: 3rem;
+}
+
+/* 性别选项 */
+.name-sex-box,
+.age-card-box {
+    position: relative;
+}
+.form-box .sex-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.95rem;
+    height: .88rem;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.form-box .sex-box input[type="radio"] {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+.form-box .sex-box label {
+    display: inline-block;
+    width: .97rem;
+    height: .88rem;
+    line-height: .88rem;
+    font-size: 0.28rem;
+    color: #2f8898;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #2f8898;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-box .sex-box label:last-child {
+    border-left: none;
+}
+.form-box .sex-box input:checked + label {
+    color: #fff;
+    background: #2f8898;
+}
+/* 信用卡选项 */
+.age-card-box .credit-card-box {
+    width: 3.1rem;
+}
+.age-card-box .age-box {
+    width: 2.76rem;
+}
+.age-card-box .age-box .input-text {
+    width: 2.1rem;
+}
+.form-box .credit-card-box label {
+    width: 1.54rem;
+}
+.form-submit {
+    position: relative;
+    width: 6.7rem;
+    height: .88rem;
+    display: inline-table;
+    line-height: .88rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: .32rem;
+    background: #ff6d70;
+    border-radius: 4px;
+    margin-bottom: .48rem;
+}
+/* 福利选项 */
+.form-welfare-box {
+    position: relative;
+    width: 6.1rem;
+    padding: .2rem .3rem;
+    color: #ff6d70;
+    font-size: .26rem;
+    background: linear-gradient(to bottom , #f3fafd , #9ed6e1);
+}
+.form-welfare-box:after {
+    position: absolute;
+    top: -.27rem;
+    right: .5rem;
+    width: 1.11rem;
+    height: 1.21rem;
+    background: url("../images/wap-welfare-icon.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.form-box .form-welfare-box label {
+    position: relative;
+    display: inline-block;
+    width: 3.37rem;
+    padding-left: .62rem;
+    line-height: .38rem;
+    text-align: justify;
+}
+.form-box .form-welfare-box label:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1.17rem;
+    height: .32rem;
+    line-height: .34rem;
+    border-radius: .4rem;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(to right ,#ff6e71 , #ff9389);
+    content: '加福利';
+}
+.form-box .form-welfare-box label>em {
+    position: absolute;
+    display: inline-block;
+    top: .2rem;
+    left: 0;
+    width: .32rem;
+    height: .32rem;
+    vertical-align: middle;
+    background: url(../images/form-welfare-nochecked.png) no-repeat;
+    background-size: .32rem;
+}
+.form-box .form-welfare-box input:checked + label>em {
+    background: url(../images/form-welfare-checked.png) no-repeat;
+    background-size: .32rem;
+}
+/* 同意 */
+/*复选框*/
+.form-box .agree-box {
+    width: 6.1rem;
+    margin: .25rem auto 0;
+    font-size: .24rem;
+    color: #656464;
+}
+.form-box .agree-box label {
+    position: relative;
+    display: inline-block;
+    width: 5.5rem;
+    padding-left: .62rem;
+    line-height: .38rem;
+    text-align: justify;
+}
+.form-box .agree-box label>em {
+    position: absolute;
+    display: inline-block;
+    top: .06rem;
+    left: 0;
+    width: .32rem;
+    height: .32rem;
+    vertical-align: middle;
+    background: url(../images/wap-form-nochecked.png) no-repeat;
+    background-size: .32rem;
+}
+.form-box .agree-box input:checked + label>em {
+    background: url(../images/wap-form-checked.png) no-repeat;
+    background-size: .32rem;
+}
+.form-box .agree-box label a{
+    color: #ff6d70;
+    text-decoration: none;
+}
+/* 数量模块 */
+.number-box {
+    width: 5.94rem;
+    border: 1px solid #ff6d70;
+    border-radius: 4px;
+    margin-bottom: .4rem;
+    padding: .5rem .38rem;
+    font-size: .24rem;
+    color: #656464;
+}
+.number-box .item-money-box {
+    width: 2.72rem;
+}
+.number-box .item-money-box .item-left-box em {
+    width: .8rem;
+    height: .8rem;
+    background: url("../images/num-icon-money.png") center no-repeat;
+    background-size: 100%;
+    display: block;
+}
+.item-right-box {
+    margin: .13rem 0 0 1.23rem;
+}
+.number-box .item-box .item-right-box p:first-child {
+    color: #ff6d70;
+}
+.number-box .item-people-box {
+    margin-left: .68rem;
+}
+.number-box .item-people-box .item-left-box em {
+    width: .76rem;
+    height: .8rem;
+    background: url("../images/num-icon-people.png") center no-repeat;
+    background-size: 100%;
+    display: block;
+}
+/* 合作机构 */
+.cooperate-box {
+    width: 5.7rem;
+    border: 1px solid #ff6d70;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: .4rem;
+    padding: .26rem .5rem;
+}
+.cooperate-box-title {
+    position: relative;
+    color: #656464;
+    font-size: .28rem;
+    margin-bottom: .78rem;
+}
+.cooperate-box-title:before {
+    position: absolute;
+    left: .4rem;
+    top: .05rem;
+    width: 1.34rem;
+    height: .2rem;
+    background: url("../images/cooperate-title-arrow.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.cooperate-box-title:after {
+    position: absolute;
+    right: .4rem;
+    top: .05rem;
+    width: 1.34rem;
+    height: .2rem;
+    background: url("../images/cooperate-title-arrow.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+    transform: rotate(180deg);
+}
+.cooperate-box-content {
+    margin-bottom: .5rem;
+}
+.cooperate-box-content:last-child {
+    margin-bottom: 0;
+}
+.cooperate-box-content .cooperate-item:last-child {
+    margin-right: 0;
+}
+.cooperate-item {
+    position: relative;
+    width: 1.2rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    background: #ff6d70;
+    border-radius: 50%;
+    margin-right: 1.03rem;
+}
+.company-pinganpuhui:after {
+    position: absolute;
+    top: .46rem;
+    left: 50%;
+    width: .88rem;
+    height: .28rem;
+    margin-left: -.44rem;
+    background: url("../images/cooperate-company-logo-pinganpuhui.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.company-niwodai:after {
+    position: absolute;
+    top: .46rem;
+    left: 50%;
+    width: .92rem;
+    height: .29rem;
+    margin-left: -.46rem;
+    background: url("../images/cooperate-company-logo-niwodai.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.company-yirendai:after {
+    position: absolute;
+    top: .46rem;
+    left: 50%;
+    width: .82rem;
+    height: .26rem;
+    margin-left: -.41rem;
+    background: url("../images/cooperate-company-logo-yirendai.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.company-paipaidai:after {
+    position: absolute;
+    top: .46rem;
+    left: 50%;
+    width: .8rem;
+    height: .35rem;
+    margin-left: -.4rem;
+    background: url("../images/cooperate-company-logo-paipaidai.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.company-baixingjinrong:after {
+    position: absolute;
+    top: .36rem;
+    left: 50%;
+    width: .6rem;
+    height: .5rem;
+    margin-left: -.3rem;
+    background: url("../images/cooperate-company-logo-baixingjinrong.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.company-hengchang:after {
+    position: absolute;
+    top: .46rem;
+    left: 50%;
+    width: .76rem;
+    height: .3rem;
+    margin-left: -.38rem;
+    background: url("../images/cooperate-company-logo-hengchang.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}

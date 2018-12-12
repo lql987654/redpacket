@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html style="font-size: 50px;">
+<head>
+    <title>{{page_param['title']}}</title>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="{{page_param['keywords']}}">
+    <meta name="description" content="{{page_param['description']}}">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="css/wap-home.css" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 750) {
+                        docEl.style.fontSize = '100px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <!-- 头部-->
+    <div class="header wrap"></div>
+    <!-- 表单主体 -->
+    <div class="content wrap">
+        <div class="form-title"><h3>填写资料领取最高<span>50万</span>元保额出行意外险</h3></div>
+        <div class="form-content">
+            <form class="form-box" id="form-box" method="post">
+
+                <div class="input-box clx">
+                    <div class="left-box">姓名</div>
+                    <div class="right-box"><input type="text" name="name" class="input-text" id="name" placeholder="需要身份证名字一致" /></div>
+                </div>
+
+                <div class="input-box clx">
+                    <div class="left-box">性别</div>
+                    <div class="right-box right-sex">
+                        <div id="sex-box" class="sex-box">
+                            <input id="male" type="radio" value="M" name="sex" class="male-input">
+                            <label class="mr30 male-label" for="male">男</label>
+                            <input id="female" type="radio" value="F" name="sex" class="female-input">
+                            <label for="female" class="female-label">女</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-box clx">
+                    <div class="left-box">年龄</div>
+                    <div class="right-box select-input"><input type="text" name="birth" class="input-text" id="birth" placeholder="限22-49岁用户" readonly /></div>
+                </div>
+                <div class="input-box clx">
+                    <div class="left-box">手机</div>
+                    <div class="right-box"><input type="text" name="mobile" class="input-text" id="mobile" placeholder="请输入您的常用手机号码" /></div>
+                </div>
+                <a href="javascript:;" class="form-submit submit-button" id="form-submit">免费领取</a>
+
+                <div class="agree-box clear">
+                    <input id="agree-button" type="checkbox" checked="" class="input-checked">
+                    <label class="fr" for="agree-button">
+                        我已知晓并许可百年人寿客服通过95542专线致电沟通赠险领取事宜及
+                        <a href="javascript:;" id="activity-user-btn">《服务协议》</a>
+                    </label>
+                </div>
+
+                <div class="form-tip">*郑重承诺：我们将严格遵守信息保密制度</div>
+            </form>
+        </div>
+    </div>
+    <!-- 底部信息 -->
+    <div class="footer wrap">
+        版权所有 © 百年人寿保险股份有限公司 未经许可不得复制、转载或摘编，<span>违者必究!</span>
+    </div>
+</body>
+</html>

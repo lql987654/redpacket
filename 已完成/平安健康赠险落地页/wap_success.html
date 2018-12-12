@@ -1,0 +1,55 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <link rel="stylesheet" href="css/wap_success.css" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="success-icon"></div>
+        <div class="success-title">你已领取过此重疾险！</div>
+        <div class="success-info">
+            <p><a>下载平安健康</a>APP，即可<a>查看保单</a></p>
+            <p>国内首个专注移动健康保障的APP</p>
+            <p>保单查询、极速理赔、一键续保、就医预约</p>
+        </div>
+    </div>
+    <div class="success-content">
+        <p>恭喜已成功获得ofo免费骑行月卡抽奖礼包</p>
+        <p>已成功发放至137****3012的短信中，请前往领取~</p>
+    </div>
+    <div class="success-btn">
+        <a href="#">下载APP查看保单</a>
+    </div>
+    <div class="fixed-footer">
+        <img src="images/adv-img.png">
+    </div>
+</body>
+</html>

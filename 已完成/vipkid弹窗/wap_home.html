@@ -1,0 +1,171 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<style>
+    *{margin:0; padding: 0;}
+    .modal-vipkid-box {
+        position: absolute;
+        top: 2.1rem;
+        left: 50%;
+        width: 5.9rem;
+        margin-left: -3.25rem;
+        padding: .46rem .3rem  .3rem .3rem;
+        background: #fff;
+        border-radius: .1rem;
+    }
+    .modal-vipkid-title:before {
+        position: absolute;
+        top: .06rem;
+        left: 0;
+        width: .32rem;
+        height: .32rem;
+        background: url("images/success-icon.png") center no-repeat;
+        background-size: 100%;
+        content: '';
+    }
+    .modal-vipkid-title {
+        position: relative;
+        width: 4.48rem;
+        margin: 0 auto;
+        padding-left: .44rem;
+        color: #f95f14;
+        font-size: .32rem;
+    }
+    .modal-vipkid-img {
+        position: relative;
+    }
+    .modal-vipkid-img:before {
+        width: 5.9rem;
+        height: 3.7rem;
+        display: block;
+        margin-top: .48rem;
+        background: url("images/vipkid-banner.png") center no-repeat;
+        background-size: 100%;
+        content: '';
+        border-radius: .1rem;
+    }
+    .info-title {
+        position: absolute;
+        top: .22rem;
+        left: .42rem;
+        color: #f95f14;
+    }
+    .info-title-desc {
+        font-size: .35rem;
+        font-weight: bold;
+    }
+    .info-title-tip {
+        font-size: .26rem;
+    }
+    .info-tip {
+        position: absolute;
+        left: .1rem;
+        bottom: .1rem;
+        font-size: .2rem;
+        color: #333333;
+    }
+    .modal-vipkid-button {
+        width: 5.9rem;
+        margin: .46rem auto;
+    }
+    .modal-vipkid-button a {
+        width: 2.8rem;
+        height: .9rem;
+        line-height: .9rem;
+        display: inline-table;
+        font-size: .38rem;
+        text-align: center;
+        border-radius: .1rem;
+        text-decoration: none;
+    }
+    .left-button {
+        color: #999999;
+        background: #e5e5e5;
+    }
+    .right-button {
+        background: #39a82e;
+        color: #fff;
+    }
+    .modal-footer-tip {
+        position: relative;
+        width: 3.6rem;
+        margin: 0 auto;
+        font-size: .28rem;
+        color: #444444;
+        padding-left: .25rem;
+    }
+    .modal-footer-tip:before {
+        position: absolute;
+        top: .08rem;
+        left: 0;
+        width: .15rem;
+        height: .24rem;
+        background: url("images/time-icon.png") center no-repeat;
+        background-size: 100%;
+        content: '';
+    }
+    .modal-close-button {
+        position: absolute;
+        top: -.84rem;
+        right: 0;
+        width: .55rem;
+        height: .55rem;
+    }
+    .modal-close-button a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url("images/vipkid-close.png") center no-repeat;
+        background-size: 100%;
+    }
+</style>
+<body style="background: #cdcdcd">
+    <div class="mask" id="mask"></div>
+    <div class="modal-vipkid-box">
+        <div class="modal-close-button"><a href="javascript:;"></a></div>
+        <div class="modal-vipkid-title">恭喜免费领取价值388元试听课</div>
+        <div class="modal-vipkid-img">
+            <div class="info-title">
+                <p class="info-title-desc">每天25分钟 轻松学英语 </p>
+                <p class="info-title-tip">适合4-12岁儿童 电脑 / iPad上课</p>
+            </div>
+            <div class="info-tip">*客服会主动致电联系您确认领取事宜</div>
+        </div>
+        <div class="modal-vipkid-button">
+            <a class="left-button" href="javascript:;">暂不需要</a>
+            <a class="right-button" href="javascript:;">为子女领取</a>
+        </div>
+        <div class="modal-footer-tip">10秒免费领取更多精彩福利</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <!-- 本页面css -->
+    <link rel="stylesheet" href="css/wap-error.css" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <!-- 标题 -->
+    <div class="header wrap">
+        <h1>提交成功 √</h1>
+        <p>是否承保成功请以保险公司短息为准，谢谢参与！</p>
+    </div>
+    <!-- 红包 -->
+    <div class="redpacket wrap ">
+        <div class="redpacket-box clx">
+            <div class="redpacket-item float-left company-apple"><img src="images/company-icon-apple.png" /></div>
+            <div class="redpacket-item float-right company-didi"><img src="images/company-icon-didi.png" /></div>
+        </div>
+        <div class="plus"></div>
+    </div>
+    <!-- 按钮 -->
+    <a href="javascript:;" class="error-button wrap">抽取iPhoneXs和300元滴滴红包</a>
+    <!-- 福利 -->
+    <div class="welfare-box wrap">
+        <div class="welfare-title"><p>精彩福利</p></div>
+        <div class="welfare-content">
+            <h3>立即去抽取</h3>
+            <p>和<span>300元滴滴红包</span></p>
+            <b>本活动为概率中奖</b>
+        </div>
+    </div>
+</body>
+</html>

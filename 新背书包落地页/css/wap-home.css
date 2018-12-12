@@ -1,0 +1,315 @@
+*{padding:0; margin:0; font-family:arial,"\5FAE\8F6F\96C5\9ED1",sans-serif; }
+html,body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+input{
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+    background: none;
+}
+input[type='button']{
+    -webkit-appearance: none;
+}
+input, label, a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type="checkbox"],
+input[type="radio"]{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+input:-webkit-autofill{
+    background-color: #ffffff;
+}
+.form-box .input-box input::-webkit-input-placeholder {
+    color: #fff;
+}
+input::-moz-placeholder {
+    color: #fff;
+}
+input:-ms-input-placeholder {
+    color: #fff;
+}
+img {
+    border-width: 0;
+    border: none;
+    outline: none;
+}
+.clx:after{
+    clear:both;
+    content:'';
+    width:0;
+    height:0;
+    display:block;
+    visibility:hidden;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+body .hide{
+    display: none;
+}
+.err_popo {
+    position: fixed;
+    z-index: 2000;
+    top: 40%;
+    left: 10%;
+    width: 80%
+}
+.err_popo span {
+    display: block;
+    padding: .22rem 0.02rem;
+    font-size: .22rem;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    text-align: center
+}
+.wrap {
+    position: relative;
+    width: 7.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/* 主体内容 */
+.result-box {
+    position: absolute;
+    top: .24rem;
+    left: 50%;
+    width: 6.5rem;
+    margin-left: -3.25rem;
+    background: #7757f8;
+    border-radius: .2rem;
+    z-index: 11;
+}
+/* 头部 */
+.top-box {
+    margin-top: .54rem;
+}
+.top-box p {
+    height: .48rem;
+    line-height: .48rem;
+    font-size: .36rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: .16rem;
+}
+.top-box p.top-desc {
+    height: .3rem;
+    line-height: .3rem;
+    font-size: .24rem;
+    color: #e5d7ff;
+    margin-bottom: 0;
+}
+/* 表单 */
+.form-content {
+    margin-top: .28rem;
+    font-size: 0;
+}
+.input-box {
+    width: 5.2rem;
+    height: .4rem;
+    margin: 0 auto .2rem;
+    padding: .25rem .3rem;
+    font-size: 0;
+    background: #2a44a5;
+    border-radius: .08rem;
+}
+.input-box .left-box {
+    height: .4rem;
+    line-height: .4rem;
+    font-size: .28rem;
+    color: #fff;
+    float: left;
+    border-right: 1px solid #fff;
+    padding-right: .2rem;
+}
+.input-box .right-box {
+    height: .4rem;
+    line-height: .4rem;
+    float: left;
+    margin-left: .2rem;
+}
+.input-box .right-box .input-text {
+    width: 3.9rem;
+    height: .4rem;
+    line-height: .4rem;
+    color: #fff;
+    font-size: .24rem;
+}
+.submit-button {
+    width: 5.8rem;
+    height: .9rem;
+    line-height: .9rem;
+    font-size: .32rem;
+    color: #fff;
+    text-align: center;
+    border-radius: .45rem;
+    display: block;
+    background: #9f87ff;
+    margin: 0 auto .2rem;
+}
+.top-box .form-content p {
+    height: .3rem;
+    line-height: .3rem;
+    font-size: .24rem;
+    color: #e5d7ff;
+    margin-bottom: .28rem;
+}
+/* 中间部分 */
+.middle-box {
+    position: relative;
+    width: 6.5rem;
+    height: 3.2rem;
+    background: url("../images/wap-middle-box-bg.png") center no-repeat;
+    background-size: 100%;
+}
+.middle-box p {
+    position: absolute;
+    right: .55rem;
+    bottom: .55rem;
+    width: 3.8rem;
+    height: .6rem;
+    line-height: .6rem;
+    text-align: center;
+    background: #7757f8;
+    border-radius: .3rem;
+    font-size: .24rem;
+    color: #e5d7ff;
+}
+.middle-box p span {
+    font-size: .28rem;
+    font-weight: bold;
+}
+/* 底部部分 */
+.bottom-box {
+    padding-top: .4rem;
+    padding-left: .5rem;
+    padding-bottom: .56rem;
+    background: #7757f8;
+}
+.bottom-box .bottom-item {
+    position: relative;
+    float: left;
+    text-align: center;
+    padding-top: .7rem;
+}
+.bottom-box .bottom-item p {
+    font-size: .32rem;
+    color: #e5d7ff;
+    margin-bottom: .2rem;
+}
+.bottom-box .bottom-item span {
+    font-size: .24rem;
+    color: #a796fa;
+    display: block;
+}
+.bottom-icon-1 {
+    margin-right: .58rem;
+    padding-top: .7rem;
+}
+.bottom-icon-1 em{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: .3rem;
+    height: .5rem;
+    margin-left: -.15rem;
+    background: url("../images/bottom-icon-1.png") center no-repeat;
+    background-size: 100%;
+}
+.bottom-icon-2 {
+    margin-right: .24rem;
+}
+.bottom-icon-2 em{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: .52rem;
+    height: .52rem;
+    margin-left: -.26rem;
+    background: url("../images/bottom-icon-2.png") center no-repeat;
+    background-size: 100%;
+}
+.bottom-icon-3 em{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: .5rem;
+    height: .47rem;
+    margin-left: -.25rem;
+    background: url("../images/bottom-icon-3.png") center no-repeat;
+    background-size: 100%;
+}
+/* 关闭按钮 */
+.result-modal-close {
+    position: absolute;
+    right: .17rem;
+    top: .17rem;
+    width: .2rem;
+    height: .2rem;
+    background: url("../images/wap-result-close.png") center no-repeat;
+    background-size: 100%;
+}
+/*头部*/
+.top {
+    padding: .2rem 0;
+    text-align: center;
+}
+.top img {
+    display: block;
+    width: 0.95rem;
+    height: 0.95rem;
+    margin: 0 auto;
+}
+.top .top-msg {
+    width: 100%;
+    text-align: center;
+}
+.top .top-msg h3 {
+    font-size: 0.32rem;
+    color: #ff8400;
+    font-weight: bold;
+}
+.top .top-msg p {
+    font-size: 0.24rem;
+    color: #999999;
+}
+/*失败页面*/
+.error-msg {
+    margin-top: .3rem;
+}
+.error-msg h3 {
+    font-size: 0.32rem;
+    color: #000;
+    line-height: 0.48rem;
+}
+.error-msg p {
+    font-size: 0.28rem;
+    color: #333333;
+    line-height: 0.48rem;
+}
+/* 遮罩层 */
+.mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    filter:Alpha(opacity=50);
+    z-index: 10;
+}

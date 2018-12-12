@@ -1,0 +1,92 @@
+*{padding:0; margin:0; font-family:arial,"\5FAE\8F6F\96C5\9ED1",sans-serif; }
+body {
+    position: relative;
+    width: 7.5rem;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+input{
+    border: none;
+    outline: none;
+}
+input[type='button']{
+    -webkit-appearance: none;
+}
+input[type="checkbox"],
+input[type="radio"]{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+a{
+    text-decoration: none;
+}
+/*头部*/
+.header {
+    width: 7.5rem;
+    position: relative;
+    padding-top: .3rem;
+    text-align: center;
+}
+.header .success-icon {
+    width: .95rem;
+    height: .95rem;
+    margin: 0 auto .3rem;
+    background: url("../images/success-icon.png") center no-repeat;
+    background-size: 100%;
+}
+.header .success-title {
+    font-size: .32rem;
+    color: #ff8400;
+    margin-bottom: .24rem;
+}
+.header .success-info{
+    font-size: .24rem;
+    color: #999999;
+}
+.header .success-info p {
+    margin-bottom: .14rem;
+}
+.header .success-info p a {
+    color: #087bf0;
+}
+/*成功信息*/
+.success-content {
+    width: 5.38rem;
+    margin: 4rem auto 0;
+    padding: .16rem .32rem;
+    text-align: center;
+    color: #999999;
+    font-size: .24rem;
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+/*成功按钮*/
+.success-btn {
+    width: 6rem;
+    margin: .4rem auto 0;
+    text-align: center;
+    background: #ff8400;
+    font-size: 0;
+    border-radius: 4px;
+}
+.success-btn a {
+    width: 100%;
+    height: 100%;
+    margin: .29rem 0;
+    display: inline-table;
+    font-size: .32rem;
+    color: #fff;
+}
+.fixed-footer {
+    width: 100%;
+    height: 1.2rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.fixed-footer img {
+    width: 100%;
+}

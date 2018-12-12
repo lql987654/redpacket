@@ -1,0 +1,372 @@
+*{padding:0; margin:0; font-family:arial,"\5FAE\8F6F\96C5\9ED1",sans-serif; }
+body{
+    background: #d32344;
+}
+a {
+    text-decoration: none;
+}
+input{
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+    background: none;
+}
+input[type='button']{
+    -webkit-appearance: none;
+}
+input, label, a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type="checkbox"],
+input[type="radio"]{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+input:-webkit-autofill{
+    background-color: #ffffff;
+}
+.form-box .input-box input::-webkit-input-placeholder {
+    color: #cab37a;
+}
+input::-moz-placeholder {
+    color: #cab37a;
+}
+input:-ms-input-placeholder {
+    color: #cab37a;
+}
+.clear-float:after{
+    clear:both;
+    content:'';
+    width:0;
+    height:0;
+    display:block;
+    visibility:hidden;
+}
+.float-left{
+    float: left;
+}
+.hide{
+    display: none;
+}
+.err_popo {
+    position: fixed;
+    z-index: 2000;
+    top: 40%;
+    left: 10%;
+    width: 80%
+}
+.err_popo span {
+    display: block;
+    padding: .22rem 0.02rem;
+    font-size: .22rem;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    text-align: center
+}
+.wrap {
+    position: relative;
+    width: 7.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/* 头部 */
+.header {
+    height: 3.7rem;
+    background: url("../images/wap-banner-bg.png") center no-repeat;
+    background-size: 100%;
+}
+/* 头部logo */
+.header-logo {
+    position: absolute;
+    top: .2rem;
+    left: .3rem;
+    width: 1.76rem;
+    height: .4rem;
+    font-size: 0;
+}
+.header-logo img {
+    width: 100%;
+}
+/* 头部表格 */
+.header-table {
+    position: absolute;
+    top: .9rem ;
+    left: .4rem;
+    width: 6.7rem;
+}
+.header-table-title {
+    font-size: .28rem;
+    color: #fff;
+    text-shadow: -1px -1px #ff705b;
+    text-align: center;
+}
+.header-table-content {
+    width: 6.7rem;
+    font-size: .28rem;
+    border: .01rem solid #fbdfb5;
+    border-radius: 4px;
+    margin-top: .2rem;
+}
+.header-table-content table {
+    width: 100%;
+    border-collapse:collapse;
+}
+.header-table-content table thead,
+.secure-table table thead {
+    background: #ffd794;
+    border-bottom: 1px solid #fbdfb5;
+}
+.header-table-content thead th {
+    width: 25%;
+    padding: .2rem;
+    color: #c25e15;
+    font-weight: normal;
+}
+.header-table-content thead th:last-child {
+    color: #d42142;
+}
+.header-table-content tbody td:last-child {
+    color: #d42142;
+}
+.header-table-content tbody {
+    background: #fff;
+}
+.header-table-content tbody tr {
+    border-bottom: 1px solid #fbdfb5;
+}
+.header-table-content tbody tr:last-child {
+    border-bottom: none;
+}
+.header-table-content tbody td {
+    color: #5f5f5f;
+    padding: .2rem;
+    text-align: center;
+}
+.border-left {
+    border-left: 1px solid #fbdfb5;
+}
+/* 表单主体 */
+.form-content {
+    background: linear-gradient( to bottom ,#feaf60 , #e67559 ,#d42142);
+    padding-bottom: .3rem;
+}
+.form-title {
+    font-size: .28rem;
+    color: #fff;
+    text-align: center;
+    padding: .56rem 0 .3rem 0;
+    text-shadow: 2px 2px #ff705b;
+}
+.form-detail-title {
+    color: #fdef0c;
+    font-size: .28rem;
+    width: 6.7rem;
+    margin: 0 auto;
+}
+.form-detail {
+    width: 6.7rem;
+    margin: 0 auto;
+}
+.form-box {
+    font-size: 0;
+}
+.input-box {
+    position: relative;
+    border: 1px solid #b71734;
+    border-radius: 4px;
+    margin-bottom: .3rem;
+    padding: .28rem .3rem;
+    background: linear-gradient(to bottom, #fffdf9 ,#fef3d6);
+}
+.input-box .left-box {
+    width: 1.4rem;
+    height: .44rem;
+    line-height: .44rem;
+    color: #000000;
+    font-size: .34rem;
+    float: left;
+    border-right: 1px solid #e2e2e2;
+    padding-right: .32rem;
+    text-align: justify;
+    text-align-last: justify;
+    overflow: hidden;
+}
+.input-box .input-text {
+    height: .44rem;
+    float: left;
+    font-size: .3rem;
+    line-height: .44rem;
+    width: 4rem;
+    margin-left: .24rem;
+}
+/* 性别选项 */
+.form-box .input-box .sex-box {
+    position: absolute;
+    top: .18rem;
+    right: .3rem;
+    width: 1.43rem;
+    height: .6rem;
+    overflow: hidden;
+}
+.form-box .input-box .sex-box input[type="radio"] {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+.form-box .input-box .sex-box label {
+    display: inline-block;
+    width: .7rem;
+    height: 0.6rem;
+    font-size: 0.28rem;
+    color: #6f2627;
+    text-align: center;
+    line-height: 0.6rem;
+    background-color: #fef7e4;
+    border: 1px solid;
+    border-image: linear-gradient( #fd7108, #feab02) 1 1;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-box .input-box .sex-box label:last-child {
+    border-left: none;
+}
+.form-box .input-box .sex-box input:checked + label {
+    color: #fff;
+    background: linear-gradient(to bottom, #fd7308 ,#fea902);
+}
+.form-box-title {
+    color: #fdef0c;
+    font-size: .28rem;
+    margin-bottom: .32rem;
+}
+.form-submit {
+    position: relative;
+    width: 6.7rem;
+    height: .9rem;
+    line-height: .9rem;
+    display: block;
+    margin: 0 auto;
+    border-radius: .4rem;
+    text-align: center;
+    font-size: .38rem;
+    color: #7c2a1f;
+    background: linear-gradient(to bottom ,#ffef57 ,#ffc607 ,#ffc845);
+}
+.form-tip {
+    margin-top: .32rem;
+    color: #ff9696;
+    font-size: .24rem;
+}
+/* 保险详情 */
+.secure-box {
+    width: 6.7rem;
+    margin: .66rem auto .64rem;
+}
+.secure-title {
+    color: #ffffff;
+    font-size: .32rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: .3rem;
+}
+.secure-time {
+    font-size: .28rem;
+    color: #ffffff;
+    margin-bottom: .35rem;
+}
+.secure-time span:last-child {
+    float: right;
+}
+.secure-table {
+    width: 6.7rem;
+    border: .01rem solid #fbdfb5;
+    border-radius: 4px;
+}
+.secure-table table {
+    position: relative;
+    width: 100%;
+    border-collapse:collapse;
+}
+.secure-table table thead th {
+    background: #ffdc9f;
+    padding: .2rem;
+    font-size: .28rem;
+    color: #c25e15;
+}
+.secure-table table thead th:first-child {
+    width: 65%;
+}
+.secure-table table thead th:first-child:before {
+    position: absolute;
+    top: -.08rem;
+    left: .2rem;
+    width: .77rem;
+    height: .82rem;
+    content: '';
+    background: url("../images/secure-table-icon.png") center no-repeat;
+    background-size: 100%;
+}
+.secure-table table thead th:last-child {
+    width: 35%;
+}
+.secure-table table tbody tr {
+    font-size: .28rem;
+    color: #5f5f5f;
+    border-bottom: 1px solid #fbdfb5;
+    background: #fff7eb;
+}
+.secure-table table tbody tr:nth-child(2n) {
+    background: #fff;
+}
+.secure-table table tbody tr td {
+    padding: .2rem;
+    text-align: center;
+}
+.secure-table table tbody tr:last-child {
+    border-bottom: none;
+}
+/* 带同意选项的表单 */
+.agree-content {
+    padding-bottom: 0;
+}
+/* 同意 */
+/*复选框*/
+.form-box .agree-box {
+    width: 6.7rem;
+    margin: .32rem auto 0;
+    font-size: .24rem;
+    color: #fff;
+}
+.form-box .agree-box label {
+    position: relative;
+    display: inline-block;
+    width: 5.9rem;
+    padding-left: .3rem;
+    line-height: .38rem;
+}
+.form-box .agree-box label>em {
+    position: absolute;
+    display: inline-block;
+    top: .06rem;
+    left: 0;
+    width: .22rem;
+    height: .22rem;
+    vertical-align: middle;
+    background: url(../images/wap-formbox-nochecked.png) no-repeat;
+    background-size: 0.22rem;
+}
+.form-box .agree-box input:checked + label>em {
+    background: url(../images/wap-formbox-checked.png) no-repeat;
+    background-size: 0.22rem;
+}
+.form-box .agree-box label a{
+    color: #ffe42b;
+    text-decoration: none;
+}

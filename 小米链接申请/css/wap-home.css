@@ -1,0 +1,422 @@
+*{padding:0; margin:0; font-family:arial,"\5FAE\8F6F\96C5\9ED1",sans-serif; }
+html,body {
+    height: 100%;
+}
+body {
+    background: linear-gradient(to bottom ,#9a3403 ,#983202);
+}
+a {
+    text-decoration: none;
+}
+input{
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+    background: none;
+}
+input[type='button']{
+    -webkit-appearance: none;
+}
+input, label, a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type="checkbox"],
+input[type="radio"]{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+input:-webkit-autofill{
+    background-color: #ffffff;
+}
+.form-box .input-box input::-webkit-input-placeholder {
+    color: #909090;
+}
+input::-moz-placeholder {
+    color: #909090;
+}
+input:-ms-input-placeholder {
+    color: #909090;
+}
+img {
+    border-width: 0;
+    border: none;
+    outline: none;
+}
+.clx:after{
+    clear:both;
+    content:'';
+    width:0;
+    height:0;
+    display:block;
+    visibility:hidden;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+body .hide{
+    display: none;
+}
+.err_popo {
+    position: fixed;
+    z-index: 2000;
+    top: 40%;
+    left: 10%;
+    width: 80%
+}
+.err_popo span {
+    display: block;
+    padding: .22rem 0.02rem;
+    font-size: .22rem;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    text-align: center
+}
+.wrap {
+    position: relative;
+    width: 7.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/* 头部 */
+.header {
+    height: 4.73rem;
+    background: url("../images/wap-home-banner.png") center no-repeat;
+    background-size: 100%;
+    z-index: 1;
+}
+.header p {
+    position: absolute;
+    top: 2.35rem;
+    left: .42rem;
+    width: 4rem;
+    height: .73rem;
+    line-height: .73rem;
+    background: linear-gradient(to right ,#fcc848, #ffebbb);
+    border-radius: .365rem;
+    font-size: .28rem;
+    color: #ea5831;
+    text-align: center;
+}
+/* 表单主体 */
+.form-container {
+    width: 6.7rem;
+    border-radius: .1rem;
+    margin-top: -.83rem;
+    z-index: 2;
+}
+.form-title {
+    background: linear-gradient(to bottom ,#fffaf0,#ffecbe);
+    padding: .3rem 0;
+}
+.form-title h2 {
+    position: relative;
+    width: 3.9rem;
+    margin: 0 auto .2rem;
+    font-size: .32rem;
+    color: #ea5831;
+    text-align: center;
+    font-weight: normal;
+}
+.form-title h2:before {
+    position: absolute;
+    top: .2rem;
+    left: 0;
+    width: .82rem;
+    height: .06rem;
+    background: url("../images/form-title-icon.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.form-title h2:after {
+    position: absolute;
+    top: .2rem;
+    right: 0;
+    width: .82rem;
+    height: .06rem;
+    background: url("../images/form-title-icon.png") center no-repeat;
+    background-size: 100%;
+    transform: rotate(180deg);
+    content: '';
+}
+.form-title p {
+    font-size: .28rem;
+    color: #303030;
+    text-align: center;
+}
+.form-content {
+    position: relative;
+    padding: .3rem .4rem .6rem .4rem;
+    background: #fef8eb;
+    font-size: 0;
+}
+.form-content .input-box {
+    padding: .2rem 0 .2rem .4rem;
+    background: #ffffff;
+    margin-bottom: .3rem;
+    border: 1px solid #f5aa82;
+    border-radius: .36rem;
+}
+.form-content .input-box .left-box {
+    position: relative;
+    width: .36rem;
+    float: left;
+}
+.form-content .input-box .name-icon-box {
+    width: .36rem;
+    height: .4rem;
+    background: url("../images/icon-name.png") center no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+}
+.form-content .input-box .mobile-icon-box {
+    width: .3rem;
+    height: .43rem;
+    background: url("../images/icon-mobile.png") center no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+}
+.form-content .input-box.mobile-box .input-text {
+    height: .43rem;
+    line-height: .43rem;
+}
+.form-content .input-box .idCard-icon-box {
+    height: .4rem;
+    vertical-align: middle;
+}
+.form-content .input-box .idCard-icon-box em {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: .43rem;
+    height: .3rem;
+    margin-top: -.15rem;
+    background: url("../images/icon-idCard.png") center no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+}
+
+.form-content .input-box .right-box {
+    width: 4.4rem;
+    margin-left: .3rem;
+    float: left;
+}
+.form-content .input-box .input-text {
+    width: 4.4rem;
+    height: .4rem;
+    line-height: .4rem;
+    font-size: .28rem;
+}
+/* 同意 */
+.form-box .agree-box {
+    width: 4.6rem;
+    margin: .28rem auto 0;
+    font-size: .24rem;
+    color: #303030;
+}
+.form-box .agree-box label {
+    position: relative;
+    display: inline-block;
+    width: 4.16rem;
+    padding-left: .45rem;
+    line-height: .38rem;
+}
+.form-box .agree-box label>em {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: .3rem;
+    height: .3rem;
+    vertical-align: middle;
+    border: 1px solid #ea5831;
+    border-radius: 50%;
+}
+.form-box .agree-box input:checked + label>em {
+    width: .32rem;
+    height: .32rem;
+    border: 0;
+    background: url("../images/form-box-checked.png") no-repeat;
+    background-size: 0.32rem;
+}
+.form-box .agree-box label a{
+    color: #ff3430;
+    text-decoration: none;
+    margin-left: .08rem;
+}
+.form-submit {
+    position: relative;
+    width: 5.9rem;
+    height: .8rem;
+    line-height: .8rem;
+    text-align: center;
+    font-size: .32rem;
+    color: #ffffff;
+    display: inline-block;
+    border-radius: .36rem;
+    margin-top: .28rem;
+    background: linear-gradient(to right ,#ea5931 ,#fe7955, #ea5931);
+    z-index: 2;
+}
+.form-content:after {
+    position: absolute;
+    left: 50%;
+    bottom: .4rem;
+    width: 5.24rem;
+    height: .49rem;
+    margin-left: -2.62rem;
+    background: url("../images/form-box-button-shadow.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+    z-index: 1;
+}
+/* 提示 */
+.detail-tip {
+    width: 6rem;
+    line-height: .44rem;
+    color: #dd792d;
+    font-size: .24rem;
+    margin: .3rem auto;
+}
+/* tab切换 */
+.insurances-box-no-pingan {
+    width: 6.7rem;
+    padding-bottom: .3rem;
+    margin: 0 auto;
+    border-radius: .1rem;
+    background-color: #fff7fb;
+    overflow: hidden;
+}
+.insurances-box-no-pingan .logos-top {
+    width: 100%;
+    height: .9rem;
+    background-color: #ff415d;
+}
+.insurances-box-no-pingan .logos-top>a {
+    display: block;
+    float: left;
+    height: .9rem;
+    background-image: url(../images/wap-tab-logos-all.png);
+    background-repeat: no-repeat;
+    background-size: 6.7rem;
+}
+.insurances-box-no-pingan .logos-top>a.active  {
+    background-color: #fff7fb;
+}
+.insurances-box-no-pingan .logos-top>a:nth-child(1) {
+    width: 1.2rem;
+    background-position: -1.26rem top;
+    margin-left: 0.5rem;
+}
+.insurances-box-no-pingan .logos-top>a:nth-child(2) {
+    width: 1.42rem;
+    background-position: -2.33rem top;
+}
+.insurances-box-no-pingan .logos-top>a:nth-child(3) {
+    width: 1.64rem;
+    background-position: -3.56rem top;
+}
+.insurances-box-no-pingan .logos-top>a:nth-child(4) {
+    width: 1.5rem;
+    background-position: -5.2rem top;
+}
+.insurances-box-no-pingan .logos-top>a.active:nth-child(1) {
+    background-position: -1.26rem bottom;
+}
+.insurances-box-no-pingan .logos-top>a.active:nth-child(2) {
+    background-position: -2.33rem bottom;
+}
+.insurances-box-no-pingan .logos-top>a.active:nth-child(3) {
+    background-position: -3.56rem bottom;
+}
+.insurances-box-no-pingan .logos-top>a.active:nth-child(4) {
+    background-position: -5.2rem bottom;
+}
+.insurances-box-no-pingan .insurance-items-box {
+    position: relative;
+    width: 6.1rem;
+    margin: 0 auto;
+}
+.insurances-box-no-pingan .insurance-items-box:after {
+    position: absolute;
+    right: -.2rem;
+    top: -.05rem;
+    display: block;
+    content: "";
+    width: .8rem;
+    height: .95rem;
+    background: url(../images/wap-corner-ico.png) center no-repeat;
+    background-size: .8rem;
+}
+.insurances-box-no-pingan .insurance-items-box .item-box {
+    display: none;
+    font-size: 0;
+}
+.insurances-box-no-pingan .insurance-items-box .item-box.active {
+    display: block;
+}
+.insurances-box-no-pingan .insurance-items-box .item-box .title {
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    font-size: .32rem;
+    color: #6f2627;
+    line-height: .32rem;
+    text-align: center;
+}
+.insurances-box-no-pingan .insurance-items-box .item-box table {
+    width: 100%;
+    color: #6f2627;
+    border: .02rem solid #fdc99f;
+    border-radius: .1rem;
+    border-spacing: 0;
+}
+.insurances-box-no-pingan .insurance-items-box .item-box td {
+    padding: .18rem .3rem;
+    font-size: .28rem;
+    line-height: .32rem;
+    text-align: left;
+    border: 0;
+    box-sizing: border-box;
+}
+.insurances-box-no-pingan .insurance-items-box .item-box thead tr td {
+    padding: 0;
+    font-size: 0;
+    border-bottom: .02rem solid #ffbcc6;
+}
+.insurances-box-no-pingan .insurance-items-box .item-box thead tr td span {
+    display: inline-block;
+    padding: .18rem .3rem;
+    font-size: .28rem;
+    line-height: .32rem;
+    text-align: left;
+}
+.insurances-box-no-pingan .insurance-items-box .item-box thead tr td span:last-child {
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+.insurances-box-no-pingan .insurance-items-box .item-box table tbody td {
+    background-color: #fff;
+    border-bottom: .02rem dashed #ffbcc6;
+}
+.insurances-box-no-pingan .insurance-items-box .item-box table tbody tr td:first-child {
+    width: 70%;
+    border-right: .02rem dashed #ffbcc6;
+}
+.insurances-box-no-pingan .insurance-items-box .item-box table tbody tr td:last-child {
+    width: 30%;
+}
+.insurances-box-no-pingan .insurance-items-box .item-box table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: .1rem;
+    border-bottom: 0
+}
+.insurances-box-no-pingan .insurance-items-box .item-box table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: .1rem;
+    border-bottom: 0;
+}

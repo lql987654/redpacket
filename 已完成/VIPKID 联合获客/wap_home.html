@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html style="font-size: 50px;">
+<head>
+    <title>{{page_param['title']}}</title>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="{{page_param['keywords']}}">
+    <meta name="description" content="{{page_param['description']}}">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="css/wap-home.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/wap-common.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 750) {
+                        docEl.style.fontSize = '100px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+<!--头图-->
+<div class="wraper" id="wraper">
+    <img src="images/banner-tip-img.png" class="beat">
+</div>
+<div class="title wrap">
+    <div class="title-info">VIPKID携手泰康人寿免费送<span>100万</span>少儿意外险</div>
+    <div class="title-img clearfix">
+        <div class="welfare-box fl">
+            <span>388礼包</span>
+            <span>VIPKID</span>
+        </div>
+        <div class="welfare-box-add fl"></div>
+        <div class="welfare-box fl">
+            <span>100万元</span>
+            <span>少儿意外险</span>
+        </div>
+    </div>
+</div>
+<!--订单信息-->
+<div class="order-msg" id="order-title-box">
+    <form method="post" action="" id="form-box" class="form-box">
+        <div class="form-forward-content" id="form-forward">
+            <!-- 隐藏域 -->
+            <input type="hidden" name="channel" value="{{page_param['V']}}" id="channel">
+            <input type="hidden" name="subchannel" value="{{page_param['subchannel']}}">
+            <input type="hidden" name="handler_path" value="{{page_param['handler_path']}}">
+            <input type="hidden" name="age" id="age-hidden-input" value="">
+            <input type="hidden" name="electronic-equipment" id="device-hidden-input" value="">
+
+            <div class="select-box clx">
+                <div class="select-item" id="select-age">孩子年龄 ></div>
+                <div class="select-item" id="select-device">选择上课的设备 ></div>
+            </div>
+            <div class="input-box input-box-name-icon">
+                <div class="left-box input-icon"><img src="images/VIPKID-icon-name.png"></div>
+                <div class="right-box">
+                    <input class="input-text input-forward-form" type="text" id="name" name="name" placeholder="请输入本人姓名"/>
+                </div>
+            </div>
+
+            <div class="input-box ">
+                <div class="left-box input-icon"><img src="images/VIPKID-icon-mobile.png"></div>
+                <div class="right-box">
+                    <input class="input-text input-forward-form" type="tel" id="mobile" name="mobile" placeholder="请输入手机号码" maxlength="11"/>
+                </div>
+            </div>
+
+            <div class="input-box-captcha clx" style="display: none">
+
+                <div class="input-box box-left">
+                    <div class="left-box input-icon"><img src="images/VIPKID-icon-validate.png"></div>
+                    <div class="right-box">
+                        <input id="captcha" class="input-text input-forward-form" type="tel" name="captcha" value="" autocomplete="off" placeholder="请输入短信验证码"/>
+                    </div>
+                </div>
+
+                <div class="box-right">
+                    <input name="token" id="token" type="hidden"/>
+                    <input id="random" name="r" value="{{page_param['random']}}" type="hidden"/>
+                    <input id="send" type="button" class="send active VIPKID-send" value="获取验证码">
+                </div>
+            </div>
+
+            <div class="input-box input-box-idCard" style="display: none">
+                <div class="left-box input-icon"><img src="images/VIPKID-icon-idCard.png"></div>
+                <div class="right-box">
+                    <input class="input-text input-forward-form" type="text" id="idCard" name="idCard" placeholder="身份证号用于身份验证" maxlength="18"/>
+                </div>
+            </div>
+
+            <div class="form-info">您提供的个人信息仅供本次使用，我们不会泄露给任何第三方或其他用途</div>
+
+            <a href="javascript:;" class="input-submit-box" id="submit-button">立即领取 ></a>
+        </div>
+    </form>
+
+    <div class="agree-box clx">
+        <input id="agree-button" type="checkbox" checked>
+        <label class="fr" for="agree-button">
+            <em></em>
+            我已知晓并许可保险公司专线致电我沟通赠险领取事宜并已
+            阅读及同意
+            <a href="javascript:;" id="activity-rules-button">《投保须知》</a>
+        </label>
+    </div>
+</div>
+<!--产品详情图-->
+<div class="details-content" id="goods-details">
+    <img src="images/wap_details05.jpg" class=" details05"/>
+
+    <div class="cctv-area">
+        <h4>三大优势征服挑剔妈妈 孩子学英语就选VIPKID</h4>
+
+        <div class="video-con">
+            <p data-video="liutaovideo" class="pic js-videoPlay">
+                <img src="images/activityvideo-3844c3f58f.png">
+                <img src="images/btn-playing-7a6e3fcfc5.png" class="btn-play">
+            </p>
+        </div>
+
+    </div>
+</div>
+<div class="commend-container">
+    <div class="commend">
+        <div class="commend-title">倾力推荐</div>
+        <div class="commend-content">
+            <div class="commend-content-box">
+                <div class="commend-content-box-left"><img src="images/commend-person-1.png"></div>
+                <div class="commend-content-box-right">
+                    <p class="person-name">Kobe Bryant</p>
+                    <p class="person-job">Bryant Stibel 创始人，NBA篮球巨星</p>
+                    <p class="person-content">
+                        “VIPKID致力于帮助更多中国孩子拥有更广阔的视野，帮助他们拥有更多机会。VIPKID在变革行业。我们找的就是能为社会创造真正价值、能够通过教育帮助孩子更好的成长和发展的公司。”
+                    </p>
+                </div>
+            </div>
+            <div class="commend-content-box">
+                <div class="commend-content-box-left"><img src="images/commend-person-2.png"></div>
+                <div class="commend-content-box-right">
+                    <p class="person-name">李开复</p>
+                    <p class="person-job">创新工场董事长兼首席执行官</p>
+                    <p class="person-content">
+                        “感谢你们，VIPKID的员工、老师们，你们帮小朋友建立了自信和从实践中快乐学习，你们教会了中国儿童世界观和批判式思维，你们推动了教育的改革进步。感谢你们，如果我的投资生涯，只投出了一个你们这样的公司，我也觉得值了。”
+                    </p>
+                </div>
+            </div>
+            <div class="commend-content-box">
+                <div class="commend-content-box-left"><img src="images/commend-person-3.png"></div>
+                <div class="commend-content-box-right">
+                    <p class="person-name">徐小平</p>
+                    <p class="person-job">真格基金创始人</p>
+                    <p class="person-content">
+                        “VIPKID 是21世纪的中国教育国际化的一个深受家长欢迎和孩子喜爱的崭新而有效的实验。她通过互联网连接北美的优秀老师与中国的孩子们，为中国孩子打开了一条宽广而前途无限的通道！”
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img data-original="{{ page_param['static_host'] }}/static/shop/VIPKID/images/wap_details1.jpg" src="images/wap_details1.jpg" class="lazy details1" style="display: block;">
+</div>
+<!--底部按钮浮栏 -->
+<div class="float-btn-bar-box-fix" id="float-btn-bar-box-fix"></div>
+<div id="float-btn-bar-box" class="float-btn-bar-box">
+    <div class="wrap footer" id="apply_now">免费领取 ></div>
+</div>
+<!--背景蒙版-->
+<div id="mask" class="mask"></div>
+<!--只领取保险 失败-->
+<div class="mask-content mask-one order-msg mask-table mask-top" style="display: none" id="only-welfare-lose">
+    <form method="post" action=""  class="form-box">
+        <div class="mask-icon"></div>
+        <div class="lost-title">已提交，是否承保请以保险公司实际 承保短信为准</div>
+        <div class="success-btn">
+            <input type="button" value="知道了">
+        </div>
+    </form>
+</div>
+<!--只领取VIPKID -->
+<div class="mask-content mask-one order-msg mask-table" style="display: none" id="only-welfare-VIPKID">
+    <div class="mask-icon"></div>
+    <div class="success-title">恭喜，成功领取价值388元试听礼包</div>
+    <div class="success-content">
+        <form method="post" action=""  class="form-box">
+            <div class="success-tip">
+                恭喜，您已成功领取VIPKID试听课，我们的工作人员会主动联系您（区号010或021或95的座机）为您预约上课时间，请保持手机畅通
+            </div>
+
+            <div class="success-btn">
+                <input type="button" value="知道了">
+            </div>
+        </form>
+    </div>
+</div>
+<!--都领取 且都成功弹窗-->
+<div class="mask-two-welfare mask-two order-msg mask-table" style="display: none" id="both-success">
+    <form method="post" action=""  class="form-box">
+        <div class="mask-welfare-box order-msg">
+            <div class="welfare-box-title"><span>1</span>恭喜，成功领取价值388元试听礼包</div>
+            <div class="welfare-box-info">
+                恭喜，您已成功领取VIPKID试听课，我们的工作人员会主动联系您（区号010或021或95的座机）为您预约上课时间，请保持手机畅通
+            </div>
+
+
+        </div>
+        <div class="mask-welfare-box" data-type="true">
+            <div class="welfare-box-title"><span>2</span>价值8万元少儿意外险已领取成功</div>
+            <div class="welfare-box-info">
+                <span>保期：30天</span>
+                <span>可投保年龄：0-50周岁</span>
+            </div>
+            <div class="detail-table">
+                <table>
+                    <tr>
+                        <th class="table-border-bottom-solid table-text-left">保障内容</th>
+                        <th class="table-border-left-solid table-border-bottom-solid">最高保额</th>
+                    </tr>
+                    <tr>
+                        <td class="table-border-left-dashed table-text-left">意外身故/意外伤害</td>
+                        <td class="table-border-bottom-dashed table-border-left-dashed">8万</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="welfare-tip">*注：是否承保请以保险公司短信为准</div>
+        </div>
+        <div class="success-btn">
+            <input type="button" value="知道了">
+        </div>
+    </form>
+</div>
+<!--都领取 但是保险领取失败-->
+<div class="mask-two-welfare mask-two order-msg mask-table" style="display: none" id="both-one-lose">
+    <form method="post" action=""  class="form-box-time">
+        <div class="mask-welfare-box order-msg">
+            <div class="welfare-box-title"><span>1</span>恭喜，成功领取价值388元试听礼包</div>
+            <div class="welfare-box-info">
+                恭喜，您已成功领取VIPKID试听课，我们的工作人员会主动联系您（区号010或021或95的座机）为您预约上课时间，请保持手机畅通
+            </div>
+
+        </div>
+        <div class="mask-welfare-box" data-type="false">
+            <div class="welfare-box-title"><span>2</span>提交成功！是否承保成功请以保险公司短信
+                为准，谢谢参与</div>
+        </div>
+        <div class="success-btn">
+            <input type="button" value="知道了">
+        </div>
+    </form>
+</div>
+<!--领取保险 且成功-->
+<div class="receive-mask mask-one order-msg mask-table" style="display: none" id="only-welfare-success">
+    <div class="receive-mask-header">
+        <div class="receive-icon"></div>
+        <div class="receive-title">
+            恭喜您领取成功！
+        </div>
+        <div class="receive-tip">请留意泰康发给您的短信，保险详情以短信通知为准</div>
+    </div>
+    <div class="receive-mask-content">
+        <div class="receive-mask-content-header">
+            <span class="company-icon"><img src="images/company-icon.png"></span>
+            <span>泰康少儿/成人意外险</span>
+        </div>
+        <div class="welfare-box-info">
+            <span>保期：30天</span>
+            <span>可投保年龄：0-50周岁</span>
+        </div>
+        <div class="detail-table">
+            <table>
+                <tr>
+                    <th class="table-border-bottom-solid table-text-left">保障内容</th>
+                    <th class="table-border-left-solid table-border-bottom-solid">最高保额</th>
+                </tr>
+                <tr>
+                    <td class="table-border-left-dashed table-text-left">意外身故/意外伤害</td>
+                    <td class="table-border-bottom-dashed table-border-left-dashed">8万</td>
+                </tr>
+            </table>
+        </div>
+        <form method="post" action=""  class="form-box">
+            <div class="success-btn">
+                <input type="button" value="知道了">
+            </div>
+        </form>
+    </div>
+</div>
+<!-- 活动规则 -->
+<div id="activity-rules-box" class="popup-box">
+    <div class="popup-title">
+        <h3>投保须知</h3>
+        <a class="close-btn" href="javascript:;"></a>
+    </div>
+    <div class="popup-msg activity-rules-msg">
+        {% for index in range(len(page_param['explain']))%}
+        {% set start_index = page_param['explain'][index].find('.') %}
+        <p><span idx="{{start_index}}">{{index+1}}.</span>{{page_param['explain'][index][start_index+1:]}}</p >
+        {% end %}
+    </div>
+</div>
+
+<!-- 保险条款 -->
+<div class="popup-box" id="insurance-box">
+    <span class="popup-close-btn popup-msg-close"></span>
+    <div class="popup-title">
+        <h3>保险条款</h3>
+        <a class="close-btn" href="javascript:;"></a>
+    </div>
+    <div class="popup-msg" id="insurance-msg">
+        {% for item in page_param['pac_insurance'] %}
+        <p>{{ item }}</p>
+        {% end %}
+    </div>
+</div>
+
+<!-- 孩子年龄弹窗 -->
+<div class="modal child-age" id="modal-child-age">
+    <div class="modal-title">
+        <span>请选择孩子年龄</span>
+        <span class="close"></span>
+    </div>
+    <div class="child-age-content" id="child-age-content">
+        <p data-value="<4" data-name="4岁以下">4岁以下</p>
+        <p data-value="4" data-name="4岁">4岁</p>
+        <p data-value="5" data-name="5岁">5岁</p>
+        <p data-value="6" data-name="6岁">6岁</p>
+        <p data-value="7" data-name="7岁">7岁</p>
+        <p data-value="8" data-name="8岁">8岁</p>
+        <p data-value="9" data-name="9岁">9岁</p>
+        <p data-value="10" data-name="10岁">10岁</p>
+        <p data-value="11" data-name="11岁">11岁</p>
+        <p data-value="12" data-name="12岁">12岁</p>
+        <p data-value=">12" data-name="12岁以上">12岁以上</p>
+    </div>
+</div>
+<!-- 设备弹窗 -->
+<div class="modal child-age device-top" id="modal-device">
+    <div class="modal-title">
+        <span>请选择上课设备</span>
+        <span class="close"></span>
+    </div>
+    <div class="child-age-content" id="device-content">
+        <p data-value="iPad平板电脑" data-name="iPad平板电脑">iPad平板电脑</p>
+        <p data-value="台式/笔记本电脑（摄像头+耳麦）" data-name="台式/笔记本电脑（摄像头+耳麦）">台式/笔记本电脑（摄像头+耳麦）</p>
+        <p data-value="以上都没有" data-name="以上都没有">以上都没有</p>
+    </div>
+</div>
+
+<!-- 兼容iphoneX -->
+<script>
+    function isIphonex() {
+        return /iphone/gi.test(navigator.userAgent) && (screen.height === 812 && screen.width === 375)
+    }
+    if (isIphonex()) {
+        $('#float-btn-bar-box-fix, #float-btn-bar-box').css('height', 1.6 + 'rem')
+    }
+</script>
+<footer>
+    <p>本活动由黑牛保险提供，黑牛保险为合法服务提供商</p>
+    <p>服务热线：010-87227385  服务 QQ：3471653040</p>
+    <p>© 无锡信成网络科技有限公司 苏ICP备 16004147号-1</p>
+</footer>
+
+<div id="videoPop" class="hide videoPop"
+     style="width: 100%; position: fixed; left: 0px; top: 0px; z-index: 50; background: rgb(0, 0, 0); height: 736px;">
+    <div id="videoCloseBtn"
+         style="width: 32px; border-radius: 50%; position: absolute; top: 40px; right: 40px; opacity: 0.7; cursor: pointer; transition: all 0.2s;">
+        <img style="width:100%" src="images/closeBtn-fe53dc1a8c.png">
+    </div>
+</div>
+
+<script src="js/wap-home.js"></script>
+</body>
+</html>

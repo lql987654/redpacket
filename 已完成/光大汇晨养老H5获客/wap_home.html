@@ -1,0 +1,277 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <!-- 本页面css -->
+    <link rel="stylesheet" href="css/wap-home.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/wap-common.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=VGLhgiD2AXtd8ukWjQx47CexMUlvQbPx"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header wrap">
+        <img src="images/wap-banner-logo.png" onclick="return false;" class="company-logo"/>
+        <div class="header-info">
+            <p>光大汇晨养老：给老年人先进医疗、生活照护、</p>
+            <p>精神慰藉、邻近子女、休闲娱乐的超温馨晚年生活</p>
+        </div>
+        <div class="icon-box clx">
+            <div class="icon-box-item">
+                <p class="item-icon item-icon-1"></p>
+                <p class="item-text">医养融合</p>
+            </div>
+            <div class="icon-box-item">
+                <p class="item-icon item-icon-2"></p>
+                <p class="item-text">持续护理</p>
+            </div>
+            <div class="icon-box-item">
+                <p class="item-icon item-icon-3"></p>
+                <p class="item-text">智慧养老</p>
+            </div>
+            <div class="icon-box-item">
+                <p class="item-icon item-icon-4"></p>
+                <p class="item-text">国家标准</p>
+            </div>
+        </div>
+    </div>
+    <!-- 表单 -->
+    <div class="form-container wrap">
+        <h3><span>星级养老 • 北京10家连锁开放抢位中</span></h3>
+        <p class="title-info">预约参观可领取免费试住机会哦~</p>
+        <div class="form-content">
+            <form class="form-box" id="form-box" method="post">
+                <div class="input-box clx">
+                    <div class="left-box">您的姓名</div>
+                    <div class="right-box"><input type="text" name="name" id="name" placeholder="请输入真实姓名" class="input-text shot-input"></div>
+                </div>
+                <div class="input-box clx select">
+                    <div class="left-box">预约项目</div>
+                    <div class="right-box">
+                        <select name="product" id="product" class="input-text input-select">
+                            <option value="0" selected>请选择需要预约的项目</option>
+                            <option value="1">北京光大汇晨朝来老年公寓</option>
+                            <option value="2">北京光大汇晨古塔老年公寓</option>
+                            <option value="3">北京光大汇晨东城区老年公寓</option>
+                            <option value="4">北京光大汇晨东四老年公寓</option>
+                            <option value="5">北京光大汇晨朝阳区老年公寓</option>
+                            <option value="6">北京光大汇晨老年公寓</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-box clx">
+                    <div class="left-box">手机号码</div>
+                    <div class="right-box"><input type="tel" name="mobile" id="mobile" placeholder="获取专业服务及试住体验" class="input-text" maxlength="11"></div>
+                </div>
+                <div class="input-box clx">
+                    <div class="left-box">验证码</div>
+                    <div class="right-box"><input type="tel" name="captcha" id="captcha" placeholder="请输入验证码" class="input-text shot-input"></div>
+                    <div class="box-right">
+                        <input id="random" name="r" value="{{page_param['random']}}" type="hidden"/>
+                        <input id="send" type="button" class="send active VIPKID-send" value="获取验证码">
+                    </div>
+                </div>
+                <p class="form-info">您的个人信息将被严格保密，请放心填写</p>
+                <a href="javascript:;" class="submit-button" id="submit-button">预约参观抢占名额</a>
+                <p class="form-info">*光大汇晨养老顾问将与您致电提供专属服务</p>
+            </form>
+        </div>
+    </div>
+    <!-- 汇晨养老 • 连锁运营 -->
+    <div class="section-box wrap section-box-1">
+        <h3>汇晨养老 • 连锁运营</h3>
+        <div class="section-title-line clx">
+            <div class="float-left line-box"><i></i><i class="long-line"></i><i></i></div>
+            <div class="float-right line-box right-line-box"><i></i><i class="long-line"></i><i></i></div>
+        </div>
+        <div class="section-info-box">
+            <h4>原生逸静  颐养身心</h4>
+        </div>
+        <div class="section-content">
+            光大汇晨养老致力于为为老年人提供多样化、全方位的产品和服务，目前已完成北京、上海、山东、苏州等多个城市的旗舰布局，您可以从下方找到各社区的具体地址。
+        </div>
+        <div class="section-box-1-bg"></div>
+    </div>
+    <!-- 地图 -->
+    <div class="map-container section-box wrap">
+        <div class="map-title" id="map-title">您的当前社区：<span>光大汇晨北京朝来老年公寓</span><em class="show-location-list" id="show-location-list"></em></div>
+        <div id="allmap" class="map-box"></div>
+        <div class="location-list" id="location-list">
+            <ul>
+                <li data-name="北京光大汇晨朝来老年公寓" data-location="116.463317,40.032446" data-address="北京市朝阳区来广营乡朝来森林公园南侧" class="active">朝来老年公寓</li>
+                <li data-name="北京光大汇晨古塔老年公寓" data-location="116.541701,39.885983" data-address="北京朝阳区古塔公园甲1号">古塔老年公寓</li>
+                <li data-name="北京光大汇晨东城区老年公寓" data-location="116.428676,40.040703" data-address="北京市朝阳区北苑路5号院606号楼">东城区老年公寓</li>
+                <li data-name="北京光大汇晨东四老年公寓" data-location="116.430281,39.937863" data-address="北京市东城区东四七条19号院">东四老年公寓</li>
+                <li data-name="北京光大汇晨朝阳区老年公寓" data-location="116.494253,40.002036" data-address="北京市朝阳区阜安东路望京东园511楼">朝阳区老年公寓</li>
+                <li data-name="北京光大汇晨老年公寓" data-location="116.441728,40.141155" data-address="北京昌平区北七家镇八仙庄光大汇晨北京老年公寓">北京老年公寓</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 国家标准 品质保证 -->
+    <div class="section-box wrap section-box-2">
+        <h3>国家标准 • 品质保证</h3>
+        <div class="section-title-line clx">
+            <div class="float-left line-box"><i></i><i class="long-line"></i><i></i></div>
+            <div class="float-right line-box right-line-box"><i></i><i class="long-line"></i><i></i></div>
+        </div>
+        <div class="section-info-box">
+            <h4>国内最早投身于养老服务行业的公司</h4>
+        </div>
+        <div class="section-box-2-content">
+            <div class="section-item-box clx">
+                <div class="section-item section-item-1">
+                    <i></i>
+                    <p class="item-title">10+公司历程</p>
+                    <p class="item-desc">丰富运营经验</p>
+                </div>
+                <div class="section-item section-item-2">
+                    <i></i>
+                    <p class="item-title">1000+从业人员</p>
+                    <p class="item-desc">专业服务管理团队</p>
+                </div>
+                <div class="section-item section-item-3">
+                    <i></i>
+                    <p class="item-title">10000+长者</p>
+                    <p class="item-desc">良好品牌形象</p>
+                </div>
+            </div>
+            <div class="section-item-box clx">
+                <div class="section-item section-item-4">
+                    <i></i>
+                    <p class="item-title">养老公寓</p>
+                    <p class="item-desc">9家4000+床位</p>
+                </div>
+                <div class="section-item section-item-5">
+                    <i></i>
+                    <p class="item-title">社区养老</p>
+                    <p class="item-desc">4家50+床位</p>
+                </div>
+                <div class="section-item section-item-6">
+                    <i></i>
+                    <p class="item-title">医护养老</p>
+                    <p class="item-desc">2家500+床位</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 专业护养 安心养老 -->
+    <div class="section-box wrap section-box-3">
+        <h3>专业护理 • 安心养老</h3>
+        <div class="section-title-line clx">
+            <div class="float-left line-box"><i></i><i class="long-line"></i><i></i></div>
+            <div class="float-right line-box right-line-box"><i></i><i class="long-line"></i><i></i></div>
+        </div>
+        <div class="section-info-box">
+            <h4>为您的金色人生保驾护航</h4>
+        </div>
+        <div class="server-section-item">
+            <div class="server-item left-item clx">
+                <img src="images/section-3-img-1.png" />
+                <div class="detail-content-box">
+                    <p class="detail-title">医养</p>
+                    <p class="detail-content">中医结合，配置常备医疗科室住院医师，定期体检、健康建档，设立就诊绿色通道。</p>
+                </div>
+                <div class="detail-desc">
+                    <p>医疗团队：医生24小时全天候监护</p>
+                    <p>保证急性病的应急处理及慢性病日常管理</p>
+                </div>
+            </div>
+            <div class="server-item right-item clx">
+                <img src="images/section-3-img-2.png" />
+                <div class="detail-content-box">
+                    <p class="detail-title">照护</p>
+                    <p class="detail-content">专职护理人员全方位照护服务，24小时应急响应，让长者有更多时间和精力放松自我、享受生活</p>
+                </div>
+                <div class="detail-desc">
+                    <p>房间消毒/床铺整理及清洗</p>
+                    <p>衣物整理/营养健康饮食管理</p>
+                </div>
+            </div>
+            <div class="server-item left-item clx">
+                <img src="images/section-3-img-3.png" />
+                <div class="detail-content-box">
+                    <p class="detail-title">安保</p>
+                    <p class="detail-content">24小时安保，国际适老标准设计，房型多样舒适的床榻和寝具，无障碍设施厨卫家电一应俱全，智慧养老</p>
+                </div>
+                <div class="detail-desc">
+                    <p>智能化适老居住设计</p>
+                    <p>全方位信息化系统管理</p>
+                </div>
+            </div>
+            <div class="server-item right-item clx">
+                <img src="images/section-3-img-4.png" />
+                <div class="detail-content-box">
+                    <p class="detail-title">美食</p>
+                    <p class="detail-content">综合老年人的身体状况、个体差异，制定营养健康食谱并定期更新，为长者提供丰富、种类多样的一日三餐</p>
+                </div>
+                <div class="detail-desc">
+                    <p>科学定制营养健康食谱</p>
+                    <p>配备专业的营养师和厨师团队</p>
+                </div>
+            </div>
+            <div class="server-item left-item clx">
+                <img src="images/section-3-img-5.png" />
+                <div class="detail-content-box">
+                    <p class="detail-title">社工服务</p>
+                    <p class="detail-content">精准把握入住老人的需求，对健康自理型老人/护理型老人开展切合需求的服务</p>
+                </div>
+                <div class="detail-desc">
+                    <p>心理辅导精心呵护</p>
+                    <p>提高老年人及其家属的生活质量</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 娱乐休闲 -->
+    <div class="section-box wrap section-box-4">
+        <h3>娱乐休闲</h3>
+        <div class="section-title-line clx">
+            <div class="float-left line-box"><i></i><i class="long-line"></i><i></i></div>
+            <div class="float-right line-box right-line-box"><i></i><i class="long-line"></i><i></i></div>
+        </div>
+        <div class="section-info-box">
+            <h4>真正实现“老有所为、老有所学”</h4>
+        </div>
+        <div class="carousel-box Cooldog_container">
+            <div class="Cooldog_content">
+                <ul class="clx slider">
+                    <li class="p1"><img src="images/carousel-1.png"></li>
+                    <li class="p2"><img src="images/carousel-2.png"></li>
+                    <li class="p3"><img src="images/carousel-3.png"></li>
+                    <li class="p4"><img src="images/carousel-4.png"></li>
+                    <li class="p5"><img src="images/carousel-1.png"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 本页面js -->
+    <script src="js/wap-home.js"></script>
+</body>
+</html>

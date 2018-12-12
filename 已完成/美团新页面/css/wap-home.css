@@ -1,0 +1,296 @@
+*{padding:0; margin:0; font-family:arial,"\5FAE\8F6F\96C5\9ED1",sans-serif; }
+body{
+    background: #ffffff;
+}
+a {
+    text-decoration: none;
+}
+input{
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+}
+input[type='button']{
+    -webkit-appearance: none;
+}
+input, label, a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type="checkbox"],
+input[type="radio"]{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+input:-webkit-autofill{
+    background-color: #ffffff;
+}
+.form-box .input-box input::-webkit-input-placeholder {
+    color: #acacac;
+}
+input::-moz-placeholder {
+    color: #acacac;
+}
+input:-ms-input-placeholder {
+    color: #acacac;
+}
+.clear:after{
+    clear:both;content:'';display:block;width:0;height:0;visibility:hidden;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.hide{
+    display: none;
+}
+.err_popo {
+    position: fixed;
+    z-index: 2000;
+    top: 40%;
+    left: 10%;
+    width: 80%
+}
+.err_popo span {
+    display: block;
+    padding: .22rem 0.02rem;
+    font-size: .22rem;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    text-align: center
+}
+.wrap {
+    width: 7.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.header-logo {
+    padding: .1rem 0 .1rem .3rem;
+    background: #ffffff;
+    line-height: 0;
+    font-size: 0;
+}
+.header-logo img {
+    width: 1.46rem;
+    height: .48rem;
+}
+/* 头部 */
+.header {
+    width: 7.5rem;
+    height: 6.1rem;
+    background: url("../images/wap-meituan-banner.png") center no-repeat;
+    background-size: 100%;
+}
+/* 表单主题 */
+.content {
+    width: 6.5rem;
+    margin: 0 auto;
+    font-size: 0;
+}
+.form-title {
+    text-align: center;
+    font-size: .32rem;
+    color: #1d1d1d;
+    margin-bottom: .4rem;
+}
+.form-title span {
+    color: #ff3430;
+}
+.input-box {
+    position: relative;
+    margin-bottom: .3rem;
+    border: 1px solid #d4d4d4;
+    overflow: hidden;
+    font-size: 0;
+    border-radius: .5rem;
+}
+.input-box .left-box {
+    width: 1.12rem;
+    height: .28rem;
+    line-height: .28rem;
+    float: left;
+    padding: .3rem .4rem;
+    font-size: .28rem;
+    color: #313131;
+    text-align: justify;
+    text-align-last: justify;
+    border-right: 1px solid #d4d4d4;
+    background: linear-gradient(to bottom, #fdfefe, #f5f4f5);
+}
+.input-box .input-text {
+    width: 3.6rem;
+    height: .28rem;
+    line-height: .28rem;
+    padding: .3rem;
+}
+/*复选框*/
+.agree-box {
+    width: 5.9rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: .24rem;
+    color: #313131;
+}
+.agree-box label {
+    position: relative;
+    display: inline-block;
+    padding-left: .3rem;
+    line-height: .38rem;
+}
+.agree-box label>em {
+    position: absolute;
+    display: inline-block;
+    top: .06rem;
+    left: 0;
+    width: .22rem;
+    height: .22rem;
+    vertical-align: middle;
+    background: url(../images/wap-meituan-nochecked.png) no-repeat;
+    background-size: 0.22rem;
+}
+.agree-box input:checked + label>em {
+    background: url(../images/wap-meituan-checked.png) no-repeat;
+    background-size: 0.22rem;
+}
+.agree-box label a {
+    color: #ff5d5b;
+}
+.agree-box-part {
+    width: 6.1rem;
+    margin: 0 auto;
+    color: #d1ba95;
+    font-size: 0.24rem;
+    background-color: #ab7c57;
+    padding: 0.2rem 0.7rem;
+}
+.agree-box-new {
+    margin: 0 auto .3rem auto;
+}
+.agree-box-new span {
+    display: inline-table;
+}
+.agree-box-new label {
+    width: auto;
+    color: #f95f14;
+    font-size: .28rem;
+}
+.submit-button {
+    width: 6.5rem;
+    height: .88rem;
+    line-height: .88rem;
+    margin: .3rem auto;
+    display: inline-table;
+    text-align: center;
+    color: #ffffff;
+    font-size: .32rem;
+    background-color: #fb1f36;
+    border-radius: .5rem;
+}
+.form-tip {
+    font-size: .24rem;
+    color: #787878;
+    text-align: center;
+}
+/* 赠险详情 表格 */
+.detail-content {
+    width: 6.5rem;
+    margin: .5rem auto;
+}
+.detail-content .detail-title {
+    position: relative;
+    font-size: 0;
+}
+.detail-content .detail-title .detail-title-logo {
+    position: absolute;
+    top: .24rem;
+    left: 0;
+    width: 1.38rem;
+    height: .42rem;
+}
+.detail-content .detail-title .detail-title-logo img {
+    width: 1.38rem;
+    height: .42rem;
+}
+.detail-content .detail-title .detail-title-name {
+    width: 4.5rem;
+    height: .88rem;
+    margin-left: 1.2rem;
+    text-align: center;
+    line-height: .88rem;
+    display: inline-table;
+    font-size: .32rem;
+    color: #fe3331;
+    background: linear-gradient(to right , #fff5f4 , #ffecec , #fff8f8);
+}
+.detail-content .detail-title .detail-title-icon {
+    position: absolute;
+    top: -.1rem;
+    width: .78rem;
+    height: .87rem;
+    background: url("../images/table-icon.png") center no-repeat;
+    background-size: 100%;
+}
+.detail-content .detail-info {
+    width: 5.84rem;
+    font-size: .24rem;
+    color: #fe3331;
+    margin: .25rem auto;
+}
+/* 表格 */
+/* 表格边框  */
+.border-left-solid {
+    border-left: 1px solid #d4d4d4;
+}
+.border-left-dashed {
+    border-left: 1px dashed #d4d4d4;
+}
+/* 表格边框结束 */
+.table-box {
+    width: 6.5rem;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: .28rem;
+}
+.table-box table {
+    border: 0;
+    border-collapse:collapse;
+    width: 100%;
+    text-align: left;
+}
+.table-box table thead th {
+    width: 50%;
+    padding: .25rem .33rem;
+    background: linear-gradient(to bottom, #fdfefe, #f5f4f5);
+    font-weight: normal;
+    color: #313131;
+}
+.table-box table thead tr {
+    border-bottom: 1px solid #d4d4d4;
+}
+.table-box table tbody tr {
+    border-bottom: 1px dashed #d4d4d4;
+}
+.table-box table tbody tr:last-child {
+    border-bottom: none;
+}
+.table-box table tbody td {
+    padding: .25rem .33rem;
+    height: .4rem;
+    line-height: .4rem;
+    color: #5f5f5f;
+}
+/* 页底 */
+.footer {
+    font-size: .2rem;
+    color: #777777;
+    text-align: center;
+    margin-bottom: .5rem;
+}

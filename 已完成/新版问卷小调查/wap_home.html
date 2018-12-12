@@ -1,0 +1,248 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <!-- 本页面css -->
+    <link rel="stylesheet" href="css/wap-home.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/wap-common.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header wrap">
+        <div class="header-logo"></div>
+        <div class="header-title"><img src="images/banner-title-yiwai-100.png"></div>
+        <div class="header-title-info">
+            参与小调查 免费领
+        </div>
+    </div>
+    <!-- 问卷 -->
+    <div class="shadow wrap">
+        <div class="questionnaire-box">
+            <div class="questionnaire-content">
+                <div class="questionnaire-item">
+                    <div class="questionnaire-title">1.您已拥有哪种保障？</div>
+                    <div class="questionnaire-detail clx">
+                        <div class="subject-item">
+                            <input  type="radio" name="q1" id="q1-1" value="A">
+                            <label for="q1-1"><em></em>有商业保险</label>
+                        </div>
+                        <div class="subject-item">
+                            <input  type="radio" name="q1" id="q1-2" value="B">
+                            <label for="q1-2"><em></em>有社保</label>
+                        </div>
+                        <div class="subject-item">
+                            <input  type="radio" name="q1" id="q1-3" value="C">
+                            <label for="q1-3"><em></em>两者都有</label>
+                        </div>
+                        <div class="subject-item">
+                            <input  type="radio" name="q1" id="q1-4" value="D">
+                            <label for="q1-4"><em></em>两者都没有</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="questionnaire-item">
+                    <div class="questionnaire-title">2.您目前更关注的保障是？</div>
+                    <div class="questionnaire-detail clx">
+                        <div class="subject-item">
+                            <input  type="radio" name="q2" id="q2-1" value="A">
+                            <label for="q2-1"><em></em>出行安全</label>
+                        </div>
+                        <div class="subject-item">
+                            <input  type="radio" name="q2" id="q2-2" value="B">
+                            <label for="q2-2"><em></em>身体健康</label>
+                        </div>
+                        <div class="subject-item">
+                            <input  type="radio" name="q2" id="q2-3" value="C">
+                            <label for="q2-3"><em></em>养老投资</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="questionnaire-item">
+                    <div class="questionnaire-title">3.家庭幸福保障需要经济的支撑，您的年收入是？</div>
+                    <div class="questionnaire-detail clx">
+                        <div class="subject-item">
+                            <input  type="radio" name="q3" id="q3-1" value="A">
+                            <label for="q3-1"><em></em>10万以下</label>
+                        </div>
+                        <div class="subject-item">
+                            <input  type="radio" name="q3" id="q3-2" value="B">
+                            <label for="q3-2"><em></em>10-20万</label>
+                        </div>
+                        <div class="subject-item">
+                            <input  type="radio" name="q3" id="q3-3" value="C">
+                            <label for="q3-3"><em></em>20万以上</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 点击按钮 -->
+    <a href="javascript:;" class="submit-button wrap" id="questionnaire-submit-button">免费领取</a>
+    <!-- 保险详情 -->
+    <div class="shadow shadow-detail wrap">
+        <div class="detail-box">
+            <div class="detail-box-title">只送不卖 送完为止</div>
+            <div class="detail-box-name">平安公共交通意外险</div>
+            <div class="table">
+                <div class="table-title clx">
+                    <span>保障内容</span>
+                    <span class="float-right">最高保额</span>
+                </div>
+                <div class="table-content">
+                    <div class="table-content-item">
+                        <span class="hot-icon">营运的飞机意外身故/残疾</span>
+                        <span class="float-right">100万</span>
+                    </div>
+                    <div class="table-content-item">
+                        <span>保期：1年</span>
+                        <span class="float-right">可投保年龄：25-50周岁</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-info">
+                本活动由黑牛保险提供,黑牛保险为合法授权服务商，如有需要，请联系服务热线：010-87227385（工作日10:00-17:00）商务合作（电话/微信）：18515088666
+            </div>
+        </div>
+    </div>
+    <!-- 遮罩层 -->
+    <div class="mask" id="mask"></div>
+    <div class="mask mask-forward" id="mask-forward"></div>
+    <!-- 有身份证的弹出窗 -->
+    <div class="modal-box" id="modal-box-idCard" style="display: none">
+        <a class="wap-form-close" href="javascript:;"></a>
+        <div class="form-detail">
+            <form class="form-box" id="form-box-idCard" method="post">
+                <div class="input-box">
+                    <div class="left-box float-left icon-name"><img src="images/icon-name.png"></div>
+                    <div class="right-box float-left"><input type="text" name="name" id="name" placeholder="请输入真实姓名" class="input-text"></div>
+                </div>
+                <div class="input-box">
+                    <div class="left-box float-left icon-name"><img src="images/icon-mobile.png"></div>
+                    <div class="right-box float-left"><input type="tel" name="mobile" id="mobile" placeholder="请输入您的手机号码" class="input-text" maxlength="11"></div>
+                </div>
+                <div class="input-box">
+                    <div class="left-box float-left icon-name"><img src="images/icon-captcha.png"></div>
+                    <div class="right-box float-left"><input type="tel" name="captcha" id="captcha" placeholder="请输入验证码" class="input-text"></div>
+                    <div class="box-right">
+                        <input name="token" id="token" type="hidden"/>
+                        <input id="random" name="r" value="{{page_param['random']}}" type="hidden"/>
+                        <input id="send" type="button" class="send active VIPKID-send" value="获取验证码">
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="left-box float-left icon-idCard"><img src="images/icon-idCard.png"></div>
+                    <div class="right-box float-left"><input type="text" name="idCard" id="idCard" placeholder="请输入您的身份证号验证身份" class="input-text" maxlength="18"></div>
+                </div>
+
+                <div class="agree-box clear">
+                    <input id="agree-button-idCard" type="checkbox" checked="">
+                    <label class="fr" for="agree-button-idCard">
+                        <em></em>我已知晓《<a href="javascript:;" class="activity-rules-btn">活动规则</a>》
+                        《<a href="javascript:;" class="activity-user-btn">服务协议</a>》
+                        并许可保险公司专线致电与我沟通赠险领取事宜。
+                    </label>
+                </div>
+            </form>
+        </div>
+        <!-- 点击按钮 -->
+        <a href="javascript:;" class="submit-button wrap form-submit-button">免费领取</a>
+    </div>
+    <!-- 没有身份证的弹窗 -->
+    <div class="modal-box" id="modal-box-normal" style="display: none">
+        <a class="wap-form-close" href="javascript:;"></a>
+        <div class="form-detail">
+            <form class="form-box" id="form-box-normal" method="post">
+                <div class="input-box">
+                    <div class="left-box float-left icon-name"><img src="images/icon-name.png"></div>
+                    <div class="right-box float-left"><input type="text" name="name" id="name" placeholder="请输入真实姓名" class="input-text"></div>
+                    <div class="sex-box">
+                        <div class="sex-item">
+                            <input id="male" type="radio" value="M" name="sex">
+                            <label class="mr30" for="male"><em></em>男</label>
+                        </div>
+                        <div class="sex-item">
+                            <input id="female" type="radio" value="F" name="sex">
+                            <label for="female"><em></em>女</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="left-box float-left icon-name"><img src="images/icon-birth.png"></div>
+                    <div class="right-box float-left"><input type="text" name="birth" id="birth" placeholder="生日(限22-50岁）" class="input-text" readonly></div>
+                </div>
+                <div class="input-box">
+                    <div class="left-box float-left icon-mobile"><img src="images/icon-mobile.png"></div>
+                    <div class="right-box float-left"><input type="tel" name="mobile" id="mobile" placeholder="请输入您的手机号码" class="input-text" maxlength="11"></div>
+                </div>
+                <div class="input-box">
+                    <div class="left-box float-left icon-captcha"><img src="images/icon-captcha.png"></div>
+                    <div class="right-box float-left"><input type="tel" name="captcha" id="captcha" placeholder="请输入验证码" class="input-text"></div>
+                    <div class="box-right">
+                        <input name="token" id="token" type="hidden"/>
+                        <input id="random" name="r" value="{{page_param['random']}}" type="hidden"/>
+                        <input id="send" type="button" class="send active VIPKID-send" value="获取验证码">
+                    </div>
+                </div>
+
+                <div class="agree-box clear">
+                    <input id="agree-button" type="checkbox" checked="">
+                    <label class="fr" for="agree-button">
+                        <em></em>我已知晓《<a href="javascript:;" class="activity-rules-btn">活动规则</a>》
+                        《<a href="javascript:;" class="activity-user-btn">服务协议</a>》
+                        并许可保险公司专线致电与我沟通赠险领取事宜。
+                    </label>
+                </div>
+            </form>
+        </div>
+        <!-- 点击按钮 -->
+        <a href="javascript:;" class="submit-button wrap form-submit-button">免费领取</a>
+    </div>
+
+    <!-- 活动规则 -->
+    <div id="activity-rules-box" class="modal rules" >
+        <h3>活动规则<a href="javascript:;" class="close"></a></h3>
+        <div class="content user-content modal-msg-box">
+            {% for explain in page_param['explain'] %}
+            <p>{{ explain }}</p>
+            {% end %}
+        </div>
+    </div>
+    <!-- 用户协议 -->
+    <div class="modal rules" id="activity-user-box">
+        <h3>服务协议<a href="javascript:;" class="close"></a></h3>
+        <div class="content user-content modal-msg-box">
+
+        </div>
+    </div>
+    <script src="js/wap-home.js"></script>
+</body>
+</html>

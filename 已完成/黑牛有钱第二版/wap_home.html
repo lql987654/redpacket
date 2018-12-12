@@ -1,0 +1,138 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <link rel="stylesheet" href="css/wap-home.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/wap-common.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header wrap">
+        <div class="header-title">
+            <p>急用钱?</p>
+            <p>不求人！</p>
+            <p class="header-title-tip">500<span>元</span>-30<span>万</span>灵活借贷</p>
+        </div>
+        <div class="header-desc">
+            <p class="first-desc">额度<span>高</span>达30万</p>
+            <p class="second-desc">放款<span>快</span>至30分钟</p>
+            <p class="third-desc">费用<span>低</span>至1万/天3元</p>
+        </div>
+    </div>
+    <!-- 表单主体 -->
+    <div class="form-content wrap">
+        <form class="form-box" id="form-box" method="post">
+            <div class="input-box clx money-box">
+                <div class="left-box"><em></em></div>
+                <input type="text" name="money" id="money" class="input-text" placeholder="请输入您要借款的金额（500元-30万元）">
+            </div>
+            <div class="input-box clx mobile-box">
+                <div class="left-box"><em></em></div>
+                <input type="tel" name="mobile" id="mobile" class="input-text" placeholder="请输入本人常用手机号">
+            </div>
+            <div class="name-sex-box">
+                <div class="input-box clx name-box">
+                    <div class="left-box"><em></em></div>
+                    <input type="text" name="name" id="name" class="input-text" placeholder="请输入您的姓名">
+                </div>
+                <div id="sex-box" class="sex-box">
+                    <input id="male" type="radio" value="M" name="sex" checked>
+                    <label class="mr30" for="male">男</label>
+                    <input id="female" type="radio" value="F" name="sex">
+                    <label for="female">女</label>
+                </div>
+            </div>
+            <div class="age-card-box">
+                <div class="input-box clx age-box">
+                    <div class="left-box"><em></em></div>
+                    <input type="text" name="age" id="age" class="input-text" placeholder="请输入您的年龄">
+                </div>
+                <div class="sex-box credit-card-box">
+                    <input id="no-credit" type="radio" value="N" name="credit" checked>
+                    <label class="mr30" for="no-credit">无信用卡</label>
+                    <input id="yes-credit" type="radio" value="Y" name="credit">
+                    <label for="yes-credit">有信用卡</label>
+                </div>
+            </div>
+
+            <a href="javascript:;" id="form-submit" class="form-submit">我要借钱</a>
+
+            <div class="form-welfare-box">
+                <input id="welfare-button" type="checkbox" checked>
+                <label class="fr" for="welfare-button">
+                    <em></em>免费领取1万元账户安全险或 最高100万出行险
+                </label>
+            </div>
+
+            <div class="agree-box clx">
+                <input id="agree-button" type="checkbox" checked>
+                <label class="fr" for="agree-button">
+                    <em></em>本人同意已同意并阅读《<a href="javascript:;" id="activity-user-btn">用户协议</a>》
+                    《<a href="javascript:;" >保险条款</a>》
+                    《<a href="javascript:;" >保险须知及信息安全条款</a>》同意中国平安后续致电确
+                    认保险产品相关事宜
+                </label>
+            </div>
+        </form>
+    </div>
+    <!-- 数量模块 -->
+    <div class="number-box wrap clx">
+        <div class="item-box item-money-box clx float-left">
+            <div class="item-left-box float-left"><em></em></div>
+            <div class="item-right-box">
+                <p>287.39亿元</p>
+                <p>成功放款</p>
+            </div>
+        </div>
+        <div class="item-box item-people-box clx float-left">
+            <div class="item-left-box float-left"><em></em></div>
+            <div class="item-right-box">
+                <p>136.21万人</p>
+                <p>借款人数</p>
+            </div>
+        </div>
+    </div>
+    <!-- 合作机构 -->
+    <div class="cooperate-box wrap">
+        <div class="cooperate-box-title">合作机构</div>
+        <div class="cooperate-box-content clx">
+            <div class="cooperate-item company-pinganpuhui float-left"></div>
+            <div class="cooperate-item company-niwodai float-left"></div>
+            <div class="cooperate-item company-yirendai float-left"></div>
+        </div>
+        <div class="cooperate-box-content clx">
+            <div class="cooperate-item company-paipaidai float-left"></div>
+            <div class="cooperate-item company-baixingjinrong float-left"></div>
+            <div class="cooperate-item company-hengchang float-left"></div>
+        </div>
+    </div>
+</body>
+</html>

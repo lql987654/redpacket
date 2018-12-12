@@ -1,0 +1,74 @@
+*{padding:0; margin:0; font-family:arial,"\5FAE\8F6F\96C5\9ED1",sans-serif; }
+body{
+    background-color: #ebebeb;
+}
+input[type='button']{
+    -webkit-appearance: none;
+}
+.container{
+    width: 7.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.result-container{
+    width: 7.1rem;
+    margin: 0 auto;
+}
+.result-title-box{
+    color: #6f2627;
+    background: url("../images/angle.png") #fef4eb center repeat-x;
+    background-position: bottom;
+    background-size: .28rem .14rem;
+    padding: .28rem .52rem .3rem 1.14rem;
+}
+.result-title{
+    font-size: .28rem;
+    color: #6f2627;
+    margin-bottom: .2rem;
+}
+.result-name{
+    font-size: .4rem;
+}
+.result-content-box{
+    width: 100%;
+    background-color: #ffffff;
+}
+.result-content{
+    width: 6.5rem;
+    margin: 0 auto;
+}
+.result-table{
+    font-size: .28rem;
+    border: 1px solid #f6bda1;
+    border-radius: 4px;
+}
+.result-table table{
+    border: 0;
+    border-collapse:collapse;
+    width: 100%;
+    text-align: center;
+}
+.result-table table thead{
+    background-color: #f4af8d;
+}
+.result-table table thead th,
+.result-table table tbody td{
+    width: 33.3%;
+    font-weight: normal;
+    height: .7rem;
+    line-height: .7rem;
+    color: #6f2627;
+}
+.table-border-left{
+    border-left: 1px solid #f4af8d;
+}
+.table-detail-title{
+    margin: .2rem 0 .2rem .2rem;
+    font-size: .28rem;
+    color: #6f2627;
+}
+.result-table-detail table thead th,
+.result-table-detail table tbody td{
+    width: 50%;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <script src="http://static.heiniubao.com/static/js/plugins/lib/jquery-3.2.1.min.js"></script>
+    <script src="http://static.heiniubao.com/static/js/plugins/base/wap-base.js?v=1.0.0"></script>
+    <link rel="stylesheet" href="css/wap-home.css?v=1.0.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/jquery.rotate.min.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <div class="active_time">
+                <img src="images/icon_01.png">
+                <span>活动倒计时：</span>
+                <span class="last_time" id="04/06/2018 00:00:00">
+                    <!--<span>0</span><span>8</span>:<span>2</span><span>8</span>:<span>3</span><span>6</span>-->
+                </span>
+            </div>
+            <div class="page_header">
+                <div class="pageHeaderImg"><img src="images/page_header_03.png"></div>
+            </div>
+        </div>
+        <div class="info">
+            <img src="images/title_03.png" >
+        </div>
+        <div class="jpxx">
+            <img src="images/jpxx_10.png">
+            <p class="jp">iPhone X 每天3台 价值￥8388</p>
+            <p class="jpsy">*仅剩2台</p>
+        </div>
+        <!--<div class="bgjb_1"><img src="images/bgjb_03.png"></div>-->
+        <div class="zpbj xuanzhuan"><img src="images/bg.png" class=""/></div>
+        <div class="zpcj">
+            <div class="zpcj-btn"><input type="button" class="cjan change_btn" id="lotteryBtn"></div>
+            <div class="zp_img_zmd"><img src="images/zp_14.png" class="xuanzhuan"></div>
+            <div class="jp_zp">
+                <img src="images/jp_zp_1_03.png" id="lotteryBackBtn" class="xuanzhuan">
+            </div>
+        </div>
+        <div class="bx hide"><img src="images/bx_14.png"></div>
+        <div class="zjfb hide">
+            <div class="fbinfo">抽<span>3次</span>中奖率翻倍</div>
+            <div class="fbdh">
+                <img src="images/zjicon_03.png" class="icon_gift gift-resizeBig">
+                <p class="fbdh_jd"></p>
+                <p class="fbdh_wcjd moveFromBottomLine delay1000"><img src="images/zjicon_07.png" class="icon_hj moveFromBottom delay1000"></p>
+            </div>
+        </div>
+        <div class="jpzx">
+
+            <img src="images/jpzx_13.png">
+            <span class="jpsy_btn">剩余 <b>6</b>次机会</span>
+            <span class="jpzx_btn">奖品中心<b>1</b></span>
+        </div>
+        <div class="jbx"></div>
+        <div class="zjxx" id="scrollBox">
+            <ul id="con1">
+                <li>恭喜辽宁 185***2930 的李先生<span class="hd">获得</span><span class="jpmc">iPhone X 1台</span></li>
+                <li>恭喜辽宁 185***2930 的李先生<span class="hd">获得</span><span class="jpmc">iPhone X 1台</span></li>
+                <li>恭喜辽宁 185***2930 的李先生<span class="hd">获得</span><span class="jpmc">iPhone X 1台</span></li>
+                <li>恭喜辽宁 185***2930 的李先生<span class="hd">获得</span><span class="jpmc">iPhone X 1台</span></li>
+                <li>恭喜辽宁 185***2930 的李先生<span class="hd">获得</span><span class="jpmc">iPhone X 1台</span></li>
+            </ul>
+            <ul id="con2"></ul>
+        </div>
+        <div class="jbx"></div>
+        <div class="hdgz">
+            <div class="left_dot">
+                <p></p>
+                <p ></p>
+            </div>
+            活动规则
+            <div class="right_dot">
+                <p></p>
+                <p ></p>
+            </div>
+        </div>
+        <div class="gz_detail">
+            <div>
+                <ul>
+                    <li><span>1</span>此活动为概率中奖，奖品数量有限，祝好运</li>
+                    <li><span>2</span>每天3部iPhone X手机，先抢先得</li>
+                    <li><span>3</span>活动时间：即日起至2018-05-10</li>
+                </ul>
+            </div>
+            <div class="gz_jp">
+                <p>惊喜一：iPhone X</p>
+                <p>惊喜二：三星S9（每天仅一台）</p>
+                <p>惊喜三：500元现金</p>
+            </div>
+            <div class="gz_sm">
+                <p>重要声明：</p>
+                <p>1、实物类奖品将在活动结束当天5-10个工作日内安排发货，请耐心等待</p>
+                <p>2、优惠券、现金券类奖品的获取方式为人工发放</p>
+                <p>3、通过非法途径获得商品的，主办方有权不提供奖品</p>
+            </div>
+        </div>
+        <div class="footer_info">*奖品与活动和设备生产商Apple lnc.无关</div>
+        <div class="hb" style="display: none">
+            <img src="images/hb_03.png" class="hb_img">
+            <img src="images/example_gift_jpg_03.png" class="gift-img">
+            <p class="hb_zj">恭喜你中奖了！</p>
+            <p class="hb_btn btn_resizeBig"><input type="button" value="立即领取"></p>
+            <p class="hb_jh">再试一次 有5次机会</p>
+            <p class="hb_close" id="closeBtn"><img src="../翻牌/image/close_07.png"></p>
+        </div>
+        <div class="maskLayer" style="display:none;"></div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

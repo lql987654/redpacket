@@ -1,0 +1,119 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <link href="css/wap-home.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header wrap">
+        <div class="rules-box-button">
+            <span class="rules-bg"></span>
+            <span class="rules-button-content">规则</span>
+        </div>
+    </div>
+    <!-- 树背景 -->
+    <div class="content-bg"></div>
+    <!-- 转盘 -->
+    <div class="content">
+        <div class="turntable">
+            <div class="turntable-bg">
+                <img src="images/turntable.png" id="lotteryBackBtn" class="xuanzhuan">
+            </div>
+            <div class="turntable-awards">
+                <img src="images/turntable-awards.png" class="xuanzhuan-award" id="xuanzhuan-award">
+            </div>
+            <div class="turntable-btn">
+                <input type="button" class="turntable-btn-input" id="lotteryBtn" style="transform: rotate(0deg); transform-origin: 50% 50% 0px;">
+            </div>
+            <div class="turntable-hand">
+                <img src="images/finger-dot.png" class="turntable-dot click-dot delay400">
+                <img src="images/turntable-hand.png" class="turntable-hand-icon click">
+            </div>
+        </div>
+        <div class="prize_center">
+            <span>剩余<b>6</b>次机会</span>
+            <span>奖品中心<b>3</b></span>
+        </div>
+    </div>
+    <!-- 右侧中奖翻倍信息 -->
+    <div class="rocket rocket-animation"><img src="images/rocket-icon.png"></div>
+    <div class="active-right-tip">
+        <div class="tip-left-info">抽<span>3次</span>中奖率翻倍</div>
+        <div class="tip-right">
+            <img src="images/gift-icon.png" class="right-icon-gift gift-resizeBig">
+            <p class="right-progress-unfinished"></p>
+            <!--<p class="right-progress-finished moveFromBottomLine delay1000"><img src="images/zjicon_07.png" class="icon-rocket moveFromBottom delay1000"></p>-->
+            <p class="right-progress-finished moveFromBottomLine delay3000"><img src="images/rocket-icon.png" class="icon-rocket"></p>
+        </div>
+    </div>
+    <!-- 遮罩层 -->
+    <div class="mask" id="mask"></div>
+    <!-- 弹出红包 -->
+    <div class="redpacket-box" style="display: none">
+        <img src="images/redpacket-bg.png" class="redpacket-bg">
+        <img class="gift-img">
+        <p class="redpacket-info">恭喜你中奖了！</p>
+        <p class="redpacket-button btn_resizeBig"><input type="button" value="立即领取"></p>
+        <p class="redpacket-chance">再试一次 有5次机会</p>
+        <p class="redpacket-close" id="closeBtn"><img src="images/redpacket-close.png"></p>
+    </div>
+    <!-- 活动规则-->
+    <div class="modal-box-rules">
+        <a class="modal-box-close" href="javascript:;"></a>
+        <div class="modal-box-content">
+            <div class="modal-box-title"><p>活动规则</p></div>
+            <div class="modal-box-detail">
+                <div class="detail-item">
+                    <ul>
+                        <li><span>1</span>此活动为概率中奖，奖品数量有限，祝好运</li>
+                        <li><span>2</span>每天3部iPhone Xs手机，先抢先得</li>
+                        <li><span>3</span>活动时间：即日起至2019-03-01</li>
+                    </ul>
+                </div>
+                <div class="detail-item">
+                    <p>惊喜一：iPhone Xs</p>
+                    <p>惊喜二：三星S9（每天仅一台）</p>
+                    <p>惊喜三：500元现金</p>
+                </div>
+                <div class="detail-item">
+                    <ul>
+                        <li>重要声明：</li>
+                        <li><span>1</span>此活动为概率中奖，奖品数量有限，祝好运</li>
+                        <li><span>2</span>每天3部iPhone Xs手机，先抢先得</li>
+                        <li><span>3</span>活动时间：即日起至2019-03-01</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

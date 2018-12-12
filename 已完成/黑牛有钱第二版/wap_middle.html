@@ -1,0 +1,142 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <link rel="stylesheet" href="css/wap-middle.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/wap-common.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <!-- 头部信息 -->
+    <div class="header wrap clx">
+        <div class="header-item info-item float-left arrow-icon">
+            <p>1 完善信息</p>
+        </div>
+        <div class="header-item plan-item float-left arrow-icon">
+            <p>2 定制贷款方案</p>
+        </div>
+        <div class="header-item money-item float-left">
+            <p>3 完成放款</p>
+        </div>
+    </div>
+    <!-- 表单主体-->
+    <div class="form-container wrap">
+        <div class="form-content ">
+            <div class="form-title">
+                <p class="form-title-detail">完善借款信息</p>
+                <p class="form-title-tip">信息越准确，匹配越精准，放款速度越快</p>
+            </div>
+            <form class="form-box" id="form-box" method="post">
+                <div class="form-detail">
+                    <div class="form-item-box clx">
+                        <div class="left-box float-left">寿险保单</div>
+                        <div class="right-box float-left">
+                            <input id="no-policy" type="radio" name="policy" value="N">
+                            <label for="no-policy">没有</label>
+                            <input id="yes-policy" type="radio" name="policy" value="Y">
+                            <label for="yes-policy">有</label>
+                        </div>
+                    </div>
+                    <div class="form-item-box clx">
+                        <div class="left-box float-left">微 粒 贷</div>
+                        <div class="right-box float-left">
+                            <input id="no-weilidai" type="radio" name="weilidai" value="N">
+                            <label for="no-weilidai">未用过</label>
+                            <input id="yes-weilidai" type="radio" name="weilidai" value="Y">
+                            <label for="yes-weilidai">用过</label>
+                        </div>
+                    </div>
+                    <div class="form-item-box clx">
+                        <div class="left-box float-left">名下房产</div>
+                        <div class="right-box float-left">
+                            <input id="no-house" type="radio" name="house" value="A">
+                            <label for="no-house">无房</label>
+                            <input id="yes-house-loan" type="radio" name="house" value="B">
+                            <label for="yes-house-loan">有房贷</label>
+                            <input id="yes-house-no-loan" type="radio" name="house" value="C">
+                            <label for="yes-house-no-loan">有房无贷</label>
+                        </div>
+                    </div>
+                    <div class="form-item-box clx">
+                        <div class="left-box float-left">名下汽车</div>
+                        <div class="right-box float-left">
+                            <input id="no-car" type="radio" name="car" value="A">
+                            <label for="no-car">无车</label>
+                            <input id="yes-car-loan" type="radio" name="car" value="B">
+                            <label for="yes-car-loan">有车贷</label>
+                            <input id="yes-car-no-loan" type="radio" name="car" value="C">
+                            <label for="yes-car-no-loan">有车无贷</label>
+                        </div>
+                    </div>
+                    <div class="form-item-box clx">
+                        <div class="left-box float-left">您的职业</div>
+                        <div class="right-box float-left">
+                            <input id="office" type="radio" name="occupation" value="A">
+                            <label for="office">上班族</label>
+                            <input id="civil" type="radio" name="occupation" value="B">
+                            <label for="civil">公务员</label>
+                            <input id="private" type="radio" name="occupation" value="C">
+                            <label for="private">私营业主</label>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="form-salary-box" class="form-salary-box">
+                    <div class="form-item-box clx">
+                        <div class="left-box float-left">月收入</div>
+                        <div class="right-box float-left">
+                            <input id="less-than-five" type="radio" name="salary" value="A">
+                            <label for="less-than-five">5千以下</label>
+                            <input id="more-than-five" type="radio" name="salary" value="B">
+                            <label for="more-than-five">5千-1万</label>
+                            <input id="more-than-one" type="radio" name="salary" value="C">
+                            <label for="more-than-one">1万以上</label>
+                        </div>
+                    </div>
+                    <div class="form-item-box clx">
+                        <div class="left-box float-left">工作时间</div>
+                        <div class="right-box float-left">
+                            <input id="less-than-six-month" type="radio" name="experience" value="A">
+                            <label for="less-than-six-month">6个月内</label>
+                            <input id="less-than-one-year" type="radio" name="experience" value="B">
+                            <label for="less-than-one-year">12个月内</label>
+                            <input id="more-than-one-year" type="radio" name="experience" value="C">
+                            <label for="more-than-one-year">1年以上</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <a href="javascript:;" id="form-submit" class="form-submit form-submit-activity">确认提交</a>
+    </div>
+
+
+</body>
+</html>

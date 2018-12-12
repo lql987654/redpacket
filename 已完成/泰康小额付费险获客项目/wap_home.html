@@ -1,0 +1,292 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <link rel="stylesheet" href="css/wap-home.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/wap-common.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header wrap">
+        <div class="header-info">
+            <p>80000000倍</p>
+            <p>的保障只要<span>1分钱</span></p>
+        </div>
+        <div class="header-radio-info clx">
+            <div class="radio-item float-left">
+                <p class="item-money">50万</p>
+                <p class="item-tip">航空意外</p>
+            </div>
+            <div class="radio-item float-left">
+                <p class="item-money">20万</p>
+                <p class="item-tip">火车意外</p>
+            </div>
+            <div class="radio-item float-left">
+                <p class="item-money">10万</p>
+                <p class="item-tip">自驾车意外</p>
+            </div>
+        </div>
+    </div>
+    <!-- 表格主体 -->
+    <div class="table-container wrap">
+        <div class="table-title">泰康出行保保险详情</div>
+        <div class="table-content">
+            <div class="table-info">
+                <span>保险期间:7天</span>
+                <span>可投保年龄：18-60周岁</span>
+            </div>
+            <div class="table-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>保障内容</th>
+                            <th>保额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>乘坐飞机意外</td>
+                            <td>50万</td>
+                        </tr>
+                        <tr>
+                            <td>乘坐火车意外</td>
+                            <td>20万</td>
+                        </tr>
+                        <tr>
+                            <td>驾驶私家车意外</td>
+                            <td>10万</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- 产品相关主体 -->
+    <div class="product-container">
+        <div class="product-title wrap">
+            <ul class="clx">
+                <li class="active">产品特色</li>
+                <li>理赔流程</li>
+                <li>我要投保</li>
+            </ul>
+        </div>
+        <!-- 产品特色 -->
+        <div class="product-content wrap">
+            <!-- 交通工具 -->
+            <div class="product-box">
+                <div class="product-box-title">常用交通工具全覆盖</div>
+                <div class="product-box-content clx">
+                    <div class="product-box-item float-left aeroplane">
+                        <p class="item-icon"></p>
+                        <p>航空意外<span>50万</span></p>
+                    </div>
+                    <div class="product-box-item float-left train">
+                        <p class="item-icon"></p>
+                        <p>火车意外<span>20万</span></p>
+                    </div>
+                    <div class="product-box-item float-left car">
+                        <p class="item-icon"></p>
+                        <p>自驾车意外<span>10万</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- 生效时间 -->
+            <div class="product-box">
+                <div class="product-box-title">灵活选择生效时间 出行无忧</div>
+                <div class="product-box-content clx effective-time-content">
+                    <div class="product-box-item float-left effective-time effective-time-icon-1 arrow-icon">
+                        <p class="item-icon"></p>
+                        <p>提前投保</p>
+                    </div>
+                    <div class="product-box-item float-left effective-time effective-time-icon-2 arrow-icon">
+                        <p class="item-icon"></p>
+                        <p>确定时间</p>
+                    </div>
+                    <div class="product-box-item float-left effective-time effective-time-icon-3">
+                        <p class="item-icon"></p>
+                        <p>获得保障</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 天平部分 -->
+            <div class="product-box">
+                <div class="product-box-title">超低价格   超高保额</div>
+                <div class="product-box-content balance-content">
+                    <div class="premium ">保费<span>￥0.01</span></div>
+                    <div class="coverage">保额<span>￥80万</span></div>
+                </div>
+            </div>
+        </div>
+        <!-- 理赔流程 -->
+        <div class="claim-container">
+            <div class="claim-title">理赔流程</div>
+            <div class="claim-content">
+                <div class="claim-box ">
+                    <div class="claim-item claim-item-1 claim-arrow-right">
+                        <div class="claim-item-icon"></div>
+                        <div class="claim-item-detail">
+                            <p class="claim-info">1.报案</p>
+                            <p class="claim-tip">拨打全国理赔热线95522</p>
+                        </div>
+                    </div>
+                    <div class="claim-item claim-item-2 claim-arrow-bottom">
+                        <div class="claim-item-icon"></div>
+                        <div class="claim-item-detail">
+                            <p class="claim-info">2.申请</p>
+                            <p class="claim-tip">准备相关材料</p>
+                        </div>
+                    </div>
+                    <div class="claim-item claim-item-3 claim-arrow-left">
+                        <div class="claim-item-icon"></div>
+                        <div class="claim-item-detail">
+                            <p class="claim-info">3.审核</p>
+                            <p class="claim-tip">受理并审核您的理赔</p>
+                        </div>
+                    </div>
+                    <div class="claim-item claim-item-4">
+                        <div class="claim-item-icon"></div>
+                        <div class="claim-item-detail">
+                            <p class="claim-info">4.给付</p>
+                            <p class="claim-tip">理赔服务</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 表单主体 -->
+        <div class="form-container">
+            <div class="form-title">我要投保<span>仅限为本人投保</span></div>
+            <div class="form-content">
+                <form id="form-box" class="form-box" method="post">
+                    <div class="input-box">
+                        <div class="left-box">您的姓名</div>
+                        <div class="right-box">
+                            <input type="text" name="name" id="name" class="input-text" placeholder="请输入您的真实姓名"/>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="left-box">身份证号</div>
+                        <div class="right-box">
+                            <input type="text" name="idCard" id="idCard" class="input-text" placeholder="用于保单生效" maxlength="18"/>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="left-box">手机号码</div>
+                        <div class="right-box">
+                            <input type="tel" name="mobile" id="mobile" class="input-text" placeholder="用于接收承保短信" maxlength="11"/>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="left-box">验 证 码</div>
+                        <div class="right-box">
+                            <input type="tel" name="captcha" id="captcha" class="input-text" placeholder="请输入验证码" maxlength="4"/>
+                        </div>
+                        <div class="box-right">
+                            <input name="token" id="token" type="hidden"/>
+                            <input id="random" name="r" value="{{page_param['random']}}" type="hidden"/>
+                            <input id="send" type="button" class="send active VIPKID-send" value="获取验证码">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="submit-box">
+            <a class="submit-free">保费(限时价)<span class="submit-money-detail">￥0.01</span></a>
+            <a href="javascript:;" class="form-submit" id="form-submit">立即投保</a>
+        </div>
+    </div>
+    <!-- 遮罩层 -->
+    <div class="mask" id="mask"></div>
+    <!-- 支付弹窗 -->
+    <div class="modal-pay-box wrap">
+        <div class="pay-box-content">
+            <div class="pay-box-title">请完善投保信息<span></span></div>
+            <div class="pay-box-form">
+                <form class="form-box" id="pay-form-box" method="post">
+                    <div class="input-box pay-input-box">
+                        <div class="left-box">保单生效日期</div>
+                        <div class="right-box select-box">
+                            <input type="text" name="date" id="date" class="input-text" placeholder="请输入您的真实姓名"/>
+                        </div>
+                    </div>
+
+                    <div class="input-box pay-input-box">
+                        <div class="left-box email-box">电子邮箱</div>
+                        <div class="right-box">
+                            <input type="text" name="email" id="email" class="input-text" placeholder="用于接收电子保单（必填）"/>
+                        </div>
+                    </div>
+
+                    <div class="agree-box clear">
+                        <input id="agree-button" type="checkbox" checked>
+                        <label class="fr" for="agree-button">
+                            <em></em>我已确认《<a href="javascript:;" id="activity-rules-btn">投保须知</a>》
+                            《<a href="javascript:;" id="activity-user-btn">用户服务协议</a>》
+                            《<a href="javascript:;" >保险条款</a>》
+                        </label>
+                    </div>
+
+                    <div class="pay-box-detail">
+                        <div class="detail-name">张三</div>
+                        <div class="detail-info">手机号码：138****1556</div>
+                        <div class="detail-info">身份证号：110************548</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="submit-box">
+            <a class="submit-free">保费(限时价)<span class="submit-money-detail">￥0.01</span></a>
+            <a href="javascript:;" class="form-submit" id="form-pay-submit">去支付</a>
+        </div>
+    </div>
+
+    <!-- 活动规则 -->
+    <div id="modal-activity-rules" class="modal-box rules mask-popup-box modal" >
+        <h3>活动规则<a href="javascript:;" class="close-button"></a></h3>
+        <div class="content user-content modal-msg-box">
+            {% for explain in page_param['explain'] %}
+            <p>{{ explain }}</p>
+            {% end %}
+        </div>
+    </div>
+    <!-- 用户协议 -->
+    <div class="modal-box rules mask-popup-box modal" id="modal-service-agreement">
+        <h3>用户协议<a href="javascript:;" class="close-button"></a></h3>
+        <div class="content user-content modal-msg-box">
+
+        </div>
+    </div>
+
+    <!-- 本页面js -->
+    <script src="js/wap-home.js"></script>
+</body>
+</html>

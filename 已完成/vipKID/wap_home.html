@@ -1,0 +1,573 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <link rel="stylesheet" href="css/wap-home.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/wap-common.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <!-- 顶部banner -->
+    <div class="header wrap">
+        <div class="header-logo"></div>
+        <div class="header-info">
+            <p class="header-title">每天25分钟 轻松学英语 </p>
+            <p class="header-tip">限时免费领取价值<span>388元</span>试听课</p>
+            <p class="header-tip">适合4-12岁儿童 电脑/iPad上课</p>
+        </div>
+    </div>
+    <!-- 表单主体 -->
+    <div class="form-container wrap">
+        <div class="form-title">只有填写了孩子基本情况后，VIPKID老师才能尽快帮孩子安排合适的问题学科诊断课哦！</div>
+        <!-- 表单内容 -->
+        <div class="form-content">
+            <form class="form-box" id="form-box" method="post">
+                <input type="hidden" id="page_type" value="A" name="page_type">
+                <div class="input-box clx select-box">
+                    <div class="left-box">上课设备</div>
+                    <input type="hidden" name="electronic-equipment" id="device-hidden-input" value="">
+                    <div class="right-box">
+                        <input type="text" id="electronic-equipment" class="input-text device-input" placeholder="请选择孩子的上课设备" readonly />
+                    </div>
+                </div>
+                <div class="input-box clx">
+                    <div class="left-box">家长手机</div>
+                    <div class="right-box">
+                        <input type="text" name="mobile" placeholder="用于和您确认孩子上课的时间" id="mobile" class="input-text">
+                    </div>
+                </div>
+                <div class="input-box clx">
+                    <div class="left-box">验证码</div>
+                    <div class="right-box">
+                        <input type="text" name="captcha" placeholder="请输入验证码" id="captcha" class="input-text">
+                    </div>
+                    <div class="box-right">
+                        <input name="token" id="token" type="hidden">
+                        <input id="random" name="r" value="" type="hidden">
+                        <input id="send" type="button" class="send" value="获取验证码">
+                    </div>
+                </div>
+                <div class="input-box clx select-box">
+                    <div class="left-box">孩子年龄</div>
+                    <input type="hidden" name="age" id="age-hidden-input" value="">
+                    <div class="right-box">
+                        <input type="text" id="age" class="input-text" placeholder="适合4-12岁儿童" readonly="" value="">
+                    </div>
+                </div>
+                <div class="choose-box clx">
+                    <div class="choose-left">是否满足下列上课设备要求</div>
+                    <div class="choose-right">
+                        <input id="have" type="radio" name="electronic-equipment" value="Y">
+                        <label for="have" class="first-label">是</label>
+                        <input id="havent" type="radio" name="electronic-equipment" value="N">
+                        <label for="havent">否</label>
+                    </div>
+                    <div class="choose-content">
+                        <p>1）台式电脑+摄像头+头戴式耳麦</p>
+                        <p>2）笔记本电脑（内置或外接摄像头）+头戴式耳麦</p>
+                        <p>3）苹果台式电脑或苹果笔记本电脑</p>
+                        <p>4）iPad1代以上的苹果平板电脑</p>
+                    </div>
+                </div>
+                <a id="submit-button" href="javascript:;" class="submit-button">为孩子领取388元试听礼包</a>
+                <div class="form-tip">领取成功后请注意接听010或021或95开头的座机来电</div>
+                <div class="agree-box clear-float">
+                    <input id="agree-button" type="checkbox" checked="">
+                    <label class="fr" for="agree-button">
+                        <em></em>
+                        我已阅读及同意
+                        <a href="javascript:;" id="user-tip-button">《用户提示》</a>
+                        <a href="javascript:;" id="activity-user-rules-button">《用户协议》</a>和
+                        <a href="javascript:;" id="activity-secret-button">《隐私策略》</a>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 简介详情 -->
+    <div class="detail wrap">
+        <!-- 地图 人数 -->
+        <div class="map-box">
+            <div class="map-info">
+                <p class="map-title">VIPKID</p>
+                <p class="map-tip">在线少儿英语</p>
+                <p class="map-tip">让孩子自由行走在这个星球</p>
+            </div>
+            <div class="map-detail">
+                <div class="map-detail-item">
+                    <p class="detail-item-title">63个</p>
+                    <p class="detail-item-content">国家和地区遍布学员</p>
+                </div>
+                <div class="map-detail-item">
+                    <p class="detail-item-title">60，000+</p>
+                    <p class="detail-item-content">优质教师</p>
+                </div>
+                <div class="map-detail-item">
+                    <p class="detail-item-title">500，000+</p>
+                    <p class="detail-item-content">付费学员</p>
+                </div>
+                <div class="map-detail-item">
+                    <p class="detail-item-title">100%</p>
+                    <p class="detail-item-content">纯北美外教</p>
+                </div>
+            </div>
+            <div class="map-bottom-bg"></div>
+        </div>
+        <!-- 为什么选择VIPKID模块 -->
+        <div class="choose-vipkid-container">
+            <div class="choose-vipkid-title">
+                <p class="choose-vipkid-title-detail">为什么要让孩子来</p>
+                <p class="choose-vipkid-name">VIPKID学习</p>
+                <p class="ask-online">在线咨询</p>
+            </div>
+            <div class="choose-vipkid-content clx">
+                <div class="choose-vipkid-item choose-vipkid-item-1">
+                    <div class="bg-info">
+                        <div class="bg-title">高资历北美外教</div>
+                        <div class="bg-desc">VIPKID北美外教均为北美小学教师/具备ESL教学经验/具有教育辅导经验。拥有良好教育背景，经过严格的面试甄选，任用懂教育、爱孩子、擅长在线授课的优秀老师。</div>
+                    </div>
+                </div>
+                <div class="choose-vipkid-item choose-vipkid-item-2">
+                    <div class="bg-info">
+                        <div class="bg-title">1对1定制化服务</div>
+                        <div class="bg-desc">北美外教1对1，打造适合中国本土小朋友的美国小学课程，因材施教。专业班主任老师1对1，全程提供五星服务，为孩子和家长及时解决各种问题，有效提升学习效果。</div>
+                    </div>
+                </div>
+                <div class="choose-vipkid-item choose-vipkid-item-3">
+                    <div class="bg-info">
+                        <div class="bg-title">纯正美国课程体验</div>
+                        <div class="bg-desc">VIPKID教材和教学内容根据美国CCSS（美国共同核心州立客户才能标准），结合中国学生特性，由强大教研专家团队潜心研发，注重语言能力培养同时，塑造孩子多样综合素质。</div>
+                    </div>
+                </div>
+                <div class="choose-vipkid-item choose-vipkid-item-4">
+                    <div class="bg-info">
+                        <div class="bg-title">浸入式学习体验</div>
+                        <div class="bg-desc">贯彻独创6E闭环学习理念，运用“浸入式”教学法，让孩子在原汁原味的英文语言环境中，完成教学内容的消化吸收，自然习得纯正美式英语与文化思维。</div>
+                    </div>
+                </div>
+                <div class="choose-vipkid-item choose-vipkid-item-5">
+                    <div class="bg-info">
+                        <div class="bg-title">透明在线课程</div>
+                        <div class="bg-desc">课程中，家长可从手机端实时监课，随时随地掌握课堂实况。课程结束后，回放录像、外教老师反馈与学习报告，帮助家长及时孩子学习掌握情况。</div>
+                    </div>
+                </div>
+                <div class="choose-vipkid-item choose-vipkid-item-6">
+                    <div class="bg-info">
+                        <div class="bg-title">随时随地便捷上课</div>
+                        <div class="bg-desc">笔记本、台式机、iPad，多终端学习平台覆盖。自由选择时间地点，随时约课、上课，免除线下机构路途奔波，高效利用碎片化学习时间。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 100%纯优质外教模块 -->
+        <div class="teacher-container">
+            <div class="teacher-container-title">100%纯北美优质外教</div>
+            <div class="teacher-container-desc">VIPKID的外教均来自北美，经过严格筛选，录取率低于
+                5%，具备ESL或K12教学辅导经验。</div>
+        </div>
+        <!-- 录用标准 -->
+        <div class="hire-standard">
+            <div class="hire-standard-title">
+                <p>严格的外教录用标准</p>
+                <p>VIPKID目前在册的北美外教人数超过60000名</p>
+            </div>
+            <div class="hire-standard-content">
+                <div class="hire-standard-item hire-standard-item-1">
+                    <p class="item-title">优质外教</p>
+                    <p class="item-desc">拥有毕业于世界名校的外教，大部分外教均拥有优质高等教育学历背景</p>
+                </div>
+                <div class="hire-standard-item hire-standard-item-2">
+                    <p class="item-title">来自北美</p>
+                    <p class="item-desc">VIPKID的外教均来自北美，发音纯正，熟悉北美文化，拥有国际视野</p>
+                </div>
+                <div class="hire-standard-item hire-standard-item-3">
+                    <p class="item-title">严格审核</p>
+                    <p class="item-desc">按照严格标准对每一位外教进行4轮以上筛选，确保每位外教懂教育、爱孩子，为孩子提供优质在线学习体验</p>
+                </div>
+            </div>
+        </div>
+        <!-- 为什么选择北美优质外教 -->
+        <div class="high-quality-teacher">
+            <div class="high-quality-teacher-title">
+                <p>我们为什么仅选用</p>
+                <p>北美优质外教？</p>
+            </div>
+            <div class="choose-vipkid-content clx high-quality-teacher-content">
+                <div class="high-quality-teacher-item high-quality-teacher-item-1">
+                    <div class="bg-info">
+                        <div class="bg-title">口音纯正</div>
+                        <div class="bg-desc">在孩子语言学习黄金期，让孩子习得纯正的发音</div>
+                    </div>
+                </div>
+                <div class="high-quality-teacher-item high-quality-teacher-item-2">
+                    <div class="bg-info">
+                        <div class="bg-title">北美文化</div>
+                        <div class="bg-desc">不光是学习语言，更要学习文化，VIPKID外教熟悉北美文化，拥有国际视野</div>
+                    </div>
+                </div>
+                <div class="high-quality-teacher-item high-quality-teacher-item-3">
+                    <div class="bg-info">
+                        <div class="bg-title">教育接轨</div>
+                        <div class="bg-desc">北美教育水平世界一流，在北美优质外教的教学下，学员可以更容易地掌握北美教育的精髓</div>
+                    </div>
+                </div>
+                <div class="high-quality-teacher-item high-quality-teacher-item-4">
+                    <div class="bg-info">
+                        <div class="bg-title">师资规模</div>
+                        <div class="bg-desc">VIPKID拥有超过6万名优质外教，均为北美中小教师或者ESL(第二外语教学)经验或者辅导经验的辅导员。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 对标ccss -->
+        <div class="ccss-standard">
+            <div class="ccss-standard-title">
+                <p>对标美国共同核心州立标准CCSS</p>
+            </div>
+            <div class="ccss-desc">
+                CCSS标准让孩子对接国际教育标准，给孩子的未来多一种选择。优中选优的教材：基于美国共同核心州立标准（CCSS）而独立研发的适合中国孩子的教材
+            </div>
+            <div class="hire-standard-content">
+                <div class="ccss-standard-item ccss-standard-item-1">
+                    <p class="item-desc">拥有毕业于世界名校的外教，大部分外教均拥有优质高等教育学历背景</p>
+                </div>
+                <div class="ccss-standard-item ccss-standard-item-2">
+                    <p class="item-desc">VIPKID的外教均来自北美，发音纯正，熟悉北美文化，拥有国际视野</p>
+                </div>
+                <div class="ccss-standard-item ccss-standard-item-3">
+                    <p class="item-desc">按照严格标准对每一位外教进行4轮以上筛选，确保每位外教懂教育、爱孩子，为孩子提供优质在线学习体验</p>
+                </div>
+            </div>
+        </div>
+        <!-- VIPKID主修课课程体系 -->
+        <div class="vipkid-course">
+            <div class="vipkid-title">VIPKID主修课课程体系</div>
+            <div class="vipkid-course-content">
+                <div class="course-content-item course-content-item-1">
+                    <p class="course-title">课前预习视频</p>
+                    <p class="course-time">(3-8分钟)</p>
+                    <p class="course-desc">真人和动画结合、充满趣味的故事情节带孩子提前预热课程了解所学主题，使课堂时间让孩子更专注于知识的深度理解和运用。</p>
+                </div>
+                <div class="course-content-item course-content-item-2">
+                    <p class="course-title">北美外教在线1对1课程</p>
+                    <p class="course-time">(25分钟) </p>
+                    <p class="course-desc">纯正美式发音，提供“母语式”语言环境；高频次互动，锻炼孩子在不同的学科和情境中学习英语；1对1教学，给孩子100%关注。</p>
+                </div>
+                <div class="course-content-item course-content-item-3 course-review-item">
+                    <p class="course-title">在线家庭作业<span>(5-25分钟)</span></p>
+                    <p class="course-time">复习手册<span>(10-15分钟)</span></p>
+                    <p class="course-desc">在线互动复习、实战练习拉升孩子的求知欲和注意力；线下全彩色复习手册，使学习效果反馈更多样。</p>
+                </div>
+            </div>
+        </div>
+        <!-- 我们的承诺 -->
+        <div class="promise">
+            <div class="promise-title">我们的承诺</div>
+            <div class="hire-standard-content">
+                <div class="hire-standard-item promise-item-1">
+                    <p class="item-title">免费试学承诺</p>
+                    <p class="item-desc">对首次购买的课程不满意，可在主修课或公开课开课日30天内，且被扣除的主修课不超过12节，申请全额退款，但需在6个月退费有效期内提出，详见《课程服务协议》。</p>
+                </div>
+                <div class="hire-standard-item promise-item-2">
+                    <p class="item-title">服务承诺</p>
+                    <p class="item-desc">付费后，每位学员都会与VIPKID签订一份课程服务协议，我们向学员保障服务水平。</p>
+                </div>
+                <div class="hire-standard-item promise-item-3">
+                    <p class="item-title">师资承诺</p>
+                    <p class="item-desc">VIPKID一贯坚持“纯北美外教，纯美国课程标准”的教学理念，我们保证外教的优质教学水平。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页底 -->
+    <div class="footer">无锡信成网络科技有限公司 苏ICP备 16004147号-1</div>
+    <!-- 底部悬浮按钮 -->
+    <div class="fixed-footer-btn"></div>
+    <!-- 用户提示 -->
+    <div class="modal user-tip" id="modal-user-tip">
+        <div class="modal-title">
+            <span>用户提示</span>
+            <span class="close"></span>
+        </div>
+        <div class="modal-content rules-content user-tip-content">
+            <p>我们是VIPKID的合作伙伴</p>
+            <p>将努力确保在使用您的个人信息时遵守《VIPKID隐私政策》<a href="https://www.vipkid.com.cn/agreement/privacy">（https://www.vipkid.com.cn/agreement/privacy）</a>及其他适当的保密和安全措施</p>
+            <p>并明确以上收集的个人信息仅用于与VIPKID产品或服务相关的特定用途。</p>
+            <p>如要改变个人信息的处理目的，我们将再次征求您的授权同意。</p>
+        </div>
+    </div>
+    <!-- 隐私策略 -->
+    <div class="modal long-modal" id="modal-secret-rules">
+        <div class="modal-title">
+            <span>隐私策略</span>
+            <span class="close"></span>
+        </div>
+        <div class="modal-content rules-content">
+            <p>北京大米科技有限公司（以下称“VIPKID”或“我们”）非常重视用户个人信息的保护。您在下载、开启、浏览、注册、登录、使用“VIPKID”相关网站、软件及相关产品和/或服务时，我们可能会收集和使用您的相关信息。我们希望通过本《隐私政策》向您说明，我们将如何收集、使用、储存和分享这些信息，以及我们为您提供的访问、更新、控制和保护这些信息的方式。本《隐私政策》与您所使用的VIPKID产品和/或服务息息相关，希望您仔细阅读，在需要时，按照本《隐私政策》的指引，作出您认为适当的选择。本《隐私政策》中涉及的相关技术词汇，我们尽量以简明扼要的表述，以便您的理解。</p>
+            <p>如果您不同意本《隐私政策》的任何内容，我们将无法为您提供产品和/或服务，您应立即停止使用我们的产品和/或服务。您使用我们的产品和/或服务，即意味着同意我们按照本《隐私政策》收集、使用、储存和分享您的相关信息。当本《隐私政策》进行更新后，我们会及时在VIPKID平台发布最新版本。 如对本《隐私政策》或相关事宜有任何问题，您可以通过VIPKID网站<a href="http://www.vipkid.com.cn">（www.vipkid.com.cn）</a>首页的客服热线或者在线咨询与我们联系。</p>
+            <p class="detail-font">本《隐私政策》包含以下内容：</p>
+            <p>1.我们可能收集的信息</p>
+            <p>2.我们如何存储您的信息</p>
+            <p>3.我们如何使用Cookie和同类技术</p>
+            <p>4.我们如何使用信息</p>
+            <p>5.您如何访问和控制自己的个人信息</p>
+            <p>6.我们如何共享信息</p>
+            <p>7.信息安全</p>
+            <p>8.您分享的信息</p>
+            <p>9.广告服务</p>
+            <p>10.我们可能向您发送的邮件和信息</p>
+            <p>11.未成年人使用我们的服务</p>
+            <p>12.隐私政策的适用范围</p>
+            <p>13.变更</p>
+            <p class="detail-font">1. 我们可能收集的信息</p>
+            <p>我们提供服务时，可能会收集、储存下列与您有关的信息。如果您不提供相关信息，可能无法注册成为我们的用户或无法享受我们提供的某些服务，或者无法达到相关服务拟达到的效果。</p>
+            <p>1.1 您向我们提供的信息</p>
+            <p>1.1.1要使用VIPKID任一产品和/或服务时，您必须成为VIPKID正式会员。当您注册VIPKID账号或使用VIPKID提供的服务时，您需要向我们提供您的姓名、手机号码等个人信息以及我们要求您提供的其他必要信息。我们将根据法律规定核实您的身份信息。我们会将这些数据加密储存在安全的服务器中。</p>
+            <p>1.1.2为了给您提供完善的专属服务，VIPKID可能会要求您提供您或学员的姓名、电子邮件地址、实际地址、微信号、性别、语言、年龄等个人信息，VIPKID需要这些数据以便快速便利地为会员提供服务，并不断优化此服务内容以便更能符合会员的使用需求。</p>
+            <p>1.1.3在您事先同意的情况下，VIPKID还可能会要求您提供您或您孩子个人简历数据（如职业、教育、学生年龄及性别等），以便提升VIPKID的产品、服务、宣传及营销成效。VIPKID可能会利用此类个人简历数据，来制作有关用户群的整体报告，此类个人简历数据及整体报告皆为不具名形式，不会包含能识别您本人的内容。</p>
+            <p>1.1.4在购买课程时，如您选择以信用卡或者银行卡方式支付费用，在选择特定支付方式时您需要提供您的信用卡或银行卡信息给我们，以便您购买想要的服务产品。在您的支付过程中，VIPKID不会向第三方提供有关会员个人信用卡或银行卡上之隐私资料。会员支付时直接跳转到第三方支付页面的，该等第三方将会直接搜集客户的支付信息，详情请见第三方隐私条款。</p>
+            <p>1.1.5 除上述信息外，VIPKID还可能为了提供服务及提高服务质量之必需而收集您的其他信息以及您与VIPKID的工作人员沟通时所提供的相关信息。</p>
+            <p>1.1.6 当您参加VIPKID的有关市场营销活动时，我们根据活动需要可能会收集您的姓名、通信地址、联系方式、微信账号等信息。</p>
+            <p>1.2 因您使用VIPKID产品和/或服务时，我们获取的您的信息</p>
+            <p>您在使用VIPKID产品和/或服务时，我们可能收集如下信息：</p>
+            <p>1.2.1 日志信息，指您使用我们的服务时，我们的系统可能通过cookies、web beacon或其他方式自动采集的技术信息，包括：</p>
+            <p>a) 设备或软件信息，例如您的移动设备、网页浏览器或用于接入我们服务的其他程序所提供的配置信息、移动设备所用的版本和设备识别码、设备所在位置相关信息（例如IP 地址、GPS位置以及能够提供相关信息的Wi-Fi 接入点、蓝牙和基站等传感器信息）等；</p>
+            <p>b) 在使用我们服务时搜索或浏览的信息，例如您使用的网页搜索词语、访问的社交媒体页面url地址，以及您在使用我们服务时浏览或要求提供的其他信息和内容详情等；</p>
+            <p>c) 有关您曾使用的移动应用（APP）和其他软件的信息，以及您曾经使用该等移动应用和软件的信息；</p>
+            <p>d)您通过我们的服务进行通讯的信息，例如曾通讯的账号，以及通讯时间、数据和时长等；</p>
+            <p>e) 您通过我们的服务分享的内容所包含的信息（元数据），例如拍摄或上传的照片或录像的日期、时间或地点等。</p>
+            <p>1.2.2 位置信息，包括您或其他用户在使用VIPKID产品和/或服务时向我们提供的包含您所处地理位置的信息。</p>
+            <p>1.2.3 为了给您提供完善的专属服务，您在使用我们的服务时系统所录制的信息，例如课程录音录像等。</p>
+            <p class="detail-font">2. 我们如何存储您的信息</p>
+            <p>我们在中华人民共和国境内运营中收集和产生的个人信息，原则上存储在中国境内，以下情形除外：</p>
+            <p>a) 法律法规有明确规定；</p>
+            <p>b) 获得您的明确授权。</p>
+            <p>针对以上情形，我们会确保依据法律法规和本《隐私政策》对您的个人信息提供安全保护。</p>
+            <p class="detail-font">3.我们如何使用Cookie和同类技术</p>
+            <p>3.1 我们或我们的第三方合作伙伴，可能通过cookies收集和使用您的信息，并将该等信息储存为日志信息。</p>
+            <p>3.2 我们使用自己的cookies，目的是为您提供更个性化的用户体验和服务，并用于以下用途：</p>
+            <p>3.2.1 记住您的身份。例如：cookies有助于我们辨认您作为我们的注册用户的身份，或保存您向我们提供的有关您的喜好或其他信息；</p>
+            <p>3.2.2 分析您使用我们服务的情况。例如，我们可利用cookies来了解您使用我们的服务进行什么活动，或哪些网页或服务最受您的欢迎；</p>
+            <p>3.2.3 广告优化。Cookies和web beacon有助于我们根据您的信息，向您提供与我们的服务相关的广告。</p>
+            <p>3.3 我们为上述目的使用cookies的同时，可能将通过cookies收集的非个人身份信息，经统计加工后提供给广告商或其他合作伙伴，用于分析用户如何使用我们的服务，并用于我们的广告服务。</p>
+            <p>3.4 我们的产品和服务上可能会有广告商或其他合作方放置的cookies和web beacon。这些cookies和web beacon可能会收集与您相关的非个人身份信息，以用于分析用户如何使用该等服务、向您发送您可能感兴趣的广告，或用于评估广告服务的效果。这些第三方cookies和web beacon收集和使用该等信息，不受本《隐私政策》约束，而是受相关使用者的隐私政策约束，我们不对第三方的cookies或web beacon承担责任。</p>
+            <p>3.5 您可以通过浏览器设置拒绝或管理cookies。但请注意，如果停用cookies或web beacon，您有可能无法享受最佳的服务体验，某些服务也可能无法正常使用。</p>
+            <p>3.6 为了确认客户使用形态与网站的使用状况，我们的网站会记录您设备的IP地址与浏览器的类型，用户的浏览行为和操作行为等，以协助我们改善「VIPKID」的设计与编排格式。</p>
+            <p class="detail-font">4. 我们如何使用信息</p>
+            <p>4.1 我们可能将在向您提供服务的过程之中所收集的信息用作下列用途：</p>
+            <p>4.1.1 向您提供服务；</p>
+            <p>4.1.2 在我们提供服务时，用于身份验证、客户服务、安全防范、诈骗监测、存档和备份用途，确保我们向您提供的产品和服务的安全性；</p>
+            <p>4.1.3 帮助我们设计新服务，改善我们现有服务；</p>
+            <p>4.1.4 使我们更加了解您如何接入和使用我们的服务，从而针对性地回应您的个性化需求，例如语言设定、位置设定、个性化的帮助服务和指示，或对您和其他用户作出其他方面的回应；</p>
+            <p>4.1.5 向您提供VIPKID相关的产品广告</p>
+            <p>4.1.6 评估我们服务中的广告和其他促销及推广活动的效果，并加以改善；</p>
+            <p>4.1.7 软件认证或管理软件升级；</p>
+            <p>4.1.8 让您参与有关我们产品和服务的调查，或者促销及抽奖活动；</p>
+            <p>4.1.9 经您同意的其他用途。</p>
+            <p>4.2 为了让您有更好的体验、改善我们的服务或您同意的其他用途，在符合相关法律法规的前提下，我们可能将通过某一项服务所收集的信息，以汇集信息或者个性化的方式，用于我们的其他服务。例如，在您使用我们的一项服务时所收集的信息，可能在另一服务中用于向您提供特定内容，或向您展示与您相关的、非普遍推送的信息。如果我们在相关服务中提供了相应选项，您也可以授权我们将该服务所提供和储存的信息用于我们的其他服务。</p>
+            <p>4.3 为了给您提供完善的服务，提升您的用户体验，在收集您的个人信息后，我们可能会对用户数据库进行分析并予以商业化的利用。我们将遵循法律法规和合法必要的原则，对相关信息采取必要的安保措施，比如通过技术手段对数据进行去标识化处理等。</p>
+            <p class="detail-font">5 您如何访问和控制自己的个人信息</p>
+            <p>5.1您可以随时登录自己的账户查看或修改账户设置和信息。如果您希望变更、更新或删除我们系统中保留的您个人信息，您只需登入VIPKID账户在“账号信息”下进行操作或者通过客服与我们联系进行修改。我们将尽一切可能采取适当的技术手段，保证您可以访问、更新和更正自己的注册信息或使用我们的服务时提供的其他个人信息。在访问、更新、更正、删除前述信息时，我们可能会要求您进行身份验证，以保障账户安全。</p>
+            <p>5.2您也可以通过拨打客服电话与我们联系要求注销VIPKID账户。如果您发现我们违反法律法规或者本政策约定收集、使用您的个人信息的，您可以通过客服与我们联系，要求我们删除相关个人信息，我们将采取措施将相关个人信息予以删除或进行匿名化或去标识化处理。在您主动注销账号之后，我们将停止为您提供产品或服务，根据适用法律的要求删除您的个人信息，或使其匿名化或去标识化处理。</p>
+            <p>5.3在您使用我们的产品和/或服务期间，我们会尽一切可能保证您可以顺利访问自己的账户内信息。如果这些账户注册信息有误，我们会努力提供各种方式来让您快速更新或删除帐户内信息（除非我们出于合法业务或法律方面的原因而必须保留这些信息）。</p>
+            <p class="detail-font">6. 我们如何共享信息</p>
+            <p>6.1我们会以高度的勤勉义务对待您的信息，除以下情形外，未经您同意，我们不会与任何第三方分享您的个人信息：</p>
+            <p>我们可能将上述我们收集的个人信息提供给我们的关联公司、合作伙伴及第三方服务提供方（例如代表我们发出电子邮件或推送通知的通讯服务提供商、为我们提供位置数据的地图服务供应商），用作下列用途：</p>
+            <p>a) 向您提供更好的客户服务和用户体验；</p>
+            <p>b) 实现“我们可能如何使用信息”部分所述目的；</p>
+            <p>c) 行使和履行我们在《VIPKID课程服务协议》或本《隐私政策》中的权利和义务；</p>
+            <p>d) 理解、维护和改善我们的服务。</p>
+            <p>6.2由于我们是一家以北美外教为主的服务机构，我们聘用的老师和合作的第三方服务提供方等可能会在美国、加拿大等地区，因此我们收集的用户个人信息可能会被上述境外机构或个人所访问或获取，我们将严格遵守相关法律法规的要求，保证相关个人信息的安全和完整。</p>
+            <p>6.3 为提供更好的客户服务和用户体验，我们可能会与上述第三方提供您的个人信息。我们仅会出于合法、正当、必要的目的提供您的个人信息，并且只会提供相关服务所必要的个人信息。我们将努力确保该等第三方在使用您的个人信息时遵守本《隐私政策》及我们要求其遵守的其他适当的保密和安全措施，并明确要求该等第三方仅将共享的个人信息用于与VIPKID产品或服务相关的特定用途。如要改变个人信息的处理目的，该等第三方将再次征求您的授权同意。</p>
+            <p>6.4 随着我们业务的持续发展，我们有可能进行合并、收购、资产转让或类似的交易，您的个人信息有可能作为此类交易的一部分而被转移。我们将在转移前通知您。</p>
+            <p>6.5 我们还可能为以下需要而保留、保存或披露您的个人信息：</p>
+            <p>a) 遵守适用的法律法规；</p>
+            <p>b) 遵守法院命令或其他法律程序的规定；</p>
+            <p>c) 遵守相关政府机关的要求；</p>
+            <p>d) 为遵守适用的法律法规、维护社会公共利益，或保护我们的客户、我们或我们的集团公司、其他用户或雇员的人身和财产安全或合法权益所合理必需的用途。</p>
+            <p>6.6我们可能与合作伙伴合作举办营销活动，并与其分享活动过程中产生的、为完成活动所必要的一些信息，以便您能参与活动、我们的合作伙伴能及时与您联系、发放奖品。</p>
+            <p class="detail-font">7. 信息安全</p>
+            <p>7.1 我们仅在为本《隐私政策》<a href="https://www.vipkid.com.cn/agreement/privacy ">（https://www.vipkid.com.cn/agreement/privacy ）</a>所述目的和法律法规允许的时限内保留您的个人信息。</p>
+            <p>7.2 为了保障您的信息安全，VIPKID公司会在现有技术水平下采取合理必要的措施来保护您的信息，采取物理、技术和行政管理安全措施来降低丢失、误用、非授权访问、披露和更改的风险，包括但不限于传输层数据加密、防火墙和加密存储、物理访问控制以及信息访问授权控制。为此我们设置了安全程序保护您的信息不会被未经授权的访问所窃取。请您理解并明白，由于存在的各种各样的无法预知或现有技术无法防御的恶意手段，即便VIPKID公司尽力采取上述措施，您的信息仍有可能被泄漏、毁损或灭失。</p>
+            <p>7.3 在信用卡或银行卡数据透过网络传送给VIPKID之前，这些数据都经过VIPKID的安全服务器予以加密处理。在登入时，VIPKID也坚持使用密码认证，避免您的个人资料档案及学习记录在未经授权的状况下被存取。</p>
+            <p>7.4 您在使用VIPKID产品和/或服务时，请妥善保管好您的VIPKID账号及其密码，我们会通过您的账号及其密码来识别您的身份。一旦您泄漏了VIPKID账号及其密码，您可能会丢失您的信息，并可能产生对您不利的法律后果。如您发现VIPKID账号及其密码因任何原因已经或将受到泄漏时，请您立即联络我们客服，以便我们采取相应措施。但在我们知悉此种情况和在合理时间内采取行动前，我们对此不负任何责任。</p>
+            <p>7.5在不幸发生个人信息安全事件后，我们将按照法律法规的要求向您告知：安全事件的基本情况和可能的影响、我们已采取或将要采取的处置措施、您可自主防范和降低风险的建议、对您的补救措施等。事件相关情况我们将以邮件、信函、电话、推送通知等方式告知您，难以逐一告知个人信息主体时，我们会采取合理、有效的方式发布公告。同时，我们还将按照监管部门要求，上报个人信息安全事件的处置情况。</p>
+            <p class="detail-font">8 您分享的信息</p>
+            <p>8.1 我们的服务，可让您不仅与自己的社交网络，也与使用该服务的其他用户公开分享您的相关信息，例如，您在我们的服务中所上传或发布的信息（包括您公开的个人信息）、您对其他人上传或发布的信息作出的回应，以及包括与这些信息有关的位置数据和日志信息。使用我们服务的其他用户也有可能分享与您有关的信息（包括位置数据和日志信息）。只要您不删除共享信息，有关信息会一直留存在公共领域；即使您删除共享信息，有关信息仍可能由其他用户或不受我们控制的非关联第三方独立地缓存、复制或储存，或由其他用户或该等第三方在公共领域保存。
+                因此，请您谨慎考虑，是否通过我们的服务上传、发布和交流相关信息内容。在一些情况下，您可通过联系我们要求从我们的服务中删除或者修改您的相关信息。</p>
+            <p>8.2 某些个人信息因其特殊性可能被认为是个人敏感信息，例如您的种族、宗教、个人健康和医疗信息等。相比其他个人信息，个人敏感信息受到更加严格的保护。</p>
+            <p>8.3 请注意，您在使用我们的服务时所提供、上传或发布的内容和信息（例如有关您社交活动的照片等信息），可能会泄露您的个人敏感信息。您需要谨慎地考虑，是否在使用我们的服务时披露相关个人敏感信息。</p>
+            <p>8.4 您同意我们可以按本《隐私政策》所述的目的和方式来处理您的个人敏感信息。</p>
+            <p class="detail-font">9. 广告服务</p>
+            <p>9.1 我们可能使用您的相关信息，向您提供与您更加相关的广告。</p>
+            <p>9.2 我们也可能使用您的信息，通过我们的服务、电子邮件或其他方式向您发送营销信息，提供或推广我们或第三方的如下产品和/或服务：</p>
+            <p>9.2.1 我们的产品和/或服务，我们的关联公司和合作伙伴的产品和/或服务；</p>
+            <p>9.2.2 第三方互联网服务供应商。</p>
+            <p>9.3 如您不希望我们将您的个人信息用作前述广告用途，您可以通过我们在广告中提供的相关提示，或在特定服务中提供的指引，要求我们停止为上述用途使用您的个人信息。</p>
+            <p class="detail-font">10. 我们可能向您发送的邮件和信息</p>
+            <p >10.1 邮件和信息推送</p>
+            <p >您在使用我们的服务时，我们可能使用您的信息向您的设备发送电子邮件、新闻或推送通知。如您不希望收到这些信息，可以按照我们的相关提示，在设备上选择取消订阅。</p>
+            <p >10.2 与服务有关的公告</p>
+            <p >我们可能在必要时（例如因系统维护而暂停某一项服务时）向您发出与服务有关的公告。您可能无法取消这些与服务有关、性质不属于推广的公告。</p>
+            <p class="detail-font">11. 未成年人使用我们的服务</p>
+            <p>我们非常重视对未成年人信息的保护。若您是18周岁以下的未成年人，请在您的父母或监护人的指导下仔细阅读本《隐私政策》，并在征得您的父母或监护人同意的前提下提交您的个人信息及使用我们的产品和/或服务。</p>
+            <p class="detail-font">12. 隐私政策的适用范围</p>
+            <p>12.1 除某些特定服务外，我们所有的服务均适用本《隐私政策》。这些特定服务将适用特定的隐私政策。针对某些特定服务的特定隐私政策，将更具体地说明我们在该等服务中如何使用您的信息。该特定服务的隐私政策构成本《隐私政策》的一部分。如相关特定服务的隐私政策与本《隐私政策》有不一致之处，适用该特定服务的隐私政策。</p>
+            <p>12.2 请您注意，本《隐私政策》仅适用于我们所收集、保存、使用、共享、披露信息。除非本《隐私政策》另有明确所指，本《隐私政策》不适用于以下情况：</p>
+            <p>a) 通过我们的产品和/或服务而接入的第三方服务（包括任何第三方网站）收集的信息；</p>
+            <p>b) 通过在我们服务中进行广告服务的其他公司或机构所收集的信息。</p>
+            <p>请您知悉：如果您浏览第三方网站或使用第三方的产品和／或服务时向该第三方提供您的个人信息，您的信息应当适用该第三方的隐私声明或类似政策，我们对任何第三方不当使用或披露由您提供的信息不承担任何法律责任，无论您登录或浏览上述网站、软件，或使用其产品/服务是否基于VIPKID的链接或引导。</p>
+            <p class="detail-font">13. 变更</p>
+            <p>我们可能适时修订本《隐私政策》的条款，该等修订构成本《隐私政策》的一部分。如该等修订造成您在本《隐私政策》下权利的实质减少，我们将在修订生效前通过在主页上显著位置提示或通过其他我们认为合适的方式（包括向您发送电子邮件或以其他方式通知您）发布对本《隐私政策》所做的变更。在该种情况下，若您继续使用我们的服务，即表示同意受经修订的本《隐私政策》的约束。</p>
+            <p>如果您还有其他问题和建议，请联系我们。我们会始终致力于充分保护用户信息，并为您提供更优质的体验和服务。</p>
+        </div>
+    </div>
+    <!-- 用户协议 -->
+    <div class="modal long-modal" id="modal-user-rules">
+        <div class="modal-title">
+            <span>用户协议</span>
+            <span class="close"></span>
+        </div>
+        <div class="modal-content rules-content">
+            <p class="detail-font">1. 特别提示</p>
+            <p>1.1 VIPKID同意按照本用户注册协议（以下称“本协议”）的规定及其不时发布的操作规则提供基于互联网以及移动网的相关服务（以下称“网络服务”），为获得网络服务，服务使用人（以下称“用户”）应当同意本协议的全部条款并按照页面上的提示完成全部的注册程序。请务必审慎阅读、充分理解本协议各条款内容，请注意免除或限制VIPKID责任的条款、权利许可和信息使用的条款、法律适用和争议解决的条款等。为使容易辨析，免除或限制VIPKID责任的条款已以加粗形式提示用户注意。用户在进行注册程序过程中点击“同意”按钮即表示用户完全接受本协议项下的全部条款。如果用户不同意本协议或其中任何条款约定，应立即停止注册程序，VIPKID也将无法为您提供网络服务。未成年人用户请在父母或监护人陪同下阅读本协议，并在提交个人信息之前寻求父母或监护人的同意和指导。</p>
+            <p>1.2 用户注册成功后，VIPKID将给予每个用户一个用户帐号及相应的密码，该用户帐号和密码由用户负责保管；用户应当对以其用户帐号进行的所有活动和事件负法律责任。</p>
+            <p>1.3 用户注册成功，VIPKID 将会向每位注册用户拨打电话进一步介绍本公司的相关服务情况。用户的注册行为即视同为同意接受公司进一步的电话服务。</p>
+            <p class="detail-font">2. 服务内容</p>
+            <p>2.1 VIPKID网络服务的具体内容由VIPKID根据实际情况提供，例如1对1在线课程、1对多公开课程、论坛、基于微信服务号的各类服务等。</p>
+            <p>2.2 VIPKID提供的部分网络服务（例如1对1在线课程，精品公开课程等）为收费的网络服务，用户使用收费网络服务需要向VIPKID支付一定的费用。对于收费的网络服务，VIPKID会在用户使用之前给予用户明确的提示，只有用户根据提示确认其愿意支付相关费用，用户才能使用该等收费网络服务。如用户拒绝支付相关费用，则VIPKID有权不向用户提供该等收费网络服务。</p>
+            <p>2.3 用户理解，VIPKID仅提供相关的网络服务，除此之外与相关网络服务有关的设备（如个人电脑、手机、及其他与接入互联网或移动网有关的装置）及所需的费用（如为接入互联网而支付的电话费及上网费、为使用移动网而支付的手机费）均应由用户自行负担。</p>
+            <p class="detail-font">3. 服务变更、中断或终止</p>
+            <p>3.1 鉴于网络服务的特殊性，用户同意VIPKID网有权随时变更、中断或终止部分或全部的网络服务（包括收费网络服务）。如变更、中断或终止的网络服务属于免费网络服务，VIPKID无需通知用户，也无需对任何用户或任何第三方承担任何责任；如变更、中断或终止的网络服务属于收费网络服务，VIPKID应当在变更、中断或终止之前事先通知用户，并应向受影响的用户提供等值的替代性的收费网络服务，如用户不愿意接受替代性的收费网络服务，就该用户已经向VIPKID支付的服务费，VIPKID应当按照该用户实际使用相应收费网络服务的情况扣除相应服务费之后将剩余的服务费退还给该用户。</p>
+            <p>3.2 用户理解，VIPKID需要定期或不定期地对提供网络服务的平台（如互联网网站、移动网络等）或相关的设备进行检修或者维护，如因此类情况而造成收费网络服务在合理时间内的中断，VIPKID无需为此承担任何责任，但VIPKID应尽可能事先进行通告。</p>
+            <p>3.3 如发生下列任何一种情形，VIPKID有权随时中断或终止向用户提供本协议项下的网络服务（包括收费网络服务）而无需对用户或任何第三方承担任何责任：</p>
+            <p>3.3.1 用户提供的个人资料不真实；</p>
+            <p>3.3.2 用户违反本协议中规定的使用规则；</p>
+            <p>3.3.3 用户在使用收费网络服务时未按规定向VIPKID支付相应的服务费。</p>
+            <p>3.4 如用户注册的免费网络服务的帐号在任何连续180日内未实际使用，或者用户注册的收费网络服务的帐号在其订购的收费网络服务的服务期满之后连续180日内未实际使用，则VIPKID有权删除该帐号并停止为该用户提供相关的网络服务。</p>
+            <p class="detail-font">4. 使用规则</p>
+            <p>4.1 用户在申请使用VIPKID网络服务时，必须向VIPKID提供准确的个人资料，如个人资料有任何变动，必须及时更新。</p>
+            <p>4.2 用户不应将其帐号、密码转让或出借予他人使用。如用户发现其帐号遭他人非法使用，应立即通知VIPKID。因黑客行为或用户的保管疏忽导致帐号、密码遭他人非法使用，VIPKID不承担任何责任。</p>
+            <p>4.3 用户同意VIPKID有权在提供网络服务过程中以各种方式投放各种商业性广告或其他任何类型的商业信息（包括但不限于在VIPKID网站的任何页面上投放广告），并且，用户同意接受VIPKID通过电子邮件或其他方式向用户发送商品促销或其他相关商业信息。</p>
+            <p>4.4 对于用户通过VIPKID网络服务（包括但不限于论坛、BBS、教育问答）上传到VIPKID网站上可公开获取区域的任何内容，用户同意VIPKID在全世界范围内具有免费的、永久性的、不可撤销的、非独家的和完全再许可的权利和许可，以使用、复制、修改、改编、出版、翻译、据以创作衍生作品、传播、表演和展示此等内容（整体或部分），和/或将此等内容编入当前已知的或以后开发的其他任何形式的作品、媒体或技术中。</p>
+            <p>4.5 用户在使用VIPKID网络服务过程中，必须遵循以下原则：</p>
+            <p>4.5.1 遵守中国有关的法律和法规；</p>
+            <p>4.5.2 遵守所有与网络服务有关的网络协议、规定和程序；</p>
+            <p>4.5.3 不得为任何非法目的而使用网络服务系统；</p>
+            <p>4.5.4 不得以任何形式使用VIPKID网络服务侵犯VIPKID的商业利益，包括并不限于发布非经VIPKID许可的商业广告；</p>
+            <p>4.5.5 不得利用VIPKID网络服务系统进行任何可能对互联网或移动网正常运转造成不利影响的行为；</p>
+            <p>4.5.6 不得利用VIPKID提供的网络服务上传、展示或传播任何虚假的、骚扰性的、中伤他人的、辱骂性的、恐吓性的、庸俗淫秽的或其他任何非法的信息资料；</p>
+            <p>4.5.7 不得侵犯其他任何第三方的专利权、著作权、商标权、名誉权或其他任何合法权益；</p>
+            <p>4.5.8 不得利用VIPKID网络服务系统进行任何不利于VIPKID的行为；</p>
+            <p>4.6 VIPKID有权对用户使用VIPKID网络服务的情况进行审查和监督(包括但不限于对用户存储在VIPKID的内容进行审核)，如用户在使用网络服务时违反任何上述规定，VIPKID或其授权的人有权要求用户改正或直接采取一切必要的措施（包括但不限于更改或删除用户张贴的内容等、暂停或终止用户使用网络服务的权利）以减轻用户不当行为造成的影响。</p>
+            <p>4.7 VIPKID针对某些特定的VIPKID网络服务的使用通过各种方式（包括但不限于网页公告、电子邮件、短信提醒等）作出的任何声明、通知、警示等内容视为本协议的一部分，用户如使用该等VIPKID网络服务，视为用户同意该等声明、通知、警示的内容。</p>
+            <p>4.8 凡用户昵称中出现如下信息者（包括但不限于），论坛有权进行屏蔽、锁定，甚至注销：</p>
+            <p>4.8.1.使用严重违反国家法律法律及风序良俗，包含或暗藏反动、色情等信息（含符号、地址等）的昵称；</p>
+            <p>4.8.2.使用党和国家领导人、古今中外比较有影响的名人、网络上知名人士的真实姓名、字、号、艺名、笔名、头衔等为昵称；</p>
+            <p>4.8.3.使用国家机构、企事业单位、知名公司或品牌的名称及标识为昵称； </p>
+            <p>4.8.4.含性别歧视、种族歧视、地域歧视等信息的昵称；</p>
+            <p>4.8.5.含自侮辱、猥亵或者对他人进行侮辱、挑衅、漫骂、人身攻击等不文明、不健康信息的昵称；</p>
+            <p>4.8.6.含易产生歧义、引起他人误解的信息的昵称；</p>
+            <p>4.8.7.未获得VIPKID官方正式许可而使用带有VIPKID相关名称的昵称；</p>
+            <p>4.8.8.与VIPKID老师、及社区管理人员的昵称近似或雷同，并可能引起混淆或纠纷的；</p>
+            <p>4.8.9.带有明显广告性质的昵称；</p>
+            <p>4.8.10.带有其它法律法规以及论坛禁止规则中所包含信息的昵称。</p>
+            <p class="detail-font">5. 知识产权</p>
+            <p>5.1 VIPKID提供的网络服务中包含的任何文本、图片、图形、音频和/或视频资料均受版权、商标和/或其它财产所有权法律的保护，未经相关权利人同意，上述资料均不得在任何媒体直接或间接发布、播放、出于播放或发布目的而改写或再发行，或者被用于其他任何商业目的。所有这些资料或资料的任何部分仅可作为私人和非商业用途而保存在某台计算机内。VIPKID不就由上述资料产生或在传送或递交全部或部分上述资料过程中产生的延误、不准确、错误和遗漏或从中产生或由此产生的任何损害赔偿，以任何形式，向用户或任何第三方负责。</p>
+            <p>5.2 VIPKID为提供网络服务而使用的任何软件（包括但不限于软件中所含的任何图象、照片、动画、录像、录音、音乐、文字和附加程序、随附的帮助材料）的一切权利均属于该软件的著作权人，未经该软件的著作权人许可，用户不得对该软件进行反向工程（reverse engineer）、反向编译（decompile）或反汇编（disassemble）。</p>
+            <p class="detail-font">6. 隐私政策</p>
+            <p>保护用户隐私是VIPKID的一项基本政策，VIPKID的隐私政策请参见VIPKID官网（www.vipkid.com.cn）页面底部的“隐私政策”相关内容。</p>
+            <p class="detail-font">7. 免责声明</p>
+            <p>7.1 用户明确同意其使用VIPKID网络服务所存在的风险将完全由其自己承担；因其使用VIPKID网络服务而产生的一切后果也由其自己承担，VIPKID对用户不承担任何责任。</p>
+            <p>7.2 VIPKID不担保网络服务一定能满足用户的要求，也不担保网络服务不会中断，对网络服务的及时性、安全性、准确性也都不作担保。</p>
+            <p>7.3 VIPKID不保证为向用户提供便利而设置的外部链接的准确性和完整性，同时，对于该等外部链接指向的不由VIPKID实际控制的任何网页上的内容，VIPKID不承担任何责任。</p>
+            <p>7.4 对于因不可抗力或VIPKID不能控制的原因造成的网络服务中断或其它缺陷，VIPKID不承担任何责任，但将尽力减少因此而给用户造成的损失和影响。</p>
+            <p>7.5 用户理解并同意，对于VIPKID向用户提供的下列产品或者服务的质量缺陷本身及其引发的任何损失，VIPKID无需承担任何责任：</p>
+            <p>7.5.1 VIPKID向用户免费提供的各项网络服务；</p>
+            <p>7.5.2 VIPKID向用户赠送的任何产品或者服务；</p>
+            <p>7.5.3 VIPKID向收费网络服务用户附赠的各种产品或者服务。</p>
+            <p>7.6 VIPKID问吧，问题的回答结果仅依据提问者的描述提供建议性内容，仅供参考。本网教师会员及普通会员仅提供专业性或非专业性知识参考，不做指导性意见。</p>
+            <p>7.7 本网站会员(或网友)所上传的相片、文章或讨论区发言内容，由该会员(或网友)自行对该相片、文章或讨论区发言内容担保其知识性、专业性以及合法性。</p>
+            <p class="detail-font">8. 违约赔偿</p>
+            <p>8.1 如因VIPKID违反有关法律、法规或本协议项下的任何条款而给用户造成损失，VIPKID同意承担由此造成的损害赔偿责任。</p>
+            <p>8.2 用户同意保障和维护VIPKID及其他用户的利益，如因用户违反有关法律、法规或本协议项下的任何条款而给VIPKID或任何其他第三人造成损失，用户同意承担由此造成的损害赔偿责任。</p>
+            <p class="detail-font">9. 协议修改</p>
+            <p>9.1 VIPKID有权随时修改本协议的任何条款，一旦本协议的内容发生变动，VIPKID将会直接在VIPKID网站上公布修改之后的协议内容，该公布行为视为VIPKID已经通知用户修改内容。VIPKID也可通过其他适当方式向用户提示修改内容。</p>
+            <p>9.2 如果不同意VIPKID对本协议相关条款所做的修改，用户有权停止使用网络服务。如果用户继续使用网络服务，则视为用户接受VIPKID对本协议相关条款所做的修改。</p>
+            <p class="detail-font">10. 通知送达</p>
+            <p>10.1 本协议项下VIPKID对于用户所有的通知均可通过网页公告、电子邮件、手机短信或常规的信件传送等方式进行；该等通知于发送之日视为已送达收件人。</p>
+            <p>10.2 用户对于VIPKID的通知应当通过VIPKID对外正式公布的通信地址、传真号码、电子邮件地址等联系信息进行送达。</p>
+            <p class="detail-font">11. 法律管辖</p>
+            <p>11.1 本协议的订立、执行和解释及争议的解决均应适用中国法律并受中国法院管辖。</p>
+            <p>11.2 如双方就本协议内容或其执行发生任何争议，双方应尽量友好协商解决；协商不成时，任何一方均可向VIPKID所在地的人民法院提起诉讼。</p>
+            <p class="detail-font">12. 其他规定</p>
+            <p>12.1 本协议构成双方对本协议之约定事项及其他有关事宜的完整协议，除本协议规定的之外，未赋予本协议各方其他权利。</p>
+            <p>12.2 如本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，本协议的其余条款仍应有效并且有约束力。</p>
+            <p>12.3 本协议中的标题仅为方便而设，在解释本协议时应被忽略。</p>
+        </div>
+    </div>
+    <!-- 孩子年龄弹窗 -->
+    <div class="modal child-age" id="modal-child-age">
+        <div class="modal-title">
+            <span>请选择孩子年龄</span>
+            <span class="close"></span>
+        </div>
+        <div class="child-age-content">
+            <p data-value="<4" data-name="4岁以下">4岁以下</p>
+            <p data-value="4" data-name="4岁">4岁</p>
+            <p data-value="5" data-name="5岁">5岁</p>
+            <p data-value="6" data-name="6岁">6岁</p>
+            <p data-value="7" data-name="7岁">7岁</p>
+            <p data-value="8" data-name="8岁">8岁</p>
+            <p data-value="9" data-name="9岁">9岁</p>
+            <p data-value="10" data-name="10岁">10岁</p>
+            <p data-value="11" data-name="11岁">11岁</p>
+            <p data-value="12" data-name="12岁">12岁</p>
+            <p data-value=">12" data-name="12岁以上">12岁以上</p>
+        </div>
+    </div>
+    <!-- 设备弹窗 -->
+    <div class="modal child-age device-top" id="modal-device">
+        <div class="modal-title">
+            <span>请选择上课设备</span>
+            <span class="close"></span>
+        </div>
+        <div class="child-age-content" id="device-content">
+            <p data-value="iPad平板电脑" data-name="iPad平板电脑">iPad平板电脑</p>
+            <p data-value="台式/笔记本电脑（摄像头+耳麦）" data-name="台式/笔记本电脑（摄像头+耳麦）">台式/笔记本电脑（摄像头+耳麦）</p>
+            <p data-value="以上都没有" data-name="以上都没有">以上都没有</p>
+        </div>
+    </div>
+    <!-- 遮罩层 -->
+    <div class="mask" id="mask"></div>
+    <!-- 本页面js -->
+    <script src="js/wap-home.js"></script>
+</body>
+</html>

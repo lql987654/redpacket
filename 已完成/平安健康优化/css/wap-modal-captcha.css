@@ -1,0 +1,289 @@
+*{padding:0; margin:0; font-family:arial,"\5FAE\8F6F\96C5\9ED1",sans-serif; }
+html,body{
+    height:100%;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+input{
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+    background: none;
+}
+input[type='button']{
+    -webkit-appearance: none;
+}
+input, label, a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type="checkbox"],
+input[type="radio"]{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+input:-webkit-autofill{
+    background-color: #ffffff;
+}
+.form-box .input-box input::-webkit-input-placeholder {
+    color: #bfbfbf;
+}
+input::-moz-placeholder {
+    color: #bfbfbf;
+}
+input:-ms-input-placeholder {
+    color: #bfbfbf;
+}
+.breeze-modal-captcha-box-clx:after{
+    clear:both;
+    content:'';
+    width:0;
+    height:0;
+    display:block;
+    visibility:hidden;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+body .hide{
+    display: none;
+}
+.err_popo {
+    position: fixed;
+    z-index: 2000;
+    top: 40%;
+    left: 10%;
+    width: 80%
+}
+.err_popo span {
+    display: block;
+    padding: .22rem 0.02rem;
+    font-size: .22rem;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    text-align: center
+}
+.breeze-modal-captcha-box-new {
+    position: relative;
+    width: 7.5rem;
+    height: 100%;
+    margin: 0 auto;
+}
+/* 固定宽度 */
+.breeze-modal-captcha-box-section {
+    position: relative;
+    width: 6.8rem;
+    margin: 0 auto;
+}
+/* 头部验证码 */
+/* 平安保险头部 */
+.breeze-modal-captcha-box-new .breeze-modal-captcha-box-new-header-pingan .breeze-modal-captcha-input-new-pingan {
+    width: 5.7rem;
+    border-bottom: 1px solid #f0f0f0;
+    padding: .4rem .9rem .3rem;
+}
+/* 验证码部分公用样式 */
+.breeze-modal-captcha-box-new .breeze-modal-captcha-input-new p {
+    font-size: .24rem;
+    color: #5f5f5f;
+    margin-bottom: .3rem;
+}
+.breeze-modal-captcha-box-new .breeze-modal-captcha-input-new p input {
+    float: right;
+    color: #5f5f5f;
+}
+.breeze-modal-captcha-box-new .breeze-modal-captcha-input-new ul li{
+    width: .7rem;
+    height: .7rem;
+    font-size: .37rem;
+    color: #000;
+    text-align: center;
+    line-height: .7rem;
+    margin-right: .3rem;
+    float: left;
+    box-sizing: border-box;
+    border-radius: .04rem;
+    list-style: none;
+    background: #f2f2f2;
+}
+.breeze-modal-captcha-box-new .breeze-modal-captcha-input-new ul li:last-child {
+    margin-right: 0;
+}
+/* 平安保险头部结束 */
+/* 其他保险头部开始 */
+.breeze-modal-captcha-box-new-header .breeze-modal-captcha-box-new-header-info {
+    position: relative;
+    line-height: .48rem;
+    padding: .33rem .3rem .2rem 1.48rem;
+    font-size: .28rem;
+    color: #1c1c1c;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: .2rem;
+}
+.breeze-modal-captcha-box-new-header .breeze-modal-captcha-box-new-header-info em {
+    font-size: .24rem;
+    color: #acacac;
+    font-style: normal;
+}
+.breeze-modal-captcha-box-new-header .breeze-modal-captcha-box-new-header-info:before {
+    position: absolute;
+    top: .33rem;
+    left: .4rem;
+    width: .9rem;
+    height: .83rem;
+    background: url("../images/breeze-modal-captcha-welfare.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+/* 其他保险头部结束 */
+/* 平安保险内容 */
+.breeze-modal-captcha-box-new .breeze-modal-captcha-box-new-header-pingan .breeze-modal-captcha-box-new-content-pingan {
+    margin-top: .4rem;
+}
+.breeze-modal-captcha-box-new .breeze-modal-captcha-box-new-header-pingan .breeze-modal-captcha-box-new-content-pingan h3 {
+    font-size: .28rem;
+    color: #1c1c1c;
+    font-weight: normal;
+}
+/* 3000元公用颜色样式 */
+.breeze-modal-captcha-box-new .breeze-modal-captcha-box-new-header-pingan .breeze-modal-captcha-box-new-content-pingan h3 span,
+.breeze-modal-captcha-box-new-header .breeze-modal-captcha-box-new-header-info span {
+    color: #ff8a00;
+}
+.breeze-modal-captcha-box-new .breeze-modal-captcha-box-new-header-pingan .breeze-modal-captcha-box-new-content-pingan p {
+    font-size: .24rem;
+    color: #acacac;
+    margin-top: .2rem;
+}
+/* 其他保险内容 */
+.breeze-modal-captcha-box-new .breeze-modal-captcha-box-new-header .breeze-modal-captcha-input-new {
+    width: 5.7rem;
+    margin: 0 auto;
+}
+.breeze-modal-captcha-box-new .breeze-modal-captcha-box-new-header .breeze-modal-captcha-input-new ul {
+    margin-top: .38rem;
+    margin-bottom: .32rem;
+}
+.breeze-modal-captcha-box-new .breeze-modal-captcha-box-new-header .breeze-modal-captcha-input-new p {
+    padding-bottom: .2rem;
+    margin-bottom: 0;
+}
+/* 主体内容 */
+.breeze-modal-captcha-box-new-detail {
+    height: 3.18rem;
+    font-size: 0;
+    margin-top: .2rem;
+    background: url("../images/breeze-modal-captcha-img-bg.png") center no-repeat;
+    background-size: 100%;
+}
+.breeze-modal-captcha-box-new-detail .breeze-modal-captcha-box-new-detail-logo {
+    position: absolute;
+    top: .15rem;
+    left: .18rem;
+    width: .8rem;
+    height: .28rem;
+}
+.breeze-modal-captcha-box-new-detail .breeze-modal-captcha-box-new-detail-bg {
+    width: 100%;
+}
+/* 其他保险浮动按钮 */
+.breeze-modal-captcha-box-fixed-button {
+    position: absolute;
+    top: 6.38rem;
+    right: .34rem;
+    width: 1.3rem;
+    height: .92rem;
+    font-size: .24rem;
+    color: #fff;
+    padding-top: .38rem;
+    background: linear-gradient(to bottom, #ff783e, #ff310e);
+    border-radius: 50%;
+    box-shadow: 0 .12rem .12rem #f29889;
+    z-index: 1;
+}
+.breeze-modal-captcha-box-fixed-button span {
+    display: block;
+    text-align: center;
+    line-height: .3rem;
+}
+/* 数字键盘样式 */
+.breeze-modal-captcha-box-new>table {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-collapse: collapse;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.breeze-modal-captcha-box-new>table td {
+    width: 33.33%;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    font-size: 0.52rem;
+    color: #000;
+    text-align: center;
+    border: 0.02rem solid #b7b7b7;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.breeze-modal-captcha-box-new>table tr:nth-child(1) td:first-child {
+    border-left: 0;
+}
+.breeze-modal-captcha-box-new>table tr:nth-child(1) td:last-child {
+    border-right: 0;
+}
+.breeze-modal-captcha-box-new>table tr:nth-child(2) td:first-child {
+    border-left: 0;
+}
+.breeze-modal-captcha-box-new>table tr:nth-child(2) td:last-child {
+    border-right: 0;
+}
+.breeze-modal-captcha-box-new>table tr:nth-child(3) td:first-child {
+    border-left: 0;
+}
+.breeze-modal-captcha-box-new>table tr:nth-child(3) td:last-child {
+    border-right: 0;
+}
+.breeze-modal-captcha-box-new>table tr:nth-child(4) td:first-child {
+    border-left: 0;
+}
+.breeze-modal-captcha-box-new>table tr:nth-child(4) td:last-child {
+    border-right: 0;
+}
+.breeze-modal-captcha-box-new>table td:active {
+    background-color: #d1d5de;
+}
+.breeze-modal-captcha-box-new>table tr:nth-child(4) td:last-child {
+    background-color: #d1d5de;
+}
+.breeze-modal-captcha-box-new>table td.border-top {
+    border-top: 0;
+}
+.breeze-modal-captcha-box-new>table td.border-bottom {
+    border-bottom: 0;
+}
+.breeze-modal-captcha-box-new>table td.border-left {
+    border-left: 0;
+}
+.breeze-modal-captcha-box-new>table td.border-right {
+    border-right: 0;
+}
+.breeze-modal-captcha-box-new>table tr:last-child td:first-child {
+    background-color: #d1d5de;
+}
+.breeze-modal-captcha-box-new>table tr:last-child td:last-child {
+    background: url(../images/wap-del.png) #d1d5de center no-repeat;
+    background-size: 0.48rem;
+}

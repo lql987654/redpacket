@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html data-dpr="1" style="font-size: 129.375px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="js/jquery.min.js"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <title>每日抽大奖*</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/actBase_201802231028.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+
+<body>
+<div id="db-content">
+    <div class="main">
+        <div class="record"></div>
+        <div class="rule"></div>
+        <div class="dollMac">
+            <div class="macbg"></div>
+            <div class="conveyorBelt backward">
+                <div class="maoding"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="mask"></div>
+                <div class="wawas" id="backward-pack">
+                    <div id="backward-img1">
+                        <img src="images/lucky.png" >
+                        <img src="images/lucky.png" >
+                        <img src="images/lucky.png" >
+                        <img src="images/lucky.png" >
+                        <img src="images/lucky.png" >
+                    </div>
+                    <div id="backward-img2"></div>
+                </div>
+            </div>
+            <div class="conveyorBelt forward">
+                <div class="maoding"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="wawas pack" id="pack">
+                    <div id="sel1">
+                        <img src="images/lucky.png" >
+                        <img src="images/lucky.png">
+                        <img src="images/lucky.png" >
+                        <img src="images/lucky.png">
+                        <img src="images/lucky.png">
+                        <img src="images/lucky.png">
+                        <img src="images/lucky.png">
+                        <img src="images/lucky.png">
+                        <img src="images/lucky.png">
+                    </div>
+                    <div id="sel2"></div>
+                </div>
+            </div>
+            <div class="macborder"></div>
+            <div class="zhuazi pawer" style="display: block; height: 246px;top:0rem;overflow: visible;!important;"
+                 stop="false">
+                <div class="foots">
+                    <div class="left-foot" style="transform: rotate(0deg);"></div>
+                    <div class="right-foot" style="transform: rotate(0deg);"></div>
+                    <div class="win"><img/></div>
+                </div>
+                <div class="pole"></div>
+            </div>
+            <div class="mactop"></div>
+            <!--<button class="start" type="button"></button>-->
+            <input type="button" class="start" style="border: 0"/>
+        </div>
+        <p class="need-credits" style="display: block;">抽奖机会已用完</p>
+    </div>
+    <div class="prize-list" id="prize-list">
+        <div id="prizes-wrapper" data-length="5"
+             style="width: 4.55rem; padding-left: 0.3rem; padding-right: 0rem; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+            <div class="prize-item" style="display: inline-block; margin-right: 0.2rem;" data-id="31101"
+                 data-type="physical">
+                <div class="prize-img-box"><img class="prize-img" src="images/ipad.png"></div>
+                <p class="prize-name">Ipad</p></div>
+            <div class="prize-item" style="display: inline-block; margin-right: 0.2rem;" data-id="31102"
+                 data-type="physical">
+                <div class="prize-img-box"><img class="prize-img" src="images/sony.png"></div>
+                <p class="prize-name">微单</p></div>
+            <div class="prize-item" style="display: inline-block; margin-right: 0.2rem;" data-id="31105"
+                 data-type="lucky">
+                <div class="prize-img-box"><img class="prize-img" src="images/draw-bar.png"></div>
+                <p class="prize-name">拉杆箱</p></div>
+            <div class="prize-item" style="display: inline-block; margin-right: 0.2rem;" data-id="31105"
+                 data-type="lucky">
+                <div class="prize-img-box"><img class="prize-img" src="images/red-packet.png"></div>
+                <p class="prize-name">红包</p></div>
+            <div class="prize-item" style="display: inline-block; margin-right: 0.2rem;" data-id="31105"
+                 data-type="lucky">
+                <div class="prize-img-box"><img class="prize-img" src="images/lucky-bag.png"></div>
+                <p class="prize-name">福袋</p></div>
+        </div>
+        <div class="prize-tag"></div>
+    </div>
+    <div id="active-recommend" class="active-recommend" style="display: none;"></div>
+ </div>
+<div class="apple">客服热线：4000806659</div>
+<div class="rule-modal rule-modal-zcd" style="display: none;">
+    <div class="bg-rule" style="background-image:url(//yun.tuisnake.com/h5-mami/activity/common/bg-rule2.png);">
+        <div class="rule-modal-dialog">
+            <header><i></i><span>活动说明</span><i></i></header>
+            <section class="scroll-box">
+                <div>
+                    <div class="description rule-3">
+                        <div class="description-scroller"><p>每日抓大奖，天天领好礼~</p>
+                            <p>活动说明：参与活动即有机会获得幸运奖，每天8次免费抽奖机会。此活动为概率中奖，奖品数量有限，祝好运。</p>
+                            <p>惊喜一：索尼微单</p>
+                            <p>惊喜二：iPad air</p>
+                            <p>惊喜三：精品拉杆箱</p>
+                            <p>惊喜四：500元红包</p>
+                            <p>惊喜五：幸运福袋</p>
+                            <p>－－－－－－－－－－－－－－－－<br></p>
+                            <p>重要声明</p>
+                            <p>1、实物类奖品将在活动结束后5-10个工作日安排发货，请耐心等待</p>
+                            <p>2、优惠券类奖品的使用规则详见每个优惠券的介绍页</p>
+                            <p>3、请兑换后仔细阅读使用流程，如有疑问，可直接联系客服专线：400-080-6659（工作日9:00至18:00）</p>
+                            <p>4、通过非法途径获得奖品的，主办方有权不提供奖品</p></div>
+                    </div>
+                    <div class="probability rule-3">
+                        <div class="nav"><span>更多概率说明</span><i></i></div>
+                        <div class="text">
+                            <div class="probability-wrapper rule-3">
+                                <div class="probability-scroller"><p>惊喜一：索尼微单共10份，中奖概率0.01%</p>
+                                    <p>惊喜二：iPad Air共20份，中奖概率0.05%</p>
+                                    <p>惊喜三：精品拉杆箱共50份，中奖概率0.1%</p>
+                                    <p>惊喜四：500元红包共50份，中奖概率0.2%</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="close"></div>
+    </div>
+</div>
+<script src="js/wap.js"></script>
+</body>
+</html>

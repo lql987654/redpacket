@@ -1,0 +1,152 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <link rel="stylesheet" href="css/wap-home.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/wap-common.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header wrap">
+        <div class="header-info">免费为宝宝领取最高20万元意外保障</div>
+        <div class="header-logo"><img src="images/wap-banner-logo.png"></div>
+    </div>
+    <!-- 右部悬浮按钮 -->
+    <a class="fixed-btn" id="activity-insurance-button"><i>赠</i><i>险</i><i>详</i><i>情</i></a>
+    <!-- 表单主体 -->
+    <div class="content">
+        <form class="form-box" id="form-box" method="post">
+            <div class="form-title">被保险人信息</div>
+            <div class="input-box clear-float">
+                <div class="left-box">宝宝姓名</div>
+                <input type="text" id="name-child" name="name" placeholder="用于保险公司承保" class="input-text">
+                <div id="sex-box" class="sex-box">
+                    <input id="male" type="radio" value="M" name="sex">
+                    <label class="mr30" for="male">男</label>
+                    <input id="female" type="radio" value="F" name="sex">
+                    <label for="female">女</label>
+                </div>
+            </div>
+            <div class="input-box clear-float select-box">
+                <div class="left-box">宝宝年龄</div>
+                <input type="text" id="birth" name="birth" placeholder="限28天到13周岁" class="input-text" readonly>
+            </div>
+            <div class="form-title">投保人信息</div>
+
+            <div class="input-box clear-float">
+                <div class="left-box">您的姓名</div>
+                <input type="text" id="name-self" name="name" placeholder="请输入您的真实姓名" class="input-text">
+            </div>
+            <div class="input-box clear-float">
+                <div class="left-box">手机号码</div>
+                <input type="tel" id="mobile" name="mobile" placeholder="用于接收保单信息" class="input-text">
+            </div>
+            <div class="input-box clear-float">
+                <div class="left-box">身份证号</div>
+                <input type="text" id="idCard" name="idCard" placeholder="用于保单生效" class="input-text">
+            </div>
+
+            <a href="javascript:;" id="form-submit" class="form-submit">免费领取</a>
+            <div class="form-tip">*后续会有保险公司打电话联系您确认免费险事宜</div>
+            <div class="agree-box clear">
+                <input id="agree-button" type="checkbox" checked>
+                <label class="fr" for="agree-button">
+                    <em></em>本人同意领取免费险并阅读<a href="javascript:;" id="activity-rules-btn">活动规则</a> 和
+                    <a href="javascript:;" id="activity-user-btn">用户协议</a>
+                </label>
+            </div>
+        </form>
+    </div>
+    <!-- 广告 -->
+    <div class="adv-box"></div>
+    <!-- 页底 -->
+    <div class="footer">
+        <p>本活动由黑牛保险提供，黑牛保险为合法授权服务商，如有需要请联系</p>
+        <p>服务热线：010-52747178（工作日10:00-17:00）</p>
+        <p>服务邮箱：service@heiniubao.com  服务 QQ：3471653040</p>
+    </div>
+    <!-- 遮罩层 -->
+    <div class="mask" id="mask"></div>
+    <div id="modal-insurance-detail" class="modal insurance-detail">
+        <a href="javascript:;" class="close-button"></a>
+        <h3>华夏公共交通意外伤害保险</h3>
+        <div class="modal-content">
+            <div class="period-age clear-float">
+                <span class="period">保障期限：3个月</span>
+                <span class="age">可投保年龄：25-50周岁</span>
+            </div>
+            <div class="table-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>保障内容</th>
+                            <th>最高保额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>公共汽车/出租车意外</td>
+                            <td>3万</td>
+                        </tr>
+                        <tr>
+                            <td>公共汽车/出租车意外</td>
+                            <td>3万</td>
+                        </tr>
+                        <tr>
+                            <td>公共汽车/出租车意外</td>
+                            <td>3万</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- 活动规则 -->
+    <div id="modal-activity-rules" class="modal">
+        <a href="javascript:;" class="close-button"></a>
+        <h3>活动规则</h3>
+        <div class="modal-content">
+            {% for val in page_param['explain'] %}
+            <p>{{ val }}</p>
+            {% end %}
+        </div>
+    </div>
+    <!-- 服务协议 -->
+    <div id="modal-service-agreement" class="modal">
+        <a href="javascript:;" class="close-button"></a>
+        <h3>服务协议</h3>
+        <div class="modal-content">
+            <p>服务协议</p>
+        </div>
+    </div>
+    <script src="js/wap-home.js"></script>
+</body>
+</html>

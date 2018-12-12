@@ -1,0 +1,364 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <script src="http://static.heiniubao.com/static/js/plugins/lib/jquery-3.2.1.min.js"></script>
+    <script src="http://static.heiniubao.com/static/js/plugins/base/wap-base.js?v=1.0.0"></script>
+    <link rel="stylesheet" href="css/wap-home.css?v=1.0.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<style>
+    .mask-success-content{
+        width: 6.54rem;
+        height: 5.7rem;
+        background-color: #ffffff;
+        margin: 0 auto;
+    }
+    .mask-success-content .mask-icon{
+        width: .76rem;
+        height: .76rem;
+        background: url("images/VIPKID-TK/mask-success-icon.png") center no-repeat;
+        background-size: 100%;
+        margin: 0 auto;
+        padding: .4rem 0 .3rem;
+    }
+    .mask-success-content .success-title{
+        font-size: .32rem;
+        color: #ff8400;
+        text-align: center;
+    }
+    .mask-success-content .success-content{
+        width: 5.75rem;
+        margin: .28rem auto 0;
+    }
+    .mask-success-content .success-content .success-tip{
+        font-size: .24rem;
+        color: #999999;
+    }
+    .success-btn{
+        width: 100%;
+        height: .9rem;
+        font-size: .36rem;
+        background-color: #f95f14;
+        text-align: center;
+        border-radius: 40px;
+        line-height: .9rem;
+        margin-top: .3rem;
+    }
+    .success-btn a{
+        color: #ffffff;
+        text-decoration: none;
+    }
+    .mask-two-welfare{
+        width: 6.4rem;
+        background-color: #ffec54;
+        padding: .45rem 0 .3rem 0;
+        margin: 0 auto;
+    }
+    .mask-two-welfare .welfare-box-title{
+        font-size: .28rem;
+    }
+    .mask-two-welfare .mask-welfare-box{
+        width: 5.75rem;
+        margin: 0 auto .25rem;
+        color: #8e4b00;
+    }
+    .mask-two-welfare .welfare-box-title span{
+        display: inline-table;
+        background: #f95f14;
+        color: #fff;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+        margin-right: .1rem;
+    }
+    .welfare-box-info{
+        color: #c7983e;
+        font-size: .24rem;
+        margin-top: .22rem;
+        position: relative;
+        margin-bottom:.14rem;
+    }
+    .welfare-box-info span:last-child{
+        position: absolute;
+        right: 0;
+    }
+    .detail-table table{
+        width: 5.74rem;
+        text-align: center;
+        font-size: .28rem;
+        border-collapse:collapse;
+
+        border-radius: 4px;
+        background-color: #fafafa;
+    }
+    .detail-table table th{
+        color: #8b631c;
+        font-weight: bold;
+        width: 2.1rem;
+        height: .8rem;
+    }
+    .detail-table table td{
+        color: #8b631c;
+        width: 2.1rem;
+        height: .8rem;
+    }
+    .table-border-left-solid{
+        border-left: 1px solid #f0e7d7;
+    }
+    .table-border-bottom-solid{
+        border-bottom: 1px solid #f0e7d7;
+    }
+    .table-border-left-dashed{
+        border-left: 1px solid #f0e7d7;
+    }
+    .table-border-bottom-dashed{
+        border-bottom: 1px solid #f0e7d7;
+    }
+    .content .detail table th:first-child{
+        width: 4.18rem;
+    }
+    .table-text-left{
+        text-align: left;
+        padding-left: .32rem;
+    }
+    .detail-table  table th:last-child{
+        width: 1.8rem;
+    }
+    .detail-table  table td{
+        border: 1px solid #f0e7d7;
+        height: .8rem;
+    }
+    .welfare-tip{
+        color: #c7983e;
+        font-size: .24rem;
+        margin: .1rem 0 .3rem 0;
+    }
+
+    .success-btn{
+        width: 100%;
+        height: .9rem;
+        font-size: .36rem;
+        background-color: #f95f14;
+        text-align: center;
+        border-radius: 40px;
+        line-height: .9rem;
+        margin-top: .3rem;
+    }
+    .success-btn a{
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+
+
+    .receive-mask{
+        width: 6.54rem;
+        margin: 0 auto;
+        padding: .4rem 0;
+        background: #ffffff;
+    }
+    .receive-mask-header{
+        width: 5.75rem;
+        margin: 0 auto;
+        border-bottom: 1px dashed #e3e3e3;
+    }
+    .receive-icon{
+        background: url("images/VIPKID-TK/mask-success-icon.png") center no-repeat;
+        background-size: 100%;
+        width: .95rem;
+        height: .95rem;
+        margin: 0 auto;
+    }
+    .receive-title{
+        font-size: .32rem;
+        color: #ff8400;
+        text-align: center;
+        margin-top: .2rem;
+    }
+    .receive-tip{
+        color: #999999;
+        font-size: .24rem;
+        text-align: center;
+        margin-top: .22rem;
+        margin-bottom: .3rem;
+    }
+    .receive-mask-content{
+        width: 5.75rem;
+        margin: 0 auto;
+    }
+    .receive-mask-content-header{
+        position: relative;
+        margin: .4rem 0 .28rem 0;
+        display: flex;
+        color: #333;
+    }
+    .receive-mask-content-header span{
+        font-size: .32rem;
+        display: inline-table;
+
+    }
+    .receive-mask-content-header .company-icon{
+        width: 1.03rem;
+        height: .5rem;
+        margin-right: .32rem;
+    }
+    .receive-mask-content-header .company-icon img{
+        width: 100%;
+    }
+    .receive-mask-content .welfare-box-info{
+        color: #999999;
+    }
+    .receive-mask-content .detail-table{
+        margin-top: .24rem;
+    }
+    .receive-mask-content .detail-table table{
+        width: 5.75rem;
+        text-align: center;
+        font-size: .28rem;
+        border-collapse:collapse;
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+    }
+    .receive-mask-content .detail-table table th{
+        color: #313131;
+        font-weight: bold;
+        background-color: #fafafa;
+        width: 2.1rem;
+        height: .8rem;
+    }
+    .receive-mask-content .detail-table .table-border-left-solid{
+        border-left: 1px solid #e2e2e2;
+    }
+    .receive-mask-content .detail-table .table-border-bottom-solid{
+        border-bottom: 1px solid #e2e2e2;
+    }
+    .receive-mask-content .detail-table .table-border-left-dashed{
+        border-left: 1px solid #e2e2e2;
+    }
+    .receive-mask-content .detail-table .table-border-bottom-dashed{
+        border-bottom: 1px solid #e2e2e2;
+    }
+    .receive-mask-content table th:first-child{
+        width: 3.15rem;
+    }
+    .table-text-left{
+        text-align: left;
+        padding-left: .32rem;
+    }
+    .receive-mask-content table th:last-child{
+        width: 1.8rem;
+    }
+    .receive-mask-content table td{
+        color: #5f5f5f;
+        background: #ffffff;
+        height: .8rem;
+    }
+</style>
+<body style="background-color: #404040">
+    <div class="container">
+        <div class="mask-two-welfare">
+            <div class="mask-welfare-box">
+                <div class="welfare-box-title"><span>1</span>恭喜，成功领取价值388元试听礼包</div>
+                <div class="welfare-box-info">
+                    恭喜，您已成功领取VIPKID试听课，我们的工作人员会主动联系您（区号010或021或95的座机）为您预约上课时间，请保持手机畅通
+                </div>
+            </div>
+            <div class="mask-welfare-box">
+                <div class="welfare-box-title"><span>2</span>价值8万元少儿意外险已领取成功</div>
+                <div class="welfare-box-info">
+                    <span>保期：30天</span>
+                    <span>可投保年龄：25-50周岁</span>
+                </div>
+                <div class="detail-table">
+                    <table>
+                        <tr>
+                            <th class="table-border-bottom-solid table-text-left">保障内容</th>
+                            <th class="table-border-left-solid table-border-bottom-solid">最高保额</th>
+                        </tr>
+                        <tr>
+                            <td class="table-border-left-dashed table-text-left">飞机意外身故/残疾</td>
+                            <td class="table-border-bottom-dashed table-border-left-dashed">100万</td>
+                        </tr>
+                        <tr>
+                            <td class="table-border-left-dashed table-text-left"></td>
+                            <td class="table-border-bottom-dashed table-border-left-dashed"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="welfare-tip">*注：是否承保请以保险公司短信为准</div>
+                <div class="success-btn">
+                    <a href="#">知道了</a>
+                </div>
+            </div>
+        </div>
+        <div class="receive-mask">
+            <div class="receive-mask-header">
+                <div class="receive-icon"></div>
+                <div class="receive-title">
+                    恭喜您领取成功！
+                </div>
+                <div class="receive-tip">请留意泰康发给您的短信，保险详情以短信通知为准</div>
+            </div>
+            <div class="receive-mask-content">
+                <div class="receive-mask-content-header">
+                    <span class="company-icon"><img src="images/company-icon.png"></span>
+                    <span>泰康少儿意外险</span>
+                </div>
+                <div class="welfare-box-info">
+                    <span>保期：30天</span>
+                    <span>可投保年龄：25-50周岁</span>
+                </div>
+                <div class="detail-table">
+                    <table>
+                        <tr>
+                            <th class="table-border-bottom-solid table-text-left">保障内容</th>
+                            <th class="table-border-left-solid table-border-bottom-solid">最高保额</th>
+                        </tr>
+                        <tr>
+                            <td class="table-border-left-dashed table-text-left">飞机意外身故/残疾</td>
+                            <td class="table-border-bottom-dashed table-border-left-dashed">100万</td>
+                        </tr>
+                        <tr>
+                            <td class="table-border-left-dashed table-text-left"></td>
+                            <td class="table-border-bottom-dashed table-border-left-dashed"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="success-btn">
+                    <a href="#">知道了</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

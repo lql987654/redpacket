@@ -1,0 +1,506 @@
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select, img {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+body {
+    position: relative;
+    font: 12px/1.5 "Microsoft YaHei", tahoma, arial, Hiragino Sans GB, \5b8b\4f53;
+    color: #000;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+ul, li {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+input {
+    border: none;
+    background: transparent;
+    outline:none
+}
+input[type="radio"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+input[disabled="disabled"] {
+    background-color: #ccc;
+    border: none;
+}
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset;}
+input::-webkit-contacts-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+}
+.clearfix {
+    zoom: 1;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.fl {
+    float: left !important;
+}
+
+.fr {
+    float: right !important;
+}
+/*自定义弹窗*/
+.err_popo {
+    position: fixed;
+    z-index: 2000;
+    top: 45%;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 8px;
+}
+.err_popo span {
+    position: relative;
+    display: block;
+    padding: 20px 15px;
+    font-size: 16px;
+    word-break:break-all;
+    color: #fff;
+    text-align: center
+}
+
+.wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    min-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+.content {
+    width:1200px;
+    margin: 0 auto;
+}
+/*头部*/
+.top {
+    height: 70px;
+    background: #fff;
+    box-shadow: 0 3px 20px 1px #a4a4a4;
+    z-index: 2;
+    overflow: unset;
+}
+.top .top-header {
+    width: 1200px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.top .top-header>img {
+    width: 122px;
+    height: 38px;
+    margin-top: 16px;
+    float: left;
+}
+.top .top-header>p {
+    position: relative;
+    font-size: 17px;
+    color: #5e5e5e;
+    line-height: 70px;
+    float: right;
+}
+.top .top-header>p span {
+    position: absolute;
+    left: -40px;
+    top: 15px;
+    display: inline-block;
+    background: url(../images/phone-ico.png) no-repeat center;
+    background-size: 37px;
+    width: 37px;
+    height: 38px;
+}
+.top .top-header .main-nav-bar {
+    width: 430px;
+    height: 68px;
+    float: left;
+    margin-left: 242px;
+}
+.top .top-header .main-nav-bar ul li:hover {
+    color: #c99f5e;
+    border-bottom: 2px solid #c99f5e;
+}
+.top .top-header .main-nav-bar ul li {
+    float: left;
+    display: inline-block;
+    font-size: 18px;
+    color: #5e5e5e;
+    width: 100px;
+    text-align: center;
+    line-height: 68px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+.top .top-header .main-nav-bar ul li.active {
+    color: #c99f5e;
+    border-bottom: 2px solid #c99f5e;
+}
+.main-nav-child-bar {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    background: #f8f8f8;
+    z-index: 3;
+    box-shadow: 0 6px 7px 1px #a4a4a4;
+    border-top: 1px solid #eaeaea;
+    display: none;
+}
+.main-nav-child-content {
+    position: relative;
+}
+.top .top-header .main-nav-bar ul li .main-nav-child-bar ul,
+.top .top-header .main-nav-bar ul li .main-nav-child-bar ul li,
+.main-nav-child-bar-content {
+    height: 45px;
+    line-height: 45px;
+}
+.top .top-header .main-nav-bar ul li .main-nav-child-bar ul li {
+    height: 41px;
+}
+.main-nav-child-bar ul {
+    margin-left: 374px;
+}
+.top .top-header .main-nav-bar ul li .main-nav-child-bar ul li {
+    width: 100px;
+    text-align: center;
+    float: left;
+    font-size: 14px;
+    color: #5e5e5e;
+    margin-right: 60px;
+}
+.top .top-header .main-nav-bar ul li .main-nav-child-bar ul li.active {
+    color: #c99f5e;
+    border-bottom: 4px solid #c99f5e;
+}
+/* 轮播图 */
+.banner-box {
+    height: 430px;
+    overflow: unset;
+    z-index: 1;
+}
+.banner-box ul ,
+.banner-box ul li {
+    width: 100%;
+    height: 430px;
+}
+.banner-item-1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    list-style-type: none;
+    background: url("../images/pc-banner-child-1.jpg") center;
+}
+/* 公用区域 */
+.section {
+    padding-top: 60px;
+}
+.section-bg {
+    background: linear-gradient(to bottom, #ffffff, #fcfcfc);
+}
+.section h2 {
+    color: #1d1d1d;
+    font-size: 44px;
+    text-align: center;
+    margin-bottom: 58px;
+}
+/* tab切换 */
+.nav-tab-box {
+    /*padding-bottom: 60px;*/
+}
+.nav-tab {
+    border-bottom: 1px solid #f6f6f6;
+}
+.nav-tab ul {
+    width: 880px;
+    padding: 30px 164px 40px 164px;
+}
+.nav-tab ul li {
+    position: relative;
+    float: left;
+    padding-top: 110px;
+    margin-right: 320px;
+    cursor: pointer;
+}
+.nav-tab ul li:last-child {
+    margin-right: 0;
+}
+.nav-tab ul li p {
+    font-size: 18px;
+    color: #303030;
+}
+.nav-tab ul li.active p {
+    color: #c99f5e;
+}
+.nav-tab ul li.active:after {
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    border-top: 10px solid #c99f5e;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    content: '';
+}
+.nav-tab ul li em {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin-left: -40px;
+}
+.tab-item-1 em {
+    background: url("../images/nav-icon-chain.png") center no-repeat;
+    background-size: 100%;
+}
+.tab-item-2 em {
+    background: url("../images/nac-icon-recover.png") center no-repeat;
+    background-size: 100%;
+}
+.tab-item-3 em {
+    background: url("../images/nav-icon-server.png") center no-repeat;
+    background-size: 100%;
+}
+.tab-item-4 em {
+    background: url("../images/nav-icon-tend.png") center no-repeat;
+    background-size: 100%;
+}
+.tab-detail {
+    margin-top: 40px;
+    box-shadow: 0 3px 7px 1px #f0f1f0;
+}
+.tab-item-detail img {
+    width: 1200px;
+    height: 400px;
+    display: block;
+}
+.tab-detail p {
+    padding: 30px;
+    font-size: 14px;
+    color: #303030;
+}
+.tab-detail-title {
+    height: 119px;
+    padding-top: 80px;
+    background: url("../images/life-title-bg.jpg") center;
+}
+.tab-detail-title p {
+    width: 1000px;
+    line-height: 24px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #303030;
+}
+/* 五星餐饮 · 色香味健 */
+.section-restaurant {
+    padding-bottom: 60px;
+}
+.section-restaurant-content {
+    position: relative;
+    height: 658px;
+}
+.section-restaurant-content .left-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 420px;
+}
+.section-restaurant-content .right-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 700px;
+    height: 420px;
+}
+.restaurant-desc {
+    position: absolute;
+    top: 98px;
+    right: 139px;
+    font-size: 16px;
+    color: #5f5f5f;
+}
+.section-restaurant-health .restaurant-desc {
+    right: 50px;
+}
+/* 社区会所 */
+.section-community {
+    padding-bottom: 60px;
+}
+.section-community b {
+    text-align: center;
+    font-weight: normal;
+    display: block;
+    font-size: 44px;
+    color: #1d1d1d;
+}
+.section-community-desc {
+    margin-bottom: 60px;
+}
+.section-community-desc p {
+    color: #5f5f5f;
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+}
+.community-detail {
+    position: relative;
+    height: 400px;
+}
+.community-detail .restaurant-detail-1 {
+    width: 598px;
+    height: 400px;
+}
+.community-detail .restaurant-detail-2 {
+    position: absolute;
+    top: 0;
+    left: 603px;
+    width: 295px;
+    height: 197px;
+}
+.community-detail .restaurant-detail-3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 295px;
+    height: 197px;
+}
+.community-detail .restaurant-detail-4 {
+    position: absolute;
+    bottom: 0;
+    left: 603px;
+    width: 295px;
+    height: 197px;
+}
+.community-detail .restaurant-detail-5 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 295px;
+    height: 197px;
+}
+/* 第二个tab切换 */
+/* 生活服务 */
+.section-life-server h2 {
+    margin-bottom: 26px;
+}
+.section-life-server h3 {
+    font-size: 16px;
+    color: #5f5f5f;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.life-server-content .item-box {
+    margin-bottom: 60px;
+}
+.life-server-content .item-box img {
+    width: 285px;
+    height: 380px;
+    margin-right: 20px;
+    display: block;
+    float: left;
+}
+.life-server-content .item-box img:last-child {
+    margin-right: 0;
+}
+.life-server-content p {
+    color: #5f5f5f;
+    font-size: 16px;
+    margin-bottom: 60px;
+}
+/* 第三个tab切换 */
+.health-file-title {
+    height: 300px;
+    padding-top: 120px;
+    font-size: 36px;
+    line-height: 60px;
+    color: #303030;
+    text-align: center;
+    background: url("../images/health-file-title-bg.jpg") center;
+}
+.health-file-content {
+    position: relative;
+    height: 400px;
+}
+.health-file-item-box {
+    position: absolute;
+    top: -110px;
+    left: 0;
+}
+.health-file-item {
+    position: relative;
+    width: 380px;
+    height: 220px;
+    box-shadow: 0 3px 7px 1px #f0f1f0;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.health-file-item:nth-child(3n) {
+    margin-right: 0;
+}
+.health-file-item h3 {
+    font-size: 24px;
+    color: #303030;
+    margin-top: 46px;
+    margin-left: 32px;
+    margin-bottom: 20px;
+}
+.health-file-item p {
+    height: 24px;
+    line-height: 24px;
+    color: #303030;
+    margin-left: 32px;
+    margin-right: 26px;
+    font-size: 14px;
+    text-align: justify;
+}
+.health-file-item-1 {
+    background: url("../images/health-item-bg-1.png") center;
+}
+.health-file-item-2 {
+    background: url("../images/health-item-bg-2.png") center;
+}
+.health-file-item-3 {
+    background: url("../images/health-item-bg-3.png") center;
+}
+.health-file-item-4 {
+    background: url("../images/health-item-bg-4.png") center;
+}
+.health-file-item-5 {
+    background: url("../images/health-item-bg-5.png") center;
+}
+.health-file-item-6 {
+    background: url("../images/health-item-bg-6.png") center;
+}

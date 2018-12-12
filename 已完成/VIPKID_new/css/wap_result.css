@@ -1,0 +1,164 @@
+*{padding:0; margin:0; font-family:arial,"\5FAE\8F6F\96C5\9ED1",sans-serif; }
+body{
+    background: #f5f5f5;
+}
+a {
+    text-decoration: none;
+}
+input{
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+}
+input[type='button']{
+    -webkit-appearance: none;
+}
+input, label, a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type="checkbox"],
+input[type="radio"]{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+input:-webkit-autofill{
+    background-color: #ffffff;
+}
+.form-box .input-box input::-webkit-input-placeholder {
+    color: #acacac;
+}
+input::-moz-placeholder {
+    color: #acacac;
+}
+input:-ms-input-placeholder {
+    color: #acacac;
+}
+.clear:after{
+    clear:both;content:'';display:block;width:0;height:0;visibility:hidden;
+}
+.float-left{
+    float: left;
+}
+.hide{
+    display: none;
+}
+.wrap {
+    width: 7.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+/* 头部 */
+.header {
+    position: relative;
+    width: 5.29rem;
+    margin: .3rem auto .2rem;
+    padding:  .4rem .46rem .4rem 1.15rem;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.success-header:before {
+    position: absolute;
+    top: -.02rem;
+    left: .2rem;
+    width: .64rem;
+    height: .93rem;
+    content: '';
+    background: url("../images/success-header-icon.png") center no-repeat;
+    background-size: 100%;
+}
+.header .header-title {
+    font-size: .32rem;
+    color: #f85a18;
+    margin-bottom: .2rem;
+}
+.header .header-content {
+    font-size: .24rem;
+    color: #787878;
+    text-align: justify;
+}
+/* 失败头部 */
+.fail-header:before {
+    position: absolute;
+    top: -.02rem;
+    left: .2rem;
+    width: .64rem;
+    height: .93rem;
+    content: '';
+    background: url("../images/header-fail-icon.png") center no-repeat;
+    background-size: 100%;
+}
+.header .fail-title {
+    font-size: .32rem;
+    color: #757575;
+    margin-bottom: 0;
+}
+/* 福利 标题 */
+.welfare-header-box {
+    font-size: 0;
+    margin-bottom: .2rem;
+}
+.welfare-header-box .welfare-header-title {
+    width: 3.8rem;
+    height: .52rem;
+    line-height: .52rem;
+    text-align: center;
+    font-size: .28rem;
+    color: #f85a18;
+    display: inline-table;
+    background: url("../images/welfare-bg.png") center no-repeat;
+    background-size: 100%;
+    margin-left: 1.86rem;
+
+}
+.welfare-header-box .welfare-change {
+    position: relative;
+    padding-left: .4rem;
+    font-size: .28rem;
+    color: #787878;
+    margin-left: .33rem;
+}
+.welfare-header-box .welfare-change em {
+    position: absolute;
+    top: .01rem;
+    left: 0;
+    width: .3rem;
+    height: .3rem;
+    background: url("../images/change.png") center no-repeat;
+    background-size: 100%;
+}
+/* 福利 主体 */
+.welfare-content {
+    width: 6.9rem;
+
+}
+.welfare-content .welfare-item {
+    position: relative;
+    width: 6.9rem;
+    height: 2.7rem;
+    background: linear-gradient(to right ,#4e96fd , #57c4fa);
+    border-radius: 5px;
+    margin-bottom: .3rem;
+}
+.welfare-content .welfare-item:before {
+    position: absolute;
+    top: .2rem;
+    left: -.04rem;
+    width: .9rem;
+    height: .4rem;
+    content: '';
+    background: url("../images/welfare-item-icon.png") center no-repeat;
+    background-size: 100%;
+}
+.welfare-content .welfare-item .welfare-btn {
+    position: absolute;
+    left: .3rem;
+    bottom: .5rem;
+    font-size: .28rem;
+    color: #ffffff;
+    background: #3f79ca;
+    border-radius: .4rem;
+    padding: .16rem .36rem;
+}

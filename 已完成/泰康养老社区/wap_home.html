@@ -1,0 +1,341 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <link rel="stylesheet" href="css/wap-home.css" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header wrap">
+        <div class="header-company-logo"><img src="images/example-logo.png"></div>
+        <div class="header-title">医养结合  康复护理  安享晚年</div>
+        <div class="header-info">
+            <p>泰康养老社区是优雅的俱乐部、开放的</p>
+            <p>大学、精神家园、高品质医疗保健中心</p>
+        </div>
+    </div>
+    <!-- 悬浮按钮 -->
+    <div class="fixed-btn">预约</div>
+    <!-- 表单主体 -->
+    <div class="form-content">
+        <div class="form-title">
+            <div class="form-title-info">五星级养老社区  北京燕园抢位中</div>
+            <div class="form-title-content">
+                <div class="form-title-content-desc">
+                    <p>预约参观即可免费体验</p>
+                    <p>尊贵服务</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-detail">
+            <form class="form-box" id="form-box" method="post">
+                <div class="input-box">
+                    <div class="left-box">您的姓名</div>
+                    <div class="right-box">
+                        <input type="text" name="name" id="name" class="input-text" placeholder="请输入真实姓名"/>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="left-box">手机号码</div>
+                    <div class="right-box">
+                        <input type="tel" name="mobile" id="mobile" class="input-text" placeholder="用于获取专业服务" maxlength="11"/>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="left-box">验证码</div>
+                    <div class="right-box">
+                        <input type="tel" name="captcha" id="captcha" class="input-text" placeholder="请输入验证码"/>
+                    </div>
+                    <div class="box-right">
+                        <input name="token" id="token" type="hidden"/>
+                        <input id="random" name="r" value="{{page_param['random']}}" type="hidden"/>
+                        <input id="send" type="button" class="send active VIPKID-send" value="获取验证码">
+                    </div>
+                </div>
+                <div class="form-tip">您的个人信息将被严格保密，请放心填写</div>
+                <a href="javascript:;" class="submit-button" id="submit-button">立即预约抢占名额</a>
+                <div class="form-tip form-tip-bottom">*泰康养老专家将通过专线向您致电，为您介绍医疗养老社区产品</div>
+            </form>
+        </div>
+    </div>
+    <!-- 燕园模块 -->
+    <div class="module-box">
+        <div class="module-title">
+            <p class="module-title-detail">泰康养老社区 • 北京燕园</p>
+            <p class="module-title-desc">立址昌平，距地铁南邵站约500米</p>
+        </div>
+        <div class="module-content">
+            <div class="module-img"><img src="images/wap-yanyuan-module.png"></div>
+            <div class="module-detail">
+                <p class="air-icon"><em></em>紧邻蟒山森林公园，空气质量常年二级以上</p>
+                <p class="hospital-icon"><em></em>除自建康复医院外，周围配套6家医疗机构</p>
+            </div>
+        </div>
+    </div>
+    <!-- 粤园模块 -->
+    <div class="module-box">
+        <div class="module-title yueyuan-title">
+            <p class="module-title-detail">泰康养老社区 • 广州粤园</p>
+            <p class="module-title-desc">立址萝岗区政府旁，6号+21号双地铁可达</p>
+        </div>
+        <div class="module-content">
+            <div class="module-img"><img src="images/wap-yueyuan-module.png"></div>
+            <div class="module-detail">
+                <p class="air-icon"><em></em>拥数十公顷古荔枝林，全年空气优良</p>
+                <p class="hospital-icon"><em></em>驾车10分钟可达中山大学岭南医院及万达广场</p>
+            </div>
+        </div>
+    </div>
+    <!-- 医养模块 -->
+    <div class="module-box">
+        <div class="module-title module-yiyao-width">
+            <p class="module-title-detail">医养</p>
+            <p class="module-title-desc">为长者健康保驾护航</p>
+        </div>
+        <div class="module-content">
+            <div class="module-img-content clear-float">
+                <div class="module-img-content-part"><img src="images/wap-yiyang-module-1.png"></div>
+                <div class="module-img-content-part"><img src="images/wap-yiyang-module-2.png"></div>
+                <div class="module-img-content-part"><img src="images/wap-yiyang-module-3.png"></div>
+                <div class="module-img-content-part"><img src="images/wap-yiyang-module-4.png"></div>
+            </div>
+            <div class="module-detail">
+                <div class="module-detail-title">
+                    <h3>自设二级康复医院  中西医一体化</h3>
+                    <h3>康复设备专业先进  医保实时结算</h3>
+                </div>
+                <div class="module-detail-content">
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-title"><em>1</em>一个社区，一家医院</div>
+                        <div class="module-detail-content-part-content">泰康养老社区坚持医养结合模式，通过“一个社区，一
+                            家医院”的方式，以长期健康管理为目标
+                        </div>
+                    </div>
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-title"><em>2</em>医疗团队</div>
+                        <div class="module-detail-content-part-content">全科医生24小时全天候监护，保证急性病的应急处理
+                            及慢性病日常管理
+                        </div>
+                    </div>
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-title"><em>3</em>医保通道</div>
+                        <div class="module-detail-content-part-content">定点医保，全方位保证长者权益，无忧就诊</div>
+                    </div>
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-title"><em>4</em>绿色通道</div>
+                        <div class="module-detail-content-part-content">与领衔全国医疗水平的专科医院建立绿色通道</div>
+                    </div>
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-title"><em>5</em>外聘专科医生会诊</div>
+                        <div class="module-detail-content-part-content">提供院内问诊和国际尖端医学诊疗支持</div>
+                    </div>
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-title"><em>6</em>健康档案</div>
+                        <div class="module-detail-content-part-content">零距离就医，无缝对接长者主治医生，跟踪后续治疗</div>
+                    </div>
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-title"><em>7</em>多元化康复</div>
+                        <div class="module-detail-content-part-content">功能训练（排便、呼吸、吞咽、肢体、生活等）、手工
+                            训练、智力训练、防摔倒训练等</div>
+                    </div>
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-title"><em>8</em>全科设计</div>
+                        <div class="module-detail-content-part-content">设有运动康复、心理科、营养科、口腔科，引入专业
+                            骨科康复服务团队，为骨科康复提供专业服务</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 膳食模块 -->
+    <div class="module-box">
+        <div class="module-title module-yiyao-width">
+            <p class="module-title-detail">膳食</p>
+            <p class="module-title-desc">唯美味与健康可兼得</p>
+        </div>
+        <div class="module-content">
+            <div class="module-img-content clear-float">
+                <div class="module-img-content-part"><img src="images/wap-shanshi-module-1.png"></div>
+                <div class="module-img-content-part"><img src="images/wap-shanshi-module-2.png"></div>
+                <div class="module-img-content-part"><img src="images/wap-shanshi-module-3.png"></div>
+                <div class="module-img-content-part"><img src="images/wap-shanshi-module-4.png"></div>
+            </div>
+            <div class="module-detail">
+                <div class="module-detail-title">
+                    <h3>星际大厨制定适老化菜品  专业餐饮团队合理配餐</h3>
+                </div>
+                <div class="module-detail-content">
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-content"><em>1</em>三餐一点的供餐模式，下午茶包括水果、酸奶及点心</div>
+                    </div>
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-content"><em>2</em>个性化餐饮：营养摄入追踪评估，针对体重动态变化
+                            提供个性化建议
+                        </div>
+                    </div>
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-content"><em>3</em>个性化餐饮：营养摄入追踪评估，针对体重动态变化
+                            提供个性化建议</div>
+                    </div>
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-content"><em>4</em>星级大厨优选绿色应季食材、烹饪出利于长者咀嚼食用
+                            的佳肴</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 安居模块 -->
+    <div class="module-box">
+        <div class="module-title module-yiyao-width">
+            <p class="module-title-detail">安居</p>
+            <p class="module-title-desc">此心安处是吾乡</p>
+        </div>
+        <div class="module-content">
+            <div class="module-img-content clear-float">
+                <div class="module-img-content-part"><img src="images/wap-anju-module-1.png"></div>
+                <div class="module-img-content-part"><img src="images/wap-anju-module-2.png"></div>
+                <div class="module-img-content-part"><img src="images/wap-anju-module-3.png"></div>
+                <div class="module-img-content-part"><img src="images/wap-anju-module-4.png"></div>
+            </div>
+            <div class="module-detail">
+                <div class="module-detail-title">
+                    <h3>智能化适老居住设计  多样化功能空间一应俱全</h3>
+                </div>
+                <div class="module-detail-content">
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-content"><em>1</em>室内外主题花园、阳光长廊、家庭会客室等多样化的功 能空间一应俱全</div>
+                    </div>
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-content"><em>2</em>42项专业适老化设计细节，家具家电、紧急求助、无 障碍设施、圆角设计等提升老人居住品质</div>
+                    </div>
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-content"><em>3</em>门禁系统/访客管理制度/视频监控及24小时安保</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 文娱模块 -->
+    <div class="module-box">
+        <div class="module-title module-wenyu-width">
+            <p class="module-title-detail">文娱</p>
+            <p class="module-title-desc">有趣而丰富的颐养时光</p>
+        </div>
+        <div class="module-content">
+            <div class="module-img-content clear-float">
+                <div class="module-img-content-part"><img src="images/wap-wenyu-module-1.png"></div>
+                <div class="module-img-content-part"><img src="images/wap-wenyu-module-2.png"></div>
+                <div class="module-img-content-part"><img src="images/wap-wenyu-module-3.png"></div>
+                <div class="module-img-content-part"><img src="images/wap-wenyu-module-4.png"></div>
+            </div>
+            <div class="module-detail">
+                <div class="module-detail-content">
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-content"><em>1</em>凝聚高知、高干、高管的兴趣爱好，提供三大类、60余门课程选择</div>
+                    </div>
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-content"><em>2</em>居民自治，参与社区发展，共建优雅生活的家园</div>
+                    </div>
+                    <div class="module-detail-content-part">
+                        <div class="module-detail-content-part-content"><em>3</em>邻居志趣相投，定能找到您的知音</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 关于泰康养老社区模块 -->
+    <div class="module-box">
+        <div class="module-title module-desc-width">
+            <p class="module-title-detail">关于泰康养老社区</p>
+        </div>
+        <div class="module-content">
+            <div class="module-img desc-img"><img src="images/wap-desc-module.png"></div>
+            <div class="module-detail">
+                <div class="module-detail-content-desc">
+                    泰康养老社区定位于世界级标准的“医养活力社区”。
+                    社区集居家生活、美食餐饮、医疗护理、文化娱乐、健身
+                    运动等全方位的服务与功能于一体。目前已完成北京、广
+                    州、上海等12个城市的旗舰布局，并于2015年开始陆续
+                    开业运营。
+                </div>
+                <div class="module-detail-content-desc">
+                    目前已有北京燕园、广州粤园开放预约参观，欢迎您的莅临！
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 表单主体 -->
+    <div class="form-content bottom-form-content">
+        <div class="form-title">
+            <div class="form-title-content">
+                <div class="form-title-content-desc">
+                    <p>预约参观即可免费体验</p>
+                    <p>尊贵服务</p>
+                </div>
+            </div>
+            <div class="form-title-tel">
+                <span>贵宾热线：400 059 5522</span>
+                <span>拨打</span>
+            </div>
+        </div>
+        <div class="form-detail">
+            <form class="form-box" id="form-box-bottom" method="post">
+                <div class="input-box">
+                    <div class="left-box">您的姓名</div>
+                    <div class="right-box">
+                        <input type="text" name="name" id="name" class="input-text" placeholder="请输入真实姓名"/>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="left-box">手机号码</div>
+                    <div class="right-box">
+                        <input type="tel" name="mobile" id="mobile" class="input-text" placeholder="用于获取专业服务" maxlength="11"/>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="left-box">验证码</div>
+                    <div class="right-box">
+                        <input type="tel" name="captcha" id="captcha" class="input-text" placeholder="请输入验证码"/>
+                    </div>
+                    <div class="box-right">
+                        <input name="token" id="token" type="hidden"/>
+                        <input id="random" name="r" value="{{page_param['random']}}" type="hidden"/>
+                        <input id="send" type="button" class="send active VIPKID-send" value="获取验证码">
+                    </div>
+                </div>
+                <div class="form-tip">您的个人信息将被严格保密，请放心填写</div>
+                <a href="javascript:;" class="submit-button" id="submit-button">立即预约抢占名额</a>
+                <div class="form-tip form-tip-bottom">*泰康养老专家将通过专线向您致电，为您介绍医疗养老社区产品</div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <link rel="stylesheet" href="css/wap_authorize.css" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="authorize-container">
+            <div class="authorize-header">
+                <div class="left-box"></div>
+                <div class="right-box">
+                    <p class="success-company"><span class="company-logo"><img src="images/authorize/authorize-example-logo.png"></span></p>
+                    <p class="success-tip">恭喜您，您的保障升级啦！</p>
+                    <p class="success-detail">恭喜您获得系统抽取的限量保障升级资格， 已将您的平安100万出行保障免费升级为：</p>
+                </div>
+            </div>
+            <div class="authorize-content">
+                <div class="red-packet"><p>泰康飞常保100万航空意外险</p></div>
+                <div class="authorize-table">
+                    <div class="authorize-title">
+                        <span>95%的幸运用户已成功领取升级保障</span>
+                    </div>
+                    <div class="table-info">
+                        <span>保期：2018/3/21-2019/3/21</span>
+                        <span>可投保年龄：22-50周岁</span>
+                    </div>
+                    <div class="table-detail">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>保障项目</th>
+                                    <th class="border-left">保障金额</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>飞机意外身故/残疾</td>
+                                    <td class="border-left">100万</td>
+                                </tr>
+                                <tr>
+                                    <td>飞机意外身故/残疾</td>
+                                    <td class="border-left">100万</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="submit">
+                        <input type="button" value="免费领取" class="submit-btn" id="submit-btm">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

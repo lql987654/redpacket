@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html style="font-size: 50px;">
+<head>
+    <title>{{page_param['title']}}</title>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="{{page_param['keywords']}}">
+    <meta name="description" content="{{page_param['description']}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="css/wap-home.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/wap-common.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 750) {
+                        docEl.style.fontSize = '100px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="wrap top pt30">
+            <img src="{{ page_param['static_host'] }}/static/images/icon/wap_error_ico.png" />
+            <div class="error-msg">
+                <h3 class="pt25 tc">提交成功!</h3><p class="pt15 tc">是否承保成功请以保险公司短信为准，谢谢参与！</p>
+            </div>
+        </div>
+    </header>
+    <!-- 遮罩层 -->
+    <div class="mask" id="mask"></div>
+    <!-- 主体 -->
+    <div class="result-box wrap">
+        <!-- 关闭按钮 -->
+        <a class="result-modal-close" href="javascript:;"></a>
+        <!-- 头部部分 -->
+        <div class="top-box">
+            <p>恭喜！您还成功获得</p>
+            <p>平安3000元重疾保额的奖励</p>
+            <p class="top-desc">补充身份证及验证码信息即可领取增险！</p>
+            <div class="form-content">
+                <form class="form-box" id="form-box" method="post">
+                    <!-- 隐藏域 -->
+                    <input id="captcha-interface" type="hidden" value="{{ page_param.get('captcha_interface', '') }}">
+                    <input id="tongji" type="hidden" value="{{ page_param.get('tongji', '') }}">
+                    <input type="hidden" id="timestamp" name="timestamp" value="{{page_param['timestamp']}}">
+                    <input type="hidden" id="jwt-token" name="jwt_token">
+                    <input type="hidden" name="subchannel" value="{{page_param['subchannel']}}">
+                    <input type="hidden" name="channel" value="{{page_param['V']}}">
+                    <input type="hidden" name="use_jwt_token" value="{{page_param.get('use_jwt_token', '')}}">
+                    <input id="theme-link" type="hidden" value="{{page_param['theme_link']}}" name="theme_link">
+                    <input id="policy_code" name="policy_code" type="hidden" value="{{page_param['policy_code']}}">
+                    <input id="req_id" name="req_id" type="hidden" value="">
+                    <input id="handler_path" name="handler_path" type="hidden" value="{{page_param['handler_path']}}">
+                    <input id="page_url" name="page_url" type="hidden" value="{{page_param['page_url']}}">
+                    <input id="use_ddh_delay" name="use_ddh_delay" type="hidden" value="{{page_param['use_ddh_delay']}}">
+                    <input id="redirect_theme_link" name="redirect_theme_link" type="hidden" value="{{page_param['redirect_theme_link']}}">
+                    <input type="hidden" name="action_failed" value="0" id="action_failed">
+                    <input type="hidden" value="{{page_param.get('input_name', '')}}" name="name">
+                    <input type="hidden" value="{{page_param.get('input_sex', '')}}" name="sex">
+                    <input type="hidden" value="{{page_param.get('security', 'Y')}}" name="security">
+                    <input type="hidden" value="{{page_param.get('input_idCard', '')}}" name="idCard">
+                    <input type="hidden" value="{{page_param.get('input_phone', '')}}" name="mobile">
+                    <input type="hidden" value="{{page_param.get('download_url', '')}}" name="download_url" id="download_url">
+
+                    <div class="input-box clx">
+                        <div class="left-box">身份证</div>
+                        <div class="right-box"><input type="text" name="idCard" id="idCard" placeholder="请输入身份证号" class="input-text" maxlength="18"></div>
+                    </div>
+                    <div class="input-box clx">
+                        <div class="left-box">验证码</div>
+                        <div class="right-box"><input type="tel" name="captcha" id="captcha" placeholder="请输入验证码，立即下载APP查保单" class="input-text"></div>
+                    </div>
+                    <a href="javascript:;" class="submit-button" id="submit-button">立即领取</a>
+                    <p>验证码已发送至186****2563，立即填写领取重疾保险</p>
+                </form>
+            </div>
+        </div>
+        <!-- 中间部分 -->
+        <div class="middle-box">
+            <p>有机会免费升级保额至<span>10万</span></p>
+        </div>
+        <!-- 底部部分 -->
+        <div class="bottom-box clx">
+            <div class="bottom-item bottom-icon-1">
+                <em></em>
+                <p>走路</p>
+                <span>就能领保额</span>
+            </div>
+            <div class="bottom-item bottom-icon-2">
+                <em></em>
+                <p>最高10万</p>
+                <span>重疾保额免费领</span>
+            </div>
+            <div class="bottom-item bottom-icon-3">
+                <em></em>
+                <p>33.33倍</p>
+                <span>下载APP提升保额</span>
+            </div>
+        </div>
+    </div>
+    <script src="js/wap-home.js"></script>
+</body>
+</html>

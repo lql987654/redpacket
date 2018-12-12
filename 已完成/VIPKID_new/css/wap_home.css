@@ -1,0 +1,718 @@
+*{padding:0; margin:0; font-family:arial,"\5FAE\8F6F\96C5\9ED1",sans-serif; }
+body{
+    background: #f5f5f5;
+}
+a {
+    text-decoration: none;
+}
+input{
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+}
+input[type='button']{
+    -webkit-appearance: none;
+}
+input, label, a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type="checkbox"],
+input[type="radio"]{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+input:-webkit-autofill{
+    background-color: #ffffff;
+}
+.form-box .input-box input::-webkit-input-placeholder {
+    color: #acacac;
+}
+input::-moz-placeholder {
+    color: #acacac;
+}
+input:-ms-input-placeholder {
+    color: #acacac;
+}
+.clear:after{
+    clear:both;content:'';display:block;width:0;height:0;visibility:hidden;
+}
+.float-left{
+    float: left;
+}
+.hide{
+    display: none;
+}
+.err_popo {
+    position: fixed;
+    z-index: 2000;
+    top: 40%;
+    left: 10%;
+    width: 80%
+}
+.err_popo span {
+    display: block;
+    padding: .22rem 0.02rem;
+    font-size: .22rem;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    text-align: center
+}
+.wrap {
+    width: 7.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+/* 头部开始 */
+.header {
+    position: relative;
+    width: 7.5rem;
+    height: 6.2rem;
+    background: url("../images/wap-vipkid-banner.png") center no-repeat;
+    background-size: 100%;
+}
+.header .header-info {
+    position: absolute;
+    top: .7rem;
+    left: .64rem;
+    font-size: .44rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+.header .header-tip-info {
+    position: absolute;
+    right: .42rem;
+    bottom: .2rem;
+    font-size: .2rem;
+    color: #2c1f20;
+}
+/* 右侧悬浮按钮 */
+.fixed-btn {
+    position: fixed;
+    top: 3.9rem;
+    right: 0;
+    width: .6rem;
+    height: 1.7rem;
+    background: #fe7020;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    text-align: center;
+    display: flex;
+    z-index: 11;
+}
+.fixed-btn p {
+    width: .3rem;
+    font-size: .28rem;
+    color: #ffffff;
+    margin: auto;
+}
+.content {
+    width: 6.1rem;
+    margin: 0 auto;
+    padding: .3rem .4rem;
+    background: #ffffff;
+    border-radius: 4px;
+}
+.input-box {
+    position: relative;
+    margin-bottom: .3rem;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 0;
+}
+.input-box .left-box {
+    width: 1.12rem;
+    height: .28rem;
+    line-height: .28rem;
+    float: left;
+    padding: .3rem;
+    font-size: .28rem;
+    color: #313131;
+    text-align: justify;
+    text-align-last: justify;
+    border-right: 1px solid #d4d4d4;
+    background: linear-gradient(to bottom, #fdfefe, #f5f4f5);
+}
+.input-box .input-text {
+    width: 3.6rem;
+    height: .28rem;
+    line-height: .28rem;
+    padding: .3rem;
+}
+.input-box .box-right {
+    position: absolute;
+    right: .1rem;
+    top: .1rem;
+    padding: .2rem .3rem;
+    z-index: 10;
+    background-color: #fed84f;
+    border-radius: 5px;
+}
+.input-box .box-right .send {
+    height: .28rem;
+    line-height: .28rem;
+    background: none;
+    font-size: .28rem;
+    color: #313131;
+}
+/*复选框*/
+.agree-box {
+    width: 5.35rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: .24rem;
+    color: #767676;
+}
+.agree-box label {
+    position: relative;
+    display: inline-block;
+    padding-left: .3rem;
+    line-height: .38rem;
+}
+.agree-box label>em {
+    position: absolute;
+    display: inline-block;
+    top: .06rem;
+    left: 0;
+    width: .22rem;
+    height: .22rem;
+    vertical-align: middle;
+    background: url(../images/VIPKID-TK/wap-nochecked.png) no-repeat;
+    background-size: 0.22rem;
+}
+.agree-box input:checked + label>em {
+    background: url(../images/wap-checked.png) no-repeat;
+    background-size: 0.22rem;
+}
+.agree-box label a {
+    color: #1985fc;
+}
+.agree-box-part {
+    width: 6.1rem;
+    margin: 0 auto;
+    color: #d1ba95;
+    font-size: 0.24rem;
+    background-color: #ab7c57;
+    padding: 0.2rem 0.7rem;
+}
+.agree-box-new {
+    margin: 0 auto .3rem auto;
+}
+.agree-box-new span {
+    display: inline-table;
+}
+.agree-box-new label {
+    width: auto;
+    color: #f95f14;
+    font-size: .28rem;
+}
+.submit-button {
+    width: 6.3rem;
+    height: .88rem;
+    line-height: .88rem;
+    margin: 0 auto;
+    display: inline-table;
+    text-align: center;
+    color: #ffffff;
+    font-size: .32rem;
+    background-color: #fa601b;
+    border-radius: 5px;
+}
+/* 福利模块 能力模块 标准模块 主体*/
+.welfare-box,
+.ability-box,
+.correctly-box {
+    width: 5.9rem;
+    padding: .5rem;
+    margin: .4rem auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+/* 福利 能力模块 标准模块 标题 */
+.welfare-box .welfare-box-title,
+.ability-box .ability-box-title,
+.correctly-box .correctly-box-title {
+    font-size: .32rem;
+    color: #303030;
+    text-align: center;
+    font-weight: bold;
+}
+/* 福利 能力模块 标准模块 副标题 */
+.welfare-box .welfare-box-tip,
+.ability-box .ability-box-tip,
+.correctly-box .correctly-box-tip {
+    margin-top: .2rem;
+    color: #787878;
+    font-size: .24rem;
+    text-align: center;
+}
+.welfare-box .welfare-item {
+    position: relative;
+    font-size: .28rem;
+    color: #f85918;
+}
+.welfare-box .welfare-item span {
+    margin-right: .14rem;
+    font-weight: bold;
+}
+.welfare-box .welfare-item-search-icon {
+    margin: .48rem 0 0 .53rem;
+    padding-left: .6rem;
+}
+.welfare-box .welfare-item-search-icon em {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: .4rem;
+     height: .4rem;
+     background: url("../images/welfare-icon-search.png") center no-repeat;
+     background-size: 100%;
+ }
+.welfare-box .welfare-item-report-icon {
+    margin: .48rem 0 0 2.13rem;
+    padding-left: .5rem;
+}
+.welfare-box .welfare-item-report-icon em {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: .32rem;
+    height: .41rem;
+    background: url("../images/welfare-icon-report.png") center no-repeat;
+    background-size: 100%;
+}
+.welfare-box .welfare-item-course-icon {
+    margin: .48rem 0 0 0;
+    padding-left: .6rem;
+}
+.welfare-box .welfare-item-course-icon em {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: .36rem;
+    height: .32rem;
+    background: url("../images/welfare-icon-course.png") center no-repeat;
+    background-size: 100%;
+}
+.welfare-box .welfare-item-tv-icon {
+    margin: .48rem 0 0 1.58rem;
+    padding-left: .5rem;
+}
+.welfare-box .welfare-item-tv-icon em {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: .38rem;
+    height: .34rem;
+    background: url("../images/welfare-icon-tv.png") center no-repeat;
+    background-size: 100%;
+}
+/* 五大能力模块 */
+.ability-box .ability-content {
+    position: relative;
+    width: 5.9rem;
+    height: 5.3rem;
+    margin-top: .5rem;
+    background: url("../images/ability-bg.png") center no-repeat;
+    background-size: 100%;
+}
+.ability-item {
+    color: #ffffff;
+    font-size: .32rem;
+}
+.ability-item-1 {
+    position: absolute;
+    top: .82rem;
+    left: .42rem;
+    width: .8rem;
+}
+.ability-item-2 {
+    position: absolute;
+    top: .52rem;
+    left: 2.78rem;
+}
+.ability-item-3 {
+    position: absolute;
+    top: 1rem;
+    right: .28rem;
+    width: .8rem;
+}
+.ability-item-4 {
+    position: absolute;
+    top: 2.02rem;
+    left: 1.9rem;
+}
+.ability-item-5 {
+    position: absolute;
+    top: 3.36rem;
+    left: .45rem;
+}
+/* 四种保障 */
+/* 正文开始 */
+.ensure-box {
+    width: 6.9rem;
+    margin: .4rem auto;
+}
+.ensure-box .ensure-item {
+    width: 3.35rem;
+    border-radius: 5px;
+    overflow: hidden;
+    float: left;
+}
+.ensure-img {
+    width: 3.35rem;
+    height: 3.1rem;
+}
+.ensure-box .ensure-content {
+    padding: .3rem;
+    background: #ffffff;
+}
+.ensure-box .ensure-content .ensure-content-title {
+    width: 1.98rem;
+    margin: 0 auto .3rem;
+    font-size: .32rem;
+    color: #303030;
+    font-weight: bold;
+}
+.ensure-box .ensure-content .ensure-content-detail {
+    font-size: .24rem;
+    color: #787878;
+    text-align: justify;
+    line-height: .34rem;
+}
+/* 个别配置部分 */
+.margin-right-item {
+    margin-right: .2rem;
+}
+.margin-bottom-item {
+    margin-bottom: .2rem;
+}
+.margin-top-item {
+    margin-top: -.2rem;
+}
+.ensure-img img {
+    width: 100%;
+}
+.ensure-box .ensure-content  .ensure-long-title {
+    width: 2.4rem;
+}
+.ensure-box .ensure-content  .ensure-long-title-1 {
+    width: 2.6rem;
+}
+.ensure-box  .ensure-content-padding {
+    padding: .3rem .3rem .8rem;
+}
+/* 标准模块 开始 */
+.correctly-box {
+    width: 6rem;
+    padding: .5rem .48rem .3rem;
+}
+.correctly-box .correctly-box-content {
+    margin-top: .5rem;
+}
+.correctly-box .correctly-item {
+    position: relative;
+    float: left;
+    margin-right: .68rem;
+}
+.correctly-box .correctly-item:last-child {
+    margin-right: 0;
+}
+.correctly-box .correctly-item em {
+    position: absolute;
+}
+.correctly-box .correctly-item-1 em {
+    width: 1.56rem;
+    height: 1rem;
+    background: url("../images/correctly-icon-1.png") no-repeat center;
+    background-size: 100%;
+}
+.correctly-box .correctly-item-2 em {
+    left: .2rem;
+    width: 1.08rem;
+    height: 1.08rem;
+    background: url("../images/correctly-icon-2.png") no-repeat center;
+    background-size: 100%;
+}
+.correctly-box .correctly-item-3 em {
+    width: 1.32rem;
+    height: .9rem;
+    background: url("../images/correctly-icon-1.png") no-repeat center;
+    background-size: 100%;
+}
+.correctly-box .correctly-item .correctly-item-content {
+    width: 1.5rem;
+    padding-top: 1.3rem;
+    text-align: justify;
+    color: #787878;
+    font-size: .24rem;
+}
+/* 承诺模块 */
+.promise-box-title {
+    margin: .4rem auto;
+    text-align: center;
+    font-size: .32rem;
+    color: #323232;
+    font-weight: bold;
+}
+.promise-box {
+    width: 6.9rem;
+    margin: 0 auto 1.4rem;
+}
+.promise-item {
+    position: relative;
+    width: 1.64rem;
+    height: 3rem;
+    padding: 1.75rem .26rem .3rem;
+    border-radius: 5px;
+    float: left;
+    background-color: #ffffff;
+    margin-right: .2rem;
+}
+.promise-box .promise-item:last-child {
+    margin-right: 0;
+}
+.promise-box .promise-item em {
+    position: absolute;
+    top: .3rem;
+    left: 50%;
+    width: 1.14rem;
+    height: 1.16rem;
+    margin-left: -.57rem;
+}
+.promise-box .promise-item-1 em {
+    background: url("../images/promise-icon-1.png") no-repeat center;
+    background-size: 100%;
+}
+.promise-box .promise-item-2 em {
+    background: url("../images/promise-icon-2.png") no-repeat center;
+    background-size: 100%;
+}
+.promise-box .promise-item-3 em {
+    background: url("../images/promise-icon-3.png") no-repeat center;
+    background-size: 100%;
+}
+.promise-box .promise-item .promise-item-title {
+    font-size: .32rem;
+    color: #313131;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: .3rem;
+}
+.promise-box .promise-item .promise-item-detail {
+    font-size: .2rem;
+    color: #767676;
+    text-align: justify;
+}
+/* 底部悬浮按钮 */
+.fixed-footer-btn {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 7.5rem;
+    height: 1rem;
+    font-size: 0;
+}
+.fixed-footer-btn a {
+    width: 100%;
+    height: 100%;
+    line-height: 1rem;
+    text-align: center;
+    display: inline-table;
+    font-size: .32rem;
+    background: #fe7120;
+    color: #ffffff;
+}
+/* 遮罩层 */
+.mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    filter:Alpha(opacity=50);
+    display: none;
+    z-index: 19;
+}
+/* 设备选择弹出窗 */
+.modal {
+    position: fixed;
+    top: 2.9rem;
+    left: 50%;
+    margin-left: -3.45rem;
+    width: 6.9rem;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 20;
+    display: none;
+}
+.modal .modal-title {
+    font-size: .32rem;
+    color: #ffffff;
+    font-weight: bold;
+    background: #fc691d;
+    padding: .3rem .3rem .3rem 1.26rem;
+}
+.modal .modal-title .close {
+    width: .3rem;
+    height: .3rem;
+    margin-top: .07rem;
+    background: url("../images/close.png") center no-repeat;
+    background-size: 100%;
+    float: right;
+}
+.modal-content {
+    background-color: #ffffff;
+    padding: .3rem;
+}
+.device-content {
+    padding: .6rem .45rem;
+}
+.device-box {
+    font-size: .28rem;
+    color: #303030;
+}
+.device-item {
+    position: relative;
+}
+.device-item em{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.top-item {
+    width: 4.84rem;
+    margin: 0 auto;
+}
+.item-ipad {
+    width: 1.35rem;
+    text-align: center;
+    padding-top: 1.35rem;
+}
+.item-ipad em{
+    width: 1.46rem;
+    height: 1.04rem;
+    background: url("../images/device-icon-ipad.png") center no-repeat;
+    background-size: 100%;
+}
+.item-note {
+    width: 1.84rem;
+    margin-left: 3rem;
+    text-align: center;
+    padding-top: 1.35rem;
+}
+.item-note em{
+    position: absolute;
+    top: 0;
+    width: 1.86rem;
+    height: 1.04rem;
+    background: url("../images/device-icon-note.png") center no-repeat;
+    background-size: 100%;
+}
+/* 分割线 */
+.split {
+    position: relative;
+    width: 6rem;
+    display: table;
+    margin: .57rem auto .52rem;
+}
+.split:before {
+    position: absolute;
+    width: 6rem;
+    height: .02rem;
+    content: '';
+    background-color: #f5f5f5;
+}
+.split span {
+    position: absolute;
+    top: -.15rem;
+    left: 50%;
+    width: .9rem;
+    height: .3rem;
+    margin-left: -.45rem;
+    line-height: .3rem;
+    border-radius: .2rem;
+    text-align: center;
+    background-color: #f5f5f5;
+    font-size: .28rem;
+    color: #303030;
+}
+/* 分割线下面的设备 */
+.device-box-bottom {
+    width: 5.7rem;
+}
+.item-earphone {
+    width: 2.02rem;
+    text-align: center;
+    padding-top: 1.35rem;
+}
+.item-earphone em{
+    position: absolute;
+    top: 0;
+    left: .54rem;
+    width: .94rem;
+    height: 1.08rem;
+    background: url("../images/device-icon-earphone.png") center no-repeat;
+    background-size: 100%;
+}
+.item-pc {
+    width: 1.54rem;
+    text-align: center;
+    padding-top: 1.35rem;
+    margin-left: .4rem;
+}
+.item-pc em{
+    position: absolute;
+    top: 0;
+    width: 1.54rem;
+    height: .92rem;
+    background: url("../images/device-icon-pc.png") center no-repeat;
+    background-size: 100%;
+}
+.item-camera {
+    width: .86rem;
+    text-align: center;
+    padding-top: 1.35rem;
+    margin-left: .88rem;
+}
+.item-camera em{
+    position: absolute;
+    top: 0;
+    width: .82rem;
+    height: .95rem;
+    background: url("../images/device-icon-camera.png") center no-repeat;
+    background-size: 100%;
+}
+/* 加号 */
+.add:before {
+    position: absolute;
+    top: .48rem;
+    right: 0;
+    width: .32rem;
+    height: .02rem;
+    content: '';
+    background-color: #fc691d;
+}
+.add:after {
+    position: absolute;
+    top: .33rem;
+    right: .14rem;
+    width: .02rem;
+    height: .32rem;
+    content: '';
+    background-color: #fc691d;
+}
+.pc-add:before {
+    right: -.62rem;
+}
+.pc-add:after {
+    right: -.47rem;
+}

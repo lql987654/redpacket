@@ -1,0 +1,112 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <link rel="stylesheet" href="css/wap-home.css" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <!-- 顶部logo -->
+    <div class="header-logo"><img src="images/example-conpany-logo.png"></div>
+    <!-- 头部 -->
+    <div class="header wrap"></div>
+    <!-- 表单主题 -->
+    <div class="content">
+        <div class="form-title">已有<span>20,004,589</span>人免费领取</div>
+        <form class="form-box" id="form-box" method="post">
+            <div class="input-box">
+                <div class="left-box">您的姓名</div>
+                <input type="text" name="name" id="name" class="input-text" placeholder="请输入您的姓名"/>
+            </div>
+            <div class="input-box">
+                <div class="left-box">手机号码</div>
+                <input type="tel" name="mobile" id="mobile" class="input-text" placeholder="请输入您的手机号" maxlength="11"/>
+            </div>
+            <div class="input-box hide" id="input-idCard-box">
+                <div class="left-box">身份证号</div>
+                <input type="text" name="idCard" id="idCard" class="input-text" placeholder="请输入身份证号"/>
+            </div>
+            <div class="agree-box clear">
+                <input id="agree-btn" type="checkbox" checked>
+                <label class="fr" for="agree-btn">
+                    <em></em>
+                    本人同意领取免费险并阅读
+                    <a href="javascript:;" id="activity-rules-btn">《活动规则》</a>、
+                    <a href="javascript:;">《投保须知》</a>、
+                    <a href="javascript:;" id="user-agreement-btn">《用户协议》</a>
+                </label>
+            </div>
+            <a href="javascript:;" class="submit-button" id="form-submit">立即领取</a>
+            <div class="form-tip">*后续会有保险公司电话联系您确认免费险事宜</div>
+        </form>
+    </div>
+    <!-- 赠险详情 -->
+    <div class="detail-content">
+        <div class="detail-title">
+            <span class="detail-title-logo"><img src="images/example-conpany-logo.png"></span>
+            <span class="detail-title-name">大都会人寿综合意外保障</span>
+            <span class="detail-title-icon"></span>
+        </div>
+        <div class="detail-info">
+            <span>保障期限：30天</span>
+            <span class="float-right">保障年龄：22-50周岁</span>
+        </div>
+        <div class="table-box">
+            <table>
+                <thead>
+                    <tr>
+                        <th>保障内容</th>
+                        <th class="border-left-solid">最高保额</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>一般意外身故/伤残</td>
+                        <td class="border-left-dashed">10万</td>
+                    </tr>
+                    <tr>
+                        <td>一般意外身故/伤残</td>
+                        <td class="border-left-dashed">10万</td>
+                    </tr>
+                    <tr>
+                        <td>一般意外身故/伤残</td>
+                        <td class="border-left-dashed">10万</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- 页底 -->
+    <div class="wrap footer">
+        <p>本活动由黑牛保险提供，黑牛保险为合法授权服务商，如有需要请联系</p>
+        <p>服务热线：010-52747178（工作日10:00-17:00）</p>
+        <p>服务邮箱：service@heiniubao.com  服务 QQ：3471653040</p>
+    </div>
+</body>
+</html>

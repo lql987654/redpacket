@@ -1,0 +1,79 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <link rel="stylesheet" href="css/wap-home.css" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <!-- 头部按钮 -->
+    <div class="header wrap">
+        <div class="rules-button">规则</div>
+        <div class="welfare-enter-button">福利社入口<span><b>GO</b></span></div>
+    </div>
+    <!-- 标题 -->
+    <div class="title wrap">
+        <p><span>海量奖品</span> <span class="right-title">放肆旋转</span></p>
+    </div>
+    <!-- 转盘主体 -->
+    <div class="turntable wrap">
+        <div class="turntable-bg"></div>
+        <div class="turntable-prize"></div>
+        <div class="turntable-button">
+            <input type="button" id="lotteryBtn">
+            <div class="turntable-button-animation"></div>
+        </div>
+    </div>
+    <!-- 页底按钮 -->
+    <div class="prize-btn">
+        <a class="prize-num-btn prize-btn-pg">剩余<span>6</span>次机会</a>
+        <a class="mine-prize--btn prize-btn-pg">我的奖品</a>
+    </div>
+    <!-- 遮罩层 -->
+    <div class="mask" id="mask"></div>
+    <!-- 规则弹窗 -->
+    <div class="modal" id="rules-box">
+        <div class="modal-close"><a href="javascript:;" class="close-btn"></a></div>
+        <div class="modal-content">
+            <p class="modal-content-title">规则</p>
+            <p>1、此活动100%概率中奖，奖品数量有限，祝好运</p>
+            <p>2、活动时间：即日起至2018-12-01</p>
+            <p>惊喜一：小米8手机（每天仅限3台）</p>
+            <p>惊喜二：世界杯限量足球（每天10个）</p>
+            <p>惊喜三：200元京东卡（每天15张）</p>
+            <p>惊喜四：幸运奖（更多精彩奖品尽在其中）</p>
+            <p>3、重要声明：</p>
+            <p>① 实物类奖品将在活动结束当天5-10个工作日内安排发货，请耐心等待</p>
+            <p>② 优惠券、现金券类奖品的获取方式为人工发放</p>
+            <p>③ 通过非法途径获得商品的，主办方有权不提供奖品</p>
+            <p>④ 活动最终解释权归活动主办方所有</p>
+        </div>
+    </div>
+</body>
+</html>

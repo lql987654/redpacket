@@ -1,0 +1,481 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="application-name" content="baoxian.163.com" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="renderer" content="webkit" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <link rel="stylesheet" href="{{ page_param['static_host'] }}/static/public/public_files/css/LCalendar.css">
+    <link rel="stylesheet" href="{{ page_param['static_host'] }}/static/public/public_files/css/wap_base.css"/>
+    <link rel="stylesheet" href="{{ page_param['static_host'] }}/static/public/public_files/css/wap_cutscenes.css"/>
+    <link rel="stylesheet" href="{{ page_param['static_host'] }}/static/activity/panding/didi/css/wap_idcard.css?v=1.0.10" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if(clientWidth>=750){
+                            docEl.style.fontSize = '100px';
+                        }else{
+                            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                        }
+                    };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+
+<body onhashchange="_goBack()">
+{% if page_param.get('top_back_url', '') %}
+<div class="top-back">
+    <div class="top">
+        <a href="{{ page_param['top_back_url'] }}"><span><</span>返回</a>
+    </div>
+</div>
+{% end %}
+<!-- 顶部banner -->
+<div class="wrap head">
+    {% if page_param['logo'] == 'duibaddcpc1_logo' %}
+        <img src="{{ page_param['static_host'] }}/static/activity/panding/didi/images/wap_header_banner.jpg" alt="" />
+    {% elif page_param['logo'] == 'new_year' %}
+         <img src="{{ page_param['static_host'] }}/static/activity/panding/didi/images/banner-wap-new-year.png" alt="" />
+    {% elif page_param['logo'] == 'ywtc' %}
+        <img src="{{ page_param['static_host'] }}/static/activity/panding/didi/images/wap_header_ywtc.jpg" alt="" />
+    {% elif page_param['logo'] == 'pa_didi' %}
+        <img src="{{ page_param['static_host'] }}/static/activity/panding/didi/images/pa_didi.png" alt="" />
+    {% elif page_param['logo'] == 'jkbd' %}
+    <img src="{{ page_param['static_host'] }}/static/activity/panding/didi/images/header_banner_JKBD.png" alt="" />
+    {% elif page_param['logo'] == 'didi_200' %}
+    <img src="{{ page_param['static_host'] }}/static/activity/panding/didi/images/header_banner_didi200.png" alt="" />
+    {% else %}
+        <img src="{{ page_param['static_host'] }}/static/activity/panding/didi/images/header_banner_{{page_param['policy_postfix']}}.png?v=1.0.2" alt="" />
+    {% end %}
+</div>
+
+<!-- 小标题 -->
+<div class="wrap">
+    <p class="have-get">已有 <b id="totalNum" class="animated"></b> 人免费领取</p>
+    <h3 class="form-title">完善信息，免费领取出行大礼包</h3>
+</div>
+
+<!-- 表单 -->
+<div class="wrap">
+    <form id="form-box" class="form-box" method="post">
+        <input id="tongji" type="hidden" value="{{ page_param.get('tongji', '') }}">
+        <input id="is-show-captcha" type="hidden" value="{{page_param['show_captcha']}}">
+        <input id="is-show-birth" type="hidden" value="{{page_param['show_birth']}}">
+        <input type="hidden" name="policy_code" value="{{page_param['policy_code']}}">
+        <input type="hidden" name="channel" value="{{page_param['V']}}">
+        <!--默认是1 点击关闭按钮为0 0未授权， 1 授权-->
+        <input type="hidden" name="authorized" value="1">
+        <input type="hidden" name="policy_index" value="">
+        <input type="hidden" name="action_failed" value="0">
+
+        <input type="hidden" name="subchannel" value="{{page_param['subchannel']}}">
+        <input type="hidden" name="handler_path" value="{{page_param['handler_path']}}">
+        <input type="hidden" name="path" value="" id="locationPath">
+        {% if not page_param['show_captcha'] %}
+            <!-- 弹窗验证码 -->
+            <input id="captcha" class="captcha" type="hidden" name="captcha">
+            <input name="" id="random" name="r" value="{{page_param['random']}}" type="hidden" />
+            <input name="token" id="token" value="" type="hidden" />
+        {% end %}
+        <ul>
+            {% if page_param['show_birth'] %}
+            <li class="name-item-box">
+                <label>您的姓名</label>
+                <input class="input-text" type="text" name="name" id="name" value="" placeholder="2~20个汉字" />
+                <div id="sex-box" class="sex-box">
+                    <input id="male" type="radio" value="M" name="sex">
+                    <label class="mr30" for="male">男</label>
+                    <input id="female" type="radio" value="F" name="sex">
+                    <label for="female">女</label>
+                </div>
+            </li>
+            {% else %}
+            <li>
+                <label>您的姓名</label>
+                <input class="input-text" type="text" name="name" id="name" value="" placeholder="2~20个汉字" />
+            </li>
+            {% end %}
+            {% if page_param['show_captcha'] %}
+            <li>
+                <label>手机号码</label>
+                <input class="input-text" maxlength="11" type="tel" name="mobile" id="mobile" value="" placeholder="用于接收保单凭证和滴滴红包" />
+            </li>
+            <li class="captcha">
+                <label>验证码</label>
+                <input id="captcha" class="input-text" type="tel" name="captcha" value="" placeholder="请输入验证码" {% if page_param['phone'] != None %} value="{{page_param['phone']}}" {% else %} value ="" {% end %} />
+                <input name="token" id="token" type="hidden" />
+                <input name="" id="random" name="r" value="{{page_param['random']}}" type="hidden" />
+                <input id="send" type="button" class="send active" value="获取验证码">
+            </li>
+            {% else %}
+            <li>
+        	    <label>手机号码</label>
+        	    <input class="input-text" maxlength="11" type="tel" name="mobile" id="mobile" value="" placeholder="用于接收保单凭证和滴滴红包" />
+            </li>
+            {% end %}
+            {% if page_param['show_birth'] %}
+            <li>
+                <label>出生日期</label>
+                <input class="input-text" type="text" name="birth" id="birth" readonly="readonly" placeholder="25-50周岁可以领取" />
+            </li>
+            {% else %}
+            <li>
+                <label>身份证号</label>
+                <input class="input-text" maxlength="18" type="text" name="idCard" id="idCard" value="" placeholder="用于领取出行保障" />
+            </li>
+            {% end %}
+            <li class="submit">
+                <a id="judge-btn" class="judge-btn active" href="javascript:;">免费领取 2 份好礼</a>
+            </li>
+        </ul>
+        {% if page_param.get('is_show_pa', False) %}
+        <p class="note">本人同意中国平安后续致电联系确认保险产品相关事宜</p>
+        <div class="agree-box">
+            <input id="agree-btn" class="agreen-btn" type="checkbox"/>
+            <label for="agree-btn">本人同意领取免费险并阅读</label><span id="activity-rules-btn">活动规则</span>和<span id="user-agreement-btn">用户协议</span>。
+        </div>
+        {% else %}
+        <p class="note">* 后续会有保险公司电话联系您确认<a id="free-insurance-btn" href="#insurance">免费险</a>事宜</p>
+        <div class="agree-box">
+            <input id="agree-btn" class="agreen-btn" type="checkbox" {{ page_param.get('is_checked_agree_get', 'checked') }} />
+            <label for="agree-btn">本人同意领取免费险并阅读</label><span id="activity-rules-btn">活动规则</span>和<span id="user-agreement-btn">用户协议</span>。
+        </div>
+        {% end %}
+    </form>
+</div>
+{% if page_param.get('is_show_tab_cover', False) %}
+<!-- 多种保险 -->
+<div class="wrap" style="padding-bottom: .3rem;">
+    <div class="insurances-box">
+        <div id="logos-top" class="logos-top clearfix">
+            {% for item in page_param['tab_cover'] %}
+            <a class="{{ item['hover'] }}" href="javascript:;"></a>
+            {% end %}
+        </div>
+        <div id="insurance-items-box" class="insurance-items-box">
+            {% for item in page_param['tab_cover'] %}
+            <div class="item-box {{ item['hover'] }}">
+                {% for item_child in item['insurance'] %}
+                <h4 class="title">{{ item_child['insurance_name'] }}</h4>
+                <table>
+                    <thead>
+                    <tr>
+                        <td colspan="2">
+                            <span>保障期限：{{ item_child['period'] }}</span>
+                            <span>保障年龄：{{ item_child['age'] }}</span>
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>保障内容</td>
+                        <td>最高保障</td>
+                    </tr>
+                    <tr>
+                        <td>{{ item_child['insurance_interest'] }}</td>
+                        <td>{{ item_child['coverage'] }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                {% end %}
+            </div>
+            {% end %}
+        </div>
+    </div>
+</div>
+{% else %}
+<!-- 保障详情表格-->
+<div class="wrap">
+    <div class="insurance-title"><span>免费保险详情</span></div>
+</div>
+<div class="wrap">
+    <div class="table-box">
+        <div class="period-age clx">
+            <span class="period fl">保期：{{page_param['policy_validity']}}天</span>
+            <span class="age fr">可投保年龄：{{page_param['policy_age_range']}}</span>
+        </div>
+        <table class="table-msg">
+            <thead>
+                <tr>
+                  <td colspan="2">{{page_param['policy_name']}}</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="td-l">保障内容</td>
+                    <td class="td-r">最高保额</td>
+                </tr>
+                {% for info in page_param['policy_infos'] %}
+                <tr>
+                    <td class="td-l">{{info['content']}}</td>
+                    <td class="td-r">{{info['amount']}}</td>
+                </tr>
+                {% end %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% end %}
+{% if page_param.get('is_show_pa', False) %}
+<p class="out-note">平安畅行天下<a id="insurance-btn">《保险条款》</a> <a id="information-btn">《投保须知及信息安全条款》</a></p>
+{% end %}
+<!-- 底部 -->
+<div class="wrap">
+    <div class="footer">
+    {% if page_param.get('back_url', '') %}
+        <a href="{{ page_param['back_url'] }}"><span><</span>返回</a>
+    {% end %}
+    </div>
+</div>
+<!-- 弹窗 -->
+<div id="mask" class="mask"></div>
+<!-- 新逻辑弹窗 -->
+<div class="content" style="display:none;" id="new-mask-content">
+    <div class="header">
+        <span class="company-icon"><img src="{{ page_param['static_host'] }}/static/activity/panding/didi/images/company-icon.png"></span>
+        <span>泰康飞常保100万航空意外险</span>
+        <span class="close"><img src="{{ page_param['static_host'] }}/static/activity/panding/didi/images/close-icon.png"></span>
+    </div>
+    <div class="detail">
+        <div class="detail-info">
+            <span>保期：2018.04.06-2019.04.06</span>
+            <span>保障年龄：25-50周岁</span>
+        </div>
+        <div class="detail-table">
+            <table>
+                <tr>
+                    <th class="table-border-bottom-solid table-text-left">保障内容</th>
+                    <th class="table-border-left-solid table-border-bottom-solid">最高保额</th>
+                </tr>
+                <tr>
+                    <td class="table-border-left-dashed table-text-left">飞机意外身故/残疾</td>
+                    <td class="table-border-bottom-dashed table-border-left-dashed">100万</td>
+                </tr>
+                <tr>
+                    <td class="table-border-left-dashed table-text-left"></td>
+                    <td class="table-border-bottom-dashed table-border-left-dashed"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="detail-btn">
+            <input type="button" value="确定" id="new-submit-btn">
+        </div>
+        <div class="detail-tip">
+            <p>由于您暂时无法领取平安保险</p>
+            <p>推荐您免费领取泰康保险</p>
+        </div>
+    </div>
+</div>
+<!-- 活动规则 -->
+<div id="activity-rules-box" class="popup-box activity-rules-box">
+    <span class="popup-close-btn popup-msg-close"></span>
+    <h3 class="popup-title">活动规则</h3>
+    <div class="popup-msg activity-rules-msg">
+        {% for index in range(len(page_param['explain']))%}
+        {% set start_index = page_param['explain'][index].find('.') %}
+        <p><span idx="{{start_index}}">{{index+1}}.</span>{{page_param['explain'][index][start_index+1:]}}</p >
+        {% end %}
+    </div>
+</div>
+<!-- 用户协议 -->
+<div class="popup-box" id="user-agreement-box">
+    <span class="popup-close-btn popup-msg-close"></span>
+    <h3 class="popup-title">用户协议</h3>
+    <div class="popup-msg" id="user-agreement-msg"></div>
+</div>
+<!-- 保险条款 -->
+<div class="popup-box" id="insurance-box">
+    <span class="popup-close-btn popup-msg-close"></span>
+    <h3 class="popup-title">保险条款</h3>
+    <div class="popup-msg" id="insurance-msg">
+        {% for item in page_param['pac_insurance'] %}
+        <p>{{ item }}</p>
+        {% end %}
+    </div>
+</div>
+<!-- 信息安全 -->
+<div class="popup-box" id="information-box">
+    <span class="popup-close-btn popup-msg-close"></span>
+    <h3 class="popup-title">投保须知及信息安全条款</h3>
+    <div class="popup-msg" id="information-msg">
+        {% for item in page_param['pac_information'] %}
+        <p>{{ item }}</p>
+        {% end %}
+    </div>
+</div>
+<!-- 过场动画 -->
+<div id="cutscenes_mask" class="cutscenes_mask"></div>
+<div id="cutscenes_box" class="cutscenes_box">
+    <div id="red_packet_animation" class="animation_element">
+        <div class="gold_img gold_img_01"></div>
+        <div class="gold_img gold_img_02"></div>
+        <div class="gold_img gold_img_03"></div>
+        <div class="box_bgimg_red_packet_open"></div>
+        <div class="box_bgimg_red_packet"></div>
+        <div class="star_atmosphere"></div>
+    </div>
+    <div id="travel_animation" class="animation_element">
+        <div class="company_logo">
+            <img id="cutscenes-img" src="{{ page_param['static_host'] }}/static/images/cutscenes/wap_{{page_param['policy_company']}}.png" alt="" class="md">
+        </div>
+        <div class="box_bgimg_travel">
+            <span class="row row_01"></span>
+            <span class="row row_02"></span>
+            <span class="row row_03"></span>
+            <span class="row row_04"></span>
+            <div class="pen"></div>
+        </div>
+    </div>
+    <p id="note" class="note tc">{{page_param['packet_generating']}}</p>
+    <div class="progress_bar md">
+        <div class="bar_active"></div>
+    </div>
+</div>
+<input id="init-msg" type="hidden" value="{{page_param['packet_generating']}}">
+<input id="packet-msg" type="hidden" value="{{page_param['packet_already']}}">
+<input id="security-msg" type="hidden" value="{{page_param['security_generating']}}">
+
+<!-- 弹窗验证码 -->
+<div id="mask-captcha" class="mask"></div>
+<div id="captcha-box" class="captcha-box">
+    <div id="captcha-close-btn" class="captcha-close-btn"></div>
+    <h3 class="captcha-title">请输入4位验证码</h3>
+    <div class="captcha-text clx">
+        <div class="fl text">发送至<span id="captcha-phone-num"></span></div>
+        <input type="button" id="send" class="send fr" value="获取验证码">
+    </div>
+    <div id="captcha-num-box" class="captcha-num-box clx">
+        <span class="input-captcha-item fl"></span>
+        <span class="input-captcha-item fl"></span>
+        <span class="input-captcha-item fl"></span>
+        <span class="input-captcha-item fl"></span>
+    </div>
+    <input id="random" value="{{page_param['random']}}" type="hidden" />
+</div>
+<div id="keyboard-box" class="keyboard-box">
+    <table>
+        <tr>
+            <td class="num border-top border-left">1</td>
+            <td class="num border-top">2</td>
+            <td class="num border-top border-right">3</td>
+        </tr>
+        <tr>
+            <td class="num border-left">4</td>
+            <td class="num">5</td>
+            <td class="num border-right">6</td>
+        </tr>
+        <tr>
+            <td class="num border-left">7</td>
+            <td class="num">8</td>
+            <td class="num border-right">9</td>
+        </tr>
+        <tr>
+            <td class="border-bottom border-left bg-col">&nbsp;</td>
+            <td class="num border-bottom">0</td>
+            <td class="del border-bottom border-right bg-col"></td>
+        </tr>
+    </table>
+</div>
+
+{% if page_param['show_birth'] %}
+<!-- 弹窗身份证 -->
+<div id="idcard-mask" class="mask"></div>
+<div id="popup-idcard-box" class="popup-idcard-box">
+    <div class="idcard-inner-box">
+        <div class="item-msg">
+           <p>为确保您的保单生效</p>
+           <p>需要验证您的身份证</p>
+        </div>
+        <div class="popup-input-box">
+            <input id="popup-input" type="text" name="idCard" placeholder="请输入您的身份证号">
+        </div>
+        <a id="idcard-submit-btn" class="idcard-submit-btn" href="javascript:;">提交验证</a>
+        <a id="idcard-close-btn" class="idcard-close-btn" href="javascript:;"></a>
+    </div>
+</div>
+{% end %}
+
+{% if page_param.get('go_back_link', None) %}
+  <script>
+      var currentLink = window.location.href;
+      currentLink = (currentLink.indexOf('#page1') > -1) ? currentLink : (currentLink + '#page1');
+      window.history.pushState(null, null, currentLink);
+      function _goBack () {
+          window.location.replace("{{ page_param.get('go_back_link', None) }}");
+      }
+  </script>
+{% else %}
+<script>
+  function _goBack () {
+          console.log();
+      }
+</script>
+{% end %}
+
+    {% if page_param.get('tongji', '') == '' %}
+    <script src="{{ page_param['static_host'] }}/static/js/public/library/require.js" data-main="{{ page_param['static_host'] }}/static/activity/panding/didi/js/wap_idcard.js?v=1.0.4" defer async="true"></script>
+    {% elif page_param.get('tongji', '') == 'juzhang' %}
+    <script type="text/javascript" src="//static.7198o.cn/iad/eventcollect/squirrel.min.js?putonid={{ page_param['putonid'] }}" ></script>
+    <script src="{{ page_param['static_host'] }}/static/js/public/library/require.js" data-main="{{ page_param['static_host'] }}/static/activity/panding/didi/js/wap_juzhang_idcard.js?v=1.0.3" defer async="true"></script>
+    {% elif page_param.get('tongji', '') == 'doumeng' %}
+    <script src="//interaction.bayimob.com/static/hdggstatistics.js"></script>
+    <script src="{{ page_param['static_host'] }}/static/js/public/library/require.js" data-main="{{ page_param['static_host'] }}/static/activity/panding/didi/js/wap_doumeng_idcard.js?v=1.0.0" defer async="true"></script>
+    {% else %}
+        {% if page_param.get('is_tuia', False) %}
+        <script src="//yun.duiba.com.cn/h5-tuia/adverter.js"></script>
+        {% else %}
+        <script src="//yun.duiba.com.cn/h5-tuia/adverter.min.js"></script>
+        {% end %}
+    <script src="{{ page_param['static_host'] }}/static/js/public/library/require.js" data-main="{{ page_param['static_host'] }}/static/activity/panding/didi/js/wap_tongji_idcard.js?v=1.0.4" defer async="true"></script>
+    {% end %}
+    <script type="text/javascript">
+        var allCount = {{page_param['all_count']}};
+        function toThousands(num) {
+            var result = [ ], counter = 0;
+            num = (num || 0).toString().split('');
+            for (var i = num.length - 1; i >= 0; i--) {
+                counter++;
+                result.unshift(num[i]);
+                if (!(counter % 3) && i != 0) { result.unshift(','); }
+            }
+            return result.join('');
+        }
+        document.getElementById("totalNum").innerText = toThousands(allCount);
+    </script>
+    {% if page_param['show_birth'] %}
+     <script src="{{ page_param['static_host'] }}/static/public/public_files/js/library/LCalendar-1.0.0.js"></script>
+     <script>
+        var calendar = new LCalendar();
+        calendar.init({
+            'trigger': '#birth',
+            'type': 'date',
+            'currentDate': '1992-'+ (new Date().getMonth() + 1) + '-' + new Date().getDate(),
+            'minDate': '1900-1-1',
+            'maxDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate()
+        });
+     </script>
+{% end %}
+    <div style="display:none;">
+		<script type="text/javascript" src="{{ page_param['static_host'] }}/static/js/statistic.js"></script>
+
+		<noscript><p><img src="//121.40.16.150/piwik/piwik.php?idsite=2" style="border:0;" alt="" /></p ></noscript>
+	</div>
+</body>
+
+</html>

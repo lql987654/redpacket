@@ -1,0 +1,95 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <link rel="stylesheet" href="css/wap-home.css" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <a href="https://8.heiniubao.com/activity/sqbyqpaph">
+            <div class="header"></div>
+            <div class="nav">
+                <ul>
+                    <li><em></em><span>借款详情</span></li>
+                    <li><em></em><span>提升额度</span></li>
+                </ul>
+            </div>
+            <div class="nav-tab">
+                <ul>
+                    <li class="li-border">
+                        <p class="tab-icon"><img src="images/tab-icon-1.png"></p>
+                        <p class="tab-info">利息低至1元/天</p>
+                    </li>
+                    <li class="li-border">
+                        <p class="tab-icon"><img src="images/tab-icon-2.png"></p>
+                        <p class="tab-info">可以借36个月</p>
+                    </li>
+                    <li>
+                        <p class="tab-icon"><img src="images/tab-icon-3.png"></p>
+                        <p class="tab-info">5分钟极速下款</p>
+                    </li>
+                </ul>
+            </div>
+        </a>
+
+        <div class="content">
+            <div class="content-title"><h2>热门推荐</h2></div>
+            <div class="content-detail">
+                <div class="content-box">
+                    <div class="adv-img">
+                        <img src="images/example-adv-img.png">
+                    </div>
+                    <div class="adv-info">
+                        <span>可贷金额：20万</span>
+                        <span>（这是一句广告语）</span>
+                        <span>立即领取 ></span>
+                    </div>
+                </div>
+                <div class="content-box">
+                    <div class="adv-img">
+                        <img src="images/example-adv-img.png">
+                    </div>
+                    <div class="adv-info">
+                        <span>可贷金额：20万</span>
+                        <span>（这是一句广告语）</span>
+                        <span>立即领取 ></span>
+                    </div>
+                </div>
+
+                <div class="content-footer">
+                    <p>服务热线：010-52747178（工作日10:00-17:00）</p>
+                    <p>服务邮箱：service@heiniubao.cm  |  服务QQ：3471653040</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

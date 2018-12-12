@@ -1,0 +1,183 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <link rel="stylesheet" href="css/wap-home.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/wap-common.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <!-- 顶部logo -->
+    <div class="header wrap">
+        <div class="header-item">
+            <img src="images/wap-banner-xingye.png">
+            <p>已选择：兴业银行</p>
+        </div>
+        <div class="header-item">
+            <img src="images/wap-banner-zhongxin.png">
+            <p>已选择：中信</p>
+        </div>
+        <div class="header-item">
+            <img src="images/wap-banner-guangda.png">
+            <p>已选择：光大</p>
+        </div>
+        <div class="header-item">
+            <img src="images/wap-banner-minsheng.png">
+            <p>已选择：民生</p>
+        </div>
+        <div class="header-item">
+            <img src="images/wap-banner-pingan.png">
+            <p>已选择：平安银行</p>
+        </div>
+    </div>
+    <!-- 银行logo切换 -->
+    <div class="logo-content clx wrap">
+        <div class="logo-item logo-select">
+            <img src="images/wap-logo-xingye.png">
+            <p>兴业银行</p>
+        </div>
+        <div class="logo-item">
+            <img src="images/wap-logo-zhongxin.png">
+            <p>中信银行</p>
+        </div>
+        <div class="logo-item">
+            <img src="images/wap-logo-guangda.png">
+            <p>光大银行</p>
+        </div>
+        <div class="logo-item">
+            <img src="images/wap-logo-minsheng.png">
+            <p>民生银行</p>
+        </div>
+        <div class="logo-item">
+            <img src="images/wap-logo-pingan.png">
+            <p>平安银行</p>
+        </div>
+    </div>
+    <!-- 表单主体 -->
+    <div class="form-content wrap">
+        <form class="form-box" id="form-box" method="post">
+            <input type="hidden" name="choose-company" id="choose-company">
+            <div class="select-box clear">
+                <input id="select-button" type="checkbox" name="choose-insurance" checked>
+                <label class="fr" for="select-button">
+                    <em></em>申请有礼  送最高百万出行意外险
+                </label>
+            </div>
+            <div class="form-detail">
+                    <div class="input-box">
+                        <div class="left-box">您的姓名</div>
+                        <div class="right-box">
+                            <input type="text" name="name" id="name" class="input-text" placeholder="请输入您的姓名" value="测试">
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="left-box">手机号码</div>
+                        <div class="right-box">
+                            <input type="tel" name="mobile" id="mobile" class="input-text" placeholder="用于接收电子保单" maxlength="11">
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="left-box">身份证号</div>
+                        <div class="right-box">
+                            <input type="text" name="idCard" id="idCard" class="input-text" placeholder="用于身份验证" maxlength="18">
+                        </div>
+                    </div>
+
+                <div class="form-tip">*后续会有保险公司电话联系您确认免费险事宜</div>
+                <div class="agree-box">本人同意领取免费险并阅读<a id="activity-rules-btn" href="javascript:;">活动规则</a>和<a id="activity-user-btn" href="javascript:;">用户协议</a></div>
+            </div>
+            <a href="javascript:;" class="submit-button" id="submit-button">填表办卡</a>
+            <div class="footer-info">
+                <p>本活动由黑牛保险提供，黑牛保险为合法服务提供商</p>
+                <p>服务热线：010-87227385 服务 QQ：3471653040</p>
+            </div>
+        </form>
+    </div>
+    <!-- 遮罩层 -->
+    <div class="mask" id="mask"></div>
+    <!-- 成功弹窗 -->
+    <div class="modal-success">
+        <div class="modal-success-header">
+            <div class="success-close"><a href="#"></a></div>
+            <div class="success-logo"><img src="images/success-logo.png"></div>
+            <div class="success-info">
+                <p class="success-info-title">申请成功！</p>
+                <p class="success-info-desc">如承保成功，泰康人寿专属客服将尽快通过专线<span>95522</span>与您联系确认赠险生效事宜，敬请留意！</p>
+            </div>
+        </div>
+        <div class="modal-success-content">
+            <div class="success-content-title">泰康飞常保100万航空意外险</div>
+            <div class="success-content-info clx">
+                <span>保期：2018/3/21-2019/3/21</span>
+                <span class="float-right">可投保年龄：22-50周岁</span>
+            </div>
+            <div class="content-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>保障项目</th>
+                            <th class="border-left-solid">保障金额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>一般意外身故/伤残</td>
+                            <td class="border-left-dashed">10万</td>
+                        </tr>
+                        <tr>
+                            <td>一般意外身故/伤残</td>
+                            <td class="border-left-dashed">10万</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a href="javascript:;" class="success-submit">去办卡</a>
+        </div>
+    </div>
+    <!-- 活动规则 -->
+    <div id="rules" class="modal-box rules mask-popup-box modal" >
+        <h3>活动规则<a href="javascript:;"></a></h3>
+        <div class="content user-content modal-msg-box">
+            {% for explain in page_param['explain'] %}
+            <p>{{ explain }}</p>
+            {% end %}
+        </div>
+    </div>
+    <!-- 用户协议 -->
+    <div class="modal-box rules mask-popup-box modal" id="server">
+        <h3>用户协议<a href="javascript:;"></a></h3>
+        <div class="content user-content modal-msg-box">
+
+        </div>
+    </div>
+
+    <script src="js/wap-home.js"></script>
+</body>
+</html>

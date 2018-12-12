@@ -1,0 +1,243 @@
+*{padding:0; margin:0; font-family:arial,"\5FAE\8F6F\96C5\9ED1",sans-serif; }
+body{
+    background: #fff;
+}
+a {
+    text-decoration: none;
+}
+input{
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+    background: none;
+}
+input[type='button']{
+    -webkit-appearance: none;
+}
+input, label, a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type="checkbox"],
+input[type="radio"]{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+input:-webkit-autofill{
+    background-color: #ffffff;
+}
+.form-box .input-box input::-webkit-input-placeholder {
+    color: #bfbfbf;
+}
+input::-moz-placeholder {
+    color: #bfbfbf;
+}
+input:-ms-input-placeholder {
+    color: #bfbfbf;
+}
+.clx:after{
+    clear:both;
+    content:'';
+    width:0;
+    height:0;
+    display:block;
+    visibility:hidden;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+body .hide{
+    display: none;
+}
+.err_popo {
+    position: fixed;
+    z-index: 2000;
+    top: 40%;
+    left: 10%;
+    width: 80%
+}
+.err_popo span {
+    display: block;
+    padding: .22rem 0.02rem;
+    font-size: .22rem;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    text-align: center
+}
+.wrap {
+    position: relative;
+    width: 7.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/* 头部 */
+.header {
+    font-size: .28rem;
+    color: #333333;
+    text-align: center;
+    padding-top: 1.55rem;
+}
+.header:before {
+    position: absolute;
+    top: .3rem;
+    left: 50%;
+    width: .95rem;
+    height: .95rem;
+    margin-left: -.475rem;
+    background: url("../images/wap_error_ico.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.header h1 {
+    height: .47rem;
+    line-height: .47rem;
+    font-size: .28rem;
+    color: #333333;
+    font-weight: normal;
+}
+.header p {
+    height: .47rem;
+    line-height: .47rem;
+}
+.redpacket {
+    width: 5.65rem;
+    height: 3.4rem;
+    background: url("../images/wap-error-bg.png") center no-repeat;
+    background-size: 100%;
+    margin: .5rem auto 0;
+}
+.redpacket-box {
+    position: absolute;
+    top: .64rem;
+    left: .64rem;
+    width: 4.42rem;
+    height: 100%;
+}
+.redpacket-item {
+    position: relative;
+    width: 1.9rem;
+    height: 2.4rem;
+    background: url("../images/redpacket.png") center no-repeat;
+    background-size: 100%;
+    font-size: 0;
+}
+.company-apple img {
+    position: absolute;
+    top: .68rem;
+    left: .75rem;
+    width: .39rem;
+    height: .45rem;
+}
+.company-didi img {
+    position: absolute;
+    top: .74rem;
+    left: .7rem;
+    width: .52rem;
+    height: .42rem;
+}
+.plus {
+    position: absolute;
+    top: 1.64rem;
+    left: 50%;
+    width: .28rem;
+    height: .28rem;
+    margin-left: -.14rem;
+}
+.plus:before {
+    position: absolute;
+    left: .11rem;
+    width: .06rem;
+    height: .28rem;
+    background: #ea4646;
+    content: '';
+}
+.plus:after {
+    position: absolute;
+    top: .11rem;
+    width: .28rem;
+    height: .06rem;
+    background: #ea4646;
+    content: '';
+}
+/* 按钮 */
+.error-button {
+    width: 5.45rem;
+    height: .88rem;
+    line-height: .88rem;
+    text-align: center;
+    background: #ea4646;
+    font-size: .32rem;
+    color: #fff;
+    display: block;
+    margin: .9rem auto .85rem;
+    border-radius: .06rem;
+}
+.welfare-box {
+    width: 6.9rem;
+    margin: 0 auto .3rem;
+}
+.welfare-title {
+    position: relative;
+    width: 100%;
+}
+.welfare-title:before {
+    position: absolute;
+    top: .2rem;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #dddddd;
+    z-index: 1;
+    content: '';
+}
+.welfare-title p {
+    position: relative;
+    width: 1.5rem;
+    background: #fff;
+    font-size: .28rem;
+    color: #e5252d;
+    z-index: 1;
+    margin: 0 auto;
+    text-align: center;
+}
+.welfare-content {
+    width: 100%;
+    height: 3.85rem;
+    background: url("../images/welfare-bg.png") center no-repeat;
+    background-size: 100%;
+    margin-top: .3rem;
+}
+.welfare-content {
+    position: relative;
+    font-size: .36rem;
+    color: #ffffff;
+}
+.welfare-content h3 {
+    position: absolute;
+    top: .32rem;
+    left: .58rem;
+    font-weight: normal;
+}
+.welfare-content p {
+    position: absolute;
+    top: 1rem;
+    left: .58rem;
+}
+.welfare-content p span {
+    color: #68baff;
+}
+.welfare-content b {
+    position: absolute;
+    right: .2rem;
+    bottom: .2rem;
+    color: #a3a3a3;
+    font-size: .18rem;
+    font-weight: normal;
+}

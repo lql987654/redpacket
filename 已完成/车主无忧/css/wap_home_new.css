@@ -1,0 +1,392 @@
+*{padding:0; margin:0; font-family:arial,"\5FAE\8F6F\96C5\9ED1",sans-serif; }
+body{
+    background-color: #c42400;
+}
+input[type='button']{
+    -webkit-appearance: none;
+}
+input {
+    padding: 0px;
+    margin: 0px;
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    outline: none;
+    font-size: inherit;
+    border: 0;
+}
+input[type="checkbox"],
+input[type="radio"]{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+.clear:after {
+    content:'';
+    width:0;
+    height:0;
+    clear:both;
+    display:block;
+    visibility:hidden;
+}
+/*页头*/
+.header {
+    position: relative;
+    width: 7.5rem;
+    height: 4.56rem;
+    background: url("../images/wap-home-banner.png") center no-repeat;
+    background-size: 100%;
+}
+.header .header-info {
+    position: absolute;
+    top: 1.92rem;
+    left: .5rem;
+    color: #c42400;
+    font-size: .3rem;
+}
+/*表格右侧的头图部分背景*/
+.part-bg {
+    position: absolute;
+    right: 0;
+    top: 5.72rem;
+    width: .3rem;
+    height: .76rem;
+    background: url(../images/header-part-bg.png) center no-repeat;
+    background-size: 100%;
+}
+/*悬浮按钮*/
+.fixed-btn {
+    position: absolute;
+    top: 3.22rem;
+    right: .3rem;
+    width: .7rem;
+    height: 2.2rem;
+    background: url("../images/fixed-btn.png") center no-repeat;
+    background-size: 100%;
+}
+/*表单*/
+.content {
+    width: 6.9rem;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.form-title {
+    padding: .33rem .94rem;
+    color: #c42400;
+    font-size: .36rem;
+    border-bottom: 1px solid #f9dd9a;
+    background: #ffedc1;
+}
+.form-container {
+    padding: .3rem;
+    background: #fff7e0;
+}
+.form-redpacket-box {
+    position: relative;
+}
+/*红包背景*/
+.redpacket-item {
+    position: relative;
+    width: 1.9rem;
+    height: 1.5rem;
+    background: url("../images/wap-redpacket-bg.png") center no-repeat;
+    background-size: 100%;
+    float: left;
+    margin-right: .3rem;
+}
+.company-icon {
+    position: absolute;
+    top: .72rem;
+    font-size: 0;
+}
+.company-icon img {
+    width: 100%;
+}
+.first-company-icon {
+    left: .7rem;
+    width: .4rem;
+    height: .18rem;
+}
+.last-company-icon {
+    width: .26rem;
+    height: .22rem;
+    right: .87rem;
+}
+/*车主无忧红包背景图片*/
+.chezhu-item {
+    background: url("../images/wap-redpacket-chezhu.png") center no-repeat;
+    background-size: 100%;
+}
+.redpacket-item:last-child {
+    margin-right: 0;
+}
+.add-icon:before {
+    content: '';
+    position: absolute;
+    top: .87rem;
+    right: -.25rem;
+    width: .2rem;
+    height: .02rem;
+    background: #c42400;
+}
+.add-icon:after {
+    content: '';
+    position: absolute;
+    top: .78rem;
+    right: -.16rem;
+    width: .02rem;
+    height: .2rem;
+    background: #c42400;
+}
+.redpacket-left-info {
+    position: absolute;
+    top: .1rem;
+    left: .2rem;
+    width: .18rem;
+    display: inline-table;
+    color: #c42400;
+    font-size: .2rem;
+}
+.redpacket-money {
+    position: absolute;
+    top: .14rem;
+    left: .55rem;
+    color: #c42400;
+    font-size: .32rem;
+    font-weight: bold;
+}
+.redpacket-tip {
+    position: absolute;
+    top: 1.1rem;
+    left: .2rem;
+    color: #fff7e0;
+    font-size: .2rem;
+}
+.didi-tip {
+    left: .3rem;
+}
+/*表单主体信息*/
+.form-content-detail {
+    margin: .3rem 0 .2rem 0;
+}
+.input-box {
+    width: 6.3rem;
+    border: 1px solid #f9dd9a;
+    border-radius: .5rem;
+    overflow: hidden;
+    background-color: #ffffff;
+    margin-bottom: .3rem;
+}
+.input-box .input-left {
+    padding: .28rem .32rem .26rem .29rem;
+    color: #773237;
+    font-size: .28rem;
+    background-color: #ffedc1;
+    float: left;
+    border-right: 1px solid #f9dd9a;
+}
+.input-box .input-text {
+    width: 3.41rem;
+    height: .25rem;
+    line-height: .25rem;
+    padding: .36rem .32rem .295rem .29rem;
+    font-size: .28rem;
+    float: left;
+}
+/*复选框*/
+.form-box .agree-box {
+    width: 6.18rem;
+    margin: 0 auto;
+    font-size: .22rem;
+    color: #773237;
+}
+.form-box .agree-box label {
+    position: relative;
+    display: inline-block;
+    width: 5.9rem;
+    padding-left: .3rem;
+    line-height: .38rem;
+}
+.form-box .agree-box label>em {
+    position: absolute;
+    display: inline-block;
+    top: .06rem;
+    left: 0;
+    width: .22rem;
+    height: .22rem;
+    vertical-align: middle;
+    background: url(../images/wap-checkbox-nochecked.png) no-repeat;
+    background-size: 0.22rem;
+}
+.form-box .agree-box input:checked + label>em {
+    background: url(../images/wap-checkbox-checked.png) no-repeat;
+    background-size: 0.22rem;
+}
+.form-box .agree-box label a {
+    color: #0a84ec;
+    text-decoration: none;
+}
+.form-box .agree-box-part {
+    width: 6.1rem;
+    margin: 0 auto;
+    color: #d1ba95;
+    font-size: 0.24rem;
+    background-color: #ab7c57;
+    padding: 0.2rem 0.7rem;
+}
+.form-box .agree-box-new span {
+    display: inline-flex;
+    width: 1.75rem;
+}
+.form-box .agree-box-new span:last-child {
+    margin-left: .62rem;
+}
+.form-box .agree-box-new label {
+    width: auto;
+    padding-left: .25rem;
+}
+.submit {
+    position: relative;
+}
+.submit .submit-btn {
+    width: 6.3rem;
+    height: .9rem;
+    background-color: #c42400;
+    color: #ffffff;
+    font-size: .32rem;
+    border-radius: .5rem;
+}
+/*表单下面的提示信息*/
+.tip-info {
+    margin: .4rem 0;
+    color: #fac599;
+    font-size: .24rem;
+    text-align: center;
+}
+/*广告*/
+.adv-box {
+    width: 6.9rem;
+    height: 3.96rem;
+    margin: 0 auto;
+    background: url("../images/adv-bg.png") center no-repeat;
+    background-size: 100%;
+}
+/*页底*/
+.footer {
+    margin: .4rem 0;
+    color: #fac599;
+    font-size: .2rem;
+    text-align: center;
+}
+/*遮罩层*/
+.mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .6;
+    z-index: 5;
+    display: none;
+}
+/*弹窗*/
+.mask-container {
+    position: fixed;
+    top: 3.26rem;
+    left: 50%;
+    margin-left: -3.45rem;
+    width: 6.9rem;
+    z-index: 6;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+}
+.mask-container-title {
+    padding: .3rem;
+    font-size: .32rem;
+    color: #773237;
+    background: #ffedc1;
+    border-bottom: 1px solid #f9dd9a;
+}
+.mask-container-title .mask-title:before {
+    content: '';
+    position: absolute;
+    top: .06rem;
+    width: .72rem;
+    height: .77rem;
+    background: url("../images/mask-icon-detail.png") center no-repeat;
+    background-size: 100%;
+    display: inline-table;
+}
+.mask-container-title .mask-title b {
+    margin-left: 1.1rem;
+    font-weight: normal;
+}
+.close-icon {
+    width: .3rem;
+    height: .3rem;
+    float: right;
+    background: url("../images/mask-icon-close.png") center no-repeat;
+    background-size: 100%;
+    margin-top: .06rem;
+}
+.mask-content {
+    padding: .26rem .3rem .3rem;
+}
+.content-info {
+    color: #c7c7c7;
+    font-size: .24rem;
+    padding: 0 .2rem;
+}
+.content-info span:last-child {
+    float: right;
+}
+.content-table {
+    width: 6.28rem;
+    border: 1px solid #e2e2e2;
+    border-radius: .04rem;
+    overflow: hidden;
+    margin: .26rem 0;
+    font-size: .28rem;
+}
+.content-table table {
+    width: 100%;
+    border-collapse:collapse;
+    text-align: left;
+}
+.content-table table thead{
+    background: #fafafa;
+    border-bottom: 1px solid #e2e2e2;
+}
+.content-table table th,
+.content-table table td {
+    width: 50%;
+    height: .3rem;
+    font-weight: normal;
+    padding: .25rem .2rem .25rem .32rem;
+}
+.content-table table tr {
+    border-bottom: 1px solid #e2e2e2;
+}
+.content-table table tr:last-child {
+    border-bottom: none;
+}
+.border-left {
+    border-left: 1px solid #e2e2e2;
+}
+.border-left-dashed {
+    border-left: 1px dashed #f1f1f1;
+}
+.content-info-detail {
+    padding: 0 .2rem;
+    color: #c7c7c7;
+    font-size: .24rem;
+    text-align: justify;
+}

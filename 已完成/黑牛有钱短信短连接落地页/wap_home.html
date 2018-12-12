@@ -1,0 +1,103 @@
+<!DOCTYPE Html>
+<html style="font-size: 50px;">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="{{page_param['keywords']}}" />
+    <meta name="description" content="{{page_param['description']}}" />
+    <title>{{page_param['title']}}</title>
+    <link rel="stylesheet" href="css/wap_home.css" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div id="carousel" class="carousel">
+                <ul class="sw-slides">
+                    <li class="sw-slide"><a href="http://www.baidu.com"><img src="images/carousel-01.png"></a></li>
+                    <li class="sw-slide"><a href="http://www.baidu.com"><img src="images/carousel-02.png"></a></li>
+                    <li class="sw-slide"><a href="http://www.baidu.com"><img src="images/carousel-03.png"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div  class="content">
+            <div class="content-title"><h2>热门借贷</h2></div>
+            <div class="content_detail">
+                <div class="detail-box">
+                    <div class="detail-box-left"><img src="images/item-icon.png"></div>
+                    <div class="detail-box-right">
+                        <div class="right-title">
+                            <span class="right-title-name">省呗</span>
+                            <span>最高借6万，3-12期还款无忧</span>
+                        </div>
+                        <div class="right-content">
+                            <div class="right-content-info">
+                                <p><b>可贷金额</b><span>500-5000</span></p>
+                                <p><b>参考月利率</b><span>1%</span></p>
+                                <p><b>最快下款</b><span>10分钟</span></p>
+                            </div>
+                            <div class="right-content-button">
+                                <p class="right-content-button-btn"><a href="http://www.baidu.com"><input type="button" value="立即领取"></a></p>
+                                <p class="right-content-button-num">2147人成功申请</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-box">
+                    <div class="detail-box-left"><img src="images/item-icon.png"></div>
+                    <div class="detail-box-right">
+                        <div class="right-title">
+                            <span class="right-title-name">省呗</span>
+                            <span>最高借6万，3-12期还款无忧</span>
+                        </div>
+                        <div class="right-content">
+                            <div class="right-content-info">
+                                <p><b>可贷金额</b><span>500-5000</span></p>
+                                <p><b>参考月利率</b><span>1%</span></p>
+                                <p><b>最快下款</b><span>10分钟</span></p>
+                            </div>
+                            <div class="right-content-button">
+                                <p class="right-content-button-btn"><a href="http://www.baidu.com"><input type="button" value="立即领取"></a></p>
+                                <p class="right-content-button-num">2147人成功申请</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/swipeslider.min.js"></script>
+
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#carousel').swipeslider({
+            transitionDuration: 500,
+            autoPlayTimeout: 3000
+        })
+    });
+</script>
+</html>
