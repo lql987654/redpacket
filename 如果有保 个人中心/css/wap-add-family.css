@@ -1,0 +1,136 @@
+html,
+body {
+    height: 100%;
+    background: #f7f7f7;
+}
+.info-box {
+    background: #fff;
+}
+.input-box {
+    height: 1.2rem;
+    font-size: 0;
+    border-bottom: 1px solid #eeeeee;
+}
+.input-box .left-box {
+    width: 2.53rem;
+    height: .6rem;
+    line-height: .6rem;
+    padding: .3rem 0 .3rem .4rem;
+    color: #1f1f23;
+    font-size: .36rem;
+    float: left;
+}
+.input-box .right-box {
+    width: 4.5rem;
+    height: 1.2rem;
+    float: left;
+    font-size: .28rem;
+}
+.input-box .right-box .input-text {
+    width: 100%;
+    height: .6rem;
+    line-height: .6rem;
+    padding: .3rem 0;
+}
+.checkbox-box {
+    padding-top: .28rem;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: .1rem;
+}
+.checkbox-box .left-box {
+    color: #1f1f23;
+    font-size: .36rem;
+    float: left;
+    margin-left: .4rem;
+    margin-top: .1rem;
+}
+.checkbox-box .right-box {
+    margin-left: 2.52rem;
+}
+.checkbox-box .right-box .checkbox-item label {
+    width: 1.33rem;
+    height: .64rem;
+    line-height: .64rem;
+    text-align: center;
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    color: #1f1f23;
+    font-size: .32rem;
+    border-radius: .32rem;
+    float: left;
+    margin-right: .3rem;
+    margin-bottom: .2rem;
+}
+.checkbox-box .right-box .checkbox-item input:checked + label {
+    border: 1px solid #52e0d1;
+    background: #f0fffd;
+    color: #1ed6c3;
+}
+.checkbox-info-box {
+    width: 6.7rem;
+    height: 2.7rem;
+    margin: .2rem auto .32rem;
+    box-sizing: border-box;
+    padding: .28rem;
+    background: #f7f7f7;
+    border-radius: .2rem;
+}
+.checkbox-info-box h2 {
+    color: #646570;
+    font-size: .36rem;
+    margin-bottom: .2rem;
+}
+.checkbox-info-box p {
+    line-height: .4rem;
+    color: #646570;
+    font-size: .28rem;
+}
+.last-checkbox-box {
+    border-bottom: none;
+}
+.add-family-button {
+    width: 6.7rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: .36rem;
+    background: #1ed6c3;
+    display: block;
+    border-radius: .44rem;
+    margin: 1.02rem auto 0;
+}
+.note {
+    color: #8e8f9a;
+    text-align: center;
+    font-size: .28rem;
+    margin-top: .32rem;
+    padding-bottom: .2rem;
+}
+.error-msg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 7.5rem;
+    height: .8rem;
+    line-height: .8rem;
+    margin-left: -3.75rem;
+    text-align: center;
+    color: #ff7c05;
+    font-size: .32rem;
+    background: #fff0dc;
+    display: none;
+}
+.error-msg span {
+    position: relative;
+}
+.error-msg span:before {
+    position: absolute;
+    top: 0;
+    left: -.58rem;
+    width: .37rem;
+    height: .37rem;
+    background: url("../images/error-icon.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}

@@ -1,0 +1,133 @@
+html,
+body {
+    height: 100%;
+    background: #f6f6f6;
+}
+.head {
+    position: relative;
+    height: 3.83rem;
+    background: url("../images/wap-pay-problem-head.png") center no-repeat;
+    background-size: 100%;
+}
+.head h2 {
+    position: absolute;
+    top: .44rem;
+    left: 2.52rem;
+    color: #ffffff;
+    font-size: .48rem;
+    font-weight: bold;
+}
+.content {
+    position: relative;
+    width: 6.9rem;
+    margin: -2.3rem auto 0;
+    background: #fff;
+    padding-top: .54rem;
+    border-radius: .3rem;
+    overflow: hidden;
+    z-index: 2;
+}
+/* 非微信 */
+.not-weixin-box {
+    width: 6.7rem;
+    margin: 0 auto .24rem;
+    border-radius: .2rem;
+    overflow: hidden;
+}
+
+.not-weixin-box h2 {
+    position: relative;
+    height: auto;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: .14rem;
+    color: #2b2b2b;
+    font-size: .36rem;
+    font-weight: bold;
+    background: none;
+}
+.not-weixin-box h2:after {
+    display: none;
+}
+.not-weixin-gif {
+    padding-bottom: .3rem;
+}
+.not-weixin-box h2 b {
+    color: #04c8b4;
+}
+.not-weixin-box h3 {
+    color: #2b2b2b;
+    font-size: .36rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.weixin-box-content {
+    position: relative;
+    background: #fff;
+    padding: .26rem 0;
+    z-index: 1;
+}
+.weixin-box-content img {
+    width: 4.95rem;
+    height: 5.32rem;
+    margin-left: .36rem;
+}
+/* 微信 */
+.weixin-box {
+    background: #fff;
+    padding-bottom: .32rem;
+}
+.weixin-box h2 {
+    position: relative;
+    text-align: center;
+    margin-bottom: .14rem;
+    color: #2b2b2b;
+    font-size: .36rem;
+    font-weight: bold;
+}
+.weixin-box h2 b {
+    color: #04c8b4;
+}
+.weixin-box h3 {
+    color: #2b2b2b;
+    font-size: .36rem;
+    text-align: center;
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+.to-weixin {
+    position: relative;
+    width: 5.75rem;
+    height: .98rem;
+    line-height: .98rem;
+    margin: 0 auto .3rem;
+    background: linear-gradient(to bottom, #f29845, #ed4338);
+    color: #ffffff;
+    display: block;
+    font-size: .36rem;
+    text-align: center;
+    border-radius: .49rem;
+    font-weight: bold;
+    z-index: 11;
+}
+.weixin-box img {
+    display: inline-block;
+}
+.weixin-box .erweima {
+    width: 2.02rem;
+    height: 2.02rem;
+    margin-left: 1.4rem;
+    margin-right: .3rem;
+}
+.weixin-box .gif {
+    width: 2.14rem;
+    height: 2.14rem;
+    margin-right: .4rem;
+}
+.weixin-box p {
+    color: #ff8728;
+    text-align: center;
+    font-size: .36rem;
+    margin-top: .12rem;
+}

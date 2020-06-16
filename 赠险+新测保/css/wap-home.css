@@ -1,0 +1,123 @@
+html,
+body {
+    height: 100%;
+    background: #ff4c39;
+}
+.head {
+    position: relative;
+    height: 6.2rem;
+    background: url("../images/wap-home-banner.png") center no-repeat;
+    background-size: 100%;
+}
+.wap-logo {
+    position: absolute;
+    top: .3rem;
+    left: .3rem;
+    width: 1.66rem;
+    height: .4rem;
+}
+.info-box h3 {
+    color: #57170a;
+    font-size: .34rem;
+    font-weight: bold;
+    text-align: center;
+}
+.info-box p {
+    width: 2.4rem;
+    height: .46rem;
+    line-height: .46rem;
+    background: linear-gradient(to right, #ff593e, #f51e1b);
+    border-radius: .23rem;
+    color: #fdfabd;
+    font-size: .22rem;
+    text-align: center;
+    margin: .2rem auto 0;
+}
+.left-box-info {
+    position: absolute;
+    left: .47rem;
+    bottom: 1.2rem;
+    width: 3.05rem;
+    height: 1.1rem;
+}
+.right-box-info {
+    position: absolute;
+    right: .47rem;
+    bottom: 1.2rem;
+    width: 3.05rem;
+    height: 1.1rem;
+}
+.rights-box {
+    width: 6.8rem;
+    padding: .32rem .38rem .44rem;
+    margin: .4rem auto .48rem;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: .4rem;
+}
+.rights-box h2 {
+    color: #57170a;
+    font-size: .34rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: .36rem;
+    padding-bottom: .36rem;
+    border-bottom: 1px solid #fecfa0;
+}
+.rights-box-content {
+    display: flex;
+}
+.icon-item {
+    margin: auto;
+}
+.rights-box-content img {
+    display: block;
+    margin: 0 auto;
+}
+.rights-box-content h3 {
+    color: #ff3830;
+    font-size: .26rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: .22rem;
+    margin-bottom: .1rem;
+}
+.rights-box-content p {
+    color: #8f8f8f;
+    font-size: .2rem;
+    text-align: center;
+}
+.icon-item-1 img {
+    width: .58rem;
+    height: .66rem;
+}
+.icon-item-2 img {
+    width: .5rem;
+    height: .66rem;
+}
+.icon-item-3 img {
+    width: .62rem;
+    height: .66rem;
+}
+.icon-item-4 img {
+    width: .56rem;
+    height: .66rem;
+}
+.footer-info-box {
+    padding-bottom: .48rem;
+}
+.footer-info-box p {
+    line-height: .5rem;
+    color: #ffe7e4;
+    font-size: .24rem;
+    text-align: center;
+}
+.footer-info-box img {
+    width: 2.28rem;
+    height: .6rem;
+    display: block;
+    margin: .22rem auto;
+}
+.footer-info-box p.ruguoyoubao-info {
+    font-size: .28rem;
+}

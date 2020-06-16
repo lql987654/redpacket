@@ -1,0 +1,278 @@
+html,
+body {
+    height: 100%;
+    background: #f6f6f6;
+}
+.head {
+    position: relative;
+    height: 1.92rem;
+    background: linear-gradient(to right, #ffedb4, #ffb716);
+}
+.head:after {
+    position: absolute;
+    top: .17rem;
+    right: .42rem;
+    width: 1.22rem;
+    height: 1.39rem;
+    background: url("../images/redeem-head-icon.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.head h2 {
+    color: #dd7c01;
+    font-size: .48rem;
+    font-weight: bold;
+    padding-top: .38rem;
+    margin-left: .4rem;
+}
+.head h3 {
+    color: #dd7c01;
+    font-size: .28rem;
+    margin-left: .4rem;
+    margin-top: .08rem;
+}
+/* 公用部分 */
+.section {
+    width: 7.5rem;
+    background: #fff;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+    padding: .34rem .3rem 0 .4rem;
+    box-sizing: border-box;
+}
+.section h2 {
+    position: relative;
+    font-weight: bold;
+    padding-left: .62rem;
+    color: #1f1f23;
+    font-size: .36rem;
+}
+.section h2:before {
+    position: absolute;
+    top: .03rem;
+    left: 0;
+    width: .42rem;
+    height: .45rem;
+    background: url("../images/insurance-plan-icon.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+/* 保障计划 */
+.insurance-plan-box {
+    position: relative;
+    margin-top: -.1rem;
+    margin-bottom: .2rem;
+    padding-bottom: .3rem;
+    z-index: 2;
+}
+.insurance-plan-box .insurance-time-info {
+    color: #67bbb3;
+    font-size: .28rem;
+    margin-top: .3rem;
+    margin-bottom: .2rem;
+}
+.insurance-plan-box .insurance-time-info span:last-child {
+    float: right;
+}
+.insurance-detail-box {
+    border-radius: .16rem;
+    border: 1px solid #d8ebe9;
+    overflow: hidden;
+}
+.insurance-detail-box p {
+    height: .8rem;
+    line-height: .8rem;
+    color: #646570;
+    padding: 0 .3rem;
+    font-size: .28rem;
+    border-bottom: 1px solid #d8ebe9;
+}
+.insurance-detail-box p:nth-child(2n-1) {
+    background: #f7fcfb;
+}
+.insurance-detail-box p:last-child {
+    border: none;
+}
+.insurance-detail-box p span {
+    float: right;
+}
+.more-insurance-detail {
+    border-top: 1px solid #d8ebe9;
+    display: none;
+}
+.show-more-plan {
+    position: relative;
+    height: 1.08rem;
+    line-height: 1.08rem;
+    color: #1ed6c3;
+    font-size: .28rem;
+    text-align: center;
+    display: block;
+}
+.show-more-plan:after {
+    position: absolute;
+    top: .5rem;
+    left: 4.1rem;
+    width: .2rem;
+    height: .12rem;
+    background: url("../images/show-more-insurance-detail-arrow.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.show-more-plan.active:after {
+    transform: rotate(180deg);
+}
+
+.insurance-detail-tag {
+    color: #1f1f23;
+    font-size: .28rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: .36rem;
+}
+.insurance-detail-tag span {
+    position: relative;
+    padding-left: .52rem;
+    display: inline-block;
+}
+.insurance-detail-tag span:before {
+    position: absolute;
+    top: -.02rem;
+    left: 0;
+    width: .38rem;
+    height: .38rem;
+    background: url("../images/insurance-tag-icon.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.insurance-detail-note {
+    color: #b6b6bf;
+    font-size: .2rem;
+    margin-top: .18rem;
+}
+
+/* 常见问题 */
+.question-box {
+    border-radius: 0;
+    margin-bottom: .3rem;
+}
+.question-content-item {
+    border-bottom: 1px solid #ececec;
+    margin-right: .3rem;
+}
+.question-content-item:last-child {
+    border-bottom: none;
+}
+
+.question-content-item h3,
+.question-content-item p {
+    position: relative;
+    color: #47485c;
+    font-size: .28rem;
+}
+.question-content-item h3 {
+    position: relative;
+    font-weight: bold;
+    padding-bottom: .3rem;
+    font-size: .32rem;
+    padding-left: .72rem;
+}
+.question-content-item h3:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: .42rem;
+    height: .44rem;
+    background: url("../images/result-people-icon.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.question-content-item p {
+    line-height: .48rem;
+}
+.question-content-item p span:last-child {
+    float: right;
+}
+.item-content {
+    border-top: 1px solid #ebebeb;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    display: none;
+}
+.question-content-item h3:after {
+    position: absolute;
+    top: .1rem;
+    right: 0;
+    width: .3rem;
+    height: .18rem;
+    background: url("../images/questoin-arrow.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+    transform: rotate(-180deg);
+}
+.question-content-item.active h3:after {
+    transform: rotate(0);
+}
+/* 交费方式 */
+.redeem-pay-box h2,
+.insurance-plan-box h2 {
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: .32rem;
+}
+.redeem-pay-content {
+    display: flex;
+    margin-top: .4rem;
+    padding-bottom: .4rem;
+}
+.redeem-pay-item.active,
+.redeem-pay-item.active h4,
+.redeem-pay-item.active h5 {
+    color: #ff8728;
+}
+.redeem-pay-item.active {
+    border: 1px solid #ff8728;
+}
+.redeem-pay-item {
+    width: 3.18rem;
+    height: 1.9rem;
+    border: 1px solid #b2b2b2;
+    border-radius: .16rem;
+    margin: auto;
+    box-sizing: border-box;
+}
+.redeem-pay-item h4,
+.redeem-pay-item h5 {
+    color: #1f1f23;
+    text-align: center;
+}
+.redeem-pay-item h4 {
+    font-size: .32rem;
+    margin-top: .12rem;
+    margin-bottom: .1rem;
+}
+.redeem-pay-item h5 {
+    font-size: .24rem;
+}
+.redeem-pay-item p {
+    font-size: .2rem;
+    text-align: center;
+    margin-top: .22rem;
+}
+.redeem-pay-item p span {
+    font-size: .48rem;
+}
+.redeem-submit {
+    width: 5.8rem;
+    height: .98rem;
+    line-height: .98rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: .4rem;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #ff902b, #ff2c2a);
+    display: block;
+    margin: .5rem auto;
+    border-radius: .49rem;
+}

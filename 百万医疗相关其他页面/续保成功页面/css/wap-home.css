@@ -1,0 +1,70 @@
+html,
+body {
+    height: 100%;
+    background: #f7f7f7;
+}
+.head {
+    position: relative;
+    height: 3.82rem;
+    background: url("../images/renewal-head-banner.png") center no-repeat;
+    background-size: 100%;
+}
+.head h2 {
+    position: absolute;
+    top: .62rem;
+    left: 2.67rem;
+    color: #ffffff;
+    font-size: .4rem;
+    font-weight: bold;
+}
+.head h3 {
+    position: absolute;
+    top: 1.15rem;
+    left: 2.67rem;
+    color: #ffffff;
+    font-size: .28rem;
+}
+.renewal-info-detail {
+    position: relative;
+    width: 7.26rem;
+    height: 5.92rem;
+    margin-top: -1.76rem;
+    background: url("../images/renewal-info-detail.png") center no-repeat;
+    background-size: 100%;
+    z-index: 2;
+}
+.renewal-name {
+    position: absolute;
+    top: .84rem;
+    left: .58rem;
+    color: #633b07;
+    font-size: .48rem;
+    font-weight: bold;
+}
+.renewal-info {
+    color: #d58c00;
+    font-size: .28rem;
+}
+.renewal-info span {
+    color: #633b07;
+}
+.renewal-price {
+    position: absolute;
+    top: 1.8rem;
+    left: .58rem;
+}
+.renewal-time {
+    position: absolute;
+    top: 2.3rem;
+    left: .58rem;
+}
+.renewal-welfare {
+    width: 7.26rem;
+    height: 5.26rem;
+    display: block;
+    margin: .3rem auto;
+}
+.renewal-welfare img {
+    width: 100%;
+    display: block;
+}

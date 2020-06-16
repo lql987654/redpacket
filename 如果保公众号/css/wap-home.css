@@ -1,0 +1,61 @@
+html,
+body {
+    height: 100%;
+    background: #fff;
+}
+.head {
+    position: relative;
+    padding-top: 2rem;
+}
+.head:before {
+    position: absolute;
+    top: .6rem;
+    left: 50%;
+    width: 1.14rem;
+    height: 1.14rem;
+    margin-left: -.57rem;
+    background: url("../images/insurance-success-icon.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.head h2 {
+    color: #1f1f23;
+    font-size: .32rem;
+    text-align: center;
+}
+.content {
+    width: 6.3rem;
+    margin-top: .74rem;
+    margin-left: 1.02rem;
+}
+.content h2 {
+    color: #1f1f23;
+    font-size: .32rem;
+    margin-bottom: .2rem;
+    font-weight: bold;
+}
+.content p {
+    line-height: .54rem;
+    color: #47485c;
+    font-size: .26rem;
+    margin-left: .3rem;
+    margin-bottom: .08rem;
+}
+
+.submit-button {
+    width: 5.75rem;
+    height: .98rem;
+    line-height: .98rem;
+    text-align: center;
+    color: #646570;
+    font-size: .36rem;
+    border: 1px solid #c1c2cc;
+    border-radius: .49rem;
+    display: block;
+    margin: 1rem auto .26rem;
+}
+.note {
+    color: #616263;
+    font-size: .24rem;
+    text-align: center;
+}

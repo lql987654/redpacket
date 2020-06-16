@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <title>领百万保障，送进口红酒</title>
+    <meta name="keywords" content="黑牛保险,互联网保险,平安,泰康,大都会,招商信诺,百年人寿,交通意外,重大疾病,健康保障,问卷调查"/>
+    <meta name="description" content="领百万保障，送进口红酒"/>
+    <script src="https://test.heiniubao.com/static/plugins/common/new_insurance/js/wap-flexible-1.0.0.min.js?v=ddfdefcc93df5496ffc8a3eeb01b9168"></script>
+    <!--基础css-->
+    <link rel="stylesheet"
+          href="https://test.heiniubao.com/static/plugins/common/new_insurance/css/wap-common.css?v=150811886ea19d2e4e85efb5ae1400eb"/>
+    <!-- jquery -->
+    <script src="https://test.heiniubao.com/static/js/plugins/lib/jquery-3.2.1.min.js?v=c9f5aeeca3ad37bf2aa006139b935f0a"></script>
+
+    <!--本页面css-->
+    <link rel="stylesheet" href="css/wap-home.css"/>
+</head>
+<body onhashchange="_goBack()">
+<!-- 头部 -->
+<div class="head wrap">
+    <div class="logo-box">
+        <img src="images/logo-ruguoyoubao.png" class="logo-ruguoyoubao">
+        <img src="images/logo-TK.png" class="logo-Tk">
+        <img src="images/logo-TKCN.png" class="logo-TKCN">
+    </div>
+    <div class="head-info">
+        <h2>住院医疗费用全报销</h2>
+        <p class="head-info-money">首月<b><i>1</i>元</b> 次月14.5元起</p>
+        <p class="head-info-num">仅剩 <span>1239</span> 份</p>
+        <div class="head-info-progress-box">
+            <p class="head-info-progress"></p>
+        </div>
+        <a class="head-info-button" href="javascript:;">立即投保</a>
+    </div>
+</div>
+<!-- 保障计划 -->
+<div class="insurance-plan-box wrap section">
+    <h2>保障计划</h2>
+    <p class="insurance-time-info"><span>投保年龄：18~49周岁</span><span>保险期间：1年</span></p>
+    <div class="insurance-detail-box">
+        <p class="p-style" style="background: rgb(247, 252, 251);">航空意外身故/伤残<span>100万元</span></p>
+        <div class="more-insurance-detail">
+            <p class="p-style">私家车驾乘意外身故/伤残<span>10万元</span></p>
+            <p class="p-style">地铁、出租车、公交意外身故/伤残<span>10万元</span></p>
+            <p class="p-style">意外伤残保险金<span>1万元</span></p>
+        </div>
+        <p class="p-style" style="background: rgb(255, 255, 255);">意外身故保险金<span>5万元</span></p>
+        <div class="more-insurance-detail">
+            <p class="p-style">意外住院医疗保险金<span>1万元</span></p>
+        </div>
+        <p class="p-style" style="border-bottom: none; background: rgb(247, 252, 251);">意外门急诊医疗保险金<span>1万元</span></p>
+    </div>
+    <a class="show-more-plan" href="javascript:;">查看详情</a>
+</div>
+
+<!-- 表单 -->
+<div class="form-section wrap">
+    <!-- 导航 -->
+    <div class="wrap nav" id="nav" style="position: static; border-bottom: 0px;">
+        <ul class="clx" style="border-bottom: 1px solid rgb(241, 241, 241);">
+            <li class="nav-box active">
+                <span>我要投保</span>
+            </li>
+            <li class="nav-box">
+                <span>产品特色</span>
+            </li>
+            <li class="nav-box">
+                <span>理赔说明</span>
+            </li>
+        </ul>
+    </div>
+    <!-- 表单 -->
+    <div class="form-content-box">
+        <form id="form-box" class="form-box">
+            <input type="hidden" id="submit-api" value="/landingpage/api/tk_axb/v1">
+            <input type="hidden" id="get-captcha" name="api_name_get_captcha" value="/landingpage/tk_axb/gen_captcha">
+            <input type="hidden" id="verify-captcha" name="api_name_verify_captcha" value="/verify/phone_captcha">
+            <input name="r" value="c9e0f7c3af46d89462d303069b9a1d18" type="hidden">
+            <!--隐藏域-->
+            <input name="channel" type="hidden" value="heiniusmart">
+            <input name="subchannel" type="hidden" value="axb_union">
+            <input name="encrypt" type="hidden" value="">
+            <div class="insurance-form-content insurance-form" id="section-1">
+                <div class="input-box form-item">
+                    <h3>本人信息</h3>
+                    <div class="form-input clx">
+                        <div class="left-box">您的姓名</div>
+                        <div class="right-box"><input type="text" class="input-text" name="name" placeholder="请输入真实姓名"
+                                                      data-input-valid=""></div>
+                    </div>
+                    <div class="form-input clx" id="input-idcard-box" style="position: relative;">
+                        <div class="left-box">身 份 证</div>
+                        <div class="right-box"><input type="tel" class="input-text" name="idCard"
+                                                      placeholder="信息保密仅用于投保" data-input-valid="" maxlength="18"
+                                                      style="position: relative;"></div>
+                        <div id="idCardX-box"
+                             style="position: absolute; top: -.46rem; left: 0;width: 100%; height: 100%; display: none">
+                            <a id="idCardX" href="javascript:;"
+                               style="position: absolute; top: 0.1rem; left: 0px; width: 2.3rem; height: 0.68rem; margin-left: -1.5rem; background: url(&quot;/static/plugins/heiniu/keyboard-idcard/images/idCard-support-new.png&quot;) center center / 100% no-repeat;"></a>
+                        </div>
+                    </div>
+                    <div class="form-input clx">
+                        <div class="left-box">手机号码</div>
+                        <div class="right-box"><input type="tel" class="input-text" name="mobile" placeholder="请输入手机号"
+                                                      data-input-valid="" maxlength="11"></div>
+                    </div>
+                    <div class="form-input captcha-input clx" id="captcha-box" style="display: block;">
+                        <div class="left-box">验 证 码</div>
+                        <div class="right-box"><input type="tel" class="input-text" name="captcha" placeholder="请输入验证码"
+                                                      data-input-valid="" maxlength="4"></div>
+                        <div class="send-box"><input type="button" value="发送验证码" id="send"></div>
+                    </div>
+                    <div class="form-input clx" style="display: block;" id="email-box">
+                        <div class="left-box">邮&nbsp;箱</div>
+                        <div class="right-box">
+                            <ul class="emailist"
+                                style="position: absolute; margin-top: 25px; min-width: 228px; visibility: hidden; z-index: 11;"></ul>
+                            <input type="email" class="input-text inputMailList" name="email"
+                                   placeholder="用于接收电子保单号，请准确填写" data-input-valid=""></div>
+                    </div>
+                </div>
+                <div class="input-box form-item clx insurance-for">
+                    <h3>为谁投保 ( 被保人 )<i></i></h3>
+                    <div class="insurance-for-content">
+                        <div class="item-radio item-radio-left">
+                            <input type="radio" id="insurance-for0" name="insurance-for" value="0" checked>
+                            <label for="insurance-for0">本人</label>
+                        </div>
+                        <div class="item-radio item-radio-left">
+                            <input type="radio" id="insurance-for1" name="insurance-for" value="1">
+                            <label for="insurance-for1">配偶</label>
+                        </div>
+                        <div class="item-radio item-radio-left">
+                            <input type="radio" id="insurance-for2" name="insurance-for" value="2">
+                            <label for="insurance-for2">父母</label>
+                        </div>
+                        <div class="item-radio item-radio-left">
+                            <input type="radio" id="insurance-for3" name="insurance-for" value="3">
+                            <label for="insurance-for3">子女</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="select-insurance-for-form hide">
+                    <div class="form-input clx">
+                        <div class="left-box">您的姓名</div>
+                        <div class="right-box"><input type="text" class="input-text" name="name" placeholder="请输入真实姓名"
+                                                      data-input-valid=""></div>
+                    </div>
+                    <div class="form-input clx" id="input-idcard-box" style="position: relative;">
+                        <div class="left-box">身 份 证</div>
+                        <div class="right-box"><input type="tel" class="input-text" name="idCard"
+                                                      placeholder="信息保密仅用于投保" data-input-valid="" maxlength="18"
+                                                      style="position: relative;"></div>
+                        <div id="idCardX-box"
+                             style="position: absolute; top: -.46rem; left: 0;width: 100%; height: 100%; display: none">
+                            <a id="idCardX" href="javascript:;"
+                               style="position: absolute; top: 0.1rem; left: 0px; width: 2.3rem; height: 0.68rem; margin-left: -1.5rem; background: url(&quot;/static/plugins/heiniu/keyboard-idcard/images/idCard-support-new.png&quot;) center center / 100% no-repeat;"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-box form-item clx">
+                    <h3 class="problem-icon">有无医保<i id="show-problem-modal"></i></h3>
+                    <div class="item-radio item-radio-left ">
+                        <input type="radio" id="have-insurance" name="test1" checked>
+                        <label for="have-insurance">有（含新农合）</label>
+                    </div>
+                    <div class="item-radio item-radio-left form-radio-item">
+                        <input type="radio" id="have-not-insurance" name="test1">
+                        <label for="have-not-insurance">无</label>
+                    </div>
+                    <div class="problem-explain-modal">
+                        有医保是指被保险人是否参加社会医疗保障，如：城镇职工医保、城镇居民医保、新型农村合作医疗、城乡居民医保、公费医疗、少儿医保.
+                    </div>
+                </div>
+                <div class="input-box form-item clx">
+                    <h3>缴费方式</h3>
+                    <div class="item-radio item-radio-left ">
+                        <input type="radio" id="pay-time-month" name="test2" checked="">
+                        <label for="pay-time-month">月交</label>
+                    </div>
+                    <div class="item-radio item-radio-left form-radio-item">
+                        <input type="radio" id="pay-time-once" name="test2">
+                        <label for="pay-time-once">一次交清</label>
+                    </div>
+                </div>
+            </div>
+            <p class="form-tip">保费与被保人年龄、有无医保有关，相见<a href="javascript:;">费率表</a></p>
+            <div class="fixed-form-box">
+                <div class="agree-box">
+                    <input id="agree-button" class="agreen-btn" type="checkbox" checked="">
+                    <label for="agree-button"><i></i>我已阅读并同意</label>《<a href="/landingpage/agreement">保险条款</a>》
+                    <span id="user-service-button">《<a href="https://test.heiniubao.com/static/documents/taikang_policy/gaoweizhiye.pdf">投保需追</a>》</span>
+                    <span id="user-service-button">《<a href="https://test.heiniubao.com/static/documents/taikang_policy/gaoweizhiye.pdf">健康告知</a>》</span>
+                    <span id="user-service-button">《<a href="https://test.heiniubao.com/static/documents/taikang_policy/gaoweizhiye.pdf">保障详情</a>》</span>
+                    <span id="user-service-button">《<a href="https://test.heiniubao.com/static/documents/taikang_policy/gaoweizhiye.pdf">服务协议</a>》</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- 产品介绍 -->
+<div class="wrap explain-section" id="section-2">
+    <img src="images/section-img-1.png">
+    <img src="images/section-img-2.png">
+    <img src="images/section-img-3.png">
+    <img src="images/section-img-4.png">
+    <img src="images/section-img-5.png">
+    <img src="images/taikang-bg.png" class="taikang-img">
+    <div class="explain-item">
+        <h3>大品牌，值得信赖</h3>
+        <p>泰康保险集团旗下成员，集团跻身《财富》世界500强，泰康在线成立于2015年11月,是行业内首家由国内大型保险企业发起成立的专业互联网保险公司</p>
+    </div>
+    <div class="explain-item">
+        <h3>实力强，保障更放心</h3>
+        <p>保费规模超1700亿元，累计服务2.25亿个人客户,理赔客户1908万人,支付理赔金351亿元</p>
+    </div>
+    <p class="data-source">1.数据来源 ：《2016年我国卫生和计划生育事业发展统计公报》</p>
+    <p class="data-source">2.数据来源 ：中华人民共和国卫生部</p>
+    <p class="data-source">3.数据来源 ：依据《2008年我国卫生事业发展统计公报》</p>
+</div>
+<!-- 理赔说明 -->
+<div class="claim-explain wrap section" id="section-3">
+    <h2>理赔说明</h2>
+    <div class="claim-explain-content clx">
+        <div class="claim-item-1 claim-item">
+            <h3>关注公众号</h3>
+            <p>关注“泰康人寿”微信公众号</p>
+        </div>
+        <div class="claim-item-2 claim-item">
+            <h3>提交申请</h3>
+            <p>在泰康人寿官方微信号中，点击服务-理赔服务，进入页面填写信息完成申请</p>
+        </div>
+        <div class="claim-item-3 claim-item">
+            <h3>上传资料</h3>
+            <p>在H5页面实现一次性打包上传图片并完整展示理赔申请应备材料名称</p>
+        </div>
+        <div class="claim-item-4 claim-item">
+            <h3>快速理赔</h3>
+            <p>根据审核结果将理赔款支付到被保险人账户</p>
+        </div>
+    </div>
+    <p class="claim-explain-tip">客户也可以通过95522客服电话，泰康官方微信或到柜面进行理赔报案</p>
+</div>
+<!-- 常见问题 -->
+<div class="question-box wrap section">
+    <h2>常见问题</h2>
+    <div class="question-box-content">
+        <div class="question-content-item">
+            <h3><i>Q</i>购买此保险后什么时候生效？</h3>
+            <p><i>A</i>在支付成功（投保当日）T+1零时生效，如2020年3月1日投保成功，2020年3月2日零时生效。</p>
+        </div>
+        <div class="question-content-item">
+            <h3><i>Q</i>购买后如何查询保单？</h3>
+            <p><i>A</i>如果有保为您提供查询电子保单服务，根据《合同法》规定，电子保单和纸质保单具有同样法律效力。您可以在如果有保公众号→我的保单中找到您的电子保单。</p>
+        </div>
+    </div>
+</div>
+<!-- 底部信息 -->
+<div class="footer">
+    <img src="https://test.heiniubao.com/static/new_insurance/activity/anxinbao/003/images/footer-logo-box-img-new.png">
+    <p>本产品由上海鑫河保险经纪有限公司提供服务</p>
+</div>
+
+<!-- 悬浮用高度 -->
+<div class="fixed-height"></div>
+<a class="fixed-button header-button taikang-submit-button" id="to-form-button">立即投保</a>
+<a class="info-submit-button clx" id="submit-button">
+    <div class="info-submit-left"><b>首月<i>１</i>元</b>  次月起39.4元/月</div>
+    <div class="info-submit-right">立即投保</div>
+</a>
+<!-- 遮罩层 -->
+<div class="mask" id="mask"></div>
+<!-- 展示勾选弹窗 -->
+<div class="modal-checkbox-box wrap">
+    <a class="modal-checkbox-close" href="javascript:;"></a>
+    <h2>立即拥有</h2>
+    <h2><span>600</span>万医疗保险</h2>
+    <p class="checkbox-title">我已阅读并同意以下内容</p>
+    <p>《<a href="javascript:;">保险条款 </a>》《<a href="javascript:;">投保需追 </a>》《<a href="javascript:;">健康告知</a>》《<a href="javascript:;">保障详情</a>》《<a href="javascript:;">服务协议</a>》</p>
+    <a href="javascript:;" class="modal-checkbox-box-button">好的  继续</a>
+</div>
+
+<!-- 费率表 -->
+<div class="rate-modal-box wrap">
+    <h2>完整费率表</h2>
+    <a href="javascript:;" class="rate-modal-box-close"></a>
+    <div class="rate-table-box month-rate-box">
+        <table>
+            <thead>
+            <tr>
+                <th>投保年龄</th>
+                <th>有医保</th>
+                <th>无医保</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0-4</td>
+                    <td>78.8</td>
+                    <td>163.8</td>
+                </tr>
+                <tr>
+                    <td>5-10</td>
+                    <td>29.7</td>
+                    <td>59.4</td>
+                </tr>
+                <tr>
+                    <td>11-15</td>
+                    <td>14.5</td>
+                    <td>31.7</td>
+                </tr>
+                <tr>
+                    <td>16-20</td>
+                    <td>18.4</td>
+                    <td>39.6</td>
+                </tr>
+                <tr>
+                    <td>21-25</td>
+                    <td>24.4</td>
+                    <td>54.2</td>
+                </tr>
+                <tr>
+                    <td>26-30</td>
+                    <td>30.4</td>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <td>31-35</td>
+                    <td>39.4</td>
+                    <td>92.9</td>
+                </tr>
+                <tr>
+                    <td>36-40</td>
+                    <td>49.2</td>
+                    <td>132.2</td>
+                </tr>
+                <tr>
+                    <td>41-45</td>
+                    <td>63.5</td>
+                    <td>220.8</td>
+                </tr>
+                <tr>
+                    <td>46-50</td>
+                    <td>98.7</td>
+                    <td>309.1</td>
+                </tr>
+                <tr>
+                    <td>51-55</td>
+                    <td>122.1</td>
+                    <td>414</td>
+                </tr>
+                <tr>
+                    <td>56-60</td>
+                    <td>163.5</td>
+                    <td>550.6</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="rate-table-box all-money-rate-box">
+        <table>
+            <thead>
+            <tr>
+                <th>投保年龄</th>
+                <th>有医保</th>
+                <th>无医保</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>0-4</td>
+                <td>788</td>
+                <td>1638</td>
+            </tr>
+            <tr>
+                <td>5-10</td>
+                <td>297</td>
+                <td>594</td>
+            </tr>
+            <tr>
+                <td>11-15</td>
+                <td>145</td>
+                <td>317</td>
+            </tr>
+            <tr>
+                <td>16-20</td>
+                <td>184</td>
+                <td>396</td>
+            </tr>
+            <tr>
+                <td>21-25</td>
+                <td>244</td>
+                <td>542</td>
+            </tr>
+            <tr>
+                <td>26-30</td>
+                <td>304</td>
+                <td>700</td>
+            </tr>
+            <tr>
+                <td>31-35</td>
+                <td>394</td>
+                <td>929</td>
+            </tr>
+            <tr>
+                <td>36-40</td>
+                <td>492</td>
+                <td>1322</td>
+            </tr>
+            <tr>
+                <td>41-45</td>
+                <td>635</td>
+                <td>2208</td>
+            </tr>
+            <tr>
+                <td>46-50</td>
+                <td>987</td>
+                <td>3091</td>
+            </tr>
+            <tr>
+                <td>51-55</td>
+                <td>1221</td>
+                <td>4140</td>
+            </tr>
+            <tr>
+                <td>56-60</td>
+                <td>1635</td>
+                <td>5506</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="rate-tab-button-box">
+        <p>按月交费</p>
+        <p>全额交费</p>
+    </div>
+</div>
+
+<script src="js/wap-home.js"></script>
+</body>
+</html>

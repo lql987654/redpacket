@@ -1,0 +1,129 @@
+html,
+body {
+    height: 100%;
+    background: #f7f7f7;
+}
+.head {
+    position: relative;
+    height: 3.82rem;
+    background: url("../images/wap-note-banner.png") center no-repeat;
+    background-size: 100%;
+}
+.head h2 {
+    position: absolute;
+    top: .54rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: .32rem;
+}
+.head h3 {
+    position: absolute;
+    top: 1.35rem;
+    left: 2.63rem;
+    color: #ffffff;
+    font-size: .4rem;
+    font-weight: bold;
+}
+/* 非微信 */
+.not-weixin-box {
+    width: 6.7rem;
+    margin: -1.45rem auto .24rem;
+    border-radius: .2rem;
+    overflow: hidden;
+}
+.not-weixin-box h2 {
+    position: relative;
+    height: 1.41rem;
+    line-height: 1.41rem;
+    text-align: center;
+    color: #1a1a1a;
+    font-size: .44rem;
+    background: #e8fffd;
+}
+.not-weixin-box h2 span {
+    color: #ff9000;
+}
+.not-weixin-box h2:after {
+    position: absolute;
+    left: 50%;
+    bottom: -.22rem;
+    width: .58rem;
+    height: .22rem;
+    margin-left: -.29rem;
+    background: url("../images/weixin-box-arrow.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+    z-index: 2;
+}
+.weixin-box-content {
+    position: relative;
+    background: #fff;
+    padding: .6rem 0;
+    z-index: 1;
+}
+.weixin-box-content img {
+    width: 4.95rem;
+    height: 5.32rem;
+    margin-left: .36rem;
+}
+.to-weixin {
+    width: 6.95rem;
+    height: .98rem;
+    line-height: .98rem;
+    margin: 0 auto .3rem;
+    background: linear-gradient(to bottom, #f29845, #ed4338);
+    color: #ffffff;
+    display: block;
+    font-size: .36rem;
+    text-align: center;
+    border-radius: .49rem;
+    font-weight: bold;
+}
+.show-gif {
+    position: relative;
+    width: 100%;
+    color: #616263;
+    font-size: .3rem;
+    text-align: center;
+    display: block;
+    padding-bottom: .3rem;
+}
+.show-gif:after {
+    position: relative;
+    top: .06rem;
+    width: .36rem;
+    height: .36rem;
+    background: url("../images/icon-videoerp.png") center no-repeat;
+    background-size: 100%;
+    margin-left: .1rem;
+    display: inline-block;
+    content: '';
+}
+.mask {
+    z-index: 10;
+}
+.show-procress-box {
+    position: fixed;
+    top: 3rem;
+    left: 50%;
+    width: 7.04rem;
+    height: 7.65rem;
+    margin-left: -3.52rem;
+    z-index: 11;
+    display: none;
+}
+.modal-procress-close {
+    position: absolute;
+    top: -.68rem;
+    right: .1rem;
+    width: .51rem;
+    height: .68rem;
+    background: url("../images/modal-checkbox-close.png") center no-repeat;
+    background-size: 100%;
+}
+.procress-gif {
+    width: 100%;
+    display: block;
+}

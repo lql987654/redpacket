@@ -1,0 +1,1015 @@
+html,
+body {
+    background: #f5f5f5;
+}
+.head {
+    position: relative;
+    height: 10.03rem;
+    background: url("../images/wap-home-banner.png") center no-repeat;
+    background-size: 100%;
+}
+.logo-ruguoyoubao {
+    position: absolute;
+    top: .2rem;
+    left: .2rem;
+    width: 1.53rem;
+    height: .36rem;
+}
+.logo-Tk {
+    position: absolute;
+    top: .2rem;
+    left: 1.88rem;
+    width: .9rem;
+    height: .4rem;
+}
+.logo-TKCN {
+    position: absolute;
+    top: .2rem;
+    left: 3rem;
+    width: .9rem;
+    height: .35rem;
+}
+.head-info {
+    position: absolute;
+    bottom: .32rem;
+    left: 50%;
+    width: 6.9rem;
+    height: 5.58rem;
+    margin-left: -3.45rem;
+}
+.head-info h2 {
+    color: #1f1f23;
+    font-size: .3rem;
+    text-align: center;
+    margin-top: 1.58rem;
+}
+.head-info .head-info-money {
+    color: #2c2c34;
+    font-size: .24rem;
+    text-align: center;
+}
+.head-info .head-info-money b {
+    color: #ffa128;
+    font-size: .38rem;
+}
+.head-info .head-info-money b i {
+    font-size: .8rem;
+    font-style: normal;
+}
+.head-info .head-info-num {
+    color: #5a5a5a;
+    font-size: .3rem;
+    text-align: center;
+    margin-top: .2rem;
+    margin-bottom: .16rem;
+}
+.head-info .head-info-num span {
+    font-size: .42rem;
+}
+.head-info .head-info-progress-box {
+    position: relative;
+    width: 2.42rem;
+    height: .14rem;
+    border-radius: .2rem;
+    background: #e9e9e9;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.head-info .head-info-progress-box .head-info-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: .14rem;
+    background: #ff9e28;
+    border-radius: .2rem;
+}
+.head-info .head-info-button {
+    width: 5rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: .4rem;
+    color: #ffffff;
+    background: linear-gradient(to right, #ffa128, #ff6f28);
+    display: block;
+    margin: .24rem auto 0;
+    border-radius: .55rem;
+    box-shadow: 0 0.1rem 0.2rem 0.01rem #ffd6a5;
+}
+
+/* 公用部分 */
+.section {
+    width: 7.5rem;
+    background: #fff;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+    padding: .34rem .3rem 0 .4rem;
+    box-sizing: border-box;
+}
+.section h2 {
+    position: relative;
+    font-weight: bold;
+    padding-left: .62rem;
+    color: #1f1f23;
+    font-size: .36rem;
+}
+.section h2:before {
+    position: absolute;
+    top: .03rem;
+    left: 0;
+    width: .42rem;
+    height: .45rem;
+    background: url("../images/insurance-plan-icon.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+/* 保障计划 */
+.insurance-plan-box {
+    margin-bottom: .2rem;
+}
+.insurance-plan-box .insurance-time-info {
+    padding: 0 .3rem;
+    color: #67bbb3;
+    font-size: .28rem;
+    margin-top: .3rem;
+    margin-bottom: .2rem;
+}
+.insurance-plan-box .insurance-time-info span:last-child {
+    float: right;
+}
+.insurance-detail-box {
+    border-radius: .16rem;
+    border: 1px solid #d8ebe9;
+    overflow: hidden;
+}
+.insurance-detail-box p {
+    height: .8rem;
+    line-height: .8rem;
+    color: #646570;
+    padding: 0 .3rem;
+    font-size: .28rem;
+    border-bottom: 1px solid #d8ebe9;
+}
+/*.insurance-detail-box p:nth-child(odd) {*/
+/*    background: #f7fcfb;*/
+/*}*/
+.insurance-detail-box p:last-child {
+}
+.insurance-detail-box p span {
+    float: right;
+}
+.more-insurance-detail {
+    display: none;
+}
+.show-more-plan {
+    position: relative;
+    height: 1.08rem;
+    line-height: 1.08rem;
+    color: #1ed6c3;
+    font-size: .28rem;
+    text-align: center;
+    display: block;
+}
+.show-more-plan:after {
+    position: absolute;
+    top: .5rem;
+    left: 4.1rem;
+    width: .2rem;
+    height: .12rem;
+    background: url("../images/show-more-insurance-detail-arrow.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.show-more-plan.active:after {
+    transform: rotate(180deg);
+}
+/* 导航 */
+.nav-explain {
+    background: #fff;
+    padding-bottom: .42rem;
+    margin-bottom: .3rem;
+}
+.nav {
+    top: 0;
+    background: #fff;
+    z-index: 2;
+}
+
+.nav-fixed-box {
+    height: .92rem;
+    display: none;
+}
+
+.nav > ul {
+    width: 6.7rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    border-bottom: 1px solid #f1f1f1;
+    background: #fff;
+}
+
+.nav > ul .nav-box {
+    display: block;
+    width: 33%;
+    font-size: 0;
+    margin: auto;
+    text-align: left;
+}
+.nav > ul .nav-box:nth-child(2) {
+    text-align: center;
+}
+.nav > ul .nav-box:nth-child(3) {
+    text-align: right;
+}
+.nav-box > span {
+    position: relative;
+    display: inline-block;
+    font-size: .32rem;
+    color: #272727;
+    line-height: .9rem;
+}
+
+.nav > ul .nav-box.active > span {
+    font-weight: bold;
+    color: #1ed6c3;
+}
+
+.nav > ul .nav-box.active > span:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: .05rem;
+    background-color: #1ed6c3;
+    content: '';
+}
+/* 表单 */
+.form-section {
+    background: #fff;
+    margin-bottom: .2rem;
+    padding-bottom: .2rem;
+}
+.insurance-form-content {
+    margin: .3rem .4rem 0;
+}
+.form-item {
+    position: relative;
+    font-size: 0;
+    margin-bottom: .2rem;
+}
+.form-item h3 {
+    position: relative;
+    color: #47485c;
+    font-size: .28rem;
+    margin-bottom: .32rem;
+    font-weight: bold;
+}
+.form-input {
+    width: 6.04rem;
+    border: 1px solid #e1e1e1;
+    border-radius: .08rem;
+    font-size: 0;
+    padding: .2rem 0;
+    margin-left: .32rem;
+    background: #fcfcfc;
+    margin-bottom: .2rem;
+}
+.form-input:last-child {
+    margin-bottom: 0;
+}
+.form-input .left-box {
+    width: 1.6rem;
+    height: .46rem;
+    line-height: .46rem;
+    text-align: center;
+    color: #47485c;
+    font-size: .28rem;
+    float: left;
+    border-right: 1px solid #e1e1e1;
+}
+.form-input .right-box {
+    width: 4.16rem;
+    height: .46rem;
+    float: left;
+    margin-left: .2rem;
+}
+.input-text {
+    width: 100%;
+    height: .46rem;
+    line-height: .46rem;
+    color: #47485c;
+    font-size: .24rem;
+}
+.form-input.captcha-input {
+    position: relative;
+    width: 3.86rem;
+}
+.form-input.captcha-input .right-box {
+    width: 1.94rem;
+}
+.send-box {
+    position: absolute;
+    top: 0;
+    right: -2.18rem;
+    width: 2.06rem;
+    height: .88rem;
+    line-height: .88rem;
+    text-align: center;
+    background: #ffba57;
+    color: #fff;
+    font-size: .28rem;
+    border-radius: .06rem;
+}
+.send-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+.form-item .item-radio {
+    position: relative;
+    float: left;
+    margin-right: .2rem;
+}
+.form-item .item-radio:last-child {
+    margin-right: 0;
+}
+.form-item .item-radio-left {
+    position: relative;
+    margin-left: .32rem;
+}
+.form-item .free-open:after {
+    position: absolute;
+    top: .25rem;
+    right: .68rem;
+    width: .12rem;
+    height: .12rem;
+    background: #ff4f46;
+    border-radius: 50%;
+    content: '';
+}
+.form-item .free-open:after {
+    position: absolute;
+    top: .25rem;
+    right: .68rem;
+    width: .12rem;
+    height: .12rem;
+    background: #ff4f46;
+    border-radius: 50%;
+    content: '';
+}
+.form-item .item-radio label {
+    position: relative;
+    width: 2.88rem;
+    height: .88rem;
+    line-height: .88rem;
+    text-align: center;
+    color: #47485c;
+    font-size: .28rem;
+    background: #fcfcfc;
+    border: 1px solid #e1e1e1;
+    border-radius: .08rem;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.form-item .item-radio input:checked + label {
+    border: 1px solid #1ed6c3;
+    color: #1ed6c3;
+}
+.form-item .item-radio input:checked + label:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: .4rem;
+    height: .4rem;
+    background: url("../images/form-radio-checked.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+
+.form-box .agree-box {
+    padding: .1rem 0 .1rem;
+    font-size: 0.24rem;
+    margin-left: 1.2rem;
+    margin-right: .3rem;
+}
+.form-box .agree-box .agreen-btn {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.form-box .agree-box label {
+    position: relative;
+    color: #47485c;
+    font-size: 0.24rem;
+    line-height: .32rem;
+}
+.form-box .agree-box label i {
+    position: absolute;
+    top: 0;
+    left: -.5rem;
+    width: .26rem;
+    height: .26rem;
+    background-image: url(../images/radio.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.form-box .agree-box input:checked + label i {
+    background-image: url(../images/radio-checked.png);
+}
+.form-box .agree-box a {
+    color: #1ed6c3;
+}
+.form-button {
+    width: 7.5rem;
+    height: .98rem;
+    display: flex;
+    border-top: 1px solid #e3e3e3;
+}
+.left-free-tip {
+    width: 4.33rem;
+    height: .98rem;
+    line-height: .98rem;
+    margin: auto;
+    color: #47485c;
+    font-size: .36rem;
+    text-align: center;
+}
+.left-free-tip span {
+    font-size: .24rem;
+}
+.right-button {
+    width: 3.17rem;
+    height: .98rem;
+    line-height: .98rem;
+    margin: auto;
+    color: #ffffff;
+    font-size: .36rem;
+    background: #ffa128;
+    font-weight: bold;
+    text-align: center;
+}
+
+.emailist {
+    width: 4.2rem;
+    border:1px solid #bdbdbd;
+    border-radius: .04rem;
+    background-color:#fff;
+    color:#666;
+    font-size: .24rem;
+    list-style-type:0;
+    padding:0;
+    margin:0;
+    overflow:hidden;
+}
+.emailist li {
+    padding: .1rem;
+    cursor: pointer;
+}
+.emailist .on,
+.emailist li:hover {
+    background-color:#eee;
+}
+.problem-icon i {
+    position: absolute;
+    top: 0;
+    left: 1.43rem;
+    width: .44rem;
+    height: .44rem;
+    background: url("../images/problem-icon.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.input-box.insurance-for .item-radio {
+    margin-right: .15rem;
+}
+.input-box.insurance-for .item-radio:not(:first-child) {
+    margin-left: 0;
+}
+.input-box.insurance-for .item-radio label {
+    width: 1.4rem;
+    height: .88rem;
+    line-height: .88rem;
+}
+.input-box.insurance-for .item-radio:last-child {
+    margin-right: 0;
+}
+.form-tip {
+    color: #a1a1a1;
+    font-size: .2rem;
+    margin-left: .72rem;
+    margin-bottom: .28rem;
+    margin-top: .1rem;
+}
+.form-tip a {
+    color: #1ed6c3;
+}
+.form-item .form-radio-item {
+    margin-left: .1rem;
+}
+.select-insurance-for-form {
+    margin-bottom: .2rem;
+}
+/* 介绍区域 */
+.explain-section {
+    background: #fff;
+    padding-bottom: .44rem;
+    margin-bottom: .2rem;
+}
+.explain-section img {
+    width: 100%;
+    display: block;
+}
+.taikang-img {
+    margin-bottom: .34rem;
+}
+.explain-item {
+    width: 6.9rem;
+    margin: 0 auto .34rem;
+}
+.explain-item h3 {
+    position: relative;
+    color: #1f1f23;
+    font-size: .32rem;
+    padding-left: .4rem;
+    margin-left: .14rem;
+    margin-bottom: .24rem;
+}
+.explain-item h3:before {
+    position: absolute;
+    top: .1rem;
+    left: 0;
+    width: .26rem;
+    height: .26rem;
+    background: url(../images/explain-icon.png) center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.explain-item p {
+    color: #646570;
+    font-size: .24rem;
+    line-height: .36rem;
+    margin-left: .14rem;
+}
+.data-source {
+    color: #b9b9b9;
+    margin-left: .45rem;
+    font-size: .22rem;
+}
+/* 理赔说明 */
+.claim-explain {
+    background: #fff;
+    padding-bottom: .4rem;
+    margin-bottom: .3rem;
+    border-radius: 0;
+}
+.claim-explain-content {
+    margin: .5rem .09rem 0;
+}
+.claim-item {
+    position: relative;
+    width: 2.88rem;
+    height: 3.77rem;
+    padding-top: 1.54rem;
+    box-sizing: border-box;
+    border: 1px solid #ececec;
+    border-radius: .08rem;
+    float: left;
+}
+.claim-item h3 {
+    color: #47485c;
+    font-size: .32rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: .1rem;
+}
+.claim-item p {
+    color: #47485c;
+    line-height: .36rem;
+    font-size: .24rem;
+    margin: 0 .3rem;
+}
+.claim-item-1,
+.claim-item-4 {
+    margin-right: .74rem;
+}
+.claim-item-1,
+.claim-item-2 {
+    margin-bottom: .7rem;
+}
+.claim-explain-tip {
+    color: #b6b6bf;
+    font-size: .24rem;
+    margin: .32rem .1rem 0;
+}
+.claim-item:before {
+    position: absolute;
+    top: .35rem;
+    left: 50%;
+    width: .94rem;
+    height: .94rem;
+    margin-left: -.47rem;
+    content: '';
+}
+.claim-item-1:before {
+    background: url("../images/claim-icon-1.png") center no-repeat;
+    background-size: 100%;
+}
+.claim-item-1:after {
+    position: absolute;
+    top: 1.6rem;
+    right: -.66rem;
+    width: .54rem;
+    height: .6rem;
+    background: url("../images/claim-arrow.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.claim-item-2:before {
+    background: url("../images/claim-icon-2.png") center no-repeat;
+    background-size: 100%;
+}
+.claim-item-2:after {
+    position: absolute;
+    bottom: -.7rem;
+    left: 1.14rem;
+    width: .54rem;
+    height: .6rem;
+    background: url("../images/claim-arrow.png") center no-repeat;
+    background-size: 100%;
+    transform: rotate(90deg);
+    content: '';
+}
+.claim-item-3 {
+    float: right;
+}
+.claim-item-3:after {
+    position: absolute;
+    top: 1.6rem;
+    left: -.7rem;
+    width: .54rem;
+    height: .6rem;
+    background: url("../images/claim-arrow.png") center no-repeat;
+    background-size: 100%;
+    transform: rotate(-180deg);
+    content: '';
+}
+.claim-item-3:before {
+    background: url("../images/claim-icon-3.png") center no-repeat;
+    background-size: 100%;
+}
+.claim-item-4:before {
+    background: url("../images/claim-icon-4.png") center no-repeat;
+    background-size: 100%;
+}
+
+/* 常见问题 */
+.question-box {
+    border-radius: 0;
+}
+.question-box.section h2 {
+    border-bottom: 1px solid #ececec;
+    padding-bottom: .35rem;
+}
+.question-box.section h2:before {
+    background: url("../images/question-title-icon.png");
+    background-size: 100%;
+}
+.question-box {
+    margin-bottom: .3rem;
+}
+.question-box-content {
+}
+.question-content-item {
+    border-bottom: 1px solid #ececec;
+    padding-bottom: .36rem;
+    padding-top: .3rem;
+}
+.question-content-item:last-child {
+    border-bottom: none;
+}
+.question-content-item h3,
+.question-content-item p {
+    position: relative;
+    color: #1f1f23;
+    font-size: .32rem;
+    padding-left: .6rem;
+}
+.question-content-item h3 i,
+.question-content-item p i {
+    position: absolute;
+    top: .04rem;
+    left: 0;
+    width: .4rem;
+    height: .4rem;
+    line-height: .42rem;
+    text-align: center;
+    border-radius: 50%;
+    background: #ffba57;
+    font-size: .24rem;
+    color: #fff;
+    box-sizing: border-box;
+}
+.question-content-item p {
+    line-height: .48rem;
+    margin-top: .3rem;
+    display: none;
+    font-size: .28rem;
+    color: #646570;
+}
+.question-content-item p i {
+    border: 1px solid #1ed6c3;
+    background: #fff;
+    color: #1ed6c3;
+}
+.question-content-item h3:after {
+    position: absolute;
+    top: .1rem;
+    right: 0;
+    width: .3rem;
+    height: .18rem;
+    background: url("../images/questoin-arrow.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+    transform: rotate(-180deg);
+}
+.question-content-item.active h3:after {
+    transform: rotate(0);
+}
+/* 底部信息 */
+.footer {
+    padding-top: 0;
+}
+.footer img {
+    width: 3.13rem;
+    height: .48rem;
+    margin: .6rem auto .2rem;
+    padding-top: 0;
+    display: block;
+}
+.footer p {
+    color: #a7a9b8;
+    font-size: .24rem;
+    text-align: center;
+}
+
+/* 悬浮用高度 */
+.fixed-height {
+    height: 1.6rem;
+}
+.fixed-button {
+    position: fixed;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: .4rem;
+    display: none;
+    background: linear-gradient(to right, #ffa028, #ff6f28);
+    border-radius: .55rem;
+    bottom: .2rem;
+    left: 50%;
+    width: 6rem;
+    margin-left: -3rem;
+    z-index: 9;
+}
+.info-submit-button {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    width: 7.5rem;
+    height: 1.1rem;
+    margin-left: -3.75rem;
+    border-top: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    display: none;
+}
+.info-submit-button .info-submit-left {
+    width: 4.08rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    color: #7a7a7b;
+    font-size: .26rem;
+    text-align: center;
+    background: #fff;
+    float: left;
+}
+.info-submit-button .info-submit-left b {
+    color: #ffa128;
+}
+.info-submit-button .info-submit-left b i {
+    font-size: .48rem;
+    font-style: normal;
+}
+.info-submit-button .info-submit-right {
+    width: 3.42rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    font-size: .4rem;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(to right, #ffa028, #ff6f28);
+    color: #fff;
+    float: left;
+}
+/* 问题解释弹窗 */
+.problem-explain-modal {
+    position: absolute;
+    top: -.7rem;
+    left: 2.32rem;
+    width: 3.64rem;
+    padding: .2rem;
+    color: #a1a1a1;
+    font-size: .2rem;
+    line-height: .28rem;
+    box-sizing: border-box;
+    background: #fff;
+    z-index: 8;
+    text-align: justify;
+    box-shadow: 0 0 .14rem .14rem #eeeeee;
+    display: none;
+}
+.problem-explain-modal:before {
+    position: absolute;
+    top: .7rem;
+    left: -.26rem;
+    width: .26rem;
+    height: .26rem;
+    background: url("../images/wap-tip-arrow-icon.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+/* 确认信息弹窗 */
+.modal-checkbox-box {
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    width: 5.66rem;
+    margin-left: -2.83rem;
+    padding: .4rem .3rem .54rem;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: .2rem;
+    display: none;
+}
+.modal-checkbox-box h2 {
+    text-align: center;
+    color: #212222;
+    font-size: .56rem;
+    font-weight: bold;
+}
+.modal-checkbox-box h2 span {
+    color: #ff7c28;
+}
+.modal-checkbox-box p {
+    color: #47485c;
+    text-align: center;
+    font-size: .24rem;
+}
+.checkbox-title {
+    font-size: .3rem;
+    margin-top: .44rem;
+    margin-bottom: .06rem;
+}
+.modal-checkbox-box p a {
+    color: #1ed6c3;
+    display: inline-block;
+}
+.modal-checkbox-box-button {
+    width: 5rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: .4rem;
+    color: #ffffff;
+    background: linear-gradient(to right, #ffa128, #ff6f28);
+    display: block;
+    margin: .24rem auto 0;
+    border-radius: .55rem;
+    box-shadow: 0 0.1rem 0.2rem 0.01rem #ffd6a5;
+}
+.modal-checkbox-close {
+    position: absolute;
+    right: .1rem;
+    top: -.68rem;
+    width: .51rem;
+    height: .68rem;
+    background: url("../images/modal-checkbox-close.png") center no-repeat;
+    background-size: 100%;
+}
+
+/* 费率表 */
+.rate-modal-box {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 7.5rem;
+    margin-left: -3.75rem;
+    background: #fff;
+    padding-top: .3rem;
+}
+.rate-modal-box .rate-modal-box-close {
+    position: absolute;
+    top: .2rem;
+    right: .2rem;
+    width: .4rem;
+    height: .4rem;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23888' fill-rule='evenodd'%3E%3Cpath d='M1.414 0l28.284 28.284-1.414 1.414L0 1.414z'/%3E%3Cpath d='M28.284 0L0 28.284l1.414 1.414L29.698 -5.586z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.rate-modal-box h2 {
+    text-align: center;
+    color: #383838;
+    font-size: .4rem;
+}
+/* 表格 */
+.rate-table-box {
+    position: relative;
+    width: 7.5rem;
+    height: 5rem;
+    overflow: auto;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    margin: .3rem auto 0;
+}
+.rate-table-box table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+.rate-table-box table thead {
+    height: .8rem;
+    line-height: .8rem;
+    color: #47485c;
+    font-size: .28rem;
+    font-weight: normal;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e7e7e7;
+}
+.rate-table-box table thead tr th {
+    width: 33.33%;
+    border-right: 1px solid #e7e7e7;
+    font-weight: normal;
+}
+.rate-table-box table thead tr th:last-child {
+    border-right: none;
+}
+.rate-table-box table tbody {
+    background: #fff;
+    color: #515151;
+    font-size: .24rem;
+}
+.rate-table-box table tbody tr td {
+    padding: .3rem .1rem;
+    text-align: center;
+}
+.rate-table-box table tbody tr {
+    background: #fff;
+}
+.rate-table-box table tbody tr:nth-child(2n-1) {
+    background-color: rgb(255, 249, 239);
+}
+.rate-table-box .border-right {
+    border-right: 1px solid #e7e7e7!important;
+    text-align: center;
+}
+.rate-table-box table tbody tr {
+    border-bottom: 1px solid #e7e7e7;
+}
+.rate-table-box table tbody tr:last-child {
+    border-bottom: none;
+}
+.rate-table-box table tbody tr td {
+    border-right: 1px solid #e7e7e7;
+}
+.rate-table-box table tbody tr td:last-child {
+    border-right: 0;
+}
+.all-money-rate-box {
+    display: none;
+}
+.rate-tab-button-box {
+    width: 7.5rem;
+    height: 1rem;
+    display: flex;
+}
+.rate-tab-button-box p {
+    width: 50%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: .36rem;
+    font-weight: bold;
+}
+.rate-tab-button-box p:first-child {
+    background: #FFAA27;
+    color: #fff;
+}
+.rate-tab-button-box p:last-child {
+    color: #545454;
+}

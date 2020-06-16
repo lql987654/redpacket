@@ -1,0 +1,134 @@
+html,
+body {
+    height: 100%;
+    background: #f7f7f7;
+}
+.head {
+    padding: .55rem 0;
+    background: #fff;
+}
+.head h2 {
+    color: #1f1f23;
+    font-size: .48rem;
+    text-align: center;
+    font-weight: bold;
+}
+.head h3 {
+    position: relative;
+    width: 3.5rem;
+    padding-left: .46rem;
+    margin: .34rem auto .5rem;
+    color: #1f1f23;
+    font-size: .32rem;
+}
+.head h3:before {
+    position: absolute;
+    top: .22rem;
+    left: 0;
+    width: .3rem;
+    height: .34rem;
+    background: url("../images/pay-icon.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.head h3 b {
+    color: #ff482a;
+    font-size: .48rem;
+}
+.head p {
+    position: relative;
+    line-height: .4rem;
+    padding-left: 1.5rem;
+    margin-left: .5rem;
+    margin-right: .6rem;
+    font-size: .28rem;
+    color: #1f1f23;
+}
+.head p b {
+    position: absolute;
+    top: .04rem;
+    left: 0;
+    font-weight: normal;
+    color: #a2a2a2;
+    display: inline-block;
+}
+.content h2 {
+    height: .98rem;
+    line-height: .98rem;
+    color: #a2a2a2;
+    font-size: .28rem;
+    padding-left: .5rem;
+}
+.pay-content {
+    background: #fff;
+}
+.pay-content .pay-item {
+    position: relative;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    border-bottom: 1px solid #efefef;
+    padding-left: 1.5rem;
+    font-size: 0;
+}
+.pay-content .pay-item.pay-weixin:before {
+    position: absolute;
+    top: .45rem;
+    left: .47rem;
+    width: .78rem;
+    height: .69rem;
+    background: url("../images/weixin-icon.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.pay-content .pay-item.pay-zhifubao:before {
+    position: absolute;
+    top: .46rem;
+    left: .5rem;
+    width: .72rem;
+    height: .72rem;
+    background: url("../images/zhifubao-icon.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.pay-item label {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    color: #1f1f23;
+    font-size: .36rem;
+}
+.pay-item label:after {
+    position: absolute;
+    top: .58rem;
+    right: .5rem;
+    width: .44rem;
+    height: .44rem;
+    background: url("../images/radio.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.pay-item.pay-weixin input:checked + label:after {
+    background: url("../images/weixin-radio-checked.png") center no-repeat;
+    background-size: 100%;
+}
+.pay-item.pay-zhifubao input:checked + label:after {
+    background: url("../images/zhifubao-radio-checked.png") center no-repeat;
+    background-size: 100%;
+}
+.pay-button {
+    width: 6.15rem;
+    height: .98rem;
+    line-height: .98rem;
+    display: block;
+    margin: 1.52rem auto 0;
+    border-radius: .49rem;
+    color: #ffffff;
+    font-size: .36rem;
+    text-align: center;
+}
+.pay-button.pay-weixin {
+    background: #00c901;
+}
+.pay-button.pay-zhifubao {
+    background: #00aaf0;
+}

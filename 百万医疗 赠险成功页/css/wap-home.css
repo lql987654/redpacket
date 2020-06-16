@@ -1,0 +1,86 @@
+html,
+body {
+    height: 100%;
+    background: #f3f3f3;
+}
+.head {
+    position: relative;
+    margin-bottom: .42rem;
+}
+.head:before {
+    position: absolute;
+    top: .48rem;
+    left: 50%;
+    width: .88rem;
+    height: .88rem;
+    margin-left: -.44rem;
+    background: url("../images/wap-success-icon.png") center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+.head h2 {
+    padding-top: 1.56rem;
+    color: #1b1b1b;
+    font-size: .4rem;
+    font-weight: bold;
+    text-align: center;
+}
+.content {
+    width: 6.9rem;
+    background: #fff;
+    border-radius: .3rem;
+    padding: .34rem .32rem .44rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.content h3 {
+    color: #909090;
+    font-size: .28rem;
+    text-align: center;
+}
+.content h2 {
+    color: #1b1b1b;
+    font-size: .4rem;
+    margin-top: .18rem;
+    margin-bottom: .18rem;
+    text-align: center;
+    font-weight: bold;
+}
+.content h2 b {
+    color: #ff322e;
+}
+.tag-box {
+    display: flex;
+    flex-direction: row;
+}
+.tag-box span {
+    display: inline-block;
+    padding: .12rem .14rem;
+    box-sizing: border-box;
+    border: 1px solid #ff322e;
+    border-radius: .1rem;
+    color: #ff322e;
+    font-size: .26rem;
+    margin: auto;
+}
+.success-button {
+    width: 5.26rem;
+    height: 1.26rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: .4rem;
+    font-weight: bold;
+    background: url("../images/success-button-bg.png") center no-repeat;
+    background-size: 100%;
+    display: block;
+    margin: .36rem auto 0;
+}
+.success-button span {
+    display: inline-block;
+    margin-left: .28rem;
+}
+.head h3 {
+    font-size: .28rem;
+    margin: .3rem .3rem 0;
+}
