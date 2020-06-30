@@ -4,24 +4,50 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
+    {
+      path: '/',
+      hidden: true,
+      redirect: '/home',
+    },
     {
       path: '/login',
       name: "login",
       component: resolve => require(['@/pages/login/Login.vue'], resolve),
-      hidden: true
     },
     {
       path: '*',
       name: "notFound",
-      hidden: true,
       component: resolve => require(['@/pages/not-found/NotFound.vue'], resolve),
     },
+
     {
       path: '/',
-      name: "home",
-      hidden: true,
-      component: resolve => require(['@/pages/home/Home.vue'], resolve),
+      name: "index",
+      meta: {
+        requireAuth : true
+      },
+      component: r => require.ensure([], () => r(require('@/pages/app/index.vue')), 'index'),
+      children: [
+        {
+          path: '/home',
+          meta: {
+            requireAuth : true
+          },
+          name: '发现',
+          component: r => require.ensure([], () => r(require('@/pages/app/home/home/index.vue')), 'index')
+        },
+        {
+          path: '/home/dayRecommend',
+          meta: {
+            requireAuth : true
+          },
+          name: '每日推荐',
+          component: r => require.ensure([], () => r(require('@/pages/app/home/dayRecommend/index.vue')), 'index')
+        },
+      ]
     },
   ]
 })
+
