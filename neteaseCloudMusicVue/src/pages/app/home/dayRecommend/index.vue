@@ -16,18 +16,21 @@
 
 <script>
   import {
-    getDayRecommendSong
+    getDayRecommendSong,
+    getHistoryRecommendList,
   } from '@/service'
 
   export default {
     name: "index",
     data() {
       return{
-        recommendList: ''
+        recommendList: '',
+        date: []
       }
     },
     mounted() {
-      this.getDayRecommendSongFunc()
+      this.getDayRecommendSongFunc();
+      this.getHistoryRecommendSongFunc();
     },
     methods: {
       getDayRecommendSongFunc() {
@@ -35,6 +38,17 @@
           console.log(res)
           this.recommendList = res.data.dailySongs;
         })
+      },
+      getHistoryRecommendSongFunc() {
+        getHistoryRecommendList().then( res => {
+          console.log(res)
+        })
+      },
+      getCurrentDate() {
+        let date = [];
+        let month = new Date().getMonth() + 1;
+        let day = new Date().getDay() + 1;
+        this.date = date[month, day]
       }
     }
   }

@@ -16,7 +16,7 @@
         <p>每日推荐</p>
       </div>
       <div class="tag-item">
-        <div class="tag-item-icon"></div>
+        <div class="tag-item-icon" @click="toHomeItem(2)"></div>
         <p>排行榜</p>
       </div>
     </div>
@@ -65,6 +65,9 @@
         switch (index) {
           case 1:
             that.$router.push({ path: '/home/dayRecommend' });
+            break;
+          case 2:
+            that.$router.push({ path: '/home/topList' });
             break;
           default:
             console.log('无传值')

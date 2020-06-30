@@ -46,6 +46,14 @@ export default new Router({
           name: '每日推荐',
           component: r => require.ensure([], () => r(require('@/pages/app/home/dayRecommend/index.vue')), 'index')
         },
+        {
+          path: '/home/topList',
+          meta: {
+            requireAuth : true
+          },
+          name: '排行榜',
+          component: r => require.ensure([], () => r(require('@/pages/app/home/topList/index.vue')), 'index')
+        },
       ]
     },
   ]

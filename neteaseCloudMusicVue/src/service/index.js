@@ -29,7 +29,13 @@ export const getRecommendMusicList = (data) => {
 export const getDayRecommendSong = (data) => {
   return GET('/recommend/songs', data)
 }
-//l
-export const getDayRecommendSong = (data) => {
-  return GET('/recommend/songs', data)
+// 每日推荐中 历史日推可用日期 404中
+export const getHistoryRecommendList = (data) => {
+  return GET('/history/recommend/songs', data)
+}
+/*
+  首页 排行榜 相关接口
+ */
+export const getTopList = (data) => {
+  return GET('/toplist', data)
 }
